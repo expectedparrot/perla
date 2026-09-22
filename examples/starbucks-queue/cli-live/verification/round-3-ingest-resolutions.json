@@ -1,0 +1,78 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla ingest resolutions --from round-3/resolutions",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "ingest",
+      "resolutions"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "Advance the current adjudication phase.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "adjudicate",
+          "close",
+          "--move",
+          "3"
+        ]
+      }
+    ],
+    "data": {
+      "imported": [
+        {
+          "move": 3,
+          "ruling_ids": [
+            "round3-integrated-customer-dynamics"
+          ],
+          "routing": {
+            "round3-integrated-customer-dynamics": {
+              "reasons": [
+                "judgment"
+              ],
+              "content_hash": "a6ec1a453d468afc81391a479d1558ad85c99c87b472c0f85bbb234dcd6790c3",
+              "impact_score": 2,
+              "blocking": false,
+              "over_budget": true,
+              "assessment": null,
+              "route": "provisional"
+            }
+          },
+          "provenance": {
+            "origin": "simulation",
+            "model": "gpt-4.1",
+            "model_parameters": {
+              "model": "gpt-4.1",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              },
+              "inference_service": "openai",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "LanguageModel"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/resolutions/control.results.ep",
+            "job_id": "job-fe40434a5f654adbbb86312f6bfed246",
+            "manifest_hash": "7b3344b8de24681c4c31aa68cdcf6b7f04943bb069e0aadfcb4dc998d822a2a2",
+            "ingested_at": "2026-09-12T14:08:54.087305+00:00",
+            "answer_hash": "010c5046f617e068991fcae985e844a5856c7e82db61118c197f502509c32bee"
+          }
+        }
+      ],
+      "already_ingested": []
+    }
+  }
+}

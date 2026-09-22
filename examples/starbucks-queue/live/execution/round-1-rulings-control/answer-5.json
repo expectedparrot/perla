@@ -1,0 +1,84 @@
+{
+  "rulings": {
+    "rulings": [
+      {
+        "ruling_id": "r1-all-move1",
+        "basis": "judgment",
+        "rationale": "All four actors have committed actions for the January 2027 period, with overlapping effects on morning coffee purchase occasions in the pilot market. The Starbucks (home) pilot reserves 20% of peak café capacity for in-café orders, capping mobile pickup slots and risking some mobile customer defection to competitors. Dunkin and Dutch Bros both execute targeted local promotions and operational enhancements to attract displaced mobile customers. The buyer segments respond as described in their contingent actions, with commuters and habitual app users sensitive to delays and slot unavailability, while café-first customers benefit from reduced in-store congestion. No real measurement or segment weights are available; switching is simulated based on explicit dossier constraints. All deltas are hypothetical and preserve unmeasured board fields.",
+        "resolves": [
+          "m1.buyer.a1",
+          "m1.buyer.a2",
+          "m1.buyer.a3",
+          "m1.dunkin.a1",
+          "m1.dunkin.a2",
+          "m1.dunkin.a3",
+          "m1.dutch.a1",
+          "m1.dutch.a2",
+          "m1.home.a1",
+          "m1.home.a2"
+        ],
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "kill_criteria": [],
+        "chain": [
+          {
+            "link": "mobile_to_competitor",
+            "basis": "dossier_fact",
+            "claim": "If Starbucks mobile pickup slots are delayed beyond the commuter's 10-minute slack or habitual user's 8-minute tolerance, these segments will redirect their purchase to Dunkin or Dutch Bros, forming new routines after repeated failures.",
+            "cite": [
+              "d.buyer.b4",
+              "d.buyer.b5"
+            ]
+          },
+          {
+            "link": "walkin_benefit",
+            "basis": "dossier_fact",
+            "claim": "Walk-in café customers will experience less congestion and more predictable in-café service due to the protected reservation, with no incentive to switch.",
+            "cite": [
+              "d.buyer.b6"
+            ]
+          },
+          {
+            "link": "competitor_offer",
+            "basis": "dossier_fact",
+            "claim": "Dunkin and Dutch Bros can locally promote app/drive-through offers and allocate incremental labor within their stated budgets, targeting peak morning windows in overlap with Starbucks pilot cafés.",
+            "cite": [
+              "d.dunkin.k5",
+              "d.dutch.d5",
+              "d.dunkin.k6",
+              "d.dutch.d6"
+            ]
+          },
+          {
+            "link": "switching_limit",
+            "basis": "dossier_fact",
+            "claim": "No measured switching rates, segment weights, or local market shares are available. Simulation must not assign numeric churn or transaction deltas.",
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b8"
+            ]
+          }
+        ],
+        "cases": [],
+        "outcome": {
+          "description": "The Starbucks pilot proceeds in 50 cafés with 20% peak capacity reserved for in-café orders and capped mobile slots. Some mobile customers (commuters and habitual app users) encountering unavailable or delayed slots will redirect purchases to Dunkin or Dutch Bros, particularly where those brands have implemented local offers and increased staffing. Walk-in customers experience improved in-café wait and satisfaction. No board field for observed switching, transaction loss, or competitor gain is populated; all such effects remain hypothetical. The pilot's measurement systems are deployed, but all measured outcome fields remain null pending real data.",
+          "confidence": 0.7,
+          "board_delta": {
+            "cafe_capacity_reservation_pct": 20,
+            "public_strategy_history": [
+              "January 2027: Starbucks pilots 20% peak café capacity reservation for in-café orders in 50 US cafés, capping mobile slots and adding up to two peak staff-hours per weekday per pilot store. Instrumentation deployed for order attempts, slot offers, completions, refunds, staffing, and repeat purchases.",
+              "January 2027: Dunkin launches a $6 breakfast bundle with opt-in mobile ordering and local marketing in 15 franchise locations near Starbucks pilot cafés, with a $20,000 budget cap.",
+              "January 2027: Dutch Bros allocates 20 additional labor hours per week per shop (4 hours/weekday, 7–10 a.m.) at 12 participating shops and promotes a $1 Order Ahead credit for first-time users from January 15–31, capped at 100 redemptions per shop or budget exhaustion.",
+              "January 2027: Composite morning customer segments respond as follows: commuters and habitual app users switch to competitors when Starbucks mobile slots are unavailable or delayed beyond stated tolerances; walk-in café customers benefit from the new policy and do not switch."
+            ]
+          }
+        },
+        "branches": null
+      }
+    ]
+  }
+}

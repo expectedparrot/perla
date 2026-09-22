@@ -1,0 +1,159 @@
+{
+  "actor_id": "control",
+  "answer": {
+    "rulings": [
+      {
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b6",
+              "d.buyer.b7",
+              "d.buyer.b8"
+            ],
+            "claim": "Morning customer segments act independently: commuters, habitual app users, and café visitors each respond to perceived delays, reliability, and in-store experience, but no measured market shares or switching probabilities are available.",
+            "link": "segment_response"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h5",
+              "d.home.h6",
+              "d.home.h7",
+              "d.home.h8"
+            ],
+            "claim": "Starbucks continues the 20% café-order reservation, adds a real-time release of unused capacity in half of pilot cafés (A/B), and maintains the two-hour staffing cap and unchanged pricing.",
+            "link": "starbucks_cafe_reservation"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dutch.d4",
+              "d.dutch.d5",
+              "d.dutch.d6",
+              "d.dutch.d7",
+              "d.dutch.d8"
+            ],
+            "claim": "Dutch Bros continues geo-fenced digital campaigns, launches a repeat loyalty incentive for Order Ahead, and increases peak staffing to absorb incremental demand from frustrated Starbucks mobile customers.",
+            "link": "dutch_bros_campaign"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k3",
+              "d.dunkin.k4",
+              "d.dunkin.k5",
+              "d.dunkin.k6",
+              "d.dunkin.k7",
+              "d.dunkin.k8"
+            ],
+            "claim": "Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing and opt-in/stop rules, monitoring redemption and store-level economics.",
+            "link": "dunkin_meal_deal"
+          }
+        ],
+        "cite": [
+          "d.buyer.b3",
+          "d.buyer.b4",
+          "d.buyer.b5",
+          "d.buyer.b6",
+          "d.buyer.b7",
+          "d.buyer.b8",
+          "d.dunkin.k3",
+          "d.dunkin.k4",
+          "d.dunkin.k5",
+          "d.dunkin.k6",
+          "d.dunkin.k7",
+          "d.dunkin.k8",
+          "d.dutch.d4",
+          "d.dutch.d5",
+          "d.dutch.d6",
+          "d.dutch.d7",
+          "d.dutch.d8",
+          "d.home.h4",
+          "d.home.h5",
+          "d.home.h6",
+          "d.home.h7",
+          "d.home.h8",
+          "d.home.h9"
+        ],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              "January 2027: Starbucks launches peak-hour mobile pickup slot limits and reserves 20% of capacity for in-café orders in 50 pilot cafés. Instrumentation begins for pilot and comparison cafés.",
+              "January 2027: Dunkin launches a $6 breakfast Meal Deal bundle in 15 consenting franchise stores near pilot cafés, with app promotion and local marketing. Store-level stop rules and monitoring are in place.",
+              "January 2027: Dutch Bros launches a geo-fenced digital campaign promoting Order Ahead and a $1 credit for first-time users in 12 shops, with peak-hour staffing adjustments and messaging.",
+              "January 2027: Morning customer segments respond: commuters abandon delayed Starbucks mobile orders, habitual app users tolerate limited delays but may switch after repeated issues, and café visitors continue in-person orders expecting improved experience.",
+              "February 2027: Starbucks continues the pilot and introduces a real-time release of unused reserved café-order capacity to mobile orders in 25 of 50 pilot cafés as an A/B test. No price change; two-hour staff cap remains.",
+              "February 2027: Dutch Bros continues geo-fenced digital campaigns, launches a loyalty promotion for repeat Order Ahead users, and increases peak staffing in 12 shops.",
+              "February 2027: Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing, opt-in/stop rules, and weekly monitoring.",
+              "February 2027: Morning customer segments: commuters and habitual app users increasingly avoid unreliable Starbucks mobile slots, switching to Dutch Bros, Dunkin, or home preparation; café visitors reinforce pilot Starbucks locations for in-person visits."
+            ]
+          },
+          "confidence": 0.8,
+          "description": "All February actions are implemented as committed. Starbucks continues the pilot and launches the real-time release A/B test in 25 pilot cafés. Dutch Bros and Dunkin both intensify their app-based acquisition and loyalty offers, and buyers allocate their business according to their declared segment behaviors. No observable measurement fields are updated; the board advances to February 2027 with an updated public strategy history, but all measured outcomes remain null."
+        },
+        "rationale": "All actors' actions are compatible and mutually observable. Starbucks continues the pilot and introduces a controlled A/B test, affecting only half of pilot cafés. Buyers' segment responses remain as declared: commuters and habitual app users are increasingly intolerant of unreliable mobile slots and switch to Dutch Bros, Dunkin, or home preparation when Starbucks cannot offer a timely slot. Dutch Bros and Dunkin both intensify app-based acquisition and loyalty efforts, with Dutch Bros focusing on repeat Order Ahead and queue management, and Dunkin on a discounted bundle and local marketing. No action directly blocks or negates another; instead, each actor's move creates a competitive environment where customer allocation shifts by occasion, but no segment is fully captured or excluded by a single actor. As no measured segment weights or switching probabilities exist, the board advances with the declared policies, segment behaviors, and experiments, but no quantitative outcome is observed. No kill criterion is triggered, as there is no evidence of negative daily contribution or inadequate store-pair data at this stage.",
+        "resolves": [
+          "m2.buyer.a1",
+          "m2.buyer.a2",
+          "m2.buyer.a3",
+          "m2.dunkin.a1",
+          "m2.dunkin.a2",
+          "m2.dunkin.a3",
+          "m2.dutch.a1",
+          "m2.dutch.a2",
+          "m2.dutch.a3",
+          "m2.home.a1",
+          "m2.home.a2"
+        ],
+        "ruling_id": "move2-integrated-customer-competition"
+      }
+    ]
+  },
+  "id": "ingest-6592484b0fe945feaa65eeb6c8c1c3c2",
+  "kind": "rulings",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "03693f69885ee16a3e9d3ef7048281c315a89bdd5dd636314cd271d977646a76",
+    "ingested_at": "2026-09-12T14:06:09.104006+00:00",
+    "job_id": "job-f2988c13f7b24afbb9f49c2e79c9bd4d",
+    "manifest_hash": "f1dc2d8b32b6cc8fc3c6243d4446fa5503617b200c3affae67a732036cf7dc8b",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rulings/control.results.ep"
+  }
+}

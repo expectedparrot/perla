@@ -1,0 +1,13 @@
+{
+  "rebuttals": {
+    "rebuttals": [
+      {
+        "ruling_id": "r1-all-move1",
+        "stance": "accept",
+        "argument": "I accept the ruling as it accurately reflects the current state of the Starbucks pilot, the implemented capacity reservation, and the lack of measured switching or transaction deltas due to explicit dossier constraints. All operational moves and measurement limitations are consistent with the public dossier.",
+        "link": null,
+        "cite": []
+      }
+    ]
+  }
+}

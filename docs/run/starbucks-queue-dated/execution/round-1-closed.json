@@ -1,0 +1,46 @@
+{
+  "move": 1,
+  "board": {
+    "adjusted_cafe_wait_reduction_pct": null,
+    "assumed_contribution_per_transaction_usd": 3,
+    "assumed_loaded_labor_cost_per_hour_usd": 30,
+    "cafe_capacity_reservation_pct": 20,
+    "calendar_period": "January 2027",
+    "comparison_cafes": 50,
+    "comparison_cohort_complete_customers": 0,
+    "complete_store_pairs": 0,
+    "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+    "incremental_daily_contribution_usd": null,
+    "measured_capacity_per_15min": null,
+    "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+    "mobile_repeat_change_pp": null,
+    "peak_window": "Weekdays 07:00–10:00 local time",
+    "period_ends": {
+      "1": "2027-01-31",
+      "2": "2027-02-28",
+      "3": "2027-03-31"
+    },
+    "pilot_cafes": 50,
+    "pilot_cohort_complete_customers": 0,
+    "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+    "public_roster": [
+      "Starbucks (home)",
+      "Dutch Bros (competitor)",
+      "Dunkin (competitor)",
+      "Composite morning customers (assumed wildcard)"
+    ],
+    "public_strategy_history": [
+      {
+        "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+        "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+        "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+        "period": "January 2027",
+        "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+      }
+    ]
+  },
+  "closed_at": "2026-09-12T12:16:13.181551+00:00",
+  "escalation_debt": [
+    "r1-integrated-jan27"
+  ]
+}

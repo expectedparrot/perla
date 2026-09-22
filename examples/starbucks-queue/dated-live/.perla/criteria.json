@@ -1,0 +1,23 @@
+[
+  {
+    "condition": "The baseline-adjusted reduction in peak café order-to-handoff p90 wait is less than 20 percent by move two across at least forty complete pilot/comparison store pairs",
+    "deadline_move": 2,
+    "id": "service",
+    "observable": "adjusted_cafe_wait_reduction_pct; equally weighted store-pair changes in p90 wait, comparing peak weekday windows before and after the pilot; complete_store_pairs >= 40",
+    "threshold": "Below 20% reduction; fewer than 40 complete pairs or missing baseline/wait evidence is unevaluated"
+  },
+  {
+    "condition": "Adjusted daily contribution per pilot café after lost orders, substitution between channels and incremental staffing is negative by move three across at least forty complete store pairs",
+    "deadline_move": 3,
+    "id": "economics",
+    "observable": "incremental_daily_contribution_usd after matched-store baseline adjustment, including all channels and added labor; complete_store_pairs >= 40",
+    "threshold": "Below $0 per café per day; incomplete transaction or cost evidence is unevaluated"
+  },
+  {
+    "condition": "Thirty-day repeat purchase among baseline mobile customers falls by more than three percentage points relative to the comparison-cohort change by move three",
+    "deadline_move": 3,
+    "id": "retention",
+    "observable": "mobile_repeat_change_pp; compare baseline-defined cohorts across all Starbucks purchase channels, with at least 1000 customers per arm and complete 30-day follow-up",
+    "threshold": "Below -3 percentage points; incomplete cohorts or missing follow-up is unevaluated"
+  }
+]

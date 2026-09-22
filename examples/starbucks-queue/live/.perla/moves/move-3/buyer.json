@@ -1,0 +1,47 @@
+{
+  "actor_id": "buyer",
+  "committed_at": "2026-09-12T12:09:20.937783+00:00",
+  "content": {
+    "actions": [
+      "For my morning commute, if the Starbucks app shows no pickup slots before my deadline, I will now more consistently go to the nearby Dunkin' for their $5 breakfast bundle, as I've found it to be a reliable and affordable alternative. If a Dutch Bros is closer, I'll use their app instead.",
+      "As a habitual Starbucks app user with a flexible schedule, I am adapting by placing my mobile order earlier, before 7 a.m., or waiting until after the 9:30 a.m. rush to avoid the 'no slots available' message. If my schedule is tight, I'm starting to use the Dunkin' app as my primary choice after being frustrated a few times.",
+      "When I want to sit and work or meet someone, I will continue to choose the pilot Starbucks locations for my in-person order, as the shorter wait time has made the experience noticeably better."
+    ],
+    "expected_responses": [
+      "I expect Starbucks will see my behavior as a drop in peak-time mobile orders and may either decide the trade-off for better in-café service is worth it, or they might adjust the capacity reservation percentage to try and win me back.",
+      "I expect Dunkin' will see my increased purchases of their breakfast bundle as a success and will likely continue the promotion to keep my business.",
+      "I expect Dutch Bros will notice the increased traffic and app usage, justifying their decision to add more staff during the morning rush."
+    ],
+    "rationale": "My morning routine is a balance of convenience, cost, and consistency. Starbucks's new system has made mobile ordering at peak times unreliable for me. While I appreciate the effort to improve the in-store experience, my priority as a commuter or a busy app user is getting my specific order, quickly and predictably. After two months of this pilot, I've learned that competitors like Dunkin' and Dutch Bros are offering attractive deals and more reliable service for my grab-and-go occasions. Their offers directly address my frustration. For my less frequent café visits, however, the Starbucks policy is a welcome improvement, so my choice depends entirely on what I need that particular morning.",
+    "resource_commitments": [
+      "I am reallocating my daily coffee budget of $5-$8 away from Starbucks towards Dunkin' or Dutch Bros on days when I can't get a convenient mobile pickup slot.",
+      "I have invested the 5-10 minutes required to download, set up payment, and learn the menu on the Dunkin' and Dutch Bros mobile apps.",
+      "I am shifting my brand loyalty; my 'default' action is no longer just opening the Starbucks app. I now compare options or go directly to a competitor's app that has proven more reliable for my schedule."
+    ]
+  },
+  "content_hash": "c8856d7c31895c7ee59372ec3a2b11e437b04bea2703b0b44d0cfb29ea78b677",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "c8856d7c31895c7ee59372ec3a2b11e437b04bea2703b0b44d0cfb29ea78b677",
+    "ingested_at": "2026-09-12T12:09:20.937783+00:00",
+    "job_id": "job-e902ea6b099e45c499557b1e4e7a6088",
+    "manifest_hash": "b9502a157ee5db4a911c3677dd4f641650ab458c588f95903d1f233afe82c828",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-moves-buyer/results-1.ep"
+  }
+}

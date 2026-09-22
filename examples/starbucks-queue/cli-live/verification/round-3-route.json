@@ -1,0 +1,52 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla adjudicate route --move 3",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "adjudicate",
+      "route"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "Advance the current adjudication phase.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "job",
+          "generate",
+          "rebuttals",
+          "--move",
+          "3"
+        ]
+      }
+    ],
+    "data": {
+      "move": 3,
+      "policy": {
+        "human_budget": 0,
+        "auto_confidence": 0.7,
+        "judgment_share_threshold": 0.4
+      },
+      "routing": {
+        "round3-integrated-customer-dynamics": {
+          "reasons": [
+            "judgment"
+          ],
+          "content_hash": "a6ec1a453d468afc81391a479d1558ad85c99c87b472c0f85bbb234dcd6790c3",
+          "impact_score": 2,
+          "blocking": false,
+          "over_budget": true,
+          "assessment": null,
+          "route": "provisional"
+        }
+      },
+      "reused": false
+    }
+  }
+}

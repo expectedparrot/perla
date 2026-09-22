@@ -1,0 +1,77 @@
+{
+  "facts": [
+    {
+      "id": "d1",
+      "claim": "Reported history: Brothers Dane and Travis Boersma founded Dutch Bros in Grants Pass, Oregon, in 1992. The brand grew from an espresso pushcart around beverages and personal service; drive-through convenience is central to its operating identity.",
+      "sources": [
+        "https://investors.dutchbros.com/overview/"
+      ]
+    },
+    {
+      "id": "d2",
+      "claim": "Reported financials: Q2 2026 total revenue was $550.9 million, up 32.5% from $415.8 million. Company-operated same-shop sales grew 8.3%, including 3.4% transaction growth. Company revenue and company-operated comparable sales are distinct measures.",
+      "sources": [
+        "https://investors.dutchbros.com/financials/quarterly-results/"
+      ]
+    },
+    {
+      "id": "d3",
+      "claim": "Reported expansion: Dutch Bros opened 48 shops in Q2 2026, 44 company-operated. Inference: managers must preserve existing-shop execution while allocating staff and attention to growth. This does not establish spare local capacity.",
+      "sources": [
+        "https://investors.dutchbros.com/financials/quarterly-results/"
+      ]
+    },
+    {
+      "id": "d4",
+      "claim": "Reported capability: Dutch Bros offers app-based Order Ahead at participating shops. Pickup availability varies by location. This does not establish that every location in a hypothetical pilot market supports the feature.",
+      "sources": [
+        "https://www.dutchbros.com/order-ahead/"
+      ]
+    },
+    {
+      "id": "d5",
+      "claim": "Assumed local remit: The player controls 12 participating company-operated shops near some of the Starbucks pilot cafés. It can adjust shifts, app messaging and local acquisition offers, but cannot open a new shop within the three-round horizon.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "d6",
+      "claim": "Assumed commercial envelope: Maximum incremental acquisition and labor budget $30,000 across these 12 shops per month. A $1 trial credit is a permitted option, not a precommitted action. Local variable contribution, queue capacity and cohort acquisition cost are unknown and must be estimated or measured before scaling.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "d7",
+      "claim": "Assumed backstory: A regional operator has spent the preceding quarter integrating new staff and protecting service consistency. The local team wants repeat demand, not a one-week promotion that overwhelms the lane. This managerial history is scenario design, not reported company information.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "d8",
+      "claim": "Assumed information rights: The operator sees its own lane times, app orders, rewards redemptions and repeat visits; it sees public Starbucks slot availability and public offers. It cannot target a verified list of customers rejected inside Starbucks’ app or read either rival’s private budget.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    }
+  ],
+  "incentives": [
+    "Turn frustrated morning demand into repeat visits while protecting the service proposition (d1, d4).",
+    "Make existing-shop growth durable as expansion absorbs managerial capacity (d2, d3, d7)."
+  ],
+  "constraints": [
+    "12 shops, a $30,000 monthly incremental envelope and no new construction within the game (d5, d6).",
+    "Order Ahead availability is location-dependent; there is no measured spare capacity or proven local acquisition cost (d4, d6).",
+    "Public observation does not reveal individual rejected Starbucks customers (d8)."
+  ],
+  "capabilities": [
+    "Run a geographically limited app offer and shift labor toward a measurable morning bottleneck (d4, d5).",
+    "Measure redeemed offers and subsequent full-price visits in the own-brand cohort (d8)."
+  ],
+  "red_lines": [
+    "Do not assume every lost Starbucks order becomes a Dutch Bros order (d8).",
+    "Do not subsidize demand beyond the monthly envelope or promise a pickup time unsupported by local throughput (d6, d7)."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "attempt": 1,
+  "receipt": {
+    "move": 3,
+    "ruling_ids": [
+      "m3-integrated"
+    ],
+    "status": "adjudication_routing",
+    "basis_distribution": {
+      "judgment": 1
+    },
+    "provenance": {
+      "origin": "simulation",
+      "model": "gpt-4.1",
+      "model_parameters": {
+        "model": "gpt-4.1",
+        "parameters": {
+          "frequency_penalty": 0,
+          "logprobs": false,
+          "max_tokens": 16000,
+          "presence_penalty": 0,
+          "reasoning_effort": null,
+          "temperature": 0.5,
+          "top_logprobs": 3,
+          "top_p": 1
+        },
+        "inference_service": "openai",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "LanguageModel"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-rulings-control/results-1.ep",
+      "job_id": "job-f49c27486a574176bc8c4160d72bed40",
+      "manifest_hash": "7398dc5884f8ebf882f859182aa8b24af8178c44b8ef3ace8010c43b9fa2a905",
+      "ingested_at": "2026-09-12T12:19:53.731698+00:00",
+      "answer_hash": "9d8738f7df440463521c173da1cb8a9adcee9ef00cc73d4380dd95b31e2f0adb"
+    }
+  }
+}

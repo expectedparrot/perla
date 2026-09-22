@@ -1,0 +1,46 @@
+{
+  "actor_id": "buyer",
+  "committed_at": "2026-09-12T12:19:34.420789+00:00",
+  "content": {
+    "actions": [
+      "Habitual Starbucks mobile-order customers who were pushed to competitors in January and February due to repeated long waits will now treat Dutch Bros or Dunkin as their new primary option. They will not check the Starbucks app by default, solidifying their new routine.",
+      "In-store café visitors, having experienced two months of improved service at the pilot Starbucks locations, will now preferentially choose these stores for their sit-down occasions, cementing their loyalty and maintaining their increased visit frequency.",
+      "Time-pressed commuters will continue their established behavior: check the Starbucks app for pickup times and immediately divert to a competitor or home prep if the quoted time creates any risk of being late."
+    ],
+    "expected_responses": [
+      "Starbucks will likely see a permanent loss of some mobile-order customers at their pilot stores but will also register a sustained lift in in-store traffic and positive feedback from that group.",
+      "Dutch Bros and Dunkin will likely see their promotional offers convert trial users into repeat customers, improving their morning market share near the pilot Starbucks locations."
+    ],
+    "rationale": "After two months, new patterns are becoming habits. The Starbucks pilot has effectively sorted us into groups. Those of us who rely on mobile ordering and were burned by the initial change have found alternatives that are actively trying to keep us with promotions and faster service; it's just easier to stick with what's working now. Conversely, those of us who prefer the in-store experience have been rewarded with consistently better service at the pilot locations, so we're going to keep going back. For commuters, it was never about loyalty, only about the fastest, most predictable option on any given morning, and that hasn't changed.",
+    "resource_commitments": [
+      "Shifted daily spending and loyalty from a segment of former Starbucks app users to Dutch Bros and Dunkin.",
+      "Concentrated spending and increased visit frequency at pilot Starbucks locations from café-focused customers.",
+      "Continued willingness to be flexible and divert our morning purchase based on real-time information from apps."
+    ]
+  },
+  "content_hash": "3e80fc99bb20ac7095e26eb65d5f19ec63d212a8d8395540713b92e95e4474f8",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "3e80fc99bb20ac7095e26eb65d5f19ec63d212a8d8395540713b92e95e4474f8",
+    "ingested_at": "2026-09-12T12:19:34.420789+00:00",
+    "job_id": "job-1393d0ca39b0422a9587c5ab105bc3f8",
+    "manifest_hash": "457c69b758579d55b653c35ce3ff5741c70e210c02e185742080dbd28687ebfe",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-moves-buyer/results-1.ep"
+  }
+}

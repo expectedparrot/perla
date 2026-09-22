@@ -1,0 +1,47 @@
+{
+  "actor_id": "home",
+  "answer": {
+    "actions": [
+      "Continue the pilot of peak-hour mobile pickup slot limits with 20% of capacity reserved for in-café orders in the 50 pilot cafés through February 2027, maintaining current beverage pricing and not exceeding the two-hour staff addition per store per weekday.",
+      "Begin real-time release of unused reserved café-order capacity to mobile orders if not claimed within the first 5 minutes of each 15-minute window, but only in half (25) of the pilot cafés as an A/B test to compare guest experience and transaction completion rates."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin may intensify digital and value messaging, but are unlikely to materially change their offers until more evidence emerges from the Starbucks pilot.",
+      "Some mobile customers may experience improved slot availability and reduced abandonment in the A/B test stores, while café guests should see little to no negative impact if the release is managed tightly.",
+      "If the real-time release proves successful, competitors may attempt to mimic dynamic capacity allocation in their own digital channels."
+    ],
+    "rationale": "Sustaining the current pilot maintains consistency for measurement and avoids prematurely expanding or rolling back before evidence is collected. Introducing a controlled A/B test of releasing unused reserved capacity allows Starbucks to probe whether tighter management of reservations can reduce mobile order abandonment and improve all-channel throughput without undermining the café experience. This balances the need to restore in-store credibility with digital convenience and tests a reversible, measurable operational tweak within binding constraints.",
+    "resource_commitments": [
+      "Continue allocating up to two additional peak staff-hours per weekday per pilot café (max $60/store/day) for the duration of February.",
+      "Allocate digital and operations resources to implement and monitor the real-time capacity release in 25 pilot cafés, ensuring robust instrumentation of order attempts, slot fills, capacity release, and customer completion rates."
+    ]
+  },
+  "id": "ingest-74dc6b2f506a4fd2a26b0927cc046e8e",
+  "kind": "moves",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "8e544dd35a4aab8d15df5ddb699c147c3d11cd9a6c8d38a199c6bd84080bfc78",
+    "ingested_at": "2026-09-12T14:04:12.233804+00:00",
+    "job_id": "job-1b54cd243d8148cba30e14413fa14305",
+    "manifest_hash": "ffa07498c4edf71815cf37b6b247daced5231527d691a186de26e4aede1556af",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/moves/home.results.ep"
+  }
+}

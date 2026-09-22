@@ -1,0 +1,30 @@
+{
+  "resolutions": {
+    "resolutions": [
+      {
+        "ruling_id": "move3-integrated-customer-competitor-dynamics",
+        "decision": "affirm",
+        "reason": "The Dutch Bros rebuttal challenges the mechanism link 'no-measured-outcomes', arguing that Dutch Bros internally observes metrics such as lane times and app orders. However, the ruling's scope and the board's measurement fields are explicitly limited to public, cross-actor, and paired-outcome fields per d.home.h8 and d.home.h9. The Dutch Bros dossier (d.dutch.d8) confirms Dutch Bros can see its own internal data, but this does not entitle Dutch Bros to update the public board fields or require the ruling to change. The ruling does not prohibit Dutch Bros from privately observing its own metrics, but maintains that no observed field (i.e., those in the public board) is updated without actual operating data, in line with the game’s measurement rule. All other actors accept the ruling as accurate. Thus, the original ruling stands.",
+        "responses": [
+          {
+            "actor_id": "buyer",
+            "reason": "Accepts the ruling as an accurate reflection of customer choice dynamics and the absence of measured segment weights or observed demand."
+          },
+          {
+            "actor_id": "dunkin",
+            "reason": "Accepts the ruling, confirming the Dunkin offer and its context are correctly described; no challenge to the public outcome."
+          },
+          {
+            "actor_id": "dutch",
+            "reason": "Challenge noted: Dutch Bros internally observes its own queue and app metrics. However, the ruling concerns only public board measurement fields, which remain null in the absence of actual operating data, per d.home.h9. The internal observation capability does not entitle Dutch Bros to update the public board or require revision of the ruling."
+          },
+          {
+            "actor_id": "home",
+            "reason": "Accepts the ruling as a correct application of pilot constraints, public measurement rules, and the absence of observed outcome updates."
+          }
+        ],
+        "revision": null
+      }
+    ]
+  }
+}

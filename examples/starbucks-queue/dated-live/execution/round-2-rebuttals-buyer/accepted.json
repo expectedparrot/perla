@@ -1,0 +1,30 @@
+{
+  "attempt": 1,
+  "receipt": {
+    "actor_id": "buyer",
+    "move": 2,
+    "provenance": {
+      "origin": "simulation",
+      "model": "gemini-2.5-pro",
+      "model_parameters": {
+        "model": "gemini-2.5-pro",
+        "parameters": {
+          "maxOutputTokens": 16000,
+          "stopSequences": [],
+          "temperature": 0.5,
+          "thinking_budget": null,
+          "topK": 1,
+          "topP": 1
+        },
+        "inference_service": "google",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "gemini-2.5-pro"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rebuttals-buyer/results-1.ep",
+      "job_id": "job-dfbef0a42cb44fad8bd70ddeb907b549",
+      "manifest_hash": "3745fc8a2464a11ebdc3ada68fc33ad6cba1d83c1f9959d461dfb73271e4afdd",
+      "ingested_at": "2026-09-12T12:18:09.613603+00:00",
+      "answer_hash": "cf5a30b2dbbc23b2f7e7630a09b432383a85144b783f2aca0c776cdd70bbdba6"
+    }
+  }
+}

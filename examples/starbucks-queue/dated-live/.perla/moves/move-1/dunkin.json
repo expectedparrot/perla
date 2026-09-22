@@ -1,0 +1,50 @@
+{
+  "actor_id": "dunkin",
+  "committed_at": "2026-09-12T12:15:05.791155+00:00",
+  "content": {
+    "actions": [
+      "Launch a local opt-in morning bundle offer in the 15 consenting franchise stores near the Starbucks pilot cafés, featuring a $6 breakfast Meal Deal with coffee and food to reinforce value perception.",
+      "Implement targeted marketing via the Dunkin app and local channels to promote the Meal Deal and advance mobile ordering for morning peak hours (7–10 a.m. weekdays).",
+      "Monitor basket contribution, repeat visits, and labor costs closely during January 2027 to evaluate economic sustainability and customer retention.",
+      "Set a decision rule to discontinue or adjust the offer in any store where incremental economics worsen after one month."
+    ],
+    "expected_responses": [
+      "Starbucks may observe competitive pressure in the morning peak and possibly adjust their pilot or marketing to maintain share.",
+      "Dutch Bros might respond with enhanced drive-through promotions or order-ahead incentives to defend their segment.",
+      "Some Dunkin franchisees may opt out if economics do not meet expectations, leading to a tailored local rollout."
+    ],
+    "rationale": "Given Dunkin's strength in coffee-and-food value and existing mobile ordering capabilities, launching a locally coordinated Meal Deal aligns with the incentive to win the breakfast occasion through a predictable, attractive basket. This approach leverages the brand's existing value perception and app infrastructure within the 15 franchised stores that can be controlled, while respecting the $20,000 monthly resource constraint. Monitoring economic impact ensures franchisees remain willing participants. This strategy responds to Starbucks' pilot of capacity-aware mobile pickup slots by strengthening Dunkin's competitive position in the same morning peak window without altering pricing structure nationally.",
+    "resource_commitments": [
+      "Allocate up to $20,000 in January 2027 for combined local promotion and additional staffing across the 15 franchise stores.",
+      "Use existing Dunkin app infrastructure to support advance ordering and rewards integration for the Meal Deal.",
+      "Dedicate local marketing budget for digital and in-store promotion targeted at morning peak customers."
+    ]
+  },
+  "content_hash": "a51745547348ac886d3b30a1da98eea9062bd0f613aad5ace4cd949908f00717",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "a51745547348ac886d3b30a1da98eea9062bd0f613aad5ace4cd949908f00717",
+    "ingested_at": "2026-09-12T12:15:05.791155+00:00",
+    "job_id": "job-fefe7f85a666430e82d8061d0d5df797",
+    "manifest_hash": "c6a90e123f06ea1444522dbb688333712409db81d1444185698fbd09a5d2814f",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-1-moves-dunkin/results-1.ep"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "attempt": 1,
+  "receipt": {
+    "actor_id": "buyer",
+    "move": 3,
+    "content_hash": "3e80fc99bb20ac7095e26eb65d5f19ec63d212a8d8395540713b92e95e4474f8",
+    "provenance": {
+      "origin": "simulation",
+      "model": "gemini-2.5-pro",
+      "model_parameters": {
+        "model": "gemini-2.5-pro",
+        "parameters": {
+          "maxOutputTokens": 16000,
+          "stopSequences": [],
+          "temperature": 0.5,
+          "thinking_budget": null,
+          "topK": 1,
+          "topP": 1
+        },
+        "inference_service": "google",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "gemini-2.5-pro"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-moves-buyer/results-1.ep",
+      "job_id": "job-1393d0ca39b0422a9587c5ab105bc3f8",
+      "manifest_hash": "457c69b758579d55b653c35ce3ff5741c70e210c02e185742080dbd28687ebfe",
+      "ingested_at": "2026-09-12T12:19:34.420789+00:00",
+      "answer_hash": "3e80fc99bb20ac7095e26eb65d5f19ec63d212a8d8395540713b92e95e4474f8"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "job_id": "job-86039fb6866748f3b96290caa627e00d",
+  "actor_id": "dutch",
+  "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/.perla/jobs/job-86039fb6866748f3b96290caa627e00d.jobs.ep",
+  "reused": false,
+  "kind": "rebuttals",
+  "move": 2,
+  "label": "round-2-rebuttals-dutch",
+  "service": "google",
+  "model": "gemini-2.5-flash",
+  "attempt": 1,
+  "result": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-dutch/results-1.ep",
+  "command": [
+    "ep",
+    "run",
+    "--jobs",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/.perla/jobs/job-86039fb6866748f3b96290caa627e00d.jobs.ep",
+    "--model_list",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-dutch/model.ep",
+    "--background",
+    "--wait",
+    "--timeout",
+    "900",
+    "--task-timeout",
+    "600",
+    "--remote_inference_results_visibility",
+    "private",
+    "--fresh",
+    "--output",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-dutch/results-1.ep"
+  ],
+  "prepared_at": "2026-09-12T12:07:53.510582+00:00"
+}

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perla — execution reference</title><style>
+:root { color-scheme: light; --ink:#202a2a; --muted:#586361; --accent:#12624b; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:1.5rem; }
+body { margin:0; background:#fbfaf7; color:var(--ink); font:19px/1.72 Georgia,"Times New Roman",serif; }
+main { width:min(100% - 3rem, 820px); margin:0 auto; padding:4.5rem 0 3rem; }
+header { margin-bottom:3rem; }
+h1 { font-size:clamp(2.7rem,6vw,4.2rem); font-weight:normal; line-height:1.08; letter-spacing:-.035em; margin:.5em 0; }
+h2 { font-size:2rem; font-weight:normal; line-height:1.2; margin:3rem 0 1.2rem; }
+h3 { font-size:1.5rem; line-height:1.3; margin:2.2rem 0 1rem; }
+h4 { font-size:1.15rem; margin:1.6rem 0 .3rem; }
+h5 { font:600 .9rem/1.5 system-ui,sans-serif; }
+p { margin:.9rem 0 1.1rem; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px; overflow-wrap:anywhere; }
+a:hover { color:#06412f; }
+a:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.eyebrow, nav, .artifacts, .fact-id, footer, summary { font-family:system-ui,sans-serif; }
+.eyebrow { font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); }
+.dek { font-size:1.38rem; line-height:1.5; color:var(--muted); }
+nav { border-block:1px solid #d8dcd6; font-size:.95rem; padding:1.2rem 0; margin:2rem 0 3rem; }
+nav h2 { font:600 1.05rem/1.4 system-ui,sans-serif; margin:0 0 .8rem; }
+nav ol { margin:0; padding-left:1.6rem; }
+nav li { padding:.2rem 0; }
+.fact-id { font-size:.77rem; color:var(--muted); padding-right:.4rem; }
+code { font: .84em/1.6 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
+p code { background:#edf0e9; padding:.1em .25em; }
+.highlight { margin:1.3rem 0; background:#f0f2ed; border-left:3px solid #a8bdb0; }
+.highlight pre { margin:0; padding:1.1rem 1.2rem; overflow-x:auto; font-size:.87rem; line-height:1.65; tab-size:2; }
+.highlight code { font-size:inherit; overflow-wrap:normal; }
+.dossier-commands pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+details { border-block-end:1px solid #d8dcd6; padding:.8rem 0; margin:1rem 0; }
+summary { cursor:pointer; font-size:.95rem; color:var(--accent); }
+.prompt { white-space:pre-wrap; overflow-wrap:anywhere; font: .85rem/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.artifacts { font-size:.85rem; line-height:1.7; }
+blockquote { margin:1.2rem 0; padding-left:1.3rem; border-left:2px solid #a8bdb0; }
+.model-play { margin:2rem 0 2.8rem; border:1px solid #b9c7c2; background:#fff; }
+.play-header { margin:0; padding:1.2rem 1.5rem; background:#203e38; color:#fff; }
+.play-kicker, .play-model, .play-label, .play-caption, .play-context, .play-footer { font-family:system-ui,sans-serif; }
+.play-kicker { margin:0 0 .5rem; font-size:.73rem; line-height:1.6; letter-spacing:.07em; text-transform:uppercase; color:#d4e4de; }
+.play-header h3, .play-header h4 { margin:0; color:#fff; font:normal 1.65rem/1.3 Georgia,serif; }
+.play-model { margin:.55rem 0 0; font-size:.84rem; color:#e3ece8; }
+.play-input { padding:1.2rem 1.5rem; background:#edf1f2; border-bottom:1px solid #cdd6d5; }
+.play-output { padding:1.3rem 1.5rem; border-left:4px solid #26765b; }
+.play-label { margin:0 0 .7rem; font-size:.78rem; font-weight:750; letter-spacing:.065em; text-transform:uppercase; color:#29483f; }
+.play-caption { margin:.9rem 0 .45rem; font-size:.78rem; color:#52625e; }
+.play-instruction { margin:0; padding:0; border:0; font: .85rem/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.play-instruction p { margin:0; }
+.play-context { margin:.9rem 0 0; font-size:.82rem; line-height:1.65; color:#41524d; }
+.play-actions, .play-rationale { margin:0; padding:0; border:0; }
+.play-actions { font-size:1.1rem; line-height:1.7; }
+.play-actions p { margin:.5rem 0 1rem; }
+.play-actions p + p { padding-top:1rem; border-top:1px solid #e2e8e3; }
+.play-actions p:last-child, .play-rationale p:last-child { margin-bottom:0; }
+.play-rationale { font-size:1rem; }
+.play-footer { margin:0; padding:.8rem 1.5rem; border-top:1px solid #d9e1dc; color:#52625e; font-size:.78rem; line-height:1.6; }
+.status { border-left:3px solid #a07a37; padding-left:1rem; }
+footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #d8dcd6; font-size:.8rem; color:var(--muted); }
+@media(max-width:600px) { body { font-size:17px; } main { width:calc(100% - 2rem); padding-top:2.5rem; } h2 { font-size:1.7rem; } .highlight pre { padding:.9rem; } }
+@media(max-width:600px) { .play-header, .play-input, .play-output { padding:1rem; } .play-footer { padding:.75rem 1rem; } .play-actions { font-size:1rem; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print { main { width:100%; padding:0; } body { font-size:11pt; background:white; } nav { display:none; } .highlight pre { white-space:pre-wrap; overflow-wrap:anywhere; } }
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #F00 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #04D } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #00F; font-weight: bold } /* Name.Class */
+.highlight .no { color: #800 } /* Name.Constant */
+.highlight .nd { color: #A2F } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #00F } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #BBB } /* Text.Whitespace */
+.highlight .mb { color: #666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666 } /* Literal.Number.Float */
+.highlight .mh { color: #666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #00F } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666 } /* Literal.Number.Integer.Long */</style></head><body><main><header><p class="eyebrow">Perla · Execution reference</p><h1>Run the game, inspect each stage, and recover a failed job.</h1><p class="dek">Direct Perla and ep commands for the <a href="index.html">Starbucks tutorial</a>. Work from the initialized game directory with the virtual environment active.</p></header>
+<nav aria-label="Execution contents"><ol><li><a href="#models">Reusable model configurations</a></li><li><a href="#round-1">January</a></li><li><a href="#round-2">February</a></li><li><a href="#round-3">March</a></li><li><a href="#recovery">Timeouts and rejected responses</a></li><li><a href="#human-review">Human-review projects</a></li><li><a href="#reconcile">Conflicting board updates</a></li><li><a href="#endgame">Optional endgame assessment</a></li></ol></nav>
+<p>If you have not initialized the game and loaded the cast, begin with <a href="index.html#setup">tutorial setup</a> or <a href="build.html#decision">build the complete case through commands</a>. Both walkthroughs explicitly delegate review. Continue only when each preceding command succeeds; the checks described below identify the next expected state.</p>
+<section id="models"><h2>Configure models once</h2>
+<p>Skip this section if the tutorial’s model commands already created these files. Each file contains one model, so each Jobs package returns one answer.</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>models
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gpt-4.1<span class="w"> </span>--service<span class="w"> </span>openai<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/home.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gemini-2.5-flash<span class="w"> </span>--service<span class="w"> </span>google<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/dutch.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gpt-4.1-mini<span class="w"> </span>--service<span class="w"> </span>openai<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/dunkin.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gemini-2.5-pro<span class="w"> </span>--service<span class="w"> </span>google<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/buyer.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gpt-4.1<span class="w"> </span>--service<span class="w"> </span>openai<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/control.ep
+</code></pre></div>
+
+</section>
+<section id="round-1"><h2>January: round 1</h2><p>Start with closed_move = 0. Use the same models directory. The named export directories belong only to this round.</p><h3>Commit every actor&#x27;s move</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>moves<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/moves
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/buyer.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>moves<span class="w"> </span>--from<span class="w"> </span>round-1/moves
+perla<span class="w"> </span>status
+</code></pre></div>
+<h3>Generate and route the initial rulings</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>open<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/rulings
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rulings/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rulings/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rulings<span class="w"> </span>--from<span class="w"> </span>round-1/rulings
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+perla<span class="w"> </span>adjudicate<span class="w"> </span>route<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<h3>Collect the affected actors&#x27; rebuttals</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>rebuttals<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/rebuttals
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/buyer.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rebuttals<span class="w"> </span>--from<span class="w"> </span>round-1/rebuttals
+</code></pre></div>
+<p>This case normally involves all four actors. If your rulings affect fewer actors, execute only the files Perla exported for that rebuttal batch.</p><h3>Resolve and inspect the final outcomes</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>resolve<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/resolutions
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/resolutions/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/resolutions/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>resolutions<span class="w"> </span>--from<span class="w"> </span>round-1/resolutions
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<h3>Close after review and reconciliation</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>close<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+perla<span class="w"> </span>status
+</code></pre></div>
+<p>Success sets closed_move to 1. Resolve any conflicts and satisfy the selected review policy before closure.</p></section><section id="round-2"><h2>February: round 2</h2><p>Start with closed_move = 1. Use the same models directory. The named export directories belong only to this round.</p><h3>Commit every actor&#x27;s move</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>moves<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span><span class="w"> </span>--output<span class="w"> </span>round-2/moves
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/moves/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/moves/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/moves/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/moves/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/moves/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/moves/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/moves/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/moves/buyer.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>moves<span class="w"> </span>--from<span class="w"> </span>round-2/moves
+perla<span class="w"> </span>status
+</code></pre></div>
+<h3>Generate and route the initial rulings</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>open<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span><span class="w"> </span>--output<span class="w"> </span>round-2/rulings
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/rulings/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/rulings/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rulings<span class="w"> </span>--from<span class="w"> </span>round-2/rulings
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span>
+perla<span class="w"> </span>adjudicate<span class="w"> </span>route<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span>
+</code></pre></div>
+<h3>Collect the affected actors&#x27; rebuttals</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>rebuttals<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span><span class="w"> </span>--output<span class="w"> </span>round-2/rebuttals
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/rebuttals/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/rebuttals/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/rebuttals/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/rebuttals/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/rebuttals/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/rebuttals/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/rebuttals/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/rebuttals/buyer.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rebuttals<span class="w"> </span>--from<span class="w"> </span>round-2/rebuttals
+</code></pre></div>
+<p>This case normally involves all four actors. If your rulings affect fewer actors, execute only the files Perla exported for that rebuttal batch.</p><h3>Resolve and inspect the final outcomes</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>resolve<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span><span class="w"> </span>--output<span class="w"> </span>round-2/resolutions
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-2/resolutions/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-2/resolutions/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>resolutions<span class="w"> </span>--from<span class="w"> </span>round-2/resolutions
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span>
+</code></pre></div>
+<h3>Close after review and reconciliation</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>close<span class="w"> </span>--move<span class="w"> </span><span class="m">2</span>
+perla<span class="w"> </span>status
+</code></pre></div>
+<p>Success sets closed_move to 2. Resolve any conflicts and satisfy the selected review policy before closure.</p></section><section id="round-3"><h2>March: round 3</h2><p>Start with closed_move = 2. Use the same models directory. The named export directories belong only to this round.</p><h3>Commit every actor&#x27;s move</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>moves<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span><span class="w"> </span>--output<span class="w"> </span>round-3/moves
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/moves/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/moves/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/moves/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/moves/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/moves/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/moves/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/moves/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/moves/buyer.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>moves<span class="w"> </span>--from<span class="w"> </span>round-3/moves
+perla<span class="w"> </span>status
+</code></pre></div>
+<h3>Generate and route the initial rulings</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>open<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span><span class="w"> </span>--output<span class="w"> </span>round-3/rulings
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/rulings/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/rulings/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rulings<span class="w"> </span>--from<span class="w"> </span>round-3/rulings
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span>
+perla<span class="w"> </span>adjudicate<span class="w"> </span>route<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span>
+</code></pre></div>
+<h3>Collect the affected actors&#x27; rebuttals</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>rebuttals<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span><span class="w"> </span>--output<span class="w"> </span>round-3/rebuttals
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/rebuttals/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/rebuttals/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/rebuttals/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/rebuttals/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/rebuttals/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/rebuttals/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/rebuttals/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/rebuttals/buyer.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rebuttals<span class="w"> </span>--from<span class="w"> </span>round-3/rebuttals
+</code></pre></div>
+<p>This case normally involves all four actors. If your rulings affect fewer actors, execute only the files Perla exported for that rebuttal batch.</p><h3>Resolve and inspect the final outcomes</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>resolve<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span><span class="w"> </span>--output<span class="w"> </span>round-3/resolutions
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-3/resolutions/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-3/resolutions/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>resolutions<span class="w"> </span>--from<span class="w"> </span>round-3/resolutions
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span>
+</code></pre></div>
+<h3>Close after review and reconciliation</h3><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>close<span class="w"> </span>--move<span class="w"> </span><span class="m">3</span>
+perla<span class="w"> </span>status
+</code></pre></div>
+<p>Success sets closed_move to 3. Resolve any conflicts and satisfy the selected review policy before closure.</p></section>
+<section id="recovery"><h2>Recover execution without replacing accepted moves</h2>
+<h3>A remote job is still running</h3>
+<p><code>ep run --background --wait</code> can time out while a remote interview continues. Its JSON response includes a remote job UUID. Use that UUID to inspect or resume the same job. The placeholders below are values to replace with the actual UUID; they are not Perla’s internal job IDs.</p>
+<div class="highlight"><pre><span></span><code>ep<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>status<span class="w"> </span>REMOTE_JOB_UUID
+ep<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span><span class="nb">wait</span><span class="w"> </span>REMOTE_JOB_UUID<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/home.results.ep
+<span class="c1"># If the remote job has already completed:</span>
+ep<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>results<span class="w"> </span>REMOTE_JOB_UUID<span class="w"> </span>--output<span class="w"> </span>round-1/moves/home.results.ep
+</code></pre></div>
+
+<p>After a remote failure, inspect <code>ep jobs errors REMOTE_JOB_UUID</code>. Do not submit another paid job merely because the original one is slow. If there is no complete usable result, preserve the failure record before a fresh execution.</p>
+<h3>Perla rejects a completed response</h3>
+<p>Batch import identifies the Results file that failed. It commits none of the pending batch when one answer is missing or invalid. Keep valid files from the other actors. Preserve the rejected response and error, then rerun only that actor’s original ep command with <code>--fresh</code> and import the batch again.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example: only when Perla has rejected this file.</span>
+<span class="c1"># Choose a new unused archive name for every rejected attempt.</span>
+mv<span class="w"> </span>round-1/moves/home.results.ep<span class="w"> </span>round-1/moves/home.rejected-1.results.ep
+
+<span class="c1"># Rerun the home ep command from the round above, then:</span>
+perla<span class="w"> </span>ingest<span class="w"> </span>moves<span class="w"> </span>--from<span class="w"> </span>round-1/moves
+</code></pre></div>
+
+<p>A structurally accepted move is immutable. Repeating a batch import skips jobs already accepted; it does not select the most attractive response. Keep the original export receipt and do not edit returned text to make it pass validation. Re-exporting a different batch requires a new directory.</p>
+</section>
+<section id="human-review"><h2>Run with a facilitator’s review</h2>
+<p>At setup, initialize a fresh game without <code>--delegate dossiers --delegate rulings</code>, load the same cast and select <code>case/policy.json</code>, which budgets five reviews. After the facilitator has reviewed the actual dossiers, record that approval with their identity and explanation:</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>workflow<span class="w"> </span>approve<span class="w"> </span>dossiers<span class="w"> </span>--by<span class="w"> </span>FACILITATOR<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--note<span class="w"> </span><span class="s1">'Reviewed the dossier sources, authority, economics and information limits'</span>
+</code></pre></div>
+
+<p>After final resolutions, <code>perla adjudicate show --move 1</code> exposes the review routing. Obtain each required individual assessment, then record final approval. Substitute real ruling IDs and reasons from that review:</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>assess<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--ruling<span class="w"> </span>RULING_ID<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--by<span class="w"> </span>FACILITATOR<span class="w"> </span>--note<span class="w"> </span><span class="s1">'Specific assessment of this final ruling'</span>
+perla<span class="w"> </span>workflow<span class="w"> </span>approve<span class="w"> </span>rulings<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--by<span class="w"> </span>FACILITATOR<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--note<span class="w"> </span><span class="s1">'Reason for approving the final round outcomes'</span>
+perla<span class="w"> </span>adjudicate<span class="w"> </span>close<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<p>These commands record a review that occurred; running them is not the review itself. If the reviewer finds a substantive problem, do not approve it merely to advance the round. Perla currently supports the single actor rebuttal/control resolution cycle, explicit board reconciliation and fresh scenario runs; it does not offer an unrestricted post-resolution ruling editor.</p>
+</section>
+<section id="reconcile"><h2>Resolve conflicting board fields</h2>
+<p>Two final rulings may propose different values for the same top-level board field. <code>adjudicate show</code> exposes the unresolved candidates, and closure refuses to choose silently. Prepare a JSON choices file naming one actual ruling for every conflicting field, with a reason. This is an example of the file structure; replace the field and ruling ID with the conflict in your run:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"choices"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"calendar_period"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"ruling_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTUAL_RULING_ID"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This candidate uses the scheduled end of the current round."</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>reconcile<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--input<span class="w"> </span>choices.json<span class="w"> </span>--by<span class="w"> </span>FACILITATOR
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<p>Reconciliation selects an existing proposed value; it cannot invent a replacement outcome. A materially unsuitable set of candidates is a reason to revisit the scenario rather than manufacture a clean closure.</p>
+</section>
+<section id="endgame"><h2>Optionally record the criterion assessment</h2>
+<p>This stage follows three closed rounds. It was not executed in the original worked case. Complete the novelty baseline first so the final assessment can compare proposed insights with what an analyst could have anticipated from the initial inputs.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>novelty<span class="w"> </span>--output<span class="w"> </span>evaluation/novelty
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>evaluation/novelty/scribe.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>evaluation/novelty/scribe.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>novelty<span class="w"> </span>--from<span class="w"> </span>evaluation/novelty
+
+perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>endgame<span class="w"> </span>--output<span class="w"> </span>evaluation/endgame
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>evaluation/endgame/scribe.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>evaluation/endgame/scribe.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>endgame<span class="w"> </span>--from<span class="w"> </span>evaluation/endgame
+perla<span class="w"> </span>endgame<span class="w"> </span>show
+perla<span class="w"> </span>workflow<span class="w"> </span>validate
+</code></pre></div>
+
+<p>Inspect missing evidence, insight ownership and prediction-resolution requirements before finalization. An unevaluated criterion is a legitimate assessment when the required observations are absent. <code>perla endgame</code> finalizes only after its completion gates are satisfied or explicit, attributed waivers are supplied; the assessment above does not silently finalize a report.</p>
+</section>
+<footer><p><a href="index.html">Tutorial</a> · <a href="reference.html">Complete evidence and transcripts</a></p></footer>
+</main></body></html>

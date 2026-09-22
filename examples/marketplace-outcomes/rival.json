@@ -1,0 +1,9 @@
+{
+  "facts": [
+    {"id": "r1", "claim": "The fictional incumbent earns its margin from self-service volume and can fund a twelve-month fee reduction", "sources": ["Fictional teaching assumption R1"]}
+  ],
+  "incentives": ["Defend self-service transaction volume and buyer retention (r1)"],
+  "constraints": ["Fee-cut capacity is limited to twelve months (r1)"],
+  "capabilities": ["Fund a temporary fee reduction across incumbent buyer accounts (r1)"],
+  "red_lines": ["Avoid permanent fee reductions that erase self-service margins (r1)"]
+}

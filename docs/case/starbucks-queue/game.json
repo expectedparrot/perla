@@ -1,0 +1,66 @@
+{
+  "decision": {
+    "statement": "Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full.",
+    "offer": "Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays",
+    "segment": "50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés",
+    "pricing": "Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure",
+    "launch_period": "January 2027; a proposed experiment, not an announced Starbucks policy",
+    "scope": "50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores",
+    "moves": 3,
+    "months_per_move": 1
+  },
+  "criteria": [
+    {
+      "id": "service",
+      "condition": "The baseline-adjusted reduction in peak café order-to-handoff p90 wait is less than 20 percent by move two across at least forty complete pilot/comparison store pairs",
+      "observable": "adjusted_cafe_wait_reduction_pct; equally weighted store-pair changes in p90 wait, comparing peak weekday windows before and after the pilot; complete_store_pairs >= 40",
+      "threshold": "Below 20% reduction; fewer than 40 complete pairs or missing baseline/wait evidence is unevaluated",
+      "deadline_move": 2
+    },
+    {
+      "id": "economics",
+      "condition": "Adjusted daily contribution per pilot café after lost orders, substitution between channels and incremental staffing is negative by move three across at least forty complete store pairs",
+      "observable": "incremental_daily_contribution_usd after matched-store baseline adjustment, including all channels and added labor; complete_store_pairs >= 40",
+      "threshold": "Below $0 per café per day; incomplete transaction or cost evidence is unevaluated",
+      "deadline_move": 3
+    },
+    {
+      "id": "retention",
+      "condition": "Thirty-day repeat purchase among baseline mobile customers falls by more than three percentage points relative to the comparison-cohort change by move three",
+      "observable": "mobile_repeat_change_pp; compare baseline-defined cohorts across all Starbucks purchase channels, with at least 1000 customers per arm and complete 30-day follow-up",
+      "threshold": "Below -3 percentage points; incomplete cohorts or missing follow-up is unevaluated",
+      "deadline_move": 3
+    }
+  ],
+  "board": {
+    "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+    "calendar_period": "January 2027",
+    "period_ends": {
+      "1": "2027-01-31",
+      "2": "2027-02-28",
+      "3": "2027-03-31"
+    },
+    "public_roster": [
+      "Starbucks (home)",
+      "Dutch Bros (competitor)",
+      "Dunkin (competitor)",
+      "Composite morning customers (assumed wildcard)"
+    ],
+    "pilot_cafes": 50,
+    "comparison_cafes": 50,
+    "peak_window": "Weekdays 07:00–10:00 local time",
+    "cafe_capacity_reservation_pct": 20,
+    "assumed_contribution_per_transaction_usd": 3,
+    "measured_capacity_per_15min": null,
+    "complete_store_pairs": 0,
+    "adjusted_cafe_wait_reduction_pct": null,
+    "incremental_daily_contribution_usd": null,
+    "mobile_repeat_change_pp": null,
+    "pilot_cohort_complete_customers": 0,
+    "comparison_cohort_complete_customers": 0,
+    "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+    "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+    "assumed_loaded_labor_cost_per_hour_usd": 30,
+    "public_strategy_history": []
+  }
+}

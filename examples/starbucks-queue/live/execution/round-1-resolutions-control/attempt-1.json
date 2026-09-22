@@ -1,0 +1,33 @@
+{
+  "job_id": "job-f6606e9956f54198a8307a71322a7d87",
+  "actor_id": "control",
+  "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/.perla/jobs/job-f6606e9956f54198a8307a71322a7d87.jobs.ep",
+  "reused": false,
+  "kind": "resolutions",
+  "move": 1,
+  "label": "round-1-resolutions-control",
+  "service": "openai",
+  "model": "gpt-4.1",
+  "attempt": 1,
+  "result": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-resolutions-control/results-1.ep",
+  "command": [
+    "ep",
+    "run",
+    "--jobs",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/.perla/jobs/job-f6606e9956f54198a8307a71322a7d87.jobs.ep",
+    "--model_list",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-resolutions-control/model.ep",
+    "--background",
+    "--wait",
+    "--timeout",
+    "900",
+    "--task-timeout",
+    "600",
+    "--remote_inference_results_visibility",
+    "private",
+    "--fresh",
+    "--output",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-resolutions-control/results-1.ep"
+  ],
+  "prepared_at": "2026-09-12T12:06:34.194757+00:00"
+}

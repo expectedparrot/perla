@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perla — the Starbucks queue strategy case</title><style>
+:root { color-scheme: light; --ink:#202a2a; --muted:#586361; --accent:#12624b; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:1.5rem; }
+body { margin:0; background:#fbfaf7; color:var(--ink); font:19px/1.72 Georgia,"Times New Roman",serif; }
+main { width:min(100% - 3rem, 820px); margin:0 auto; padding:4.5rem 0 3rem; }
+header { margin-bottom:3rem; }
+h1 { font-size:clamp(2.7rem,6vw,4.2rem); font-weight:normal; line-height:1.08; letter-spacing:-.035em; margin:.5em 0; }
+h2 { font-size:2rem; font-weight:normal; line-height:1.2; margin:3rem 0 1.2rem; }
+h3 { font-size:1.5rem; line-height:1.3; margin:2.2rem 0 1rem; }
+h4 { font-size:1.15rem; margin:1.6rem 0 .3rem; }
+h5 { font:600 .9rem/1.5 system-ui,sans-serif; }
+p { margin:.9rem 0 1.1rem; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px; overflow-wrap:anywhere; }
+a:hover { color:#06412f; }
+a:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.eyebrow, nav, .artifacts, .fact-id, footer, summary { font-family:system-ui,sans-serif; }
+.eyebrow { font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); }
+.dek { font-size:1.38rem; line-height:1.5; color:var(--muted); }
+nav { border-block:1px solid #d8dcd6; font-size:.95rem; padding:1.2rem 0; margin:2rem 0 3rem; }
+nav h2 { font:600 1.05rem/1.4 system-ui,sans-serif; margin:0 0 .8rem; }
+nav ol { margin:0; padding-left:1.6rem; }
+nav li { padding:.2rem 0; }
+.fact-id { font-size:.77rem; color:var(--muted); padding-right:.4rem; }
+code { font: .84em/1.6 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
+p code { background:#edf0e9; padding:.1em .25em; }
+.highlight { margin:1.3rem 0; background:#f0f2ed; border-left:3px solid #a8bdb0; }
+.highlight pre { margin:0; padding:1.1rem 1.2rem; overflow-x:auto; font-size:.87rem; line-height:1.65; tab-size:2; }
+.highlight code { font-size:inherit; overflow-wrap:normal; }
+.dossier-commands pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+details { border-block-end:1px solid #d8dcd6; padding:.8rem 0; margin:1rem 0; }
+summary { cursor:pointer; font-size:.95rem; color:var(--accent); }
+.prompt { white-space:pre-wrap; overflow-wrap:anywhere; font: .85rem/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.artifacts { font-size:.85rem; line-height:1.7; }
+blockquote { margin:1.2rem 0; padding-left:1.3rem; border-left:2px solid #a8bdb0; }
+.model-play { margin:2rem 0 2.8rem; border:1px solid #b9c7c2; background:#fff; }
+.play-header { margin:0; padding:1.2rem 1.5rem; background:#203e38; color:#fff; }
+.play-kicker, .play-model, .play-label, .play-caption, .play-context, .play-footer { font-family:system-ui,sans-serif; }
+.play-kicker { margin:0 0 .5rem; font-size:.73rem; line-height:1.6; letter-spacing:.07em; text-transform:uppercase; color:#d4e4de; }
+.play-header h3, .play-header h4 { margin:0; color:#fff; font:normal 1.65rem/1.3 Georgia,serif; }
+.play-model { margin:.55rem 0 0; font-size:.84rem; color:#e3ece8; }
+.play-input { padding:1.2rem 1.5rem; background:#edf1f2; border-bottom:1px solid #cdd6d5; }
+.play-output { padding:1.3rem 1.5rem; border-left:4px solid #26765b; }
+.play-label { margin:0 0 .7rem; font-size:.78rem; font-weight:750; letter-spacing:.065em; text-transform:uppercase; color:#29483f; }
+.play-caption { margin:.9rem 0 .45rem; font-size:.78rem; color:#52625e; }
+.play-instruction { margin:0; padding:0; border:0; font: .85rem/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.play-instruction p { margin:0; }
+.play-context { margin:.9rem 0 0; font-size:.82rem; line-height:1.65; color:#41524d; }
+.play-actions, .play-rationale { margin:0; padding:0; border:0; }
+.play-actions { font-size:1.1rem; line-height:1.7; }
+.play-actions p { margin:.5rem 0 1rem; }
+.play-actions p + p { padding-top:1rem; border-top:1px solid #e2e8e3; }
+.play-actions p:last-child, .play-rationale p:last-child { margin-bottom:0; }
+.play-rationale { font-size:1rem; }
+.play-footer { margin:0; padding:.8rem 1.5rem; border-top:1px solid #d9e1dc; color:#52625e; font-size:.78rem; line-height:1.6; }
+.status { border-left:3px solid #a07a37; padding-left:1rem; }
+footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #d8dcd6; font-size:.8rem; color:var(--muted); }
+@media(max-width:600px) { body { font-size:17px; } main { width:calc(100% - 2rem); padding-top:2.5rem; } h2 { font-size:1.7rem; } .highlight pre { padding:.9rem; } }
+@media(max-width:600px) { .play-header, .play-input, .play-output { padding:1rem; } .play-footer { padding:.75rem 1rem; } .play-actions { font-size:1rem; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print { main { width:100%; padding:0; } body { font-size:11pt; background:white; } nav { display:none; } .highlight pre { white-space:pre-wrap; overflow-wrap:anywhere; } }
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #F00 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #04D } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #00F; font-weight: bold } /* Name.Class */
+.highlight .no { color: #800 } /* Name.Constant */
+.highlight .nd { color: #A2F } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #00F } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #BBB } /* Text.Whitespace */
+.highlight .mb { color: #666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666 } /* Literal.Number.Float */
+.highlight .mh { color: #666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #00F } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666 } /* Literal.Number.Integer.Long */</style></head><body><main><header>
+<p class="eyebrow">Perla · A worked strategy case</p>
+<h1>Protect the café queue without giving away the morning customer.</h1>
+<p class="dek">Use a competitive simulation to improve a Starbucks pilot: give rivals a reason to respond, let customers reject the offer, and challenge the explanation of what happens next.</p>
+</header>
+<section id="payoff">
+<h2>The decision this exercise helps you make</h2>
+<p>Suppose Starbucks reserves part of its morning production capacity for customers standing in the café. Mobile customers would see later pickup slots when the remaining capacity fills. Faster café service sounds attractive. But a commuter can leave, a rival can subsidize the first visit, and a customer who changes their morning routine may be slow to return.</p>
+<p>Our recommendation from this exercise is to <strong>test a flexible reservation before expanding a fixed rule</strong>. Compare a protected café allocation with one that releases unused capacity to mobile orders. Track the entire purchase journey, including later purchases and no purchase, and measure whether customers return after a rival’s offer ends. A shorter café queue alone is insufficient grounds to expand.</p>
+<p>That is an experimental recommendation drawn from the scenario, not a forecast of Starbucks’ results. The three rounds below make the reasoning inspectable: rivals respond to restricted mobile availability, Starbucks adapts its rule, and the customer model raises the possibility that habits persist after service recovers. The useful output is a better pilot design and a sharper question to test.</p>
+</section>
+<nav aria-labelledby="contents-title">
+<h2 id="contents-title">Work through the case</h2>
+<ol>
+<li><a href="#method">Understand how the simulation works</a></li>
+<li><a href="#setup">Install the tools and choose how to build the case</a></li>
+<li><a href="#players">Understand and edit the four players</a></li>
+<li><a href="#control">Configure control’s evidence and decision rules</a></li>
+<li><a href="#round-1">Play January: moves, ruling, challenge, resolution</a></li>
+<li><a href="#later-rounds">Follow the adaptations in February and March</a></li>
+<li><a href="#decision-memo">Write the decision memo</a></li>
+</ol>
+<p><a href="reference.html">Full dossiers, prompts, transcripts, and sources</a> · <a href="commands.html">Execution commands and recovery</a></p>
+</nav>
+<section id="method">
+<h2>How a business simulation tests the proposal</h2>
+<p>Perla organizes a strategy exercise around players who have different interests and limited information. In this case, one player makes decisions for Starbucks, two respond as Dutch Bros and Dunkin, and a fourth chooses what customers would do when faced with those offers. We use language models to play these roles. The customer player is a simulated decision maker working from specified customer situations; its answers are not responses from actual customers.</p>
+<p>We give each player a written briefing, called a <em>dossier</em>, describing its background, objectives, resources and limits. The Starbucks player can change the pilot’s staffing and ordering rules. The rival players can choose local offers within their budgets. The customer player can buy coffee elsewhere, make it at home or skip the purchase. Each submits a <em>move</em>: the actions it chooses for that month, without seeing the other players’ current choices.</p>
+<p>A separate model then acts as the adjudicator, called <em>control</em>. It reads the combined moves and explains their likely consequences in a <em>ruling</em>. The players get a chance to object before that ruling becomes the starting situation for the next month. This is where red teaming tests the explanation: a rival or customer can point out that an assumed response conflicts with its incentives or available choices. Below, we build those briefings, play a complete month and inspect an actual objection that changed a ruling.</p>
+<h3>Three kinds of information to keep separate</h3>
+<p><strong>Reported facts</strong> ground the business: company financials, app capabilities and operating models. <strong>Scenario assumptions</strong> define this hypothetical local game: budgets, store counts, customer time limits. <strong>Simulation judgments</strong> describe what might follow when the actors interact. Perla checks structure, citations and job lineage; an accepted response can still make a poor business inference.</p>
+<p>Perla exports EDSL Jobs and imports EDSL Results. The <code>ep</code> CLI chooses models and runs inference through Expected Parrot. The files preserve what each actor saw and returned. In a facilitated game, people can also supply moves and assess rulings.</p>
+</section>
+<section id="setup">
+<h2>Set up the pilot and load its cast</h2>
+<p>Starbucks’ public strategy combines coffeehouse service, staffing investment and digital order sequencing. Its reported Q3 fiscal 2026 US comparable transactions grew 4.2%; the question here is how to sustain momentum while improving the café experience. The particular reservation policy below is our proposed experiment. <a href="https://about.starbucks.com/press/2026/back-to-starbucks-two-year-anniversary/">Strategy context</a> · <a href="https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx">Quarterly results</a>.</p>
+<p>The case covers January–March 2027: 50 pilot cafés, 50 comparison cafés, a 20% café-capacity reservation on weekdays from 7–10 a.m., unchanged prices and up to two extra staff-hours per pilot café per weekday. It assumes relevant local overlap with Dutch Bros and Dunkin. Confirm that overlap before choosing real stores.</p>
+<h3>Install from the source folder</h3>
+<p>You need macOS or Linux, Python 3.11 or later, Git, and an Expected Parrot account for remote inference. If you already have the Perla checkout, open a terminal in the folder containing <code>pyproject.toml</code>. Otherwise download the <a href="perla-source.zip">package source and case bundle</a>, extract it and open a terminal in its <code>perla</code> folder. Python dependencies are downloaded during installation.</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s1">'.[edsl]'</span>
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>anthropic<span class="w"> </span>openai<span class="w"> </span>google-genai
+ep<span class="w"> </span>auth<span class="w"> </span>login
+</code></pre></div>
+
+<p>Keep that terminal active for the commands below. Remote inference uses your account’s credits. The recorded three-round case reported about $0.51 for 32 remote jobs; that is a historical execution cost, not a quote for a new run.</p>
+<h3 id="build">Build the case through commands, or load the supplied files</h3>
+<p>You can author every part of this case with Perla commands. The <a href="build.html#decision">complete command walkthrough</a> starts in an empty game directory and builds the decision, three evaluation criteria, shared starting situation and all four sourced dossiers. It finishes with the review policy and rejoins this tutorial before the first model call.</p>
+<p>After creating a fresh game directory, the command route begins by turning the pilot proposal into a draft decision:</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>game<span class="w"> </span>decision<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--statement<span class="w"> </span><span class="s1">'Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--offer<span class="w"> </span><span class="s1">'Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--segment<span class="w"> </span><span class="s1">'50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--pricing<span class="w"> </span><span class="s1">'Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--launch-period<span class="w"> </span><span class="s1">'January 2027; a proposed experiment, not an announced Starbucks policy'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--scope<span class="w"> </span><span class="s1">'50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--moves<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--months-per-move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<p>Follow the <a href="build.html#criteria">remaining construction steps</a> to add the criteria and initial board, inspect the draft with <code>perla game show</code>, and register it with <code>perla init</code>. You then use <code>actor add</code> and the dossier commands to build each player. This route makes the design choices explicit as you go.</p>
+<p>The file-loading route below imports the same design in fewer commands. Choose it if you want to inspect the prepared inputs and start playing quickly. Both routes produce the same case; use a fresh game directory for whichever route you choose.</p>
+<h3>Create a fresh workspace</h3>
+<p>The case files are written inputs supplied with this tutorial. We assembled public company research, chose a hypothetical pilot and wrote the players’ operating limits. Perla reads that design; it does not research Starbucks or invent these files when you initialize a game. Copy the supplied case into a working folder so you can inspect and adapt it:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>games/starbucks-queue
+cp<span class="w"> </span>-R<span class="w"> </span>docs/case/starbucks-queue<span class="w"> </span>games/starbucks-queue/case
+<span class="nb">cd</span><span class="w"> </span>games/starbucks-queue
+</code></pre></div>
+
+<p>All commands now run from this game directory, which Perla discovers automatically. If you prefer to issue Perla commands from elsewhere, use <code>perla project set /absolute/path/to/your/game</code> once there. Relative paths passed to ep still follow the terminal’s current directory.</p>
+<h3>Define the experiment in game.json</h3>
+<p><a href="case/starbucks-queue/game.json">Read the supplied game.json</a>. It contains three parts: <code>decision</code>, the proposal being tested; <code>criteria</code>, the conditions for judging it; and <code>board</code>, the starting situation shared with all players. Here is an excerpt showing how the proposal and calendar become inputs:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"decision"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"statement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"moves"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"months_per_move"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>This excerpt illustrates the fields; the supplied file also specifies the offer, customer segment, pricing and scope. Three moves of one month each give Starbucks two opportunities to adapt after January. The 50-café scope and 20% reservation are choices we made for the experiment. For another strategy question, the case author must make those choices explicitly.</p>
+<p>We also wrote three decision criteria before play: seek a 20% reduction in café waiting time by February, nonnegative incremental contribution by March and no more than a three-percentage-point deterioration in repeat purchasing by March. The file specifies comparison groups and minimum sample sizes. These are proposed standards for evaluating a real pilot; a model’s prediction does not satisfy them.</p>
+<p>The initial <code>board</code> records January 2027, the participating store counts, the reservation rule and the public market context. Actual wait, contribution and retention measurements start as <code>null</code>, meaning unmeasured. Its <code>measurement_rule</code> tells control to keep hypothetical estimates separate from observations. This is how the case author defines both what everyone knows at the start and what remains unknown.</p>
+<p>Initialize Perla from the complete supplied file once you have inspected those choices. This creates the local <code>.perla</code> record and fixes the decision and criteria for this run. The two <code>--delegate</code> options let this model-only walkthrough proceed without a person signing off on dossiers and rulings. For a facilitated exercise, omit them and follow the <a href="commands.html#human-review">human-review instructions</a>.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>init<span class="w"> </span>--input<span class="w"> </span><span class="k">case</span>/game.json<span class="w"> </span>--delegate<span class="w"> </span>dossiers<span class="w"> </span>--delegate<span class="w"> </span>rulings
+</code></pre></div>
+
+<h3>Connect the players to their written briefings</h3>
+<p><a href="case/starbucks-queue/players.json">players.json</a> is the roster we wrote for this case. Here is the complete file:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"actors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"home"</span><span class="p">,</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Starbucks"</span><span class="p">,</span><span class="w"> </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"home"</span><span class="p">,</span><span class="w"> </span><span class="nt">"dossier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"home.json"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dutch"</span><span class="p">,</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dutch Bros"</span><span class="p">,</span><span class="w"> </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"competitor"</span><span class="p">,</span><span class="w"> </span><span class="nt">"dossier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dutch.json"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dunkin"</span><span class="p">,</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dunkin"</span><span class="p">,</span><span class="w"> </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"competitor"</span><span class="p">,</span><span class="w"> </span><span class="nt">"dossier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dunkin.json"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Morning customers (composite)"</span><span class="p">,</span><span class="w"> </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wildcard"</span><span class="p">,</span><span class="w"> </span><span class="nt">"dossier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer.json"</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The IDs are short names used in later commands. The <code>home</code> role identifies the company whose decision we are testing; <code>competitor</code> identifies its rivals; <code>wildcard</code> lets us include another participant, here customers. Each <code>dossier</code> path points to a briefing beside this roster, so <code>home.json</code> means <code>case/home.json</code>.</p>
+<p>Those briefings contain the substance of the players: sourced facts, incentives, constraints, capabilities and limits they must not cross. For example, <a href="case/starbucks-queue/home.json">Starbucks’ briefing</a> cites its quarterly report for segment financials, but labels the $3 transaction contribution and two-hour staffing allowance as author-designed assumptions. The <a href="#players">next section</a> explains all four backgrounds and shows how to author dossier entries with Perla commands.</p>
+<p>Load the roster and all four complete briefings together:</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>actor<span class="w"> </span>load<span class="w"> </span>--input<span class="w"> </span><span class="k">case</span>/players.json
+</code></pre></div>
+
+<p>This registers the players and records their dossiers in one transaction. It refuses conflicting existing content, so loading the case again cannot silently replace your edits. It has not yet asked a model to choose a move.</p>
+<h3>Choose how rulings receive review</h3>
+<p>The final input, <a href="case/starbucks-queue/live-policy.json">live-policy.json</a>, controls review of the adjudicator’s work. We supplied this policy for the automated walkthrough:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"human_budget"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"auto_confidence"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"judgment_share_threshold"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.4</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><code>human_budget</code> allocates zero human reviews for escalated rulings. <code>auto_confidence</code> sets the confidence threshold for automatic eligibility of otherwise unflagged rulings grounded in dossier facts. <code>judgment_share_threshold</code> causes a warning when more than 40% of a closed round’s rulings rest on judgment. These settings govern review; they do not make a confident model correct. Player objections still run, and the record retains unassessed judgments.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>policy<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--input<span class="w"> </span><span class="k">case</span>/live-policy.json
+perla<span class="w"> </span>status
+</code></pre></div>
+
+<p>You have now registered the experiment, loaded its players and selected the review policy. The expected <code>data.phase</code> in the status response is <code>move_generation</code>; <code>missing_dossiers</code> is empty. No model has run yet. Editing the copied input files later does not automatically update the registered game; use the dossier commands below to change player briefings, and initialize a fresh game to change the decision or criteria.</p>
+</section>
+<section id="players">
+<h2>Give each player a business—and a limit</h2>
+<p>The cast file is a short roster linking actor IDs to ordinary dossier files. Bulk loading and direct authoring produce the same dossiers; the <a href="reference.html#players">complete backgrounds, sources and authoring commands</a> remain available for inspection.</p>
+<h3 id="player-home">Starbucks: protect service without losing contribution</h3>
+<p>Starbucks’ coffeehouse history makes the visit part of its proposition. Q3 fiscal 2026 North America revenue was $7,395.1 million and operating margin 13.6%, which establish business scale but tell us little about an individual pilot café. The constructed management tension is between the operations lead’s service and labor goals, the digital lead’s pickup reliability, and finance’s all-channel contribution target.</p>
+<p>In the case, Starbucks can adjust pickup windows, staffing and the reservation rule within 50 cafés. It can instrument its own attempts, purchases and repeat visits. It cannot see where every rejected customer ultimately buys. Its assumed $3 transaction contribution and $30 hourly labor cost imply that two extra staff-hours require 20 genuinely incremental transactions per café per day to break even. <a href="reference.html#player-home">Sources and complete dossier</a>.</p>
+<p>Here is how those economics and operating limits enter the player’s briefing. <code>dossier fact</code> records the claim and its source; <code>dossier constraint</code> makes the staffing and pilot limits explicit. These two entries are already in the loaded case, so repeating them leaves the dossier unchanged.</p>
+<div class="dossier-commands"><div class="highlight"><pre><span></span><code>perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h6<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'Assumed economics: $3 contribution per incremental or lost transaction before additional staffing. Assume fully loaded incremental labor costs $30/hour for sensitivity calculations. Two added hours cost $60/store/day and require 20 genuinely incremental transactions to break even before other costs. No actual store margins, baselines or demand elasticities are supplied.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>home<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s1">'The two-hour staff allowance, unchanged prices and 50-store limit are binding game constraints (h5).'</span>
+</code></pre></div>
+</div>
+<p>Inspect the result with <code>perla dossier show home</code>. For the rest of the player’s history, financials, incentives, capabilities and information limits, follow the <a href="build.html#home">complete Starbucks construction commands</a>.</p>
+<h3 id="player-dutch">Dutch Bros: buy a repeat customer, not another bottleneck</h3>
+<p>Dutch Bros’ drive-through service and Order Ahead app offer an alternative morning routine. Its Q2 2026 revenue was $550.9 million, with company-operated same-shop transactions up 3.4%. In our constructed backstory, a regional operator is integrating staff while protecting service consistency. The local player controls 12 participating shops and an assumed $30,000 monthly acquisition-and-labor envelope. It can see its own lane times and redemptions, but cannot target a verified list of people rejected inside Starbucks’ app. <a href="reference.html#player-dutch">Sources and complete dossier</a>.</p>
+<h3 id="player-dunkin">Dunkin: keep the franchisees willing to participate</h3>
+<p>Dunkin brings a coffee-and-food value proposition and a franchise operating model. Its app and breakfast offers make the whole basket relevant. Our player represents 15 consenting local restaurants with an assumed $20,000 monthly staffing-and-promotion budget. The constructed backstory is disagreement over offers that increased traffic without profitable food attachment. The player can coordinate an opt-in offer and measure its own costs; it cannot impose national pricing or assume corporate reimbursement. <a href="reference.html#player-dunkin">Sources and complete dossier</a>.</p>
+<h3 id="player-buyer">Customers: the occasion determines the alternative</h3>
+<p>The customer player represents three assumed occasions: a commuter with ten minutes of slack and an $8 budget; a habitual app user willing to tolerate an eight-minute delay communicated before payment; and a café visitor with a $7 drink budget and 25 minutes to sit. Home preparation, postponement and no purchase are available. These are designed constraints, not measured segment weights or survey responses. The player sees public offers and its own experience, not confidential business plans. <a href="reference.html#player-buyer">Sources and complete dossier</a>.</p>
+<h3>Adjust assumptions before play</h3>
+<p>To explore a different budget, make a separate game, revise the relevant fact with <code>--replace</code>, and revise any dependent constraints consistently before exporting moves. Richness should explain authority and incentives; it should not prescribe the response you hope a player will choose. The eight-minute tolerance, for example, is an input to this game. Its reappearance in a model answer is not a discovery.</p>
+</section>
+<section id="control">
+<h2>Define what control can conclude</h2>
+<p>Control’s default role and response schema are built into Perla. You configure its case evidence through <code>case/game.json</code>, the dossiers and any supplied testimony; you choose its model with ep. There is currently no separate CLI command for replacing control’s role prompt. <code>adjudicate open</code> assembles the frozen evidence after all actors commit.</p>
+<h3>Set the decision gates before initialization</h3>
+<p>The supplied <code>game.json</code> defines three gates in <code>criteria</code>. Service requires a 20% adjusted reduction in café p90 wait by February across at least 40 complete store pairs. Economics requires nonnegative adjusted daily contribution by March. Retention requires no worse than a three-percentage-point adjusted repeat decline, with at least 1,000 complete customers per arm. Change these definitions before initializing a different game; the registered criteria are fixed for that run.</p>
+<p>The same file’s <code>board.measurement_rule</code> specifies how the public situation is represented: keep absent observations empty, put hypothetical estimates in separate <code>simulated_*</code> fields, and carry observable developments into <code>public_strategy_history</code>. The <a href="case/starbucks-queue/README.md">case notes</a> spell out the measurement definitions. Control sees the full dossiers; private information can leak through its published prose, so inspect the proposed public update before closure.</p>
+<h3>Inspect the argument, not just the schema</h3>
+<p>A café-capacity reservation is an action. Lower café waiting time is a consequence requiring assumptions about arrivals, preparation times and use of the reserved capacity. In this case those operating distributions are absent. A good ruling can identify a possible improvement, but its magnitude—and potentially its direction—remains judgment. The prompt requires control to state the basis of each causal link and cite qualified facts such as <code>d.home.h6</code>.</p>
+<p>For each important causal link, ask whether the claimed consequence follows from the cited evidence and whether control has excluded a choice available to a player. Structural acceptance ensures the response fits the game; it does not fix a bad causal argument.</p>
+</section>
+<section id="round-1">
+<h2>January: play one complete round</h2>
+<p>The following commands execute a fresh round. The quoted responses are from the recorded January case; a new model run will produce different wording and may choose different actions. The <a href="reference.html#execution-records">execution records</a> distinguish the original case from the fresh CLI verification.</p>
+<h3>1. Choose each actor’s model once</h3>
+<p>The original case used GPT-4.1 for Starbucks, Gemini 2.5 Flash for Dutch Bros, GPT-4.1 Mini for Dunkin and Gemini 2.5 Pro for customers. Control also used GPT-4.1, in a separate role. This is a reproducible assignment, not evidence that these models represent the businesses or provide independent judgments. The generous output limit lets control return complete structured explanations.</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>models
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gpt-4.1<span class="w"> </span>--service<span class="w"> </span>openai<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/home.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gemini-2.5-flash<span class="w"> </span>--service<span class="w"> </span>google<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/dutch.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gpt-4.1-mini<span class="w"> </span>--service<span class="w"> </span>openai<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/dunkin.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gemini-2.5-pro<span class="w"> </span>--service<span class="w"> </span>google<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/buyer.ep
+ep<span class="w"> </span>models<span class="w"> </span>create<span class="w"> </span>--model<span class="w"> </span>gpt-4.1<span class="w"> </span>--service<span class="w"> </span>openai<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--temperature<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--max-tokens<span class="w"> </span><span class="m">16000</span><span class="w"> </span>--output<span class="w"> </span>models/control.ep
+</code></pre></div>
+
+<h3>2. Elicit four independent commitments</h3>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>moves<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/moves
+</code></pre></div>
+
+<p>The directory now contains four named <code>.jobs.ep</code> files and a batch receipt. Each actor job receives the decision, the initial public board and only its own dossier. None receives another player’s unfinished move. The prompt asks for actions, rationale, resource commitments and expected responses.</p>
+<div class="highlight"><pre><span></span><code>ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/moves/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/moves/buyer.results.ep
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>ingest<span class="w"> </span>moves<span class="w"> </span>--from<span class="w"> </span>round-1/moves
+perla<span class="w"> </span>status
+</code></pre></div>
+
+<p>After all four ep commands complete, there should be four <code>.results.ep</code> files beside the Jobs. Import validates all pending responses together. Success moves <code>data.phase</code> to <code>ready_for_adjudication</code>. If a response fails or ep times out, use the <a href="commands.html#recovery">recovery instructions</a> before continuing.</p>
+<h3>What the four players returned</h3>
+<p>Starbucks committed to the reservation and measurement plan. Dutch Bros combined staffing with an acquisition offer. Dunkin emphasized an opt-in breakfast bundle. The customer player made contingent choices by occasion. The records below separate the instructions given to each model from the actions it returned. Both quoted passages are verbatim; the input is an excerpt, and the links preserve the complete prompts and responses.</p>
+<article class="model-play" aria-labelledby="play-1-home"><header class="play-header"><p class="play-kicker">Recorded model gameplay · Round 1 · January 2027</p><h4 id="play-1-home">Starbucks’s move</h4><p class="play-model">Played by <strong>gpt-4.1</strong> · openai</p></header><div class="play-input"><p class="play-label">01 / Presented to the model</p><p class="play-caption">Task instruction · verbatim excerpt</p><blockquote class="play-instruction"><p>Play only the actor whose dossier is supplied. Choose a committed strategic move consistent with its incentives, constraints, and available resources. State concrete actions, the rationale, resource commitments, and expected competitor responses.</p></blockquote><p class="play-context">Also supplied: the proposed decision, the public situation entering round 1 and Starbucks’s own dossier. Other players’ uncommitted moves were withheld. <a href="reference.html#round-1-home-record">Read the complete input.</a></p></div><div class="play-output"><p class="play-label">02 / Returned by the model</p><p class="play-caption">Committed actions · verbatim</p><blockquote class="play-actions"><p>Implement capacity-aware mobile pickup slot limits in 50 pilot cafés for weekdays 07:00–10:00 a.m. during January 2027, reserving 20% of measured 15-minute production capacity for in-café orders.</p><p>Instrument order attempt funnels, offered pickup slots, completed orders, and staffing hours in both pilot and comparison cafés to capture baseline and intervention effects for January 2027.</p></blockquote></div><p class="play-footer">Simulation record · <a href="reference.html#round-1-home-record">Full prompts, response and original Results</a></p></article><article class="model-play" aria-labelledby="play-1-dutch"><header class="play-header"><p class="play-kicker">Recorded model gameplay · Round 1 · January 2027</p><h4 id="play-1-dutch">Dutch Bros’s move</h4><p class="play-model">Played by <strong>gemini-2.5-flash</strong> · google</p></header><div class="play-input"><p class="play-label">01 / Presented to the model</p><p class="play-caption">Task instruction · verbatim excerpt</p><blockquote class="play-instruction"><p>Play only the actor whose dossier is supplied. Choose a committed strategic move consistent with its incentives, constraints, and available resources. State concrete actions, the rationale, resource commitments, and expected competitor responses.</p></blockquote><p class="play-context">Also supplied: the proposed decision, the public situation entering round 1 and Dutch Bros’s own dossier. Other players’ uncommitted moves were withheld. <a href="reference.html#round-1-dutch-record">Read the complete input.</a></p></div><div class="play-output"><p class="play-label">02 / Returned by the model</p><p class="play-caption">Committed actions · verbatim</p><blockquote class="play-actions"><p>Allocate $15,000/month for incremental labor during weekday morning peak (7-10 AM) across the 12 company-operated shops, focusing on optimizing drive-through speed and service quality.</p><p>Launch a geo-targeted app promotion for $1 off the first Order Ahead purchase for new or lapsed users, valid during weekday mornings (7-10 AM), in the vicinity of the 12 pilot shops. Allocate up to $15,000/month for this promotion.</p></blockquote></div><p class="play-footer">Simulation record · <a href="reference.html#round-1-dutch-record">Full prompts, response and original Results</a></p></article><article class="model-play" aria-labelledby="play-1-dunkin"><header class="play-header"><p class="play-kicker">Recorded model gameplay · Round 1 · January 2027</p><h4 id="play-1-dunkin">Dunkin’s move</h4><p class="play-model">Played by <strong>gpt-4.1-mini</strong> · openai</p></header><div class="play-input"><p class="play-label">01 / Presented to the model</p><p class="play-caption">Task instruction · verbatim excerpt</p><blockquote class="play-instruction"><p>Play only the actor whose dossier is supplied. Choose a committed strategic move consistent with its incentives, constraints, and available resources. State concrete actions, the rationale, resource commitments, and expected competitor responses.</p></blockquote><p class="play-context">Also supplied: the proposed decision, the public situation entering round 1 and Dunkin’s own dossier. Other players’ uncommitted moves were withheld. <a href="reference.html#round-1-dunkin-record">Read the complete input.</a></p></div><div class="play-output"><p class="play-label">02 / Returned by the model</p><p class="play-caption">Committed actions · verbatim</p><blockquote class="play-actions"><p>Launch a local opt-in morning bundle offer in the 15 consenting franchise stores near the Starbucks pilot cafés, featuring a $6 breakfast Meal Deal with coffee and food to reinforce value perception.</p><p>Implement targeted marketing via the Dunkin app and local channels to promote the Meal Deal and advance mobile ordering for morning peak hours (7–10 a.m. weekdays).</p><p>Monitor basket contribution, repeat visits, and labor costs closely during January 2027 to evaluate economic sustainability and customer retention.</p><p>Set a decision rule to discontinue or adjust the offer in any store where incremental economics worsen after one month.</p></blockquote></div><p class="play-footer">Simulation record · <a href="reference.html#round-1-dunkin-record">Full prompts, response and original Results</a></p></article><article class="model-play" aria-labelledby="play-1-buyer"><header class="play-header"><p class="play-kicker">Recorded model gameplay · Round 1 · January 2027</p><h4 id="play-1-buyer">Morning customers’s move</h4><p class="play-model">Played by <strong>gemini-2.5-pro</strong> · google</p></header><div class="play-input"><p class="play-label">01 / Presented to the model</p><p class="play-caption">Task instruction · verbatim excerpt</p><blockquote class="play-instruction"><p>Play only the actor whose dossier is supplied. Choose a committed strategic move consistent with its incentives, constraints, and available resources. State concrete actions, the rationale, resource commitments, and expected competitor responses.</p></blockquote><p class="play-context">Also supplied: the proposed decision, the public situation entering round 1 and Morning customers’s own dossier. Other players’ uncommitted moves were withheld. <a href="reference.html#round-1-buyer-record">Read the complete input.</a></p></div><div class="play-output"><p class="play-label">02 / Returned by the model</p><p class="play-caption">Committed actions · verbatim</p><blockquote class="play-actions"><p>For habitual app users: We will attempt our usual mobile order. If the offered pickup slot is more than 8 minutes later than our desired time, we will abandon the order. If we experience two such significant delays or other service failures within a week, we will switch our primary morning routine to a competitor (like Dutch Bros or Dunkin) for the remainder of the month.</p><p>For time-pressed commuters: We will check the Starbucks app for pickup times before committing to our route. If the app indicates a delay that risks making us late for work, we will immediately divert to a more predictable competitor on our route.</p><p>For in-store café visitors: We will continue to visit the pilot cafés, hopeful that the reserved capacity for in-store orders will improve our experience. If we observe a noticeable reduction in wait times, we may increase our visit frequency.</p></blockquote></div><p class="play-footer">Simulation record · <a href="reference.html#round-1-buyer-record">Full prompts, response and original Results</a></p></article>
+<p>The useful interaction is that rivals can respond immediately through existing apps and staffing, while Starbucks needs time to learn whether its rule improves contribution. The customer’s eight-minute cutoff was supplied in the dossier; the combination of rival offers and an operational learning period creates the strategic question about switching before Starbucks adapts.</p>
+<h3>3. Ask control what the combined moves imply</h3>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>open<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/rulings
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rulings/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rulings/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rulings<span class="w"> </span>--from<span class="w"> </span>round-1/rulings
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+perla<span class="w"> </span>adjudicate<span class="w"> </span>route<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<p>Opening control before all commitments are accepted fails. After rulings are ingested, <code>adjudicate show</code> exposes the actions and mechanism chains for inspection. Routing freezes which judgments require review under the selected policy.</p>
+<p>In the recorded January case, control put all eleven actions into one integrated ruling. It anticipated diversion toward competitors or home preparation and kept conversion rates and capacity unknown. Its claim that café visitors experience better waits was too strong: reserving capacity does not itself establish that queues improve. The full <a href="reference.html#round-1">ruling and its evidence</a> allow you to check that inference.</p>
+<h3>4. Return the ruling to the affected players</h3>
+<p>Each affected actor receives the relevant ruling, its own dossier and the prior public board. It must accept the ruling or challenge a named causal link with a dossier citation. It cannot browse other actors’ private dossiers.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>job<span class="w"> </span>generate<span class="w"> </span>rebuttals<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/rebuttals
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/home.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/home.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/home.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/dutch.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dutch.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/dutch.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/dunkin.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/dunkin.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/dunkin.results.ep
+
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/rebuttals/buyer.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/buyer.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/rebuttals/buyer.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>rebuttals<span class="w"> </span>--from<span class="w"> </span>round-1/rebuttals
+</code></pre></div>
+
+<p>All four January actors accepted. That tells us these responses did not identify a dispute; it supplies no independent evidence that the queue improves. The protocol creates an opportunity to challenge, not a guarantee of an effective challenge.</p>
+<h4>What a successful objection looks like</h4>
+<p>In an earlier, separate run of this Starbucks case, control explained the effects of delayed mobile orders by saying customers would redirect their purchases to Dunkin or Dutch Bros. When that ruling was returned to the customer player, it objected:</p>
+<blockquote><p>The ruling assumes that a delayed mobile user will always switch to a competitor like Dunkin or Dutch Bros. However, some customers may choose to prepare coffee at home, postpone their purchase, or skip it altogether on a given day, especially if a detour to a competitor is inconvenient.</p></blockquote>
+<p>The customer’s briefing explicitly allowed home preparation, postponement and skipping the purchase. Its response cited that entry and identified the disputed part of the ruling: the claim that a delayed mobile order would become a competitor purchase. Control then revised its explanation and the published outcome to include those other choices.</p>
+<p>The simulation did not discover those alternatives; we had supplied them. The objection caught control neglecting them. That correction matters for the pilot: a lost Starbucks order cannot simply be credited to a rival, so researchers need to learn where the uncompleted order went. The <a href="reference.html#challenge-example">original ruling, objection and revision</a> preserve the complete exchange from that separate run.</p>
+<h3>5. Resolve, inspect and close the round</h3>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>resolve<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span><span class="w"> </span>--output<span class="w"> </span>round-1/resolutions
+ep<span class="w"> </span>run<span class="w"> </span>--jobs<span class="w"> </span>round-1/resolutions/control.jobs.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--model_list<span class="w"> </span>models/control.ep<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--background<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="w"> </span><span class="m">900</span><span class="w"> </span>--task-timeout<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--remote_inference_results_visibility<span class="w"> </span>private<span class="w"> </span>--fresh<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>round-1/resolutions/control.results.ep
+perla<span class="w"> </span>ingest<span class="w"> </span>resolutions<span class="w"> </span>--from<span class="w"> </span>round-1/resolutions
+perla<span class="w"> </span>adjudicate<span class="w"> </span>show<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<p>Control affirmed January’s ruling after answering the actors. Before closing your run, inspect its final outcomes for unsupported numerical claims, private information in public history and incompatible changes to the same board field. A conflicting update must be <a href="commands.html#reconcile">reconciled explicitly</a>. A human-review project also requires its assessments and approval.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>close<span class="w"> </span>--move<span class="w"> </span><span class="m">1</span>
+perla<span class="w"> </span>status
+</code></pre></div>
+
+<p>On success, <code>closed_move</code> is 1, <code>current_move</code> is 2 and the next move-generation phase is available. The new board contains the accepted public developments. That is the state February’s players will receive, together with their original dossiers. It is not a shared transcript of every private conversation.</p>
+</section>
+<section id="later-rounds">
+<h2>February and March: does adaptation arrive in time?</h2>
+<p>To execute the remaining rounds, continue with the visible <a href="commands.html#round-2">February commands</a>, then the <a href="commands.html#round-3">March commands</a>. They repeat the same commitment, ruling, rebuttal and resolution cycle using the preceding round’s closed board. The account below follows the original recorded case.</p>
+<h3 id="round-2">February: release unused capacity</h3>
+<p>Starbucks retained the 20% reservation, but tested a variation in ten cafés: after 8 a.m., release half the unused allocation to mobile orders when café demand uses less than 15% of capacity. Dutch Bros kept its $15,000 labor and $15,000 acquisition split. Dunkin proposed a $1 bundle discount with $12,000 for staffing and $8,000 for promotion. The customer model described frustrated app users trying alternatives.</p>
+<p>This is the most actionable adaptation in the case. A fixed reservation can leave capacity unused; a conditional release rule gives Starbucks something specific to test. It remains an operational hypothesis because no store measurements arrived between rounds. The service gate was due, but the game could not establish that it passed.</p>
+<p>Control produced four rulings, and the actors ultimately accepted them. Two incomplete rebuttals were structurally rejected and replaced by fresh calls. Those are execution failures, not substantive disagreement. The <a href="reference.html#round-2">February transcript</a> preserves both attempts.</p>
+<h3 id="round-3">March: expansion meets an uncertain habit change</h3>
+<p>Starbucks expanded the conditional release rule from ten to all 50 pilot cafés. Dunkin increased its proposed bundle discount to $1.50, while Dutch Bros continued its offer and reviewed local performance. The customer model said some former Starbucks app users now opened a rival app by default. That persistence is a plausible risk to investigate; the supplied loyalty assumptions and the prior simulated history helped produce it.</p>
+<p>Expansion did not follow demonstrated success in the ten-store variation. Starbucks also proposed rollback if mobile abandonment or café waits worsened by “more than 5 percentage points.” That unit can describe a rate, but it does not specify a usable threshold for waiting time measured in minutes. Control accepted the structure without correcting the ambiguity. These are reasons to retain experimental discipline despite a coherent story.</p>
+<p>The <a href="reference.html#round-3">March transcript</a> ends with agreement and a closed public board. The three real operating gates remain unevaluated. The round progression nevertheless identifies an adaptive rule to test, a rival-response risk and a measurement flaw to correct.</p>
+</section>
+<section id="decision-memo">
+<h2>The memo to the pilot team</h2>
+<p><strong>Recommendation:</strong> authorize a bounded comparison of the fixed reservation and conditional release rule, with adequate baseline and comparison data. Do not expand the rule on the strength of a simulated queue improvement. Predefine rollback separately for waiting time, abandonment and contribution, using units that match each metric.</p>
+<p><strong>Competitive preparation:</strong> assume rivals can deploy local offers quickly through existing channels. Test whether switching persists after a promotion ends. Distinguish an order delayed within Starbucks, an order transferred to another Starbucks channel, a competitor purchase and no purchase. The outside-option challenge shows why these cannot be collapsed into a single lost-sale measure.</p>
+<p><strong>First research priority:</strong> instrument the rejected-slot journey and follow the baseline mobile cohort across channels. Pair that with café waits, staffing cost and all-channel contribution. Under the case’s assumed unit economics, the full extra labor allowance requires 20 incremental transactions per café per day; a channel shift does not cover that bill.</p>
+<p><strong>What would change this recommendation:</strong> evidence that reservation capacity is rarely unused would weaken the case for conditional release. Evidence that shorter waits fail to offset mobile losses would favor narrowing or stopping the policy. Persistent rival repeat after offers expire would make recovery of routine a separate intervention. These are testable propositions from the case, not measured conclusions.</p>
+<p>This editorial memo is the worked case’s decision artifact. Perla’s optional endgame stage can record criterion assessments, insights and predictions; it was not executed in the original case. The <a href="commands.html#endgame">endgame instructions</a> show how to add it to your own run, and the <a href="reference.html#sources">source register</a> and <a href="reference.html#execution-records">execution archives</a> support review of the case.</p>
+</section>
+<footer><p>Perla · <a href="reference.html">Evidence and complete transcripts</a> · <a href="commands.html">Execution reference</a></p></footer>
+</main></body></html>

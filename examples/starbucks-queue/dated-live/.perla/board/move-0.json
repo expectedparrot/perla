@@ -1,0 +1,31 @@
+{
+  "adjusted_cafe_wait_reduction_pct": null,
+  "assumed_contribution_per_transaction_usd": 3,
+  "assumed_loaded_labor_cost_per_hour_usd": 30,
+  "cafe_capacity_reservation_pct": 20,
+  "calendar_period": "January 2027",
+  "comparison_cafes": 50,
+  "comparison_cohort_complete_customers": 0,
+  "complete_store_pairs": 0,
+  "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+  "incremental_daily_contribution_usd": null,
+  "measured_capacity_per_15min": null,
+  "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+  "mobile_repeat_change_pp": null,
+  "peak_window": "Weekdays 07:00–10:00 local time",
+  "period_ends": {
+    "1": "2027-01-31",
+    "2": "2027-02-28",
+    "3": "2027-03-31"
+  },
+  "pilot_cafes": 50,
+  "pilot_cohort_complete_customers": 0,
+  "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+  "public_roster": [
+    "Starbucks (home)",
+    "Dutch Bros (competitor)",
+    "Dunkin (competitor)",
+    "Composite morning customers (assumed wildcard)"
+  ],
+  "public_strategy_history": []
+}

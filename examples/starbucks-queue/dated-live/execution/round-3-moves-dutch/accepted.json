@@ -1,0 +1,31 @@
+{
+  "attempt": 1,
+  "receipt": {
+    "actor_id": "dutch",
+    "move": 3,
+    "content_hash": "2acb9a31f8706e8c596203c82ea18fa0bd5331206593450fa959a235ae7f88d5",
+    "provenance": {
+      "origin": "simulation",
+      "model": "gemini-2.5-flash",
+      "model_parameters": {
+        "model": "gemini-2.5-flash",
+        "parameters": {
+          "maxOutputTokens": 16000,
+          "stopSequences": [],
+          "temperature": 0.5,
+          "thinking_budget": null,
+          "topK": 1,
+          "topP": 1
+        },
+        "inference_service": "google",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "gemini-2.5-flash"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-moves-dutch/results-1.ep",
+      "job_id": "job-3ba79de627f8470ea706704767960db3",
+      "manifest_hash": "3b0c8b27473f8ac7f4a49bdce7fc101fce376b6aaf614cdf623402a4dfbaf65b",
+      "ingested_at": "2026-09-12T12:19:34.909146+00:00",
+      "answer_hash": "2acb9a31f8706e8c596203c82ea18fa0bd5331206593450fa959a235ae7f88d5"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "actor_id": "dunkin",
+  "committed_at": "2026-09-12T12:09:21.161769+00:00",
+  "content": {
+    "actions": [
+      "Launch a $5 breakfast bundle with opt-in mobile ordering at 15 consenting franchise locations near Starbucks pilot cafés from February 1 to February 28, 2027.",
+      "Allocate $15,000 for local marketing promoting the bundle and $5,000 toward additional peak labor hours to ensure timely mobile order fulfillment during 7–10 a.m. weekdays.",
+      "Implement local stop rules to exit any store where economics worsen after discount and labor costs are accounted for, based on weekly basket contribution and repeat visit measurements."
+    ],
+    "expected_responses": [
+      "Starbucks maintains their 20% café capacity reservation pilot, potentially causing some mobile slot unavailability or delays.",
+      "Mobile-ordering customers facing Starbucks slot limits may redirect orders to Dunkin’s $5 bundle offer, increasing Dunkin’s morning mobile transactions.",
+      "Dutch Bros continues its labor and $1 Order Ahead credit promotion, maintaining competitive pressure.",
+      "Some customers may still prepare coffee at home or skip purchases if mobile ordering is inconvenient, but Dunkin’s offer aims to capture a profitable share of redirected demand."
+    ],
+    "rationale": "The $5 breakfast bundle leverages Dunkin's value positioning and mobile app capabilities to attract mobile-ordering customers who might be diverted from Starbucks due to their capacity reservation pilot. The $15,000 marketing spend aims to build awareness and opt-in participation, while $5,000 in added labor helps maintain service quality and minimize delays that could drive customers away. Stop rules protect franchisees from unprofitable participation, aligning with the priority for predictable and profitable breakfast baskets.",
+    "resource_commitments": [
+      "Budget cap of $20,000 for combined marketing incentives and additional labor for February 2027.",
+      "15 franchise locations participating near Starbucks pilot cafés with coordinated opt-in offers.",
+      "Staffing investment to cover peak weekday morning hours (7–10 a.m.) for the month."
+    ]
+  },
+  "content_hash": "2170d0d24ebe4045e24b7865b3aba4090494b8e63099591c5e6fc5d074021b29",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "2170d0d24ebe4045e24b7865b3aba4090494b8e63099591c5e6fc5d074021b29",
+    "ingested_at": "2026-09-12T12:09:21.161769+00:00",
+    "job_id": "job-b7c499ac3fa64fa09702739b5eb94027",
+    "manifest_hash": "ab88b4fe01500557a6c111e64914b0e69b8a4330805a8fc08a14ae9a6c905a0e",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-moves-dunkin/results-1.ep"
+  }
+}

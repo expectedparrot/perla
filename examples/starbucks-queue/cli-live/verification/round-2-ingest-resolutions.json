@@ -1,0 +1,79 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla ingest resolutions --from round-2/resolutions",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "ingest",
+      "resolutions"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "Advance the current adjudication phase.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "adjudicate",
+          "close",
+          "--move",
+          "2"
+        ]
+      }
+    ],
+    "data": {
+      "imported": [
+        {
+          "move": 2,
+          "ruling_ids": [
+            "move2-integrated-customer-competition"
+          ],
+          "routing": {
+            "move2-integrated-customer-competition": {
+              "reasons": [
+                "judgment",
+                "revised"
+              ],
+              "content_hash": "3c96109a78096b7c430d2d21b5647c55dc15a7f786a634e7834051a2e5b7db33",
+              "impact_score": 2,
+              "blocking": false,
+              "over_budget": true,
+              "assessment": null,
+              "route": "provisional"
+            }
+          },
+          "provenance": {
+            "origin": "simulation",
+            "model": "gpt-4.1",
+            "model_parameters": {
+              "model": "gpt-4.1",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              },
+              "inference_service": "openai",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "LanguageModel"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/resolutions/control.results.ep",
+            "job_id": "job-aeb125a32f2e4f1f8780726454e7c313",
+            "manifest_hash": "1bc514ecd441950a857bfe604c6fd59ac1f57b74c158dcf9b72d974bae8d5fc5",
+            "ingested_at": "2026-09-12T14:07:05.493573+00:00",
+            "answer_hash": "3642238bc8b10de384f80026683a0aecd0568eda740f7a67cad1d661a23628c0"
+          }
+        }
+      ],
+      "already_ingested": []
+    }
+  }
+}

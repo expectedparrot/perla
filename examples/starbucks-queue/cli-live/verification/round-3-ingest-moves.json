@@ -1,0 +1,152 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla ingest moves --from round-3/moves",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "ingest",
+      "moves"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "All moves are committed. Open adjudication to export the neutral control job.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "adjudicate",
+          "open",
+          "--move",
+          "3"
+        ]
+      }
+    ],
+    "data": {
+      "imported": [
+        {
+          "actor_id": "buyer",
+          "move": 3,
+          "content_hash": "06e23b9e871556ec513a6a246f9b5c5c2f927ba35f455edb226c8ce0f85ab35c",
+          "provenance": {
+            "origin": "simulation",
+            "model": "gemini-2.5-pro",
+            "model_parameters": {
+              "model": "gemini-2.5-pro",
+              "parameters": {
+                "maxOutputTokens": 16000,
+                "max_tokens": 16000,
+                "stopSequences": [],
+                "temperature": 0.5,
+                "thinking_budget": null,
+                "topK": 1,
+                "topP": 1
+              },
+              "inference_service": "google",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "gemini-2.5-pro"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves/buyer.results.ep",
+            "job_id": "job-e86ffb1ad6c74101ae183d3bdfd4d76d",
+            "manifest_hash": "1819d292fbe8f998be6f314f18ab3e5ad107b65fc7641690b4be4bd02c12c653",
+            "ingested_at": "2026-09-12T14:07:42.875801+00:00",
+            "answer_hash": "06e23b9e871556ec513a6a246f9b5c5c2f927ba35f455edb226c8ce0f85ab35c"
+          }
+        },
+        {
+          "actor_id": "dunkin",
+          "move": 3,
+          "content_hash": "16a38faf827a6f617c9752bf3b3d0904c7bbe0f8303ea82c235bd65ec92d6b98",
+          "provenance": {
+            "origin": "simulation",
+            "model": "gpt-4.1-mini",
+            "model_parameters": {
+              "model": "gpt-4.1-mini",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              },
+              "inference_service": "openai",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "LanguageModel"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves/dunkin.results.ep",
+            "job_id": "job-ae69dc95bfd8479895ee0ceb919f22fd",
+            "manifest_hash": "f1cc428b98822ae6c315e78ee0fed0e21d07e6a0a2adc6f334f0c0f041277df9",
+            "ingested_at": "2026-09-12T14:07:43.003568+00:00",
+            "answer_hash": "16a38faf827a6f617c9752bf3b3d0904c7bbe0f8303ea82c235bd65ec92d6b98"
+          }
+        },
+        {
+          "actor_id": "dutch",
+          "move": 3,
+          "content_hash": "269a596944d2b368ee2fc0883aac928aa88b784fe75c39b3a2c84a66c28a595c",
+          "provenance": {
+            "origin": "simulation",
+            "model": "gemini-2.5-flash",
+            "model_parameters": {
+              "model": "gemini-2.5-flash",
+              "parameters": {
+                "maxOutputTokens": 16000,
+                "max_tokens": 16000,
+                "stopSequences": [],
+                "temperature": 0.5,
+                "thinking_budget": null,
+                "topK": 1,
+                "topP": 1
+              },
+              "inference_service": "google",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "gemini-2.5-flash"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves/dutch.results.ep",
+            "job_id": "job-2c8a63703f3a4a259d67b1b69f7179fa",
+            "manifest_hash": "cd2b54ce009556f879a2af0f3141ebd86956d04de623b7c3e6ca64147c6f35c4",
+            "ingested_at": "2026-09-12T14:07:43.176930+00:00",
+            "answer_hash": "269a596944d2b368ee2fc0883aac928aa88b784fe75c39b3a2c84a66c28a595c"
+          }
+        },
+        {
+          "actor_id": "home",
+          "move": 3,
+          "content_hash": "54ff87d3a155fa2dc28a248b52c810099fbc82f01336e6afa053bbf719dc0f13",
+          "provenance": {
+            "origin": "simulation",
+            "model": "gpt-4.1",
+            "model_parameters": {
+              "model": "gpt-4.1",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              },
+              "inference_service": "openai",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "LanguageModel"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves/home.results.ep",
+            "job_id": "job-a2ca59d942bd4a9eba080a81d8f32258",
+            "manifest_hash": "bb25cd3ba189130234808bfdb33dce76103c07fc709430293486a637fdaa3276",
+            "ingested_at": "2026-09-12T14:07:43.292535+00:00",
+            "answer_hash": "54ff87d3a155fa2dc28a248b52c810099fbc82f01336e6afa053bbf719dc0f13"
+          }
+        }
+      ],
+      "already_ingested": []
+    }
+  }
+}

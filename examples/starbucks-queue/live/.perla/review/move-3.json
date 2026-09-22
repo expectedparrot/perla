@@ -1,0 +1,606 @@
+{
+  "approval": null,
+  "board_choices": {},
+  "closed_at": "2026-09-12T12:10:46.780027+00:00",
+  "closure": {
+    "approval": null,
+    "board_hash": "fb95adc743e89729adfcb81c2dcf784660f093333f5705797878ad94900f9eed",
+    "delegated": true,
+    "escalation_debt": [
+      "move3-integrated-customer-competitor-dynamics"
+    ],
+    "snapshot_hash": "575cc02f2299aaa468b36e097ce565a13c98ad434af25a59c363053964afab71"
+  },
+  "control_job": "job-77b29f645c0e4da9829acd70bf639e96",
+  "events": [
+    {
+      "action": "route",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:09:58.381787+00:00"
+    },
+    {
+      "action": "generate_rebuttals",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:09:59.314505+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "1f8e974aec61e780d40caf08970d2b8dad7768c8eb67a529f83f2eaf280609e1",
+        "ingested_at": "2026-09-12T12:10:24.563696+00:00",
+        "job_id": "job-5d20f519dbd34bbda04d332e62d45ed6",
+        "manifest_hash": "eea8728cd859686083e844fb505e619ad6360a9d8a753aae7b681ec2a1dfb48d",
+        "model": "gemini-2.5-pro",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-pro",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-pro",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-buyer/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:10:24.563741+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "83416ae2eedc78fefc51b912a95fe5f1f45214072f5bdbab8ec5facdfeffb84a",
+        "ingested_at": "2026-09-12T12:10:25.340881+00:00",
+        "job_id": "job-c2d0b0ec37184883a864206ec0a56166",
+        "manifest_hash": "2327113867feee9df1125ee59b89f26a53ab707b1f70d34d42d20357e0b2cd0d",
+        "model": "gpt-4.1-mini",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1-mini",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-dunkin/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:10:25.340923+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "c27e7ee5ec93f4112d126dedd4902bbcec6d59b71ca7b1cfad6f0831551269f3",
+        "ingested_at": "2026-09-12T12:10:26.160357+00:00",
+        "job_id": "job-5fef68c75c974b20b56b572e6ec5d062",
+        "manifest_hash": "b3b1d1f5d5d42c81e135d4ccd7ccf17fd292897e68cadc36d2b44adb51464838",
+        "model": "gemini-2.5-flash",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-flash",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-flash",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-dutch/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:10:26.160404+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "9ea6c169fe6523f0bd9fc390e2492261a1b348ea8e8acec500f40d252dcb4ee0",
+        "ingested_at": "2026-09-12T12:10:26.965202+00:00",
+        "job_id": "job-582e5a8ab99344d98901ecc95139380d",
+        "manifest_hash": "454102561452e3879f9772de61bfa2760134a002589f796460270be44ba8aff7",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-home/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:10:26.965249+00:00"
+    },
+    {
+      "action": "generate_resolution",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:10:27.670425+00:00"
+    },
+    {
+      "action": "ingest_resolutions",
+      "attribution": {
+        "answer_hash": "44012f480ec24ff06dc3e1e4d3fccf5aa673f0cea081a1a91405dafd2945db32",
+        "ingested_at": "2026-09-12T12:10:46.038294+00:00",
+        "job_id": "job-b99a355db15f4b8794132dcd7a277d02",
+        "manifest_hash": "5ad3d3ec2cdefca8caed61e2995291e1e0e738f9789d93c2e4774e3fe4f4d655",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-resolutions-control/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:10:46.038537+00:00"
+    },
+    {
+      "action": "close_round",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:10:46.780304+00:00"
+    }
+  ],
+  "final_rulings": {
+    "move3-integrated-customer-competitor-dynamics": {
+      "content": {
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b2",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b7"
+            ],
+            "claim": "Composite morning customers may switch from Starbucks mobile orders to Dunkin or Dutch Bros when slots are unavailable or unreliable, or choose home preparation/skip.",
+            "link": "customer-switching"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k5",
+              "d.dunkin.k6"
+            ],
+            "claim": "Dunkin can launch a $5 breakfast bundle with opt-in mobile ordering at 15 consenting local stores, with capped marketing and labor spend.",
+            "link": "dunkin-offer"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dutch.d5",
+              "d.dutch.d6"
+            ],
+            "claim": "Dutch Bros can offer capped Order Ahead credits and increase peak labor at 12 local shops.",
+            "link": "dutch-offer"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h5",
+              "d.home.h6"
+            ],
+            "claim": "Starbucks pilot continues with 20% café capacity reservation, capped mobile slots, and up to two additional staff hours per weekday per pilot store.",
+            "link": "starbucks-pilot-constraints"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h9"
+            ],
+            "claim": "No observed field (wait time, contribution, repeat) may be updated without actual operating data; all measurement fields remain null.",
+            "link": "no-measured-outcomes"
+          }
+        ],
+        "cite": [],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              "January 2027: Starbucks pilots 20% peak café capacity reservation for in-café orders in 50 US cafés, capping mobile slots and adding up to two peak staff-hours per weekday per pilot store. Instrumentation deployed for order attempts, slot offers, completions, refunds, staffing, and repeat purchases.",
+              "January 2027: Dunkin launches a $6 breakfast bundle with opt-in mobile ordering and local marketing in 15 franchise locations near Starbucks pilot cafés, with a $20,000 budget cap.",
+              "January 2027: Dutch Bros allocates 20 additional labor hours per week per shop (4 hours/weekday, 7–10 a.m.) at 12 participating shops and promotes a $1 Order Ahead credit for first-time users from January 15–31, capped at 100 redemptions per shop or budget exhaustion.",
+              "January 2027: Composite morning customer segments respond as follows: commuters and habitual app users, when encountering unavailable or delayed Starbucks mobile slots, may redirect purchases to competitors (Dunkin or Dutch Bros) or may instead prepare coffee at home, postpone, or skip the purchase if a detour is inconvenient; walk-in café customers benefit from the new policy and do not switch.",
+              "February 2027: Starbucks continues the 20% peak café capacity reservation pilot in 50 US cafés, maintaining capped mobile slots and up to two additional peak staff-hours per weekday per store. Dunkin launches a $5 breakfast bundle with opt-in mobile ordering, $15,000 in local marketing, and $5,000 for peak labor at 15 consenting franchise locations, with a stop rule for unprofitable stores. Dutch Bros maintains increased peak labor and a $1 Order Ahead credit for first-time users at 12 shops, capped at 250 redemptions per shop or budget exhaustion; actual queue capacity to serve redirected demand is unmeasured. Composite morning customers continue to redirect mobile orders to the most convenient competitor when Starbucks slots are unavailable or delayed, or otherwise prepare at home or skip.",
+              "February 2027: Dunkin continues $5 breakfast bundle with opt-in mobile ordering, $15,000 local marketing, $5,000 peak labor at 15 local stores; local stop rules applied. Dutch Bros offers $0.50 follow-up Order Ahead credit to January trial users, continues $1 first-time Order Ahead credit (600 cap), and implements peak-hour queue time measurement at 12 shops. Starbucks maintains 20% peak café capacity reservation, capped mobile slots, two added peak staff hours per pilot store, and paired-instrumentation; no expansion or rollback. Composite morning customers more consistently redirect peak mobile orders to Dunkin or Dutch Bros when Starbucks slots are unavailable, otherwise maintain café visits or home preparation. No observed metrics are updated."
+            ]
+          },
+          "confidence": 0.9,
+          "description": "All February 2027 actions are implemented as proposed; mobile order redirection and competitive offers are active but no observed metrics are updated. The board fields for measured outcomes remain null. The public_strategy_history is advanced to include these moves."
+        },
+        "rationale": "All actors submitted actions for February 2027 that interact through mobile order channel constraints, competitive offers, and customer redirection. No direct measurement of demand, queue times, or repeat behavior is available (d.home.h8, d.buyer.b3). Customer switching is permitted as a contingent behavior (d.buyer.b2, d.buyer.b4, d.buyer.b5, d.buyer.b7), but no segment weights or observed elasticities exist (d.buyer.b1, d.buyer.b8). Dunkin and Dutch Bros both run capped, locally targeted offers and increase peak labor, aiming to capture redirected Starbucks mobile demand (d.dunkin.k5, d.dunkin.k6, d.dutch.d5, d.dutch.d6). Starbucks maintains its pilot with capped mobile slots and added staff (d.home.h5, d.home.h6). No actor's move invalidates another. The board fields for measured outcomes remain null due to the absence of actual operating data (d.home.h9). This outcome preserves the experimental status quo and records the proposed February actions for strategy history, but does not update observed metrics.",
+        "resolves": [
+          "m3.buyer.a1",
+          "m3.buyer.a2",
+          "m3.buyer.a3",
+          "m3.dunkin.a1",
+          "m3.dunkin.a2",
+          "m3.dunkin.a3",
+          "m3.dutch.a1",
+          "m3.dutch.a2",
+          "m3.dutch.a3",
+          "m3.home.a1",
+          "m3.home.a2"
+        ],
+        "ruling_id": "move3-integrated-customer-competitor-dynamics"
+      },
+      "content_hash": "5a46b6fbf271457bb8a863213814ed77b1e7827ab2e1f76d847669a1d2b852ce",
+      "move": 3,
+      "original_provenance": {
+        "answer_hash": "d32c1f4a43214770294e47dd18e963e18bd55325359e961c3ed57c6ef7ac6b26",
+        "ingested_at": "2026-09-12T12:09:58.028869+00:00",
+        "job_id": "job-77b29f645c0e4da9829acd70bf639e96",
+        "manifest_hash": "1c21d7f8f5ec0e43acab069c39456c5d03f781fd894c3e075ab1e14dfb9fe751",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rulings-control/results-2.ep"
+      },
+      "provenance": {
+        "answer_hash": "44012f480ec24ff06dc3e1e4d3fccf5aa673f0cea081a1a91405dafd2945db32",
+        "ingested_at": "2026-09-12T12:10:46.038294+00:00",
+        "job_id": "job-b99a355db15f4b8794132dcd7a277d02",
+        "manifest_hash": "5ad3d3ec2cdefca8caed61e2995291e1e0e738f9789d93c2e4774e3fe4f4d655",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-resolutions-control/results-1.ep"
+      },
+      "resolution": {
+        "decision": "affirm",
+        "reason": "The Dutch Bros rebuttal challenges the mechanism link 'no-measured-outcomes', arguing that Dutch Bros internally observes metrics such as lane times and app orders. However, the ruling's scope and the board's measurement fields are explicitly limited to public, cross-actor, and paired-outcome fields per d.home.h8 and d.home.h9. The Dutch Bros dossier (d.dutch.d8) confirms Dutch Bros can see its own internal data, but this does not entitle Dutch Bros to update the public board fields or require the ruling to change. The ruling does not prohibit Dutch Bros from privately observing its own metrics, but maintains that no observed field (i.e., those in the public board) is updated without actual operating data, in line with the game’s measurement rule. All other actors accept the ruling as accurate. Thus, the original ruling stands.",
+        "responses": [
+          {
+            "actor_id": "buyer",
+            "reason": "Accepts the ruling as an accurate reflection of customer choice dynamics and the absence of measured segment weights or observed demand."
+          },
+          {
+            "actor_id": "dunkin",
+            "reason": "Accepts the ruling, confirming the Dunkin offer and its context are correctly described; no challenge to the public outcome."
+          },
+          {
+            "actor_id": "dutch",
+            "reason": "Challenge noted: Dutch Bros internally observes its own queue and app metrics. However, the ruling concerns only public board measurement fields, which remain null in the absence of actual operating data, per d.home.h9. The internal observation capability does not entitle Dutch Bros to update the public board or require revision of the ruling."
+          },
+          {
+            "actor_id": "home",
+            "reason": "Accepts the ruling as a correct application of pilot constraints, public measurement rules, and the absence of observed outcome updates."
+          }
+        ],
+        "revision": null,
+        "ruling_id": "move3-integrated-customer-competitor-dynamics"
+      },
+      "resolution_mode": "agent",
+      "revised": false
+    }
+  },
+  "initial_routing": {
+    "move3-integrated-customer-competitor-dynamics": {
+      "assessment": null,
+      "blocking": false,
+      "content_hash": "5a46b6fbf271457bb8a863213814ed77b1e7827ab2e1f76d847669a1d2b852ce",
+      "impact_score": 2.0,
+      "over_budget": true,
+      "reasons": [
+        "judgment"
+      ],
+      "route": "provisional"
+    }
+  },
+  "move": 3,
+  "options": {
+    "flagged": [],
+    "impact_scores": {}
+  },
+  "policy": {
+    "auto_confidence": 0.7,
+    "human_budget": 0,
+    "judgment_share_threshold": 0.4
+  },
+  "rebuttal_jobs": {
+    "buyer": "job-5d20f519dbd34bbda04d332e62d45ed6",
+    "dunkin": "job-c2d0b0ec37184883a864206ec0a56166",
+    "dutch": "job-5fef68c75c974b20b56b572e6ec5d062",
+    "home": "job-582e5a8ab99344d98901ecc95139380d"
+  },
+  "rebuttals": {
+    "buyer": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "That sounds about right. If our usual Starbucks mobile order isn't available, we'll go somewhere else convenient or just skip it. It depends on the person and the morning, but we're not going to wait around if there's a better option.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move3-integrated-customer-competitor-dynamics",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "1f8e974aec61e780d40caf08970d2b8dad7768c8eb67a529f83f2eaf280609e1",
+        "ingested_at": "2026-09-12T12:10:24.563696+00:00",
+        "job_id": "job-5d20f519dbd34bbda04d332e62d45ed6",
+        "manifest_hash": "eea8728cd859686083e844fb505e619ad6360a9d8a753aae7b681ec2a1dfb48d",
+        "model": "gemini-2.5-pro",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-pro",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-pro",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-buyer/results-1.ep"
+      }
+    },
+    "dunkin": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "The ruling accurately reflects the situation for February 2027, including Dunkin's $5 breakfast bundle offer with opt-in mobile ordering at 15 consenting local franchise stores, capped marketing and labor spend, and the customer redirection dynamics described. There is no basis to dispute the causal links or facts presented.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move3-integrated-customer-competitor-dynamics",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "83416ae2eedc78fefc51b912a95fe5f1f45214072f5bdbab8ec5facdfeffb84a",
+        "ingested_at": "2026-09-12T12:10:25.340881+00:00",
+        "job_id": "job-c2d0b0ec37184883a864206ec0a56166",
+        "manifest_hash": "2327113867feee9df1125ee59b89f26a53ab707b1f70d34d42d20357e0b2cd0d",
+        "model": "gpt-4.1-mini",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1-mini",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-dunkin/results-1.ep"
+      }
+    },
+    "dutch": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "The ruling states that no observed field may be updated and all measurement fields remain null. However, our dossier explicitly states that we observe our own lane times, app orders, rewards redemptions, and repeat visits. These are internal observed metrics that should be available to us, even if the public board metrics remain null.",
+            "cite": [
+              "d.dutch.d8"
+            ],
+            "link": "no-measured-outcomes",
+            "ruling_id": "move3-integrated-customer-competitor-dynamics",
+            "stance": "challenge"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "c27e7ee5ec93f4112d126dedd4902bbcec6d59b71ca7b1cfad6f0831551269f3",
+        "ingested_at": "2026-09-12T12:10:26.160357+00:00",
+        "job_id": "job-5fef68c75c974b20b56b572e6ec5d062",
+        "manifest_hash": "b3b1d1f5d5d42c81e135d4ccd7ccf17fd292897e68cadc36d2b44adb51464838",
+        "model": "gemini-2.5-flash",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-flash",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-flash",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-dutch/results-1.ep"
+      }
+    },
+    "home": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "The ruling accurately reflects the Starbucks pilot constraints and evidence status: the 20% peak café capacity reservation, capped mobile slots, and added staff hours are maintained as described in d.home.h5 and d.home.h6. No observed outcomes can be updated without actual operating data per d.home.h9. The public_strategy_history and board fields are updated accordingly, with all actions remaining within the documented capabilities and constraints.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move3-integrated-customer-competitor-dynamics",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "9ea6c169fe6523f0bd9fc390e2492261a1b348ea8e8acec500f40d252dcb4ee0",
+        "ingested_at": "2026-09-12T12:10:26.965202+00:00",
+        "job_id": "job-582e5a8ab99344d98901ecc95139380d",
+        "manifest_hash": "454102561452e3879f9772de61bfa2760134a002589f796460270be44ba8aff7",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-rebuttals-home/results-1.ep"
+      }
+    }
+  },
+  "resolution_job": "job-b99a355db15f4b8794132dcd7a277d02",
+  "resolutions": {
+    "answer": {
+      "resolutions": [
+        {
+          "decision": "affirm",
+          "reason": "The Dutch Bros rebuttal challenges the mechanism link 'no-measured-outcomes', arguing that Dutch Bros internally observes metrics such as lane times and app orders. However, the ruling's scope and the board's measurement fields are explicitly limited to public, cross-actor, and paired-outcome fields per d.home.h8 and d.home.h9. The Dutch Bros dossier (d.dutch.d8) confirms Dutch Bros can see its own internal data, but this does not entitle Dutch Bros to update the public board fields or require the ruling to change. The ruling does not prohibit Dutch Bros from privately observing its own metrics, but maintains that no observed field (i.e., those in the public board) is updated without actual operating data, in line with the game’s measurement rule. All other actors accept the ruling as accurate. Thus, the original ruling stands.",
+          "responses": [
+            {
+              "actor_id": "buyer",
+              "reason": "Accepts the ruling as an accurate reflection of customer choice dynamics and the absence of measured segment weights or observed demand."
+            },
+            {
+              "actor_id": "dunkin",
+              "reason": "Accepts the ruling, confirming the Dunkin offer and its context are correctly described; no challenge to the public outcome."
+            },
+            {
+              "actor_id": "dutch",
+              "reason": "Challenge noted: Dutch Bros internally observes its own queue and app metrics. However, the ruling concerns only public board measurement fields, which remain null in the absence of actual operating data, per d.home.h9. The internal observation capability does not entitle Dutch Bros to update the public board or require revision of the ruling."
+            },
+            {
+              "actor_id": "home",
+              "reason": "Accepts the ruling as a correct application of pilot constraints, public measurement rules, and the absence of observed outcome updates."
+            }
+          ],
+          "revision": null,
+          "ruling_id": "move3-integrated-customer-competitor-dynamics"
+        }
+      ]
+    },
+    "provenance": {
+      "answer_hash": "44012f480ec24ff06dc3e1e4d3fccf5aa673f0cea081a1a91405dafd2945db32",
+      "ingested_at": "2026-09-12T12:10:46.038294+00:00",
+      "job_id": "job-b99a355db15f4b8794132dcd7a277d02",
+      "manifest_hash": "5ad3d3ec2cdefca8caed61e2995291e1e0e738f9789d93c2e4774e3fe4f4d655",
+      "model": "gpt-4.1",
+      "model_parameters": {
+        "edsl_class_name": "LanguageModel",
+        "edsl_version": "1.0.8.dev1",
+        "inference_service": "openai",
+        "model": "gpt-4.1",
+        "parameters": {
+          "frequency_penalty": 0,
+          "logprobs": false,
+          "max_tokens": 16000,
+          "presence_penalty": 0,
+          "reasoning_effort": null,
+          "temperature": 0.5,
+          "top_logprobs": 3,
+          "top_p": 1
+        }
+      },
+      "origin": "simulation",
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-resolutions-control/results-1.ep"
+    }
+  },
+  "routing": {
+    "move3-integrated-customer-competitor-dynamics": {
+      "assessment": null,
+      "blocking": false,
+      "content_hash": "5a46b6fbf271457bb8a863213814ed77b1e7827ab2e1f76d847669a1d2b852ce",
+      "impact_score": 2.0,
+      "over_budget": true,
+      "reasons": [
+        "judgment"
+      ],
+      "route": "provisional"
+    }
+  }
+}

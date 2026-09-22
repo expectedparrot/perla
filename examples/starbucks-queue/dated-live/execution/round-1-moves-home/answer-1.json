@@ -1,0 +1,18 @@
+{
+  "moves": {
+    "actions": [
+      "Implement capacity-aware mobile pickup slot limits in 50 pilot cafés for weekdays 07:00–10:00 a.m. during January 2027, reserving 20% of measured 15-minute production capacity for in-café orders.",
+      "Instrument order attempt funnels, offered pickup slots, completed orders, and staffing hours in both pilot and comparison cafés to capture baseline and intervention effects for January 2027."
+    ],
+    "rationale": "The pilot directly tests whether reserving 20% of peak capacity for in-café orders can meaningfully reduce wait times for café customers without sacrificing overall transaction momentum or contribution. This aligns with Starbucks’ strategic aim to restore the coffeehouse experience (h1, h4) while defending transaction growth and contribution (h2, h3, h6). Instrumentation is essential for credible measurement and for meeting round two evidence requirements (h8, h9). No changes to pricing or staffing policy are made yet, consistent with constraints and red lines (h5, h6).",
+    "resource_commitments": [
+      "Allocate up to two additional peak staff-hours per weekday per pilot café (max 2 hours × 5 days × 50 cafés = 500 staff-hours/week).",
+      "Dedicate digital and operations resources to instrument order attempts, slot offers, completions, refunds, and staffing in pilot and comparison cafés for January 2027."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin may highlight their drive-thru and mobile order convenience, potentially targeting customers who are denied peak Starbucks mobile slots.",
+      "Some mobile customers may shift to competitors or change their time of visit if peak slots are unavailable, but the experiment will generate the evidence needed to quantify this effect.",
+      "Café customers may experience improved wait times, supporting Starbucks’ positioning as a coffeehouse destination."
+    ]
+  }
+}

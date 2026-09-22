@@ -1,0 +1,69 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla ingest rulings --from round-3/rulings",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "ingest",
+      "rulings"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "Advance the current adjudication phase.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "adjudicate",
+          "route",
+          "--move",
+          "3"
+        ]
+      }
+    ],
+    "data": {
+      "imported": [
+        {
+          "move": 3,
+          "ruling_ids": [
+            "round3-integrated-customer-dynamics"
+          ],
+          "status": "adjudication_routing",
+          "basis_distribution": {
+            "judgment": 1
+          },
+          "provenance": {
+            "origin": "simulation",
+            "model": "gpt-4.1",
+            "model_parameters": {
+              "model": "gpt-4.1",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              },
+              "inference_service": "openai",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "LanguageModel"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/rulings/control.results.ep",
+            "job_id": "job-36f0830a82694e8a8650f9519dcd2d63",
+            "manifest_hash": "84418596451bcdf33efbf74932c733d6bbb84232d900c7cbeccbb7aa0bdee317",
+            "ingested_at": "2026-09-12T14:08:08.663808+00:00",
+            "answer_hash": "feb30856f4385e806ce6a73de0fb5b921a5dd1d5a857c9a7189cd7f046f7ca51"
+          }
+        }
+      ],
+      "already_ingested": []
+    }
+  }
+}

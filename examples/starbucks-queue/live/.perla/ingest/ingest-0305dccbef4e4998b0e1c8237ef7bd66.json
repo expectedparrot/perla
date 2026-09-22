@@ -1,0 +1,48 @@
+{
+  "actor_id": "dutch",
+  "answer": {
+    "actions": [
+      "Introduce a $0.50 Order Ahead credit for customers who redeemed the $1 first-time Order Ahead credit in January, valid for their second Order Ahead purchase in February. This offer will be available from February 15-28, capped at 600 redemptions across all 12 pilot shops.",
+      "Implement a daily peak-hour queue time measurement protocol at the 12 pilot shops. From February 1-28, shift leads will record drive-through wait times (from order placement to pickup) during the 7:00-10:00 AM weekday peak window, utilizing existing labor.",
+      "Adjust the first-time Order Ahead credit for February: Continue offering a $1 credit for first-time Order Ahead users, but cap total redemptions across all 12 pilot shops at 600 for the month of February."
+    ],
+    "expected_responses": [
+      "Starbucks: Will likely continue its 20% capacity reservation pilot, focused on its own in-café experience and mobile order flow. It will observe its own metrics and may not directly perceive Dutch Bros' internal retention efforts or queue time measurements.",
+      "Dunkin: Will continue its $5 breakfast bundle and local marketing. They may notice sustained or increased activity at Dutch Bros but are unlikely to immediately alter their strategy based on Dutch Bros' internal offers or data collection.",
+      "Composite Morning Customers: Those experiencing Starbucks mobile slot unavailability will continue to seek convenient alternatives. The follow-up offer is designed to solidify their preference for Dutch Bros, potentially increasing repeat visits among the segment already trying Order Ahead."
+    ],
+    "rationale": "Our January efforts successfully attracted first-time Order Ahead users. Now, our strategic focus shifts to converting these trial users into loyal, repeat customers, aligning with our incentive to turn frustrated morning demand into durable repeat visits. The $0.50 follow-up credit directly targets this retention goal. Simultaneously, implementing queue time measurements will provide critical data on whether our increased labor is effectively handling demand and if there's spare capacity. This addresses the 'unmeasured queue capacity' constraint and is essential for making informed decisions about future staffing and marketing, ensuring existing-shop growth is sustainable. By slightly reducing the cap on the first-time user credit for February, we prudently manage our budget to fund this retention initiative while remaining within our monthly envelope.",
+    "resource_commitments": [
+      "Labor: $28,800 for maintaining 20 additional labor hours per week per shop (4 hours/weekday, 7-10 a.m.) at 12 participating shops.",
+      "First-time Order Ahead Credit: Up to $600 for the $1 credit, capped at 600 redemptions across all 12 pilot shops for February.",
+      "Follow-up Order Ahead Credit: Up to $300 for the $0.50 credit, capped at 600 redemptions across all 12 pilot shops for eligible January first-time users in February.",
+      "Measurement: No additional cash cost; queue time measurement will be integrated into existing shift lead duties during the allocated additional peak labor hours."
+    ]
+  },
+  "id": "ingest-0305dccbef4e4998b0e1c8237ef7bd66",
+  "kind": "moves",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "3588372d781de8587becd2c3b1f5a8b9eb5f403b4c84b8330b881b1d6d0f3cc6",
+    "ingested_at": "2026-09-12T12:09:21.360429+00:00",
+    "job_id": "job-af5ec1d40c744bb6801078b74198f51d",
+    "manifest_hash": "453b1bc454d1790f2a1cbe58ece67734e1464ae4a5665fb500714b75b5fa38c3",
+    "model": "gemini-2.5-flash",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-flash",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-flash",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-moves-dutch/results-1.ep"
+  }
+}

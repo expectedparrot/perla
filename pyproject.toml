@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perla"
+version = "0.1.0"
+description = "Local-first competitive wargaming CLI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.7,<3", "rich>=13.7"]
+
+[project.optional-dependencies]
+edsl = ["edsl @ git+https://github.com/expectedparrot/edsl.git@main"]
+dev = ["pytest>=8", "ruff>=0.6"]
+docs = ["pygments>=2.17,<3"]
+
+[project.scripts]
+perla = "perla.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["perla*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

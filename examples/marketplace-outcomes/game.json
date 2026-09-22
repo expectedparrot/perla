@@ -1,0 +1,44 @@
+{
+  "decision": {
+    "statement": "Launch a fixed-price managed-outcomes pilot for mid-market software buyers at premium pricing in Q1 2027.",
+    "offer": "Fixed-price managed software delivery outcomes",
+    "segment": "Mid-market software buyers",
+    "pricing": "20 percent premium to comparable marketplace contracts",
+    "launch_period": "Q1 2027",
+    "scope": "US pilot with 20 delivery teams",
+    "moves": 3,
+    "months_per_move": 8
+  },
+  "criteria": [
+    {
+      "id": "replication",
+      "condition": "At least two external actors profitably replicate the managed offering within two moves",
+      "observable": "Number of competing managed offerings with positive contribution margin",
+      "threshold": "At least two profitable competing offerings",
+      "deadline_move": 2
+    },
+    {
+      "id": "margin",
+      "condition": "Delivery guarantees drive the home pilot contribution margin below ten percent",
+      "observable": "Home managed-outcomes contribution margin after guarantee costs",
+      "threshold": "Below 10 percent",
+      "deadline_move": 3
+    },
+    {
+      "id": "supply",
+      "condition": "Competitive exclusivity deals leave fewer than fifteen qualified home delivery teams",
+      "observable": "Available qualified teams for the home pilot",
+      "threshold": "Fewer than 15 teams",
+      "deadline_move": 2
+    }
+  ],
+  "board": {
+    "evidence_status": "Fictional teaching assumptions; not claims about actual companies",
+    "calendar_period": "Q1 2027",
+    "segments": ["Mid-market software delivery"],
+    "home_qualified_teams": 20,
+    "home_managed_price_index": 120,
+    "marketplace_price_index": 100,
+    "profitable_competing_managed_offerings": 0
+  }
+}

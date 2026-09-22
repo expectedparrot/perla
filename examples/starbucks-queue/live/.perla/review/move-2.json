@@ -1,0 +1,769 @@
+{
+  "approval": null,
+  "board_choices": {},
+  "closed_at": "2026-09-12T12:08:39.584477+00:00",
+  "closure": {
+    "approval": null,
+    "board_hash": "83109c64626c238c89d6ebe50b87da2c749bb494fa807e34f97c53ea47c6eec7",
+    "delegated": true,
+    "escalation_debt": [
+      "move2-integrated-customer-competition"
+    ],
+    "snapshot_hash": "b91111a9360de81139f1065f3b7c534728bb4ec746be69c9bec841f0fbfc2102"
+  },
+  "control_job": "job-fd52c409380f4bfe901a5230c4b866dd",
+  "events": [
+    {
+      "action": "route",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:07:52.117040+00:00"
+    },
+    {
+      "action": "generate_rebuttals",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:07:52.955813+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "6420260676ba012ecc72ec1bfb0b0e6b78dc9f44083f7030dc8db7e9431c7d82",
+        "ingested_at": "2026-09-12T12:08:17.688544+00:00",
+        "job_id": "job-a225f5575faa4d76945880a96ba6f4bb",
+        "manifest_hash": "5b3be39ef4f9978e0c11be6b35ae0ad1627f4a23cf3b03ad7ec773f38be2c04f",
+        "model": "gemini-2.5-pro",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-pro",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-pro",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-buyer/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:08:17.688589+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "2dfab369a40298a8d07dd79d597d0929440c82e7b331766a902e9d7e48549068",
+        "ingested_at": "2026-09-12T12:08:18.431559+00:00",
+        "job_id": "job-87e5bc8ca3184262a4f6c3042ce25a03",
+        "manifest_hash": "5c5f4c7bdfc3dcdc2ebf5e2d99e69f3d1010f2dbd2e4f1aa256b7913aa6fea8a",
+        "model": "gpt-4.1-mini",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1-mini",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-dunkin/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:08:18.431606+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "afa35bff94ce693e09064a5d80cf53a9e4ac2c7b198e1808d476f3fcbdab1895",
+        "ingested_at": "2026-09-12T12:08:19.263841+00:00",
+        "job_id": "job-86039fb6866748f3b96290caa627e00d",
+        "manifest_hash": "cc51b6e2cfde45598615ef56228a9415b953e6c6ee5294a040522fdb35aaa61e",
+        "model": "gemini-2.5-flash",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-flash",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-flash",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-dutch/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:08:19.263888+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "53d33b9815bc220ee9a47d144c175fd2bb0c3482ba53e7ec5a46dcaef9201720",
+        "ingested_at": "2026-09-12T12:08:19.997920+00:00",
+        "job_id": "job-62069cb9e1b345bcb83cfd5819211260",
+        "manifest_hash": "37c4bd4adce947ab3aac764dc7df9ba0220166b6c7dc62bdb6f08bc48c4b3dd5",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-home/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:08:19.997969+00:00"
+    },
+    {
+      "action": "generate_resolution",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:08:20.678253+00:00"
+    },
+    {
+      "action": "ingest_resolutions",
+      "attribution": {
+        "answer_hash": "78dbe4713d3d5b2e42aa83393b180a3a5b736d8647b84f9cf0f23b8300537ce4",
+        "ingested_at": "2026-09-12T12:08:38.886728+00:00",
+        "job_id": "job-ecc109d964564ac591eae402fa0207f0",
+        "manifest_hash": "c66c7e0bd2707cb7ec47b96641cd4873be1efc39318971be1a51b82140f29238",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-resolutions-control/results-1.ep"
+      },
+      "recorded_at": "2026-09-12T12:08:38.886964+00:00"
+    },
+    {
+      "action": "close_round",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T12:08:39.584756+00:00"
+    }
+  ],
+  "final_rulings": {
+    "move2-integrated-customer-competition": {
+      "content": {
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b7"
+            ],
+            "claim": "Commuters and habitual app users encountering a Starbucks mobile slot delay beyond their time ceiling will attempt to redirect their order to the most convenient competitor, provided the detour is acceptable; otherwise, they may prepare at home or skip the purchase.",
+            "link": "customer-switch"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k5",
+              "d.dunkin.k6",
+              "d.dutch.d5",
+              "d.dutch.d6"
+            ],
+            "claim": "Dunkin has implemented targeted local offers and additional peak labor only within the 15 consenting franchise locations near pilot cafés, strictly limited by franchise participation and budget constraints. Dutch Bros has implemented targeted local offers and additional peak labor at 12 participating shops, but actual queue capacity to absorb redirected mobile demand is unmeasured and cannot be presumed sufficient.",
+            "link": "offer-competition"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h5"
+            ],
+            "claim": "Starbucks maintains the 20% café capacity reservation, capped peak mobile slots, and up to two incremental staff-hours per pilot store per weekday, with no expansion or price change allowed.",
+            "link": "pilot-constraint"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h8"
+            ],
+            "claim": "All measured outcome fields remain null, as no actual pilot store or customer records are supplied. Simulated outcomes must be stated as hypothetical and not as observed measurement.",
+            "link": "measurement-null"
+          }
+        ],
+        "cite": [],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              "January 2027: Starbucks pilots 20% peak café capacity reservation for in-café orders in 50 US cafés, capping mobile slots and adding up to two peak staff-hours per weekday per pilot store. Instrumentation deployed for order attempts, slot offers, completions, refunds, staffing, and repeat purchases.",
+              "January 2027: Dunkin launches a $6 breakfast bundle with opt-in mobile ordering and local marketing in 15 franchise locations near Starbucks pilot cafés, with a $20,000 budget cap.",
+              "January 2027: Dutch Bros allocates 20 additional labor hours per week per shop (4 hours/weekday, 7–10 a.m.) at 12 participating shops and promotes a $1 Order Ahead credit for first-time users from January 15–31, capped at 100 redemptions per shop or budget exhaustion.",
+              "January 2027: Composite morning customer segments respond as follows: commuters and habitual app users, when encountering unavailable or delayed Starbucks mobile slots, may redirect purchases to competitors (Dunkin or Dutch Bros) or may instead prepare coffee at home, postpone, or skip the purchase if a detour is inconvenient; walk-in café customers benefit from the new policy and do not switch.",
+              "February 2027: Starbucks continues the 20% peak café capacity reservation pilot in 50 US cafés, maintaining capped mobile slots and up to two additional peak staff-hours per weekday per store. Dunkin launches a $5 breakfast bundle with opt-in mobile ordering, $15,000 in local marketing, and $5,000 for peak labor at 15 consenting franchise locations, with a stop rule for unprofitable stores. Dutch Bros maintains increased peak labor and a $1 Order Ahead credit for first-time users at 12 shops, capped at 250 redemptions per shop or budget exhaustion; actual queue capacity to serve redirected demand is unmeasured. Composite morning customers continue to redirect mobile orders to the most convenient competitor when Starbucks slots are unavailable or delayed, or otherwise prepare at home or skip."
+            ]
+          },
+          "confidence": 0.8,
+          "description": "The board advances to February 2027, with all player actions implemented as observable public strategy. Starbucks continues the 20% capacity reservation pilot in 50 cafés with capped mobile slots and added peak staff-hours. Dunkin launches a $5 breakfast bundle with local marketing and a stop rule for unprofitable stores, plus incremental peak labor, strictly limited to 15 consenting franchise locations. Dutch Bros deploys additional peak labor and a capped $1 Order Ahead credit for first-time users at 12 shops, but the actual queue capacity to absorb redirected mobile demand is unmeasured. Composite morning customers, when facing a Starbucks mobile slot delay beyond their time or patience ceiling, redirect to the most convenient competitor if feasible, or otherwise may prepare at home or skip the purchase. No measured outcome fields are updated; all remain null. The public_strategy_history is updated to reflect these moves and their intended effects."
+        },
+        "rationale": "The revision directly addresses the challenges from Dunkin and Dutch Bros by qualifying the scope of Dunkin's competitive offer as limited to the 15 consenting franchise locations, and by clarifying that Dutch Bros' ability to absorb redirected demand is unmeasured. All other mechanism links and outcome logic remain unchanged. This maintains fidelity to the dossier constraints and the scenario's evidence base.",
+        "resolves": [
+          "m2.buyer.a1",
+          "m2.buyer.a2",
+          "m2.buyer.a3",
+          "m2.dunkin.a1",
+          "m2.dunkin.a2",
+          "m2.dunkin.a3",
+          "m2.dunkin.a4",
+          "m2.dutch.a1",
+          "m2.dutch.a2",
+          "m2.home.a1",
+          "m2.home.a2"
+        ],
+        "ruling_id": "move2-integrated-customer-competition"
+      },
+      "content_hash": "5de07aeeaa24d63078ee0dd25b4955a80139f082ea11f199f25b6cee46578407",
+      "move": 2,
+      "original_provenance": {
+        "answer_hash": "f031f686afdb9381a045abf09c4c51d2091ec5543f51ff94914f658e76c41fab",
+        "ingested_at": "2026-09-12T12:07:51.793953+00:00",
+        "job_id": "job-fd52c409380f4bfe901a5230c4b866dd",
+        "manifest_hash": "4c7b3e16f49942c03fc7480e55b87b976564718df9c279000fab216c56bcd4a0",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rulings-control/results-1.ep"
+      },
+      "provenance": {
+        "answer_hash": "78dbe4713d3d5b2e42aa83393b180a3a5b736d8647b84f9cf0f23b8300537ce4",
+        "ingested_at": "2026-09-12T12:08:38.886728+00:00",
+        "job_id": "job-ecc109d964564ac591eae402fa0207f0",
+        "manifest_hash": "c66c7e0bd2707cb7ec47b96641cd4873be1efc39318971be1a51b82140f29238",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-resolutions-control/results-1.ep"
+      },
+      "resolution": {
+        "decision": "revise",
+        "reason": "Both Dunkin and Dutch Bros challenged the mechanism link 'offer-competition' on two grounds: (1) Dunkin's competitive offer is limited to 15 consenting franchise locations and cannot be generalized to a broader local offer footprint, per d.dunkin.k5; (2) Dutch Bros' actual queue capacity to serve redirected mobile demand is unmeasured and cannot be presumed adequate, per d.dutch.d6. The original ruling's mechanism link overstated the scope of Dunkin's competitive impact and the certainty of Dutch Bros' ability to absorb redirected demand. The revised ruling qualifies these points to accurately reflect each competitor's constraints. All other mechanism links and outcome logic remain unchanged.",
+        "responses": [
+          {
+            "actor_id": "buyer",
+            "reason": "No challenge from buyer; the revision does not alter the customer logic and preserves the accepted description of contingent redirection."
+          },
+          {
+            "actor_id": "dunkin",
+            "reason": "The revision directly addresses Dunkin's challenge by clarifying that Dunkin's offers and labor adjustments are strictly limited to the 15 consenting franchise locations, consistent with d.dunkin.k5."
+          },
+          {
+            "actor_id": "dutch",
+            "reason": "The revision acknowledges Dutch Bros' challenge by noting that actual queue capacity to serve redirected demand is unmeasured and cannot be presumed, per d.dutch.d6."
+          },
+          {
+            "actor_id": "home",
+            "reason": "No challenge from home; the revision does not alter Starbucks' pilot constraints or the logic of the pilot continuation."
+          }
+        ],
+        "revision": {
+          "affected_actors": [
+            "buyer",
+            "dunkin",
+            "dutch",
+            "home"
+          ],
+          "basis": "judgment",
+          "branches": null,
+          "cases": [],
+          "chain": [
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.buyer.b3",
+                "d.buyer.b4",
+                "d.buyer.b5",
+                "d.buyer.b7"
+              ],
+              "claim": "Commuters and habitual app users encountering a Starbucks mobile slot delay beyond their time ceiling will attempt to redirect their order to the most convenient competitor, provided the detour is acceptable; otherwise, they may prepare at home or skip the purchase.",
+              "link": "customer-switch"
+            },
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.dunkin.k5",
+                "d.dunkin.k6",
+                "d.dutch.d5",
+                "d.dutch.d6"
+              ],
+              "claim": "Dunkin has implemented targeted local offers and additional peak labor only within the 15 consenting franchise locations near pilot cafés, strictly limited by franchise participation and budget constraints. Dutch Bros has implemented targeted local offers and additional peak labor at 12 participating shops, but actual queue capacity to absorb redirected mobile demand is unmeasured and cannot be presumed sufficient.",
+              "link": "offer-competition"
+            },
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.home.h5"
+              ],
+              "claim": "Starbucks maintains the 20% café capacity reservation, capped peak mobile slots, and up to two incremental staff-hours per pilot store per weekday, with no expansion or price change allowed.",
+              "link": "pilot-constraint"
+            },
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.home.h8"
+              ],
+              "claim": "All measured outcome fields remain null, as no actual pilot store or customer records are supplied. Simulated outcomes must be stated as hypothetical and not as observed measurement.",
+              "link": "measurement-null"
+            }
+          ],
+          "cite": [],
+          "kill_criteria": [],
+          "outcome": {
+            "board_delta": {
+              "calendar_period": "February 2027",
+              "public_strategy_history": [
+                "January 2027: Starbucks pilots 20% peak café capacity reservation for in-café orders in 50 US cafés, capping mobile slots and adding up to two peak staff-hours per weekday per pilot store. Instrumentation deployed for order attempts, slot offers, completions, refunds, staffing, and repeat purchases.",
+                "January 2027: Dunkin launches a $6 breakfast bundle with opt-in mobile ordering and local marketing in 15 franchise locations near Starbucks pilot cafés, with a $20,000 budget cap.",
+                "January 2027: Dutch Bros allocates 20 additional labor hours per week per shop (4 hours/weekday, 7–10 a.m.) at 12 participating shops and promotes a $1 Order Ahead credit for first-time users from January 15–31, capped at 100 redemptions per shop or budget exhaustion.",
+                "January 2027: Composite morning customer segments respond as follows: commuters and habitual app users, when encountering unavailable or delayed Starbucks mobile slots, may redirect purchases to competitors (Dunkin or Dutch Bros) or may instead prepare coffee at home, postpone, or skip the purchase if a detour is inconvenient; walk-in café customers benefit from the new policy and do not switch.",
+                "February 2027: Starbucks continues the 20% peak café capacity reservation pilot in 50 US cafés, maintaining capped mobile slots and up to two additional peak staff-hours per weekday per store. Dunkin launches a $5 breakfast bundle with opt-in mobile ordering, $15,000 in local marketing, and $5,000 for peak labor at 15 consenting franchise locations, with a stop rule for unprofitable stores. Dutch Bros maintains increased peak labor and a $1 Order Ahead credit for first-time users at 12 shops, capped at 250 redemptions per shop or budget exhaustion; actual queue capacity to serve redirected demand is unmeasured. Composite morning customers continue to redirect mobile orders to the most convenient competitor when Starbucks slots are unavailable or delayed, or otherwise prepare at home or skip."
+              ]
+            },
+            "confidence": 0.8,
+            "description": "The board advances to February 2027, with all player actions implemented as observable public strategy. Starbucks continues the 20% capacity reservation pilot in 50 cafés with capped mobile slots and added peak staff-hours. Dunkin launches a $5 breakfast bundle with local marketing and a stop rule for unprofitable stores, plus incremental peak labor, strictly limited to 15 consenting franchise locations. Dutch Bros deploys additional peak labor and a capped $1 Order Ahead credit for first-time users at 12 shops, but the actual queue capacity to absorb redirected mobile demand is unmeasured. Composite morning customers, when facing a Starbucks mobile slot delay beyond their time or patience ceiling, redirect to the most convenient competitor if feasible, or otherwise may prepare at home or skip the purchase. No measured outcome fields are updated; all remain null. The public_strategy_history is updated to reflect these moves and their intended effects."
+          },
+          "rationale": "The revision directly addresses the challenges from Dunkin and Dutch Bros by qualifying the scope of Dunkin's competitive offer as limited to the 15 consenting franchise locations, and by clarifying that Dutch Bros' ability to absorb redirected demand is unmeasured. All other mechanism links and outcome logic remain unchanged. This maintains fidelity to the dossier constraints and the scenario's evidence base.",
+          "resolves": [
+            "m2.buyer.a1",
+            "m2.buyer.a2",
+            "m2.buyer.a3",
+            "m2.dunkin.a1",
+            "m2.dunkin.a2",
+            "m2.dunkin.a3",
+            "m2.dunkin.a4",
+            "m2.dutch.a1",
+            "m2.dutch.a2",
+            "m2.home.a1",
+            "m2.home.a2"
+          ],
+          "ruling_id": "move2-integrated-customer-competition"
+        },
+        "ruling_id": "move2-integrated-customer-competition"
+      },
+      "resolution_mode": "agent",
+      "revised": true
+    }
+  },
+  "initial_routing": {
+    "move2-integrated-customer-competition": {
+      "assessment": null,
+      "blocking": false,
+      "content_hash": "fe70fa85a58be8608a7ada02b3087d8b070be05fb176670fe4a00a7e36b090b7",
+      "impact_score": 2.0,
+      "over_budget": true,
+      "reasons": [
+        "judgment"
+      ],
+      "route": "provisional"
+    }
+  },
+  "move": 2,
+  "options": {
+    "flagged": [],
+    "impact_scores": {}
+  },
+  "policy": {
+    "auto_confidence": 0.7,
+    "human_budget": 0,
+    "judgment_share_threshold": 0.4
+  },
+  "rebuttal_jobs": {
+    "buyer": "job-a225f5575faa4d76945880a96ba6f4bb",
+    "dunkin": "job-87e5bc8ca3184262a4f6c3042ce25a03",
+    "dutch": "job-86039fb6866748f3b96290caa627e00d",
+    "home": "job-62069cb9e1b345bcb83cfd5819211260"
+  },
+  "rebuttals": {
+    "buyer": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "This ruling correctly describes our different morning routines. Some of us are just trying to grab a coffee on the way to work and can't afford a delay, so we'll go somewhere else if we have to. Others are coming in for the café experience itself, and for us, a shorter line is a good thing. The ruling understands this split.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "6420260676ba012ecc72ec1bfb0b0e6b78dc9f44083f7030dc8db7e9431c7d82",
+        "ingested_at": "2026-09-12T12:08:17.688544+00:00",
+        "job_id": "job-a225f5575faa4d76945880a96ba6f4bb",
+        "manifest_hash": "5b3be39ef4f9978e0c11be6b35ae0ad1627f4a23cf3b03ad7ec773f38be2c04f",
+        "model": "gemini-2.5-pro",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-pro",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-pro",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-buyer/results-1.ep"
+      }
+    },
+    "dunkin": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "The claim that Dunkin and Dutch Bros have implemented targeted local offers and additional peak labor only within their respective local pilot footprints and budget constraints is inaccurate regarding Dunkin's capability. Dunkin's franchise network and operational model limit our control to only 15 consenting franchise locations near pilot cafés, and we cannot impose a national price or mandate participation across all franchises, as per dossier fact d.dunkin.k5. This constraint means the competitive impact of Dunkin's offers is more limited than implied here, and the causal link to broad local offer competition should be qualified accordingly.",
+            "cite": [
+              "d.dunkin.k5"
+            ],
+            "link": "offer-competition",
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "challenge"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "2dfab369a40298a8d07dd79d597d0929440c82e7b331766a902e9d7e48549068",
+        "ingested_at": "2026-09-12T12:08:18.431559+00:00",
+        "job_id": "job-87e5bc8ca3184262a4f6c3042ce25a03",
+        "manifest_hash": "5c5f4c7bdfc3dcdc2ebf5e2d99e69f3d1010f2dbd2e4f1aa256b7913aa6fea8a",
+        "model": "gpt-4.1-mini",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1-mini",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-dunkin/results-1.ep"
+      }
+    },
+    "dutch": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "While Dutch Bros has implemented targeted local offers and additional peak labor with the intent to attract new demand, the actual capacity to effectively \"serve redirected mobile demand\" is unmeasured. Our dossier explicitly states that \"queue capacity... are unknown and must be estimated or measured before scaling\" (d.dutch.d6). Therefore, the claim that our implementation ensures we will 'serve redirected mobile demand' is not fully supported without knowledge of our actual capacity limits.",
+            "cite": [
+              "d.dutch.d6"
+            ],
+            "link": "offer-competition",
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "challenge"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "afa35bff94ce693e09064a5d80cf53a9e4ac2c7b198e1808d476f3fcbdab1895",
+        "ingested_at": "2026-09-12T12:08:19.263841+00:00",
+        "job_id": "job-86039fb6866748f3b96290caa627e00d",
+        "manifest_hash": "cc51b6e2cfde45598615ef56228a9415b953e6c6ee5294a040522fdb35aaa61e",
+        "model": "gemini-2.5-flash",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-flash",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-flash",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-dutch/results-1.ep"
+      }
+    },
+    "home": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "The ruling accurately represents Starbucks' capacity reservation pilot, constraints, and the absence of observed outcome measurements, consistent with the supplied dossier and evidence. No causal link requires challenge from the Starbucks perspective.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "53d33b9815bc220ee9a47d144c175fd2bb0c3482ba53e7ec5a46dcaef9201720",
+        "ingested_at": "2026-09-12T12:08:19.997920+00:00",
+        "job_id": "job-62069cb9e1b345bcb83cfd5819211260",
+        "manifest_hash": "37c4bd4adce947ab3aac764dc7df9ba0220166b6c7dc62bdb6f08bc48c4b3dd5",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-rebuttals-home/results-1.ep"
+      }
+    }
+  },
+  "resolution_job": "job-ecc109d964564ac591eae402fa0207f0",
+  "resolutions": {
+    "answer": {
+      "resolutions": [
+        {
+          "decision": "revise",
+          "reason": "Both Dunkin and Dutch Bros challenged the mechanism link 'offer-competition' on two grounds: (1) Dunkin's competitive offer is limited to 15 consenting franchise locations and cannot be generalized to a broader local offer footprint, per d.dunkin.k5; (2) Dutch Bros' actual queue capacity to serve redirected mobile demand is unmeasured and cannot be presumed adequate, per d.dutch.d6. The original ruling's mechanism link overstated the scope of Dunkin's competitive impact and the certainty of Dutch Bros' ability to absorb redirected demand. The revised ruling qualifies these points to accurately reflect each competitor's constraints. All other mechanism links and outcome logic remain unchanged.",
+          "responses": [
+            {
+              "actor_id": "buyer",
+              "reason": "No challenge from buyer; the revision does not alter the customer logic and preserves the accepted description of contingent redirection."
+            },
+            {
+              "actor_id": "dunkin",
+              "reason": "The revision directly addresses Dunkin's challenge by clarifying that Dunkin's offers and labor adjustments are strictly limited to the 15 consenting franchise locations, consistent with d.dunkin.k5."
+            },
+            {
+              "actor_id": "dutch",
+              "reason": "The revision acknowledges Dutch Bros' challenge by noting that actual queue capacity to serve redirected demand is unmeasured and cannot be presumed, per d.dutch.d6."
+            },
+            {
+              "actor_id": "home",
+              "reason": "No challenge from home; the revision does not alter Starbucks' pilot constraints or the logic of the pilot continuation."
+            }
+          ],
+          "revision": {
+            "affected_actors": [
+              "buyer",
+              "dunkin",
+              "dutch",
+              "home"
+            ],
+            "basis": "judgment",
+            "branches": null,
+            "cases": [],
+            "chain": [
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.buyer.b3",
+                  "d.buyer.b4",
+                  "d.buyer.b5",
+                  "d.buyer.b7"
+                ],
+                "claim": "Commuters and habitual app users encountering a Starbucks mobile slot delay beyond their time ceiling will attempt to redirect their order to the most convenient competitor, provided the detour is acceptable; otherwise, they may prepare at home or skip the purchase.",
+                "link": "customer-switch"
+              },
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.dunkin.k5",
+                  "d.dunkin.k6",
+                  "d.dutch.d5",
+                  "d.dutch.d6"
+                ],
+                "claim": "Dunkin has implemented targeted local offers and additional peak labor only within the 15 consenting franchise locations near pilot cafés, strictly limited by franchise participation and budget constraints. Dutch Bros has implemented targeted local offers and additional peak labor at 12 participating shops, but actual queue capacity to absorb redirected mobile demand is unmeasured and cannot be presumed sufficient.",
+                "link": "offer-competition"
+              },
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.home.h5"
+                ],
+                "claim": "Starbucks maintains the 20% café capacity reservation, capped peak mobile slots, and up to two incremental staff-hours per pilot store per weekday, with no expansion or price change allowed.",
+                "link": "pilot-constraint"
+              },
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.home.h8"
+                ],
+                "claim": "All measured outcome fields remain null, as no actual pilot store or customer records are supplied. Simulated outcomes must be stated as hypothetical and not as observed measurement.",
+                "link": "measurement-null"
+              }
+            ],
+            "cite": [],
+            "kill_criteria": [],
+            "outcome": {
+              "board_delta": {
+                "calendar_period": "February 2027",
+                "public_strategy_history": [
+                  "January 2027: Starbucks pilots 20% peak café capacity reservation for in-café orders in 50 US cafés, capping mobile slots and adding up to two peak staff-hours per weekday per pilot store. Instrumentation deployed for order attempts, slot offers, completions, refunds, staffing, and repeat purchases.",
+                  "January 2027: Dunkin launches a $6 breakfast bundle with opt-in mobile ordering and local marketing in 15 franchise locations near Starbucks pilot cafés, with a $20,000 budget cap.",
+                  "January 2027: Dutch Bros allocates 20 additional labor hours per week per shop (4 hours/weekday, 7–10 a.m.) at 12 participating shops and promotes a $1 Order Ahead credit for first-time users from January 15–31, capped at 100 redemptions per shop or budget exhaustion.",
+                  "January 2027: Composite morning customer segments respond as follows: commuters and habitual app users, when encountering unavailable or delayed Starbucks mobile slots, may redirect purchases to competitors (Dunkin or Dutch Bros) or may instead prepare coffee at home, postpone, or skip the purchase if a detour is inconvenient; walk-in café customers benefit from the new policy and do not switch.",
+                  "February 2027: Starbucks continues the 20% peak café capacity reservation pilot in 50 US cafés, maintaining capped mobile slots and up to two additional peak staff-hours per weekday per store. Dunkin launches a $5 breakfast bundle with opt-in mobile ordering, $15,000 in local marketing, and $5,000 for peak labor at 15 consenting franchise locations, with a stop rule for unprofitable stores. Dutch Bros maintains increased peak labor and a $1 Order Ahead credit for first-time users at 12 shops, capped at 250 redemptions per shop or budget exhaustion; actual queue capacity to serve redirected demand is unmeasured. Composite morning customers continue to redirect mobile orders to the most convenient competitor when Starbucks slots are unavailable or delayed, or otherwise prepare at home or skip."
+                ]
+              },
+              "confidence": 0.8,
+              "description": "The board advances to February 2027, with all player actions implemented as observable public strategy. Starbucks continues the 20% capacity reservation pilot in 50 cafés with capped mobile slots and added peak staff-hours. Dunkin launches a $5 breakfast bundle with local marketing and a stop rule for unprofitable stores, plus incremental peak labor, strictly limited to 15 consenting franchise locations. Dutch Bros deploys additional peak labor and a capped $1 Order Ahead credit for first-time users at 12 shops, but the actual queue capacity to absorb redirected mobile demand is unmeasured. Composite morning customers, when facing a Starbucks mobile slot delay beyond their time or patience ceiling, redirect to the most convenient competitor if feasible, or otherwise may prepare at home or skip the purchase. No measured outcome fields are updated; all remain null. The public_strategy_history is updated to reflect these moves and their intended effects."
+            },
+            "rationale": "The revision directly addresses the challenges from Dunkin and Dutch Bros by qualifying the scope of Dunkin's competitive offer as limited to the 15 consenting franchise locations, and by clarifying that Dutch Bros' ability to absorb redirected demand is unmeasured. All other mechanism links and outcome logic remain unchanged. This maintains fidelity to the dossier constraints and the scenario's evidence base.",
+            "resolves": [
+              "m2.buyer.a1",
+              "m2.buyer.a2",
+              "m2.buyer.a3",
+              "m2.dunkin.a1",
+              "m2.dunkin.a2",
+              "m2.dunkin.a3",
+              "m2.dunkin.a4",
+              "m2.dutch.a1",
+              "m2.dutch.a2",
+              "m2.home.a1",
+              "m2.home.a2"
+            ],
+            "ruling_id": "move2-integrated-customer-competition"
+          },
+          "ruling_id": "move2-integrated-customer-competition"
+        }
+      ]
+    },
+    "provenance": {
+      "answer_hash": "78dbe4713d3d5b2e42aa83393b180a3a5b736d8647b84f9cf0f23b8300537ce4",
+      "ingested_at": "2026-09-12T12:08:38.886728+00:00",
+      "job_id": "job-ecc109d964564ac591eae402fa0207f0",
+      "manifest_hash": "c66c7e0bd2707cb7ec47b96641cd4873be1efc39318971be1a51b82140f29238",
+      "model": "gpt-4.1",
+      "model_parameters": {
+        "edsl_class_name": "LanguageModel",
+        "edsl_version": "1.0.8.dev1",
+        "inference_service": "openai",
+        "model": "gpt-4.1",
+        "parameters": {
+          "frequency_penalty": 0,
+          "logprobs": false,
+          "max_tokens": 16000,
+          "presence_penalty": 0,
+          "reasoning_effort": null,
+          "temperature": 0.5,
+          "top_logprobs": 3,
+          "top_p": 1
+        }
+      },
+      "origin": "simulation",
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-resolutions-control/results-1.ep"
+    }
+  },
+  "routing": {
+    "move2-integrated-customer-competition": {
+      "assessment": null,
+      "blocking": false,
+      "content_hash": "5de07aeeaa24d63078ee0dd25b4955a80139f082ea11f199f25b6cee46578407",
+      "impact_score": 2.0,
+      "over_budget": true,
+      "reasons": [
+        "judgment",
+        "revised"
+      ],
+      "route": "provisional"
+    }
+  }
+}

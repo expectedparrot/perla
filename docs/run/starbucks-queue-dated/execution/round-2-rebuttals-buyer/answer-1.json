@@ -1,0 +1,34 @@
+{
+  "rebuttals": {
+    "rebuttals": [
+      {
+        "ruling_id": "r2-buyer-behavior",
+        "stance": "accept",
+        "argument": "This ruling accurately reflects the different motivations and choices of our various customer segments—habitual app users, café visitors, and time-pressed commuters—based on their experiences in January.",
+        "link": null,
+        "cite": []
+      },
+      {
+        "ruling_id": "r2-dunkin-actions",
+        "stance": "accept",
+        "argument": "We see the new breakfast bundle offer from Dunkin' in the market. We will evaluate it based on our individual needs for convenience, taste, and price on any given morning.",
+        "link": null,
+        "cite": []
+      },
+      {
+        "ruling_id": "r2-dutch-actions",
+        "stance": "accept",
+        "argument": "The continuation of the Dutch Bros Order Ahead offer is noted. For those of us who have switched or are considering it, this remains an attractive option, especially when we're in a hurry.",
+        "link": null,
+        "cite": []
+      },
+      {
+        "ruling_id": "r2-home-actions",
+        "stance": "accept",
+        "argument": "We don't know the internal rules Starbucks uses, but we will experience the results. We will continue to check the app for pickup times and observe the wait times in the café, and make our daily decisions based on that.",
+        "link": null,
+        "cite": []
+      }
+    ]
+  }
+}

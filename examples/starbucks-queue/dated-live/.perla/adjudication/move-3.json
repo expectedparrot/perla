@@ -1,0 +1,10 @@
+{
+  "context_hash": "791bd31048eeeeb71b9e6840d0a25d8abad2794e468b633cbb501cb815c7e642",
+  "job_id": "job-f49c27486a574176bc8c4160d72bed40",
+  "move": 3,
+  "opened_at": "2026-09-12T12:19:35.428724+00:00",
+  "rulings": {
+    "m3-integrated": "2e193ea3ba11ad691df39ee877e1118c7a462a1b345a4d0c6623d9b5c5e287bc"
+  },
+  "status": "awaiting_rebuttals"
+}

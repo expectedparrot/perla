@@ -1,0 +1,10 @@
+{
+  "context_hash": "1a755f76c803ec2d426b5df759a4fd566a03daa1da8d5facbd36b4a8fd637367",
+  "job_id": "job-abf8b0ce5b89461a9ffd736f6132cb02",
+  "move": 1,
+  "opened_at": "2026-09-12T12:15:06.518962+00:00",
+  "rulings": {
+    "r1-integrated-jan27": "b200e7c4105b2f3b49b1cd600b0118db9935ba266569d4cbe7c2d949777c9f1b"
+  },
+  "status": "awaiting_rebuttals"
+}

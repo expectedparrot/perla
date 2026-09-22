@@ -1,0 +1,184 @@
+<header>
+<p class="eyebrow">Perla · A worked strategy case</p>
+<h1>Protect the café queue without giving away the morning customer.</h1>
+<p class="dek">Use a competitive simulation to improve a Starbucks pilot: give rivals a reason to respond, let customers reject the offer, and challenge the explanation of what happens next.</p>
+</header>
+<section id="payoff">
+<h2>The decision this exercise helps you make</h2>
+<p>Suppose Starbucks reserves part of its morning production capacity for customers standing in the café. Mobile customers would see later pickup slots when the remaining capacity fills. Faster café service sounds attractive. But a commuter can leave, a rival can subsidize the first visit, and a customer who changes their morning routine may be slow to return.</p>
+<p>Our recommendation from this exercise is to <strong>test a flexible reservation before expanding a fixed rule</strong>. Compare a protected café allocation with one that releases unused capacity to mobile orders. Track the entire purchase journey, including later purchases and no purchase, and measure whether customers return after a rival’s offer ends. A shorter café queue alone is insufficient grounds to expand.</p>
+<p>That is an experimental recommendation drawn from the scenario, not a forecast of Starbucks’ results. The three rounds below make the reasoning inspectable: rivals respond to restricted mobile availability, Starbucks adapts its rule, and the customer model raises the possibility that habits persist after service recovers. The useful output is a better pilot design and a sharper question to test.</p>
+</section>
+<nav aria-labelledby="contents-title">
+<h2 id="contents-title">Work through the case</h2>
+<ol>
+<li><a href="#method">Understand how the simulation works</a></li>
+<li><a href="#setup">Install the tools and choose how to build the case</a></li>
+<li><a href="#players">Understand and edit the four players</a></li>
+<li><a href="#control">Configure control’s evidence and decision rules</a></li>
+<li><a href="#round-1">Play January: moves, ruling, challenge, resolution</a></li>
+<li><a href="#later-rounds">Follow the adaptations in February and March</a></li>
+<li><a href="#decision-memo">Write the decision memo</a></li>
+</ol>
+<p><a href="reference.html">Full dossiers, prompts, transcripts, and sources</a> · <a href="commands.html">Execution commands and recovery</a></p>
+</nav>
+<section id="method">
+<h2>How a business simulation tests the proposal</h2>
+<p>Perla organizes a strategy exercise around players who have different interests and limited information. In this case, one player makes decisions for Starbucks, two respond as Dutch Bros and Dunkin, and a fourth chooses what customers would do when faced with those offers. We use language models to play these roles. The customer player is a simulated decision maker working from specified customer situations; its answers are not responses from actual customers.</p>
+<p>We give each player a written briefing, called a <em>dossier</em>, describing its background, objectives, resources and limits. The Starbucks player can change the pilot’s staffing and ordering rules. The rival players can choose local offers within their budgets. The customer player can buy coffee elsewhere, make it at home or skip the purchase. Each submits a <em>move</em>: the actions it chooses for that month, without seeing the other players’ current choices.</p>
+<p>A separate model then acts as the adjudicator, called <em>control</em>. It reads the combined moves and explains their likely consequences in a <em>ruling</em>. The players get a chance to object before that ruling becomes the starting situation for the next month. This is where red teaming tests the explanation: a rival or customer can point out that an assumed response conflicts with its incentives or available choices. Below, we build those briefings, play a complete month and inspect an actual objection that changed a ruling.</p>
+<h3>Three kinds of information to keep separate</h3>
+<p><strong>Reported facts</strong> ground the business: company financials, app capabilities and operating models. <strong>Scenario assumptions</strong> define this hypothetical local game: budgets, store counts, customer time limits. <strong>Simulation judgments</strong> describe what might follow when the actors interact. Perla checks structure, citations and job lineage; an accepted response can still make a poor business inference.</p>
+<p>Perla exports EDSL Jobs and imports EDSL Results. The <code>ep</code> CLI chooses models and runs inference through Expected Parrot. The files preserve what each actor saw and returned. In a facilitated game, people can also supply moves and assess rulings.</p>
+</section>
+<section id="setup">
+<h2>Set up the pilot and load its cast</h2>
+<p>Starbucks’ public strategy combines coffeehouse service, staffing investment and digital order sequencing. Its reported Q3 fiscal 2026 US comparable transactions grew 4.2%; the question here is how to sustain momentum while improving the café experience. The particular reservation policy below is our proposed experiment. <a href="https://about.starbucks.com/press/2026/back-to-starbucks-two-year-anniversary/">Strategy context</a> · <a href="https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx">Quarterly results</a>.</p>
+<p>The case covers January–March 2027: 50 pilot cafés, 50 comparison cafés, a 20% café-capacity reservation on weekdays from 7–10 a.m., unchanged prices and up to two extra staff-hours per pilot café per weekday. It assumes relevant local overlap with Dutch Bros and Dunkin. Confirm that overlap before choosing real stores.</p>
+<h3>Install from the source folder</h3>
+<p>You need macOS or Linux, Python 3.11 or later, Git, and an Expected Parrot account for remote inference. If you already have the Perla checkout, open a terminal in the folder containing <code>pyproject.toml</code>. Otherwise download the <a href="perla-source.zip">package source and case bundle</a>, extract it and open a terminal in its <code>perla</code> folder. Python dependencies are downloaded during installation.</p>
+<pre data-language="bash">python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[edsl]'
+python -m pip install anthropic openai google-genai
+ep auth login</pre>
+<p>Keep that terminal active for the commands below. Remote inference uses your account’s credits. The recorded three-round case reported about $0.51 for 32 remote jobs; that is a historical execution cost, not a quote for a new run.</p>
+<h3 id="build">Build the case through commands, or load the supplied files</h3>
+<p>You can author every part of this case with Perla commands. The <a href="build.html#decision">complete command walkthrough</a> starts in an empty game directory and builds the decision, three evaluation criteria, shared starting situation and all four sourced dossiers. It finishes with the review policy and rejoins this tutorial before the first model call.</p>
+<p>After creating a fresh game directory, the command route begins by turning the pilot proposal into a draft decision:</p>
+{{BUILD_DECISION}}
+<p>Follow the <a href="build.html#criteria">remaining construction steps</a> to add the criteria and initial board, inspect the draft with <code>perla game show</code>, and register it with <code>perla init</code>. You then use <code>actor add</code> and the dossier commands to build each player. This route makes the design choices explicit as you go.</p>
+<p>The file-loading route below imports the same design in fewer commands. Choose it if you want to inspect the prepared inputs and start playing quickly. Both routes produce the same case; use a fresh game directory for whichever route you choose.</p>
+<h3>Create a fresh workspace</h3>
+<p>The case files are written inputs supplied with this tutorial. We assembled public company research, chose a hypothetical pilot and wrote the players’ operating limits. Perla reads that design; it does not research Starbucks or invent these files when you initialize a game. Copy the supplied case into a working folder so you can inspect and adapt it:</p>
+<pre data-language="bash">mkdir -p games/starbucks-queue
+cp -R docs/case/starbucks-queue games/starbucks-queue/case
+cd games/starbucks-queue</pre>
+<p>All commands now run from this game directory, which Perla discovers automatically. If you prefer to issue Perla commands from elsewhere, use <code>perla project set /absolute/path/to/your/game</code> once there. Relative paths passed to ep still follow the terminal’s current directory.</p>
+<h3>Define the experiment in game.json</h3>
+<p><a href="case/starbucks-queue/game.json">Read the supplied game.json</a>. It contains three parts: <code>decision</code>, the proposal being tested; <code>criteria</code>, the conditions for judging it; and <code>board</code>, the starting situation shared with all players. Here is an excerpt showing how the proposal and calendar become inputs:</p>
+<pre data-language="json">{
+  "decision": {
+    "statement": "Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full.",
+    "moves": 3,
+    "months_per_move": 1
+  }
+}</pre>
+<p>This excerpt illustrates the fields; the supplied file also specifies the offer, customer segment, pricing and scope. Three moves of one month each give Starbucks two opportunities to adapt after January. The 50-café scope and 20% reservation are choices we made for the experiment. For another strategy question, the case author must make those choices explicitly.</p>
+<p>We also wrote three decision criteria before play: seek a 20% reduction in café waiting time by February, nonnegative incremental contribution by March and no more than a three-percentage-point deterioration in repeat purchasing by March. The file specifies comparison groups and minimum sample sizes. These are proposed standards for evaluating a real pilot; a model’s prediction does not satisfy them.</p>
+<p>The initial <code>board</code> records January 2027, the participating store counts, the reservation rule and the public market context. Actual wait, contribution and retention measurements start as <code>null</code>, meaning unmeasured. Its <code>measurement_rule</code> tells control to keep hypothetical estimates separate from observations. This is how the case author defines both what everyone knows at the start and what remains unknown.</p>
+<p>Initialize Perla from the complete supplied file once you have inspected those choices. This creates the local <code>.perla</code> record and fixes the decision and criteria for this run. The two <code>--delegate</code> options let this model-only walkthrough proceed without a person signing off on dossiers and rulings. For a facilitated exercise, omit them and follow the <a href="commands.html#human-review">human-review instructions</a>.</p>
+<pre data-language="bash">perla init --input case/game.json --delegate dossiers --delegate rulings</pre>
+<h3>Connect the players to their written briefings</h3>
+<p><a href="case/starbucks-queue/players.json">players.json</a> is the roster we wrote for this case. Here is the complete file:</p>
+<pre data-language="json">{
+  "actors": [
+    {"id": "home", "name": "Starbucks", "role": "home", "dossier": "home.json"},
+    {"id": "dutch", "name": "Dutch Bros", "role": "competitor", "dossier": "dutch.json"},
+    {"id": "dunkin", "name": "Dunkin", "role": "competitor", "dossier": "dunkin.json"},
+    {"id": "buyer", "name": "Morning customers (composite)", "role": "wildcard", "dossier": "buyer.json"}
+  ]
+}</pre>
+<p>The IDs are short names used in later commands. The <code>home</code> role identifies the company whose decision we are testing; <code>competitor</code> identifies its rivals; <code>wildcard</code> lets us include another participant, here customers. Each <code>dossier</code> path points to a briefing beside this roster, so <code>home.json</code> means <code>case/home.json</code>.</p>
+<p>Those briefings contain the substance of the players: sourced facts, incentives, constraints, capabilities and limits they must not cross. For example, <a href="case/starbucks-queue/home.json">Starbucks’ briefing</a> cites its quarterly report for segment financials, but labels the $3 transaction contribution and two-hour staffing allowance as author-designed assumptions. The <a href="#players">next section</a> explains all four backgrounds and shows how to author dossier entries with Perla commands.</p>
+<p>Load the roster and all four complete briefings together:</p>
+<pre data-language="bash">perla actor load --input case/players.json</pre>
+<p>This registers the players and records their dossiers in one transaction. It refuses conflicting existing content, so loading the case again cannot silently replace your edits. It has not yet asked a model to choose a move.</p>
+<h3>Choose how rulings receive review</h3>
+<p>The final input, <a href="case/starbucks-queue/live-policy.json">live-policy.json</a>, controls review of the adjudicator’s work. We supplied this policy for the automated walkthrough:</p>
+<pre data-language="json">{
+  "human_budget": 0,
+  "auto_confidence": 0.7,
+  "judgment_share_threshold": 0.4
+}</pre>
+<p><code>human_budget</code> allocates zero human reviews for escalated rulings. <code>auto_confidence</code> sets the confidence threshold for automatic eligibility of otherwise unflagged rulings grounded in dossier facts. <code>judgment_share_threshold</code> causes a warning when more than 40% of a closed round’s rulings rest on judgment. These settings govern review; they do not make a confident model correct. Player objections still run, and the record retains unassessed judgments.</p>
+<pre data-language="bash">perla adjudicate policy set --input case/live-policy.json
+perla status</pre>
+<p>You have now registered the experiment, loaded its players and selected the review policy. The expected <code>data.phase</code> in the status response is <code>move_generation</code>; <code>missing_dossiers</code> is empty. No model has run yet. Editing the copied input files later does not automatically update the registered game; use the dossier commands below to change player briefings, and initialize a fresh game to change the decision or criteria.</p>
+</section>
+<section id="players">
+<h2>Give each player a business—and a limit</h2>
+<p>The cast file is a short roster linking actor IDs to ordinary dossier files. Bulk loading and direct authoring produce the same dossiers; the <a href="reference.html#players">complete backgrounds, sources and authoring commands</a> remain available for inspection.</p>
+<h3 id="player-home">Starbucks: protect service without losing contribution</h3>
+<p>Starbucks’ coffeehouse history makes the visit part of its proposition. Q3 fiscal 2026 North America revenue was $7,395.1 million and operating margin 13.6%, which establish business scale but tell us little about an individual pilot café. The constructed management tension is between the operations lead’s service and labor goals, the digital lead’s pickup reliability, and finance’s all-channel contribution target.</p>
+<p>In the case, Starbucks can adjust pickup windows, staffing and the reservation rule within 50 cafés. It can instrument its own attempts, purchases and repeat visits. It cannot see where every rejected customer ultimately buys. Its assumed $3 transaction contribution and $30 hourly labor cost imply that two extra staff-hours require 20 genuinely incremental transactions per café per day to break even. <a href="reference.html#player-home">Sources and complete dossier</a>.</p>
+<p>Here is how those economics and operating limits enter the player’s briefing. <code>dossier fact</code> records the claim and its source; <code>dossier constraint</code> makes the staffing and pilot limits explicit. These two entries are already in the loaded case, so repeating them leaves the dossier unchanged.</p>
+{{AUTHORING_EXAMPLE}}
+<p>Inspect the result with <code>perla dossier show home</code>. For the rest of the player’s history, financials, incentives, capabilities and information limits, follow the <a href="build.html#home">complete Starbucks construction commands</a>.</p>
+<h3 id="player-dutch">Dutch Bros: buy a repeat customer, not another bottleneck</h3>
+<p>Dutch Bros’ drive-through service and Order Ahead app offer an alternative morning routine. Its Q2 2026 revenue was $550.9 million, with company-operated same-shop transactions up 3.4%. In our constructed backstory, a regional operator is integrating staff while protecting service consistency. The local player controls 12 participating shops and an assumed $30,000 monthly acquisition-and-labor envelope. It can see its own lane times and redemptions, but cannot target a verified list of people rejected inside Starbucks’ app. <a href="reference.html#player-dutch">Sources and complete dossier</a>.</p>
+<h3 id="player-dunkin">Dunkin: keep the franchisees willing to participate</h3>
+<p>Dunkin brings a coffee-and-food value proposition and a franchise operating model. Its app and breakfast offers make the whole basket relevant. Our player represents 15 consenting local restaurants with an assumed $20,000 monthly staffing-and-promotion budget. The constructed backstory is disagreement over offers that increased traffic without profitable food attachment. The player can coordinate an opt-in offer and measure its own costs; it cannot impose national pricing or assume corporate reimbursement. <a href="reference.html#player-dunkin">Sources and complete dossier</a>.</p>
+<h3 id="player-buyer">Customers: the occasion determines the alternative</h3>
+<p>The customer player represents three assumed occasions: a commuter with ten minutes of slack and an $8 budget; a habitual app user willing to tolerate an eight-minute delay communicated before payment; and a café visitor with a $7 drink budget and 25 minutes to sit. Home preparation, postponement and no purchase are available. These are designed constraints, not measured segment weights or survey responses. The player sees public offers and its own experience, not confidential business plans. <a href="reference.html#player-buyer">Sources and complete dossier</a>.</p>
+<h3>Adjust assumptions before play</h3>
+<p>To explore a different budget, make a separate game, revise the relevant fact with <code>--replace</code>, and revise any dependent constraints consistently before exporting moves. Richness should explain authority and incentives; it should not prescribe the response you hope a player will choose. The eight-minute tolerance, for example, is an input to this game. Its reappearance in a model answer is not a discovery.</p>
+</section>
+<section id="control">
+<h2>Define what control can conclude</h2>
+<p>Control’s default role and response schema are built into Perla. You configure its case evidence through <code>case/game.json</code>, the dossiers and any supplied testimony; you choose its model with ep. There is currently no separate CLI command for replacing control’s role prompt. <code>adjudicate open</code> assembles the frozen evidence after all actors commit.</p>
+<h3>Set the decision gates before initialization</h3>
+<p>The supplied <code>game.json</code> defines three gates in <code>criteria</code>. Service requires a 20% adjusted reduction in café p90 wait by February across at least 40 complete store pairs. Economics requires nonnegative adjusted daily contribution by March. Retention requires no worse than a three-percentage-point adjusted repeat decline, with at least 1,000 complete customers per arm. Change these definitions before initializing a different game; the registered criteria are fixed for that run.</p>
+<p>The same file’s <code>board.measurement_rule</code> specifies how the public situation is represented: keep absent observations empty, put hypothetical estimates in separate <code>simulated_*</code> fields, and carry observable developments into <code>public_strategy_history</code>. The <a href="case/starbucks-queue/README.md">case notes</a> spell out the measurement definitions. Control sees the full dossiers; private information can leak through its published prose, so inspect the proposed public update before closure.</p>
+<h3>Inspect the argument, not just the schema</h3>
+<p>A café-capacity reservation is an action. Lower café waiting time is a consequence requiring assumptions about arrivals, preparation times and use of the reserved capacity. In this case those operating distributions are absent. A good ruling can identify a possible improvement, but its magnitude—and potentially its direction—remains judgment. The prompt requires control to state the basis of each causal link and cite qualified facts such as <code>d.home.h6</code>.</p>
+<p>For each important causal link, ask whether the claimed consequence follows from the cited evidence and whether control has excluded a choice available to a player. Structural acceptance ensures the response fits the game; it does not fix a bad causal argument.</p>
+</section>
+<section id="round-1">
+<h2>January: play one complete round</h2>
+<p>The following commands execute a fresh round. The quoted responses are from the recorded January case; a new model run will produce different wording and may choose different actions. The <a href="reference.html#execution-records">execution records</a> distinguish the original case from the fresh CLI verification.</p>
+<h3>1. Choose each actor’s model once</h3>
+<p>The original case used GPT-4.1 for Starbucks, Gemini 2.5 Flash for Dutch Bros, GPT-4.1 Mini for Dunkin and Gemini 2.5 Pro for customers. Control also used GPT-4.1, in a separate role. This is a reproducible assignment, not evidence that these models represent the businesses or provide independent judgments. The generous output limit lets control return complete structured explanations.</p>
+{{MODEL_COMMANDS}}
+<h3>2. Elicit four independent commitments</h3>
+<pre data-language="bash">perla job generate moves --move 1 --output round-1/moves</pre>
+<p>The directory now contains four named <code>.jobs.ep</code> files and a batch receipt. Each actor job receives the decision, the initial public board and only its own dossier. None receives another player’s unfinished move. The prompt asks for actions, rationale, resource commitments and expected responses.</p>
+{{FIRST_MOVE_COMMANDS}}
+<pre data-language="bash">perla ingest moves --from round-1/moves
+perla status</pre>
+<p>After all four ep commands complete, there should be four <code>.results.ep</code> files beside the Jobs. Import validates all pending responses together. Success moves <code>data.phase</code> to <code>ready_for_adjudication</code>. If a response fails or ep times out, use the <a href="commands.html#recovery">recovery instructions</a> before continuing.</p>
+<h3>What the four players returned</h3>
+<p>Starbucks committed to the reservation and measurement plan. Dutch Bros combined staffing with an acquisition offer. Dunkin emphasized an opt-in breakfast bundle. The customer player made contingent choices by occasion. The records below separate the instructions given to each model from the actions it returned. Both quoted passages are verbatim; the input is an excerpt, and the links preserve the complete prompts and responses.</p>
+{{MOVE_EXCERPTS}}
+<p>The useful interaction is that rivals can respond immediately through existing apps and staffing, while Starbucks needs time to learn whether its rule improves contribution. The customer’s eight-minute cutoff was supplied in the dossier; the combination of rival offers and an operational learning period creates the strategic question about switching before Starbucks adapts.</p>
+<h3>3. Ask control what the combined moves imply</h3>
+{{CONTROL_COMMANDS}}
+<p>Opening control before all commitments are accepted fails. After rulings are ingested, <code>adjudicate show</code> exposes the actions and mechanism chains for inspection. Routing freezes which judgments require review under the selected policy.</p>
+<p>In the recorded January case, control put all eleven actions into one integrated ruling. It anticipated diversion toward competitors or home preparation and kept conversion rates and capacity unknown. Its claim that café visitors experience better waits was too strong: reserving capacity does not itself establish that queues improve. The full <a href="reference.html#round-1">ruling and its evidence</a> allow you to check that inference.</p>
+<h3>4. Return the ruling to the affected players</h3>
+<p>Each affected actor receives the relevant ruling, its own dossier and the prior public board. It must accept the ruling or challenge a named causal link with a dossier citation. It cannot browse other actors’ private dossiers.</p>
+{{REBUTTAL_COMMANDS}}
+<p>All four January actors accepted. That tells us these responses did not identify a dispute; it supplies no independent evidence that the queue improves. The protocol creates an opportunity to challenge, not a guarantee of an effective challenge.</p>
+<h4>What a successful objection looks like</h4>
+<p>In an earlier, separate run of this Starbucks case, control explained the effects of delayed mobile orders by saying customers would redirect their purchases to Dunkin or Dutch Bros. When that ruling was returned to the customer player, it objected:</p>
+{{CHALLENGE_QUOTE}}
+<p>The customer’s briefing explicitly allowed home preparation, postponement and skipping the purchase. Its response cited that entry and identified the disputed part of the ruling: the claim that a delayed mobile order would become a competitor purchase. Control then revised its explanation and the published outcome to include those other choices.</p>
+<p>The simulation did not discover those alternatives; we had supplied them. The objection caught control neglecting them. That correction matters for the pilot: a lost Starbucks order cannot simply be credited to a rival, so researchers need to learn where the uncompleted order went. The <a href="reference.html#challenge-example">original ruling, objection and revision</a> preserve the complete exchange from that separate run.</p>
+<h3>5. Resolve, inspect and close the round</h3>
+{{RESOLUTION_COMMANDS}}
+<p>Control affirmed January’s ruling after answering the actors. Before closing your run, inspect its final outcomes for unsupported numerical claims, private information in public history and incompatible changes to the same board field. A conflicting update must be <a href="commands.html#reconcile">reconciled explicitly</a>. A human-review project also requires its assessments and approval.</p>
+<pre data-language="bash">perla adjudicate close --move 1
+perla status</pre>
+<p>On success, <code>closed_move</code> is 1, <code>current_move</code> is 2 and the next move-generation phase is available. The new board contains the accepted public developments. That is the state February’s players will receive, together with their original dossiers. It is not a shared transcript of every private conversation.</p>
+</section>
+<section id="later-rounds">
+<h2>February and March: does adaptation arrive in time?</h2>
+<p>To execute the remaining rounds, continue with the visible <a href="commands.html#round-2">February commands</a>, then the <a href="commands.html#round-3">March commands</a>. They repeat the same commitment, ruling, rebuttal and resolution cycle using the preceding round’s closed board. The account below follows the original recorded case.</p>
+<h3 id="round-2">February: release unused capacity</h3>
+<p>Starbucks retained the 20% reservation, but tested a variation in ten cafés: after 8 a.m., release half the unused allocation to mobile orders when café demand uses less than 15% of capacity. Dutch Bros kept its $15,000 labor and $15,000 acquisition split. Dunkin proposed a $1 bundle discount with $12,000 for staffing and $8,000 for promotion. The customer model described frustrated app users trying alternatives.</p>
+<p>This is the most actionable adaptation in the case. A fixed reservation can leave capacity unused; a conditional release rule gives Starbucks something specific to test. It remains an operational hypothesis because no store measurements arrived between rounds. The service gate was due, but the game could not establish that it passed.</p>
+<p>Control produced four rulings, and the actors ultimately accepted them. Two incomplete rebuttals were structurally rejected and replaced by fresh calls. Those are execution failures, not substantive disagreement. The <a href="reference.html#round-2">February transcript</a> preserves both attempts.</p>
+<h3 id="round-3">March: expansion meets an uncertain habit change</h3>
+<p>Starbucks expanded the conditional release rule from ten to all 50 pilot cafés. Dunkin increased its proposed bundle discount to $1.50, while Dutch Bros continued its offer and reviewed local performance. The customer model said some former Starbucks app users now opened a rival app by default. That persistence is a plausible risk to investigate; the supplied loyalty assumptions and the prior simulated history helped produce it.</p>
+<p>Expansion did not follow demonstrated success in the ten-store variation. Starbucks also proposed rollback if mobile abandonment or café waits worsened by “more than 5 percentage points.” That unit can describe a rate, but it does not specify a usable threshold for waiting time measured in minutes. Control accepted the structure without correcting the ambiguity. These are reasons to retain experimental discipline despite a coherent story.</p>
+<p>The <a href="reference.html#round-3">March transcript</a> ends with agreement and a closed public board. The three real operating gates remain unevaluated. The round progression nevertheless identifies an adaptive rule to test, a rival-response risk and a measurement flaw to correct.</p>
+</section>
+<section id="decision-memo">
+<h2>The memo to the pilot team</h2>
+<p><strong>Recommendation:</strong> authorize a bounded comparison of the fixed reservation and conditional release rule, with adequate baseline and comparison data. Do not expand the rule on the strength of a simulated queue improvement. Predefine rollback separately for waiting time, abandonment and contribution, using units that match each metric.</p>
+<p><strong>Competitive preparation:</strong> assume rivals can deploy local offers quickly through existing channels. Test whether switching persists after a promotion ends. Distinguish an order delayed within Starbucks, an order transferred to another Starbucks channel, a competitor purchase and no purchase. The outside-option challenge shows why these cannot be collapsed into a single lost-sale measure.</p>
+<p><strong>First research priority:</strong> instrument the rejected-slot journey and follow the baseline mobile cohort across channels. Pair that with café waits, staffing cost and all-channel contribution. Under the case’s assumed unit economics, the full extra labor allowance requires 20 incremental transactions per café per day; a channel shift does not cover that bill.</p>
+<p><strong>What would change this recommendation:</strong> evidence that reservation capacity is rarely unused would weaken the case for conditional release. Evidence that shorter waits fail to offset mobile losses would favor narrowing or stopping the policy. Persistent rival repeat after offers expire would make recovery of routine a separate intervention. These are testable propositions from the case, not measured conclusions.</p>
+<p>This editorial memo is the worked case’s decision artifact. Perla’s optional endgame stage can record criterion assessments, insights and predictions; it was not executed in the original case. The <a href="commands.html#endgame">endgame instructions</a> show how to add it to your own run, and the <a href="reference.html#sources">source register</a> and <a href="reference.html#execution-records">execution archives</a> support review of the case.</p>
+</section>
+<footer><p>Perla · <a href="reference.html">Evidence and complete transcripts</a> · <a href="commands.html">Execution reference</a></p></footer>

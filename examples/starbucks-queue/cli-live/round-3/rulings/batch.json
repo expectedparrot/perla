@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "actor_id": "control",
+      "job_id": "job-36f0830a82694e8a8650f9519dcd2d63",
+      "kind": "rulings",
+      "move": 3,
+      "package": "control.jobs.ep",
+      "results": "control.results.ep"
+    }
+  ],
+  "project_id": "51bf44d9-5a70-45d0-90cb-4578f7302299",
+  "version": 1
+}

@@ -1,0 +1,321 @@
+{
+  "approvals": {},
+  "closed_move": 3,
+  "created_at": "2026-09-12T10:49:00.871557+00:00",
+  "decision": {
+    "launch_period": "January 2027; a proposed experiment, not an announced Starbucks policy",
+    "months_per_move": 1,
+    "moves": 3,
+    "offer": "Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays",
+    "pricing": "Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure",
+    "scope": "50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores",
+    "segment": "50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés",
+    "statement": "Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full."
+  },
+  "delegations": [
+    {
+      "checkpoint": "dossiers",
+      "recorded_at": "2026-09-12T10:49:00.871557+00:00"
+    },
+    {
+      "checkpoint": "rulings",
+      "recorded_at": "2026-09-12T10:49:00.871557+00:00"
+    }
+  ],
+  "escalation_policy": {
+    "auto_confidence": 0.7,
+    "human_budget": 0,
+    "judgment_share_threshold": 0.4
+  },
+  "id": "47d39ce5-de29-4fef-b12f-ba185967f991",
+  "initial_board_hash": "c4787148a1e0971365448cfb9b800f4d88426699bd9713ca45d3fcf3ad8ae220",
+  "jobs": {
+    "job-39b750386b844e99bba1cc089cd3d0a8": {
+      "actor_id": "home",
+      "id": "job-39b750386b844e99bba1cc089cd3d0a8",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-39b750386b844e99bba1cc089cd3d0a8.manifest.json",
+      "manifest_hash": "70e9544b7ca8a4e43343a8d9ab9b6a07954b09ffc50675387256acee879bf666",
+      "move": 3
+    },
+    "job-582e5a8ab99344d98901ecc95139380d": {
+      "actor_id": "home",
+      "id": "job-582e5a8ab99344d98901ecc95139380d",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-582e5a8ab99344d98901ecc95139380d.manifest.json",
+      "manifest_hash": "454102561452e3879f9772de61bfa2760134a002589f796460270be44ba8aff7",
+      "move": 3
+    },
+    "job-5895cd99ab2942b6955f668532ef750c": {
+      "actor_id": "home",
+      "id": "job-5895cd99ab2942b6955f668532ef750c",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-5895cd99ab2942b6955f668532ef750c.manifest.json",
+      "manifest_hash": "e52536c3beb1ad0075cd109a1c266d7892376dc9a8df031a28bdfd2cf48a7b54",
+      "move": 2
+    },
+    "job-58df0db26f8847f6ad62a84d52f60417": {
+      "actor_id": "buyer",
+      "id": "job-58df0db26f8847f6ad62a84d52f60417",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-58df0db26f8847f6ad62a84d52f60417.manifest.json",
+      "manifest_hash": "c7373e7dada7bcf5188a49f88d3977246e38568f5b7df81cd67b2800e0fe650b",
+      "move": 1
+    },
+    "job-5d20f519dbd34bbda04d332e62d45ed6": {
+      "actor_id": "buyer",
+      "id": "job-5d20f519dbd34bbda04d332e62d45ed6",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-5d20f519dbd34bbda04d332e62d45ed6.manifest.json",
+      "manifest_hash": "eea8728cd859686083e844fb505e619ad6360a9d8a753aae7b681ec2a1dfb48d",
+      "move": 3
+    },
+    "job-5fef68c75c974b20b56b572e6ec5d062": {
+      "actor_id": "dutch",
+      "id": "job-5fef68c75c974b20b56b572e6ec5d062",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-5fef68c75c974b20b56b572e6ec5d062.manifest.json",
+      "manifest_hash": "b3b1d1f5d5d42c81e135d4ccd7ccf17fd292897e68cadc36d2b44adb51464838",
+      "move": 3
+    },
+    "job-62069cb9e1b345bcb83cfd5819211260": {
+      "actor_id": "home",
+      "id": "job-62069cb9e1b345bcb83cfd5819211260",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-62069cb9e1b345bcb83cfd5819211260.manifest.json",
+      "manifest_hash": "37c4bd4adce947ab3aac764dc7df9ba0220166b6c7dc62bdb6f08bc48c4b3dd5",
+      "move": 2
+    },
+    "job-65d1d37ce41d46fb89f9a94fddc842ea": {
+      "actor_id": "dutch",
+      "id": "job-65d1d37ce41d46fb89f9a94fddc842ea",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-65d1d37ce41d46fb89f9a94fddc842ea.manifest.json",
+      "manifest_hash": "3dd43a028698e675f85624735d3b32a66345c0f434da754f072eb04b38de880b",
+      "move": 1
+    },
+    "job-75f937e0912e481bb6d3f28fe6a6316d": {
+      "actor_id": "dunkin",
+      "id": "job-75f937e0912e481bb6d3f28fe6a6316d",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-75f937e0912e481bb6d3f28fe6a6316d.manifest.json",
+      "manifest_hash": "3df10b9d342d8b1140e10d09fa722dd5b8a309f9d98d44509b19d41ad58054b6",
+      "move": 2
+    },
+    "job-77b29f645c0e4da9829acd70bf639e96": {
+      "actor_id": "control",
+      "id": "job-77b29f645c0e4da9829acd70bf639e96",
+      "ingested": true,
+      "kind": "rulings",
+      "manifest": "jobs/job-77b29f645c0e4da9829acd70bf639e96.manifest.json",
+      "manifest_hash": "1c21d7f8f5ec0e43acab069c39456c5d03f781fd894c3e075ab1e14dfb9fe751",
+      "move": 3,
+      "ruling_hashes": {
+        "move3-integrated-customer-competitor-dynamics": "4118680512e4c43f89d3d25c2c7dec8252dde17fabeb3c5dae1414dd81012a1a"
+      }
+    },
+    "job-7e88696bfe2547358ca9f10777c0df89": {
+      "actor_id": "control",
+      "id": "job-7e88696bfe2547358ca9f10777c0df89",
+      "ingested": true,
+      "kind": "rulings",
+      "manifest": "jobs/job-7e88696bfe2547358ca9f10777c0df89.manifest.json",
+      "manifest_hash": "ac68311483b6a8051880159140e4f68cd933552d0a2a5c8f951910aa53bae1e0",
+      "move": 1,
+      "ruling_hashes": {
+        "r1-all-move1": "b6e4a36e3268cdef178b356d4fdf5b71df7bc843bf13c8a86f1949bef17c119d"
+      }
+    },
+    "job-86039fb6866748f3b96290caa627e00d": {
+      "actor_id": "dutch",
+      "id": "job-86039fb6866748f3b96290caa627e00d",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-86039fb6866748f3b96290caa627e00d.manifest.json",
+      "manifest_hash": "cc51b6e2cfde45598615ef56228a9415b953e6c6ee5294a040522fdb35aaa61e",
+      "move": 2
+    },
+    "job-87e5bc8ca3184262a4f6c3042ce25a03": {
+      "actor_id": "dunkin",
+      "id": "job-87e5bc8ca3184262a4f6c3042ce25a03",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-87e5bc8ca3184262a4f6c3042ce25a03.manifest.json",
+      "manifest_hash": "5c5f4c7bdfc3dcdc2ebf5e2d99e69f3d1010f2dbd2e4f1aa256b7913aa6fea8a",
+      "move": 2
+    },
+    "job-8a70a41de2a546fdb90afe3abe40d1ca": {
+      "actor_id": "dunkin",
+      "id": "job-8a70a41de2a546fdb90afe3abe40d1ca",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-8a70a41de2a546fdb90afe3abe40d1ca.manifest.json",
+      "manifest_hash": "a23d3ea1f7fcedf697b697989f83e50fb2e566526e0b39dc9a0a3bdda879ee93",
+      "move": 1
+    },
+    "job-8d1de97bd17442e4b910f418b64a0c08": {
+      "actor_id": "home",
+      "id": "job-8d1de97bd17442e4b910f418b64a0c08",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-8d1de97bd17442e4b910f418b64a0c08.manifest.json",
+      "manifest_hash": "68c78c2b38d45267ccc5d353c96e7e58b36a47ac03769d4851bbcd6a8fce4b78",
+      "move": 1
+    },
+    "job-9bccd9c03aee4110b682829afd1820bd": {
+      "actor_id": "dutch",
+      "id": "job-9bccd9c03aee4110b682829afd1820bd",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-9bccd9c03aee4110b682829afd1820bd.manifest.json",
+      "manifest_hash": "214b002854d3257216de112cbef7ff18121fffce02b055c3783e094b734e1931",
+      "move": 2
+    },
+    "job-a225f5575faa4d76945880a96ba6f4bb": {
+      "actor_id": "buyer",
+      "id": "job-a225f5575faa4d76945880a96ba6f4bb",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-a225f5575faa4d76945880a96ba6f4bb.manifest.json",
+      "manifest_hash": "5b3be39ef4f9978e0c11be6b35ae0ad1627f4a23cf3b03ad7ec773f38be2c04f",
+      "move": 2
+    },
+    "job-af5ec1d40c744bb6801078b74198f51d": {
+      "actor_id": "dutch",
+      "id": "job-af5ec1d40c744bb6801078b74198f51d",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-af5ec1d40c744bb6801078b74198f51d.manifest.json",
+      "manifest_hash": "453b1bc454d1790f2a1cbe58ece67734e1464ae4a5665fb500714b75b5fa38c3",
+      "move": 3
+    },
+    "job-b6ceb86d09924346bc2b6aa6dadd404b": {
+      "actor_id": "dunkin",
+      "id": "job-b6ceb86d09924346bc2b6aa6dadd404b",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-b6ceb86d09924346bc2b6aa6dadd404b.manifest.json",
+      "manifest_hash": "8f4ff99a57c25c17f3929769aa63a3d6848b1b0663da872d7b27ace65a90bc89",
+      "move": 1
+    },
+    "job-b7c499ac3fa64fa09702739b5eb94027": {
+      "actor_id": "dunkin",
+      "id": "job-b7c499ac3fa64fa09702739b5eb94027",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-b7c499ac3fa64fa09702739b5eb94027.manifest.json",
+      "manifest_hash": "ab88b4fe01500557a6c111e64914b0e69b8a4330805a8fc08a14ae9a6c905a0e",
+      "move": 3
+    },
+    "job-b99a355db15f4b8794132dcd7a277d02": {
+      "actor_id": "control",
+      "id": "job-b99a355db15f4b8794132dcd7a277d02",
+      "ingested": true,
+      "kind": "resolutions",
+      "manifest": "jobs/job-b99a355db15f4b8794132dcd7a277d02.manifest.json",
+      "manifest_hash": "5ad3d3ec2cdefca8caed61e2995291e1e0e738f9789d93c2e4774e3fe4f4d655",
+      "move": 3
+    },
+    "job-bb9a337bb34641bbbbe1a78262f656a2": {
+      "actor_id": "dutch",
+      "id": "job-bb9a337bb34641bbbbe1a78262f656a2",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-bb9a337bb34641bbbbe1a78262f656a2.manifest.json",
+      "manifest_hash": "2a0bf0d32901fad52a95e03197c1e8bd3705f14735871061a591038bfd9ebea7",
+      "move": 1
+    },
+    "job-c006e9cbe580474caa400dc6ab4e8fd7": {
+      "actor_id": "buyer",
+      "id": "job-c006e9cbe580474caa400dc6ab4e8fd7",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-c006e9cbe580474caa400dc6ab4e8fd7.manifest.json",
+      "manifest_hash": "90d6294a9766fcb35ea323aefa71183cdbbe1c55b508e2f315ea764c2d0465f1",
+      "move": 2
+    },
+    "job-c2d0b0ec37184883a864206ec0a56166": {
+      "actor_id": "dunkin",
+      "id": "job-c2d0b0ec37184883a864206ec0a56166",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-c2d0b0ec37184883a864206ec0a56166.manifest.json",
+      "manifest_hash": "2327113867feee9df1125ee59b89f26a53ab707b1f70d34d42d20357e0b2cd0d",
+      "move": 3
+    },
+    "job-d3d457e34cd043e0a6a123e461a22e0c": {
+      "actor_id": "buyer",
+      "id": "job-d3d457e34cd043e0a6a123e461a22e0c",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-d3d457e34cd043e0a6a123e461a22e0c.manifest.json",
+      "manifest_hash": "b178ed7c77fe467230bf966d23c2c79238f6b1aec046e5a1d375036167e5322e",
+      "move": 1
+    },
+    "job-e4726a2a039e48dbaec74dca32e5ebaa": {
+      "actor_id": "home",
+      "id": "job-e4726a2a039e48dbaec74dca32e5ebaa",
+      "ingested": true,
+      "kind": "rebuttals",
+      "manifest": "jobs/job-e4726a2a039e48dbaec74dca32e5ebaa.manifest.json",
+      "manifest_hash": "3d2a7ecfd9cd1c45129af1e2f783f0f99a17b2100d4aec4f99531e9eb813c431",
+      "move": 1
+    },
+    "job-e902ea6b099e45c499557b1e4e7a6088": {
+      "actor_id": "buyer",
+      "id": "job-e902ea6b099e45c499557b1e4e7a6088",
+      "ingested": true,
+      "kind": "moves",
+      "manifest": "jobs/job-e902ea6b099e45c499557b1e4e7a6088.manifest.json",
+      "manifest_hash": "b9502a157ee5db4a911c3677dd4f641650ab458c588f95903d1f233afe82c828",
+      "move": 3
+    },
+    "job-ecc109d964564ac591eae402fa0207f0": {
+      "actor_id": "control",
+      "id": "job-ecc109d964564ac591eae402fa0207f0",
+      "ingested": true,
+      "kind": "resolutions",
+      "manifest": "jobs/job-ecc109d964564ac591eae402fa0207f0.manifest.json",
+      "manifest_hash": "c66c7e0bd2707cb7ec47b96641cd4873be1efc39318971be1a51b82140f29238",
+      "move": 2
+    },
+    "job-f6606e9956f54198a8307a71322a7d87": {
+      "actor_id": "control",
+      "id": "job-f6606e9956f54198a8307a71322a7d87",
+      "ingested": true,
+      "kind": "resolutions",
+      "manifest": "jobs/job-f6606e9956f54198a8307a71322a7d87.manifest.json",
+      "manifest_hash": "24a8f01a70eff8e84e00f11f5c1f836dab4783dfbfb4da5483b50807f4e66939",
+      "move": 1
+    },
+    "job-fd52c409380f4bfe901a5230c4b866dd": {
+      "actor_id": "control",
+      "id": "job-fd52c409380f4bfe901a5230c4b866dd",
+      "ingested": true,
+      "kind": "rulings",
+      "manifest": "jobs/job-fd52c409380f4bfe901a5230c4b866dd.manifest.json",
+      "manifest_hash": "4c7b3e16f49942c03fc7480e55b87b976564718df9c279000fab216c56bcd4a0",
+      "move": 2,
+      "ruling_hashes": {
+        "move2-integrated-customer-competition": "224e286db76839aebe048b211b731a2bd0fccd18bb30b3bf0181031900571b48"
+      }
+    }
+  },
+  "registration_hash": "254f280d345cacc2d10d64817f38c3b4a5c62c86b4ca9f3eb4aa4a6512ecbd53",
+  "reviews": {
+    "1": "9484e7a77fe1ccb6b21b14cf460becbe01faa6c73596de228743f2dfa96f7e57",
+    "2": "e357b5fe08350da7966574aead8f201744db481e228706182d4d3c910793ba62",
+    "3": "3799a30f520de2c8bc087c9a41c29eaee9849a079e24a0f72864c10ef168b5c2"
+  },
+  "schema_version": "1.0",
+  "setup_hash": "8ec4b6ee802cc4dce76532e95744935492f63f21be8ac6e84d713bfc490b6fb9"
+}

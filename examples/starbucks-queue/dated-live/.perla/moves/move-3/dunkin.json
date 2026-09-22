@@ -1,0 +1,49 @@
+{
+  "actor_id": "dunkin",
+  "committed_at": "2026-09-12T12:19:34.665478+00:00",
+  "content": {
+    "actions": [
+      "Launch a $1.50 discount breakfast bundle offer via the Dunkin app at all 15 participating franchise stores for March 2027, targeting weekday mornings 7–10 a.m. near pilot Starbucks cafés.",
+      "Allocate $10,000 for incremental morning labor to improve order speed and reduce wait times during the peak window.",
+      "Allocate $10,000 for local app advertising and promotional efforts to increase awareness and trial of the offer.",
+      "Implement a stop rule to discontinue the offer at any store where contribution margin worsens after one month, based on basket economics and repeat visit data."
+    ],
+    "expected_responses": [
+      "Starbucks maintains 20% peak café capacity reservation for in-café orders and mobile order limits without price changes.",
+      "Dutch Bros continues $15,000 monthly incremental morning labor and $15,000 monthly geo-targeted $1 Order Ahead app offers at nearby shops.",
+      "Some habitual Starbucks app users experiencing delays may shift to Dunkin's improved offer, increasing Dunkin's morning transactions and repeat visits if service is reliable."
+    ],
+    "rationale": "Increasing the discount from $1 to $1.50 aims to better compete with Starbucks' capacity-aware mobile order slots and Dutch Bros' $1 offers, potentially attracting more habitual Starbucks app users who are sensitive to wait times and price. The labor investment is intended to ensure faster service and reliable pickup, addressing the key customer pain point of mobile order delays. Local advertising supports awareness and trial without exceeding the $20,000 monthly budget. The stop rule ensures economic discipline by discontinuing unprofitable offers, protecting franchisee margins and sustaining willingness to continue participation.",
+    "resource_commitments": [
+      "$10,000 for incremental morning labor in March 2027",
+      "$10,000 for local app advertising and promotions in March 2027"
+    ]
+  },
+  "content_hash": "0e0bff2f1059192a9a7639c598f821bf6300fd1b6474dcbba54f4466c1899041",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "0e0bff2f1059192a9a7639c598f821bf6300fd1b6474dcbba54f4466c1899041",
+    "ingested_at": "2026-09-12T12:19:34.665478+00:00",
+    "job_id": "job-b905fe98900c47e19c18a9f0246582d6",
+    "manifest_hash": "443286e33d550092eacecae06463a3a3eeb6062c65978b65eb8e608390c839c0",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-moves-dunkin/results-1.ep"
+  }
+}

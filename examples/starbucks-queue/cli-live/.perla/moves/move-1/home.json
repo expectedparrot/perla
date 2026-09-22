@@ -1,0 +1,47 @@
+{
+  "actor_id": "home",
+  "committed_at": "2026-09-12T13:39:20.624684+00:00",
+  "content": {
+    "actions": [
+      "Implement capacity-aware mobile pickup slots in 50 pilot cafés during weekday peak (07:00–10:00) for January 2027, reserving 20% of measured 15-minute production capacity for in-café orders and offering later mobile pickup times when allocation is full.",
+      "Instrument and monitor all order attempts (mobile and café), offered pickup slots, completed orders, refunds, and incremental staffing hours in both pilot and 50 comparison cafés. Begin building paired-store and customer cohort data for baseline and intervention measurement."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin may emphasize their own digital ordering convenience or drive-through speed to attract mobile customers who are offered later Starbucks pickup slots.",
+      "Some Starbucks mobile customers may shift to in-café ordering, accept later pickup times, or defect to competitors, but the protected café allocation should improve the in-store experience and reduce peak wait times.",
+      "Competitors may test limited-time offers or value promotions to capture any displaced Starbucks demand but lack visibility into the pilot's internal measurement or results."
+    ],
+    "rationale": "Protecting a portion of peak production capacity for café orders addresses the strategic need to restore the in-store coffeehouse experience (h1, h4) without sacrificing digital convenience. This operational experiment is designed to balance transaction growth (h3) and all-channel contribution (h6, h7), while remaining reversible and within the defined scope (h5). Instrumentation is essential to generate the evidence needed for later decision gates, since no actual store or customer measurements are yet available (h8, h9).",
+    "resource_commitments": [
+      "Dedicate up to two additional staff-hours per weekday morning per pilot café to support the new order sequencing and customer flows, at an assumed cost of $60/store/day (h5, h6).",
+      "Deploy internal measurement and reporting tools to track attempt-to-purchase funnels, slot offers, completions, and staffing for both pilot and comparison cafés."
+    ]
+  },
+  "content_hash": "6cb6ec26fbb084f0fee8d464a4d00c8208aad0e787a9e6eaadea71b5e1cee9a8",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "6cb6ec26fbb084f0fee8d464a4d00c8208aad0e787a9e6eaadea71b5e1cee9a8",
+    "ingested_at": "2026-09-12T13:39:20.624684+00:00",
+    "job_id": "job-c739d86a9bd2456daccdc0bd614c7bfb",
+    "manifest_hash": "294bb264e53365e41ed093fc613977839a56b3ee5cef48631ecf41f85cad5fe2",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-1/moves/home.results.ep"
+  }
+}

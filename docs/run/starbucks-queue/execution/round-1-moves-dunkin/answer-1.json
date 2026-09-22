@@ -1,0 +1,19 @@
+{
+  "moves": {
+    "actions": [
+      "Launch a coordinated opt-in mobile order bundle offer for breakfast in the 15 consenting Dunkin franchise locations near the Starbucks pilot cafés, emphasizing a $6 breakfast Meal Deal with mobile ordering convenience during the 7–10 a.m. peak weekday window.",
+      "Implement a local marketing campaign in January 2027 promoting the value and convenience of the mobile order bundle, with a cap on combined promotion and staffing spend at $20,000 for the month.",
+      "Monitor basket contribution, repeat visits, and labor costs closely to evaluate profitability and customer retention, with a decision rule to discontinue or adjust the offer if economics worsen after one month."
+    ],
+    "rationale": "Dunkin's strength lies in its established franchise footprint and value-oriented coffee-and-food offerings, supported by a mobile app with ordering capabilities. With Starbucks piloting capacity-aware mobile pickup slots that reserve 20% of peak café capacity for mobile orders, Dunkin should respond by reinforcing its competitive advantage in value and convenience through a focused, locally controlled offer. This approach leverages Dunkin's existing app and franchise network, aligns with the $20,000 monthly promotional budget, and addresses the priority to secure a repeatable breakfast basket and predictable pickup experience. The opt-in nature respects franchisee autonomy and local market conditions.",
+    "resource_commitments": [
+      "Allocate up to $20,000 in January 2027 for combined local promotion and staffing costs across the 15 participating franchise locations.",
+      "Dedicate staff time to manage and monitor the bundle offer performance, including basket contribution and repeat visits, on a weekly basis."
+    ],
+    "expected_responses": [
+      "Starbucks may intensify its focus on Smart Queue and café staffing to enhance mobile order throughput and customer experience during peak hours.",
+      "Dutch Bros may respond by promoting its drive-through and Order Ahead options to maintain share among morning beverage customers.",
+      "Some customers may shift from Starbucks mobile orders to Dunkin's value bundle if the offer is perceived as more convenient or cost-effective."
+    ]
+  }
+}

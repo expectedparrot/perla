@@ -1,0 +1,20 @@
+{
+  "moves": {
+    "actions": [
+      "Launch a $1.50 discount breakfast bundle offer via the Dunkin app at all 15 participating franchise stores for March 2027, targeting weekday mornings 7–10 a.m. near pilot Starbucks cafés.",
+      "Allocate $10,000 for incremental morning labor to improve order speed and reduce wait times during the peak window.",
+      "Allocate $10,000 for local app advertising and promotional efforts to increase awareness and trial of the offer.",
+      "Implement a stop rule to discontinue the offer at any store where contribution margin worsens after one month, based on basket economics and repeat visit data."
+    ],
+    "rationale": "Increasing the discount from $1 to $1.50 aims to better compete with Starbucks' capacity-aware mobile order slots and Dutch Bros' $1 offers, potentially attracting more habitual Starbucks app users who are sensitive to wait times and price. The labor investment is intended to ensure faster service and reliable pickup, addressing the key customer pain point of mobile order delays. Local advertising supports awareness and trial without exceeding the $20,000 monthly budget. The stop rule ensures economic discipline by discontinuing unprofitable offers, protecting franchisee margins and sustaining willingness to continue participation.",
+    "resource_commitments": [
+      "$10,000 for incremental morning labor in March 2027",
+      "$10,000 for local app advertising and promotions in March 2027"
+    ],
+    "expected_responses": [
+      "Starbucks maintains 20% peak café capacity reservation for in-café orders and mobile order limits without price changes.",
+      "Dutch Bros continues $15,000 monthly incremental morning labor and $15,000 monthly geo-targeted $1 Order Ahead app offers at nearby shops.",
+      "Some habitual Starbucks app users experiencing delays may shift to Dunkin's improved offer, increasing Dunkin's morning transactions and repeat visits if service is reliable."
+    ]
+  }
+}

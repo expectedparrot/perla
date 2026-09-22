@@ -1,0 +1,44 @@
+{
+  "actor_id": "buyer",
+  "committed_at": "2026-09-12T12:15:05.545812+00:00",
+  "content": {
+    "actions": [
+      "For habitual app users: We will attempt our usual mobile order. If the offered pickup slot is more than 8 minutes later than our desired time, we will abandon the order. If we experience two such significant delays or other service failures within a week, we will switch our primary morning routine to a competitor (like Dutch Bros or Dunkin) for the remainder of the month.",
+      "For time-pressed commuters: We will check the Starbucks app for pickup times before committing to our route. If the app indicates a delay that risks making us late for work, we will immediately divert to a more predictable competitor on our route.",
+      "For in-store café visitors: We will continue to visit the pilot cafés, hopeful that the reserved capacity for in-store orders will improve our experience. If we observe a noticeable reduction in wait times, we may increase our visit frequency."
+    ],
+    "expected_responses": [
+      "We expect that nearby Dutch Bros and Dunkin locations will see an increase in traffic from former Starbucks customers during the 7-10 a.m. peak. Initially, this may just lead to longer lines at their stores. If the trend continues, they might respond by increasing their own morning staffing or running promotions to retain us as new customers."
+    ],
+    "rationale": "Our behavior is driven by the need to minimize the total cost of our morning coffee run—this includes money, time spent waiting or detouring, and the risk of being late. The new Starbucks policy creates different outcomes for each of us. For those of us who rely on the speed of the mobile app, the new risk of being assigned a later pickup slot is a major disruption to our routine. Predictability is key, and if Starbucks can no longer guarantee a quick pickup, we will immediately seek alternatives that can. For those of us who prefer the in-store experience, this policy is potentially a welcome change. We've been frustrated by crowded cafés filled with mobile order pickups, and a dedicated capacity for our orders could make our visits faster and more pleasant, earning our continued business.",
+    "resource_commitments": [
+      "Our daily spending at pilot Starbucks locations is now conditional. For app-dependent customers, our purchase is contingent on receiving a mobile order slot with an acceptable delay (under 8 minutes). If this condition isn't met, that day's spending will be redirected to a competitor or saved by skipping the purchase entirely.",
+      "Our time is also a resource. We will not wait for delayed Starbucks pickup slots if it makes us late. We will instead 'spend' that time driving to a competitor."
+    ]
+  },
+  "content_hash": "9fc61afc2eee569ecc953aa3831b4da6a9fd96b09e7665266c65f4e331f5df20",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "9fc61afc2eee569ecc953aa3831b4da6a9fd96b09e7665266c65f4e331f5df20",
+    "ingested_at": "2026-09-12T12:15:05.545812+00:00",
+    "job_id": "job-82fd3d6a6dff40238c3bd1eeeae0b5c2",
+    "manifest_hash": "b3f6b018a39f94279862f98d56c06105c414fca0ba141a81f9f79495c39bedf1",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-1-moves-buyer/results-1.ep"
+  }
+}

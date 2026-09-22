@@ -1,0 +1,10 @@
+{
+  "context_hash": "a23ccde2fe814abc7df718be15356c049b1de0aa7d3612efb1612f53f1ea6dc6",
+  "job_id": "job-36f0830a82694e8a8650f9519dcd2d63",
+  "move": 3,
+  "opened_at": "2026-09-12T14:07:43.973723+00:00",
+  "rulings": {
+    "round3-integrated-customer-dynamics": "5ec2eedf804ef340c5024ec1a7245536c9bb840222bb15b5a0d58c4e9f999ecc"
+  },
+  "status": "awaiting_rebuttals"
+}

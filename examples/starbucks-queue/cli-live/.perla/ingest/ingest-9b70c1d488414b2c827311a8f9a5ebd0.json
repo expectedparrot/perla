@@ -1,0 +1,47 @@
+{
+  "actor_id": "buyer",
+  "answer": {
+    "actions": [
+      "Commuters will solidify their new morning routines, continuing to favor the reliability of Dutch Bros' Order Ahead and the value of Dunkin's Meal Deal over the perceived risk of a delayed Starbucks mobile order.",
+      "Habitual Starbucks app users will remain fragmented. Many will stick with the competitors they switched to in February, drawn by new loyalty programs (Dutch Bros) and consistent offers (Dunkin). A small, curious fraction might cautiously try the Starbucks app again, but widespread trust has not been restored.",
+      "Café visitors will continue to show a strong preference for the 50 pilot Starbucks locations, as the reserved capacity has consistently resulted in a better, more predictable in-store experience for them."
+    ],
+    "expected_responses": [
+      "We expect Starbucks will see that their mobile order numbers are still struggling, even with the test to release unused capacity. They'll probably have to offer a significant discount or promotion in the future to even get us to try the app again.",
+      "We expect Dutch Bros and Dunkin will see that their strategies are working to pull us away from Starbucks. They'll likely continue their promotions and staffing levels to keep us from switching back."
+    ],
+    "rationale": "After two months, our habits are starting to set. For those of us on a tight schedule, like commuters, the risk of a delay at Starbucks isn't worth it anymore. We've found that Dutch Bros and Dunkin are just more reliable for a quick pickup, and Dunkin's cheaper deal is a nice bonus. For those of us who loved the Starbucks app, the damage is mostly done. The new loyalty program at Dutch Bros gives us a reason to stay switched. Why go back to something that might not work? The only ones who are consistently happier are the people who wanted to visit the café anyway. For them, the pilot is great, and they'll keep going because it's less chaotic.",
+    "resource_commitments": [
+      "Commuter spending and time: We are committing our daily coffee budget (up to $8) and a few minutes of detour time to competitors who have proven more reliable.",
+      "Habitual app user attention: We are investing our time and attention into learning and using the Dutch Bros and Dunkin apps and loyalty systems, shifting our regular spending away from Starbucks.",
+      "Café visitor patronage: We are committing our time (25+ minutes per visit) and money (up to $7) specifically to the Starbucks pilot locations that provide a better atmosphere."
+    ]
+  },
+  "id": "ingest-9b70c1d488414b2c827311a8f9a5ebd0",
+  "kind": "moves",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "06e23b9e871556ec513a6a246f9b5c5c2f927ba35f455edb226c8ce0f85ab35c",
+    "ingested_at": "2026-09-12T14:07:42.875801+00:00",
+    "job_id": "job-e86ffb1ad6c74101ae183d3bdfd4d76d",
+    "manifest_hash": "1819d292fbe8f998be6f314f18ab3e5ad107b65fc7641690b4be4bd02c12c653",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "max_tokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves/buyer.results.ep"
+  }
+}

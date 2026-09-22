@@ -1,0 +1,15 @@
+{
+  "rebuttals": {
+    "rebuttals": [
+      {
+        "ruling_id": "move3-integrated-customer-competitor-dynamics",
+        "stance": "challenge",
+        "argument": "The ruling states that no observed field may be updated and all measurement fields remain null. However, our dossier explicitly states that we observe our own lane times, app orders, rewards redemptions, and repeat visits. These are internal observed metrics that should be available to us, even if the public board metrics remain null.",
+        "link": "no-measured-outcomes",
+        "cite": [
+          "d.dutch.d8"
+        ]
+      }
+    ]
+  }
+}

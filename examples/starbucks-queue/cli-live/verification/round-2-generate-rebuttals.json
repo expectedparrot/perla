@@ -1,0 +1,90 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla job generate rebuttals --move 2 --output round-2/rebuttals",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "job",
+      "generate",
+      "rebuttals"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "facilitate",
+        "description": "Collect one response per assigned actor job and ingest rebuttals.",
+        "mutating": false,
+        "networked": false,
+        "requires_approval": false
+      }
+    ],
+    "data": {
+      "jobs": [
+        {
+          "job_id": "job-a67ed311dae84489a23cdc6b58483fb2",
+          "actor_id": "buyer",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-a67ed311dae84489a23cdc6b58483fb2.jobs.ep",
+          "reused": false
+        },
+        {
+          "job_id": "job-f0a68b1ff2ef49229567249d1afcd0be",
+          "actor_id": "dunkin",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-f0a68b1ff2ef49229567249d1afcd0be.jobs.ep",
+          "reused": false
+        },
+        {
+          "job_id": "job-880c9a13fa4b4bb5aacea7ebc85eb2e8",
+          "actor_id": "dutch",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-880c9a13fa4b4bb5aacea7ebc85eb2e8.jobs.ep",
+          "reused": false
+        },
+        {
+          "job_id": "job-ad8eb239b6534b768acbc7e80dc7a5fa",
+          "actor_id": "home",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-ad8eb239b6534b768acbc7e80dc7a5fa.jobs.ep",
+          "reused": false
+        }
+      ],
+      "export": {
+        "directory": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals",
+        "version": 1,
+        "project_id": "51bf44d9-5a70-45d0-90cb-4578f7302299",
+        "jobs": [
+          {
+            "job_id": "job-a67ed311dae84489a23cdc6b58483fb2",
+            "actor_id": "buyer",
+            "kind": "rebuttals",
+            "move": 2,
+            "package": "buyer.jobs.ep",
+            "results": "buyer.results.ep"
+          },
+          {
+            "job_id": "job-f0a68b1ff2ef49229567249d1afcd0be",
+            "actor_id": "dunkin",
+            "kind": "rebuttals",
+            "move": 2,
+            "package": "dunkin.jobs.ep",
+            "results": "dunkin.results.ep"
+          },
+          {
+            "job_id": "job-880c9a13fa4b4bb5aacea7ebc85eb2e8",
+            "actor_id": "dutch",
+            "kind": "rebuttals",
+            "move": 2,
+            "package": "dutch.jobs.ep",
+            "results": "dutch.results.ep"
+          },
+          {
+            "job_id": "job-ad8eb239b6534b768acbc7e80dc7a5fa",
+            "actor_id": "home",
+            "kind": "rebuttals",
+            "move": 2,
+            "package": "home.jobs.ep",
+            "results": "home.results.ep"
+          }
+        ]
+      }
+    }
+  }
+}

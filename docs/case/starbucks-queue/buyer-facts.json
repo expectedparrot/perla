@@ -1,0 +1,60 @@
+{
+  "facts": [
+    {
+      "id": "b1",
+      "claim": "Reported category context: NCA’s June 2026 report says 47% of American adults consumed specialty coffee in the past day. Among past-day specialty drinkers, 36% had coffee prepared outside the home, versus 23% among traditional coffee drinkers. These national aggregates are not local switching probabilities.",
+      "sources": [
+        "https://www.ncausa.org/newsroom/Specialty-Coffee-Consumption-Remains-at-Record-High"
+      ]
+    },
+    {
+      "id": "b2",
+      "claim": "Reported choices: Dutch Bros Order Ahead is available at participating shops; Dunkin offers app ordering and rewards. A credible alternative depends on the particular route and location, not merely national brand availability.",
+      "sources": [
+        "https://www.dutchbros.com/order-ahead/"
+      ]
+    },
+    {
+      "id": "b3",
+      "claim": "Assumed character: This player is a composite of morning purchase occasions, not a single person controlling the market and not a recruited survey panel. It may describe different segment choices but may not report votes or measured percentages.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "b4",
+      "claim": "Assumed commuter occasion: A weekday commuter buys before a fixed work start, has 10 minutes of discretionary travel-and-wait time, and an $8 coffee-and-light-breakfast ceiling. A 4-minute detour consumes real slack. These figures are illustrative constraints, not survey findings.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "b5",
+      "claim": "Assumed habitual-app occasion: A repeat Starbucks buyer values a familiar customization and prepaid ordering, allows an 8-minute pickup delay when communicated before paying, and may switch temporarily after two unreliable mornings. Loyalty friction exists, but its monetary value and prevalence are unknown.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "b6",
+      "claim": "Assumed café occasion: A customer intends to sit for 25 minutes before a meeting and has a $7 drink budget. Predictable handoff and an available place to sit matter; a cheap drive-through is not a complete substitute for this occasion.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "b7",
+      "claim": "Assumed outside option and household economics: Some mornings the customer can prepare coffee at home using an illustrative $1 marginal ingredient cost; time, preparation equipment and taste differ. Skipping the purchase or buying later is permissible. These examples do not establish local market shares.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "b8",
+      "claim": "Assumed information rights: Customers see quoted pickup times, prices, offers, public store conditions and their own experience. They do not know confidential staffing plans, rivals’ margins, adjudicator confidence, or other customers’ behavior. No segment weights or demand elasticity have been measured.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    }
+  ]
+}

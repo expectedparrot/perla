@@ -1,0 +1,32 @@
+<header><p class="eyebrow">Perla · Case reference</p><h1>Evidence, players and complete transcripts.</h1><p class="dek">The full record supporting the <a href="index.html">Starbucks tutorial</a>. Use this page to inspect a claim, reproduce a dossier or audit a returned answer.</p></header>
+<nav aria-label="Reference contents"><ol>
+<li><a href="#players">Complete player dossiers and direct authoring</a></li>
+<li><a href="#execution-records">What was executed, and how</a></li>
+<li><a href="#round-1">Original January transcript</a></li>
+<li><a href="#round-2">Original February transcript</a></li>
+<li><a href="#round-3">Original March transcript</a></li>
+<li><a href="#challenge-example">The earlier contested ruling</a></li>
+<li><a href="#sources">Sources and archives</a></li>
+</ol><p><a href="commands.html">Execution commands</a> · <a href="index.html#decision-memo">Decision memo</a></p></nav>
+<section id="players"><h2>The complete cast</h2>
+<p>The tutorial loads these four dossiers with <code>perla actor load --input case/players.json</code>. The commands here are an alternative way to construct exactly the same content in a fresh project. Do not register the same actors a second time in an already loaded game. Sourced claims, constructed managerial backstories and assumed local constraints are labeled in each dossier.</p>
+{{PLAYERS}}
+</section>
+<section id="execution-records"><h2>Execution and provenance</h2>
+<p>The main tutorial analyzes the original dated run: January–March 2027 in simulated time, executed through EDSL’s remote Python API. The submitted packages, prompts, original responses and structural rejections are retained below. Current Perla and ep commands illustrate how to play your own game; rerunning a probabilistic model need not reproduce these words or decisions.</p>
+{{EXECUTION_STATUS}}
+{{CLI_VERIFICATION}}
+<p>The earlier engineering run is also preserved. It exposed citation-format failures and a repeated-month ambiguity, and contains the customer objection used in the tutorial opening. It is not blended into the dated run. No actor’s returned answer has been rewritten to improve the story.</p>
+</section>
+{{ROUNDS}}
+<section id="challenge-example"><h2>The objection that changed the earlier ruling</h2>
+<p>In the earlier January ruling, control mapped delayed Starbucks mobile purchases to competitors. The affected customer player challenged that causal link using its own dossier’s outside options. Control then revised the ruling and the history supplied to subsequent actors.</p>
+{{ARCHIVED_EXCHANGE}}
+<p>The change fixes an omitted alternative. It does not measure the frequency of home preparation or establish that the revised queue forecast is accurate. Compare the original and revised wording before treating this as evidence of a stronger result.</p>
+</section>
+<section id="sources"><h2>Sources and working files</h2>
+<p>Public research cutoff: September 12, 2026. Company financial periods differ from the calendar months played in the game. Local budgets, operating authority and customer occasions are author assumptions. This exercise has no internal company records or recruited customer interviews.</p>
+{{SOURCES}}
+<p><a href="case/starbucks-queue.zip">Complete case download</a> · <a href="case/starbucks-queue/players.json">Cast manifest</a> · <a href="case/starbucks-queue/game.json">Decision, criteria and initial board</a> · <a href="case/starbucks-queue/README.md">Measurement definitions</a> · <a href="run/starbucks-queue-dated.zip">Original dated execution archive</a> · <a href="run/starbucks-queue-initial.zip">Earlier execution archive</a></p>
+</section>
+<footer><p><a href="index.html">Return to the tutorial</a> · <a href="commands.html">Execution reference</a></p></footer>

@@ -1,0 +1,886 @@
+{
+  "approval": null,
+  "board_choices": {},
+  "closed_at": "2026-09-12T14:07:06.703708+00:00",
+  "closure": {
+    "approval": null,
+    "board_hash": "aa9acd2f37c9c456af458484501ddcfdf5b32e86c3cf2d99768e824cee9a7bd7",
+    "delegated": true,
+    "escalation_debt": [
+      "move2-integrated-customer-competition"
+    ],
+    "snapshot_hash": "21d7aa5e5457526184d5d79c611f2b92bbeb8d4dc0a14ffd73adc84be0e465b2"
+  },
+  "control_job": "job-f2988c13f7b24afbb9f49c2e79c9bd4d",
+  "events": [
+    {
+      "action": "route",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T14:06:09.789344+00:00"
+    },
+    {
+      "action": "generate_rebuttals",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T14:06:10.953721+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "76c599721333fb1f7570e562cb63bf5e805fc4bd8b3d3be28575375367501036",
+        "ingested_at": "2026-09-12T14:06:37.389932+00:00",
+        "job_id": "job-a67ed311dae84489a23cdc6b58483fb2",
+        "manifest_hash": "9d256126414ce06863fff2d9904716b3de084fe5393987500549561562d1b96b",
+        "model": "gemini-2.5-pro",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-pro",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-pro",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "max_tokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/buyer.results.ep"
+      },
+      "recorded_at": "2026-09-12T14:06:37.389962+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "3175e0fb824e60e9964ed9403c8c65c79fe6b96518053510bff30c8292b7fae0",
+        "ingested_at": "2026-09-12T14:06:37.967232+00:00",
+        "job_id": "job-f0a68b1ff2ef49229567249d1afcd0be",
+        "manifest_hash": "ec60b206128783e68302b042935dafbeba724dbf41fa5eb85af19ae78366058e",
+        "model": "gpt-4.1-mini",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1-mini",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/dunkin.results.ep"
+      },
+      "recorded_at": "2026-09-12T14:06:37.967264+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "b33fe72270692fb8163ddf9511ef0553593fd608bb70dee7b7efea5c506f8e1b",
+        "ingested_at": "2026-09-12T14:06:38.630157+00:00",
+        "job_id": "job-880c9a13fa4b4bb5aacea7ebc85eb2e8",
+        "manifest_hash": "27cbf031cb28eaeb079d4af92c04a97289af9d38efdea02e7a94b0c5e5232f52",
+        "model": "gemini-2.5-flash",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-flash",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-flash",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "max_tokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/dutch.results.ep"
+      },
+      "recorded_at": "2026-09-12T14:06:38.630192+00:00"
+    },
+    {
+      "action": "ingest_rebuttals",
+      "attribution": {
+        "answer_hash": "358695e776684e6205de17012044bc569623acfa3c9d4d790a43837f4cbd981d",
+        "ingested_at": "2026-09-12T14:06:39.375476+00:00",
+        "job_id": "job-ad8eb239b6534b768acbc7e80dc7a5fa",
+        "manifest_hash": "7fadda0c8918f56efe6dd6077926e653a03eb2dfa817810003c3adada49d6a23",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/home.results.ep"
+      },
+      "recorded_at": "2026-09-12T14:06:39.375513+00:00"
+    },
+    {
+      "action": "generate_resolution",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T14:06:40.587365+00:00"
+    },
+    {
+      "action": "ingest_resolutions",
+      "attribution": {
+        "answer_hash": "3642238bc8b10de384f80026683a0aecd0568eda740f7a67cad1d661a23628c0",
+        "ingested_at": "2026-09-12T14:07:05.493573+00:00",
+        "job_id": "job-aeb125a32f2e4f1f8780726454e7c313",
+        "manifest_hash": "1bc514ecd441950a857bfe604c6fd59ac1f57b74c158dcf9b72d974bae8d5fc5",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/resolutions/control.results.ep"
+      },
+      "recorded_at": "2026-09-12T14:07:05.493779+00:00"
+    },
+    {
+      "action": "close_round",
+      "attribution": "operator",
+      "recorded_at": "2026-09-12T14:07:06.704270+00:00"
+    }
+  ],
+  "final_rulings": {
+    "move2-integrated-customer-competition": {
+      "content": {
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b6",
+              "d.buyer.b7",
+              "d.buyer.b8"
+            ],
+            "claim": "Morning customer segments act independently: commuters, habitual app users, and café visitors each respond to perceived delays, reliability, and in-store experience, but no measured market shares or switching probabilities are available.",
+            "link": "segment_response"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h5",
+              "d.home.h6",
+              "d.home.h7",
+              "d.home.h8"
+            ],
+            "claim": "Starbucks continues the 20% café-order reservation, adds a real-time release of unused capacity in half of pilot cafés (A/B), and maintains the two-hour staffing cap and unchanged pricing.",
+            "link": "starbucks_cafe_reservation"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dutch.d4",
+              "d.dutch.d5",
+              "d.dutch.d6",
+              "d.dutch.d7",
+              "d.dutch.d8"
+            ],
+            "claim": "Dutch Bros continues geo-fenced digital campaigns, launches a repeat loyalty incentive for Order Ahead, and increases peak staffing to absorb incremental demand from frustrated Starbucks mobile customers.",
+            "link": "dutch_bros_campaign"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k3",
+              "d.dunkin.k4",
+              "d.dunkin.k5",
+              "d.dunkin.k6",
+              "d.dunkin.k7",
+              "d.dunkin.k8"
+            ],
+            "claim": "Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing and opt-in/stop rules, monitoring redemption and store-level economics. The competitive benefit of this offer is conditional on subsequent evidence that incremental redemption does not primarily cannibalize profitable full-price transactions, in line with d.dunkin.k6 and d.dunkin.k7.",
+            "link": "dunkin_meal_deal"
+          }
+        ],
+        "cite": [
+          "d.buyer.b3",
+          "d.buyer.b4",
+          "d.buyer.b5",
+          "d.buyer.b6",
+          "d.buyer.b7",
+          "d.buyer.b8",
+          "d.dunkin.k3",
+          "d.dunkin.k4",
+          "d.dunkin.k5",
+          "d.dunkin.k6",
+          "d.dunkin.k7",
+          "d.dunkin.k8",
+          "d.dutch.d4",
+          "d.dutch.d5",
+          "d.dutch.d6",
+          "d.dutch.d7",
+          "d.dutch.d8",
+          "d.home.h4",
+          "d.home.h5",
+          "d.home.h6",
+          "d.home.h7",
+          "d.home.h8",
+          "d.home.h9"
+        ],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              "January 2027: Starbucks launches peak-hour mobile pickup slot limits and reserves 20% of capacity for in-café orders in 50 pilot cafés. Instrumentation begins for pilot and comparison cafés.",
+              "January 2027: Dunkin launches a $6 breakfast Meal Deal bundle in 15 consenting franchise stores near pilot cafés, with app promotion and local marketing. Store-level stop rules and monitoring are in place.",
+              "January 2027: Dutch Bros launches a geo-fenced digital campaign promoting Order Ahead and a $1 credit for first-time users in 12 shops, with peak-hour staffing adjustments and messaging.",
+              "January 2027: Morning customer segments respond: commuters abandon delayed Starbucks mobile orders, habitual app users tolerate limited delays but may switch after repeated issues, and café visitors continue in-person orders expecting improved experience.",
+              "February 2027: Starbucks continues the pilot and introduces a real-time release of unused reserved café-order capacity to mobile orders in 25 of 50 pilot cafés as an A/B test. No price change; two-hour staff cap remains.",
+              "February 2027: Dutch Bros continues geo-fenced digital campaigns, launches a loyalty promotion for repeat Order Ahead users, and increases peak staffing in 12 shops.",
+              "February 2027: Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing, opt-in/stop rules, and weekly monitoring.",
+              "February 2027: Morning customer segments: commuters and habitual app users increasingly avoid unreliable Starbucks mobile slots, switching to Dutch Bros, Dunkin, or home preparation; café visitors reinforce pilot Starbucks locations for in-person visits."
+            ]
+          },
+          "confidence": 0.8,
+          "description": "All February actions are implemented as committed. Starbucks continues the pilot and launches the real-time release A/B test in 25 pilot cafés. Dutch Bros and Dunkin both intensify their app-based acquisition and loyalty offers, and buyers allocate their business according to their declared segment behaviors. The competitive benefit of Dunkin's $1.50 discount is explicitly conditional on subsequent evidence that incremental redemptions do not primarily cannibalize full-price transactions. No observable measurement fields are updated; the board advances to February 2027 with an updated public strategy history, but all measured outcomes remain null."
+        },
+        "rationale": "All actors' actions remain compatible and mutually observable. The revision directly addresses Dunkin's challenge by clarifying that the competitive benefit of the $1.50 discount is conditional on subsequent economic monitoring to prevent unprofitable cannibalization, as cautioned by d.dunkin.k6 and d.dunkin.k7. No other mechanism links are challenged or revised; the board advances with the declared actions, segment behaviors, and experiments, but no measured quantitative outcome. No kill criterion is triggered.",
+        "resolves": [
+          "m2.buyer.a1",
+          "m2.buyer.a2",
+          "m2.buyer.a3",
+          "m2.dunkin.a1",
+          "m2.dunkin.a2",
+          "m2.dunkin.a3",
+          "m2.dutch.a1",
+          "m2.dutch.a2",
+          "m2.dutch.a3",
+          "m2.home.a1",
+          "m2.home.a2"
+        ],
+        "ruling_id": "move2-integrated-customer-competition"
+      },
+      "content_hash": "3c96109a78096b7c430d2d21b5647c55dc15a7f786a634e7834051a2e5b7db33",
+      "move": 2,
+      "original_provenance": {
+        "answer_hash": "03693f69885ee16a3e9d3ef7048281c315a89bdd5dd636314cd271d977646a76",
+        "ingested_at": "2026-09-12T14:06:09.104006+00:00",
+        "job_id": "job-f2988c13f7b24afbb9f49c2e79c9bd4d",
+        "manifest_hash": "f1dc2d8b32b6cc8fc3c6243d4446fa5503617b200c3affae67a732036cf7dc8b",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rulings/control.results.ep"
+      },
+      "provenance": {
+        "answer_hash": "3642238bc8b10de384f80026683a0aecd0568eda740f7a67cad1d661a23628c0",
+        "ingested_at": "2026-09-12T14:07:05.493573+00:00",
+        "job_id": "job-aeb125a32f2e4f1f8780726454e7c313",
+        "manifest_hash": "1bc514ecd441950a857bfe604c6fd59ac1f57b74c158dcf9b72d974bae8d5fc5",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/resolutions/control.results.ep"
+      },
+      "resolution": {
+        "decision": "revise",
+        "reason": "Dunkin challenged the original ruling's mechanism link for the $1.50 discount on the breakfast Meal Deal, arguing that the ruling did not sufficiently account for the risk that discount-driven redemptions could cannibalize full-price transactions, potentially leading to unprofitable traffic. This is supported by dossier facts d.dunkin.k6 and d.dunkin.k7, which caution that redemption alone does not guarantee profit and that full accounting of incremental economics is necessary. The original ruling's mechanism link for Dunkin's offer is therefore revised to clarify that while the offer is implemented as committed, the causal claim about reliably improving Dunkin's competitive position is explicitly conditional on subsequent economic monitoring and opt-in/stop enforcement. All other mechanism links and outcome details remain unchanged. The revised ruling preserves the original action coverage, affected actors, and criterion links, but directly addresses the challenged mechanism link.",
+        "responses": [
+          {
+            "actor_id": "buyer",
+            "reason": "The revised ruling continues to reflect the independent segment behaviors and their responses to reliability, value, and in-store experience, as described in the buyer dossier and original move. No mechanism link affecting the buyer segments was challenged or altered."
+          },
+          {
+            "actor_id": "dunkin",
+            "reason": "The revision incorporates Dunkin's challenge by clarifying that the competitive benefit of the $1.50 discount is conditional on the economics monitored through opt-in/stop rules, in line with d.dunkin.k6 and d.dunkin.k7. This explicitly acknowledges that redemption without profit is not a guaranteed win for Dunkin."
+          },
+          {
+            "actor_id": "dutch",
+            "reason": "Dutch Bros' actions and mechanism links remain affirmed and are not affected by the Dunkin challenge. The revision does not alter the description or implementation of Dutch Bros' digital, loyalty, and staffing initiatives."
+          },
+          {
+            "actor_id": "home",
+            "reason": "Starbucks' pilot continuation and A/B test actions are affirmed. The revision to Dunkin's mechanism link does not affect Starbucks' operational commitments or measurement plans."
+          }
+        ],
+        "revision": {
+          "affected_actors": [
+            "buyer",
+            "dunkin",
+            "dutch",
+            "home"
+          ],
+          "basis": "judgment",
+          "branches": null,
+          "cases": [],
+          "chain": [
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.buyer.b3",
+                "d.buyer.b4",
+                "d.buyer.b5",
+                "d.buyer.b6",
+                "d.buyer.b7",
+                "d.buyer.b8"
+              ],
+              "claim": "Morning customer segments act independently: commuters, habitual app users, and café visitors each respond to perceived delays, reliability, and in-store experience, but no measured market shares or switching probabilities are available.",
+              "link": "segment_response"
+            },
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.home.h5",
+                "d.home.h6",
+                "d.home.h7",
+                "d.home.h8"
+              ],
+              "claim": "Starbucks continues the 20% café-order reservation, adds a real-time release of unused capacity in half of pilot cafés (A/B), and maintains the two-hour staffing cap and unchanged pricing.",
+              "link": "starbucks_cafe_reservation"
+            },
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.dutch.d4",
+                "d.dutch.d5",
+                "d.dutch.d6",
+                "d.dutch.d7",
+                "d.dutch.d8"
+              ],
+              "claim": "Dutch Bros continues geo-fenced digital campaigns, launches a repeat loyalty incentive for Order Ahead, and increases peak staffing to absorb incremental demand from frustrated Starbucks mobile customers.",
+              "link": "dutch_bros_campaign"
+            },
+            {
+              "basis": "dossier_fact",
+              "cases": [],
+              "cite": [
+                "d.dunkin.k3",
+                "d.dunkin.k4",
+                "d.dunkin.k5",
+                "d.dunkin.k6",
+                "d.dunkin.k7",
+                "d.dunkin.k8"
+              ],
+              "claim": "Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing and opt-in/stop rules, monitoring redemption and store-level economics. The competitive benefit of this offer is conditional on subsequent evidence that incremental redemption does not primarily cannibalize profitable full-price transactions, in line with d.dunkin.k6 and d.dunkin.k7.",
+              "link": "dunkin_meal_deal"
+            }
+          ],
+          "cite": [
+            "d.buyer.b3",
+            "d.buyer.b4",
+            "d.buyer.b5",
+            "d.buyer.b6",
+            "d.buyer.b7",
+            "d.buyer.b8",
+            "d.dunkin.k3",
+            "d.dunkin.k4",
+            "d.dunkin.k5",
+            "d.dunkin.k6",
+            "d.dunkin.k7",
+            "d.dunkin.k8",
+            "d.dutch.d4",
+            "d.dutch.d5",
+            "d.dutch.d6",
+            "d.dutch.d7",
+            "d.dutch.d8",
+            "d.home.h4",
+            "d.home.h5",
+            "d.home.h6",
+            "d.home.h7",
+            "d.home.h8",
+            "d.home.h9"
+          ],
+          "kill_criteria": [],
+          "outcome": {
+            "board_delta": {
+              "calendar_period": "February 2027",
+              "public_strategy_history": [
+                "January 2027: Starbucks launches peak-hour mobile pickup slot limits and reserves 20% of capacity for in-café orders in 50 pilot cafés. Instrumentation begins for pilot and comparison cafés.",
+                "January 2027: Dunkin launches a $6 breakfast Meal Deal bundle in 15 consenting franchise stores near pilot cafés, with app promotion and local marketing. Store-level stop rules and monitoring are in place.",
+                "January 2027: Dutch Bros launches a geo-fenced digital campaign promoting Order Ahead and a $1 credit for first-time users in 12 shops, with peak-hour staffing adjustments and messaging.",
+                "January 2027: Morning customer segments respond: commuters abandon delayed Starbucks mobile orders, habitual app users tolerate limited delays but may switch after repeated issues, and café visitors continue in-person orders expecting improved experience.",
+                "February 2027: Starbucks continues the pilot and introduces a real-time release of unused reserved café-order capacity to mobile orders in 25 of 50 pilot cafés as an A/B test. No price change; two-hour staff cap remains.",
+                "February 2027: Dutch Bros continues geo-fenced digital campaigns, launches a loyalty promotion for repeat Order Ahead users, and increases peak staffing in 12 shops.",
+                "February 2027: Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing, opt-in/stop rules, and weekly monitoring.",
+                "February 2027: Morning customer segments: commuters and habitual app users increasingly avoid unreliable Starbucks mobile slots, switching to Dutch Bros, Dunkin, or home preparation; café visitors reinforce pilot Starbucks locations for in-person visits."
+              ]
+            },
+            "confidence": 0.8,
+            "description": "All February actions are implemented as committed. Starbucks continues the pilot and launches the real-time release A/B test in 25 pilot cafés. Dutch Bros and Dunkin both intensify their app-based acquisition and loyalty offers, and buyers allocate their business according to their declared segment behaviors. The competitive benefit of Dunkin's $1.50 discount is explicitly conditional on subsequent evidence that incremental redemptions do not primarily cannibalize full-price transactions. No observable measurement fields are updated; the board advances to February 2027 with an updated public strategy history, but all measured outcomes remain null."
+          },
+          "rationale": "All actors' actions remain compatible and mutually observable. The revision directly addresses Dunkin's challenge by clarifying that the competitive benefit of the $1.50 discount is conditional on subsequent economic monitoring to prevent unprofitable cannibalization, as cautioned by d.dunkin.k6 and d.dunkin.k7. No other mechanism links are challenged or revised; the board advances with the declared actions, segment behaviors, and experiments, but no measured quantitative outcome. No kill criterion is triggered.",
+          "resolves": [
+            "m2.buyer.a1",
+            "m2.buyer.a2",
+            "m2.buyer.a3",
+            "m2.dunkin.a1",
+            "m2.dunkin.a2",
+            "m2.dunkin.a3",
+            "m2.dutch.a1",
+            "m2.dutch.a2",
+            "m2.dutch.a3",
+            "m2.home.a1",
+            "m2.home.a2"
+          ],
+          "ruling_id": "move2-integrated-customer-competition"
+        },
+        "ruling_id": "move2-integrated-customer-competition"
+      },
+      "resolution_mode": "agent",
+      "revised": true
+    }
+  },
+  "initial_routing": {
+    "move2-integrated-customer-competition": {
+      "assessment": null,
+      "blocking": false,
+      "content_hash": "f1cb5761341d7a65e9361d48431daec0d0aaeb39de7d8ab5a3be09e05eeba529",
+      "impact_score": 2.0,
+      "over_budget": true,
+      "reasons": [
+        "judgment"
+      ],
+      "route": "provisional"
+    }
+  },
+  "move": 2,
+  "options": {
+    "flagged": [],
+    "impact_scores": {}
+  },
+  "policy": {
+    "auto_confidence": 0.7,
+    "human_budget": 0,
+    "judgment_share_threshold": 0.4
+  },
+  "rebuttal_jobs": {
+    "buyer": "job-a67ed311dae84489a23cdc6b58483fb2",
+    "dunkin": "job-f0a68b1ff2ef49229567249d1afcd0be",
+    "dutch": "job-880c9a13fa4b4bb5aacea7ebc85eb2e8",
+    "home": "job-ad8eb239b6534b768acbc7e80dc7a5fa"
+  },
+  "rebuttals": {
+    "buyer": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "This makes sense. Those of us in a hurry for work can't deal with unreliable pickup times, so we're definitely looking at other apps or just making coffee at home if Starbucks can't get it right. The deals at Dunkin' and the faster service at Dutch Bros sound appealing. For days when we have more time and want to sit down, a less crowded Starbucks sounds great, so we'll keep going for that. The ruling reflects these different needs.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "76c599721333fb1f7570e562cb63bf5e805fc4bd8b3d3be28575375367501036",
+        "ingested_at": "2026-09-12T14:06:37.389932+00:00",
+        "job_id": "job-a67ed311dae84489a23cdc6b58483fb2",
+        "manifest_hash": "9d256126414ce06863fff2d9904716b3de084fe5393987500549561562d1b96b",
+        "model": "gemini-2.5-pro",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-pro",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-pro",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "max_tokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/buyer.results.ep"
+      }
+    },
+    "dunkin": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "The ruling assumes that Dunkin's $1.50 discount on the breakfast Meal Deal in 15 stores with local marketing and opt-in/stop rules will be effective and economically viable without sufficiently accounting for the full-price purchases that would have occurred anyway, risking unprofitable traffic. The dossier facts d.dunkin.k6 and d.dunkin.k7 explicitly caution that redemption alone is not profit and that full accounting of discount costs and repeat visit economics is necessary. Therefore, the causal link that Dunkin's discount and marketing efforts will reliably improve competitive position without risking economic harm is not fully supported.",
+            "cite": [
+              "d.dunkin.k6",
+              "d.dunkin.k7"
+            ],
+            "link": "dunkin_meal_deal",
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "challenge"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "3175e0fb824e60e9964ed9403c8c65c79fe6b96518053510bff30c8292b7fae0",
+        "ingested_at": "2026-09-12T14:06:37.967232+00:00",
+        "job_id": "job-f0a68b1ff2ef49229567249d1afcd0be",
+        "manifest_hash": "ec60b206128783e68302b042935dafbeba724dbf41fa5eb85af19ae78366058e",
+        "model": "gpt-4.1-mini",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1-mini",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/dunkin.results.ep"
+      }
+    },
+    "dutch": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "We are continuing our geo-fenced digital campaigns to promote Order Ahead, and we're excited to launch a loyalty incentive for repeat users. Increasing peak staffing in our 12 shops is a crucial step to ensure we can absorb the incremental demand, especially from those Starbucks customers looking for a more reliable morning option, while protecting our service proposition. This aligns with our strategy to build durable repeat business.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "b33fe72270692fb8163ddf9511ef0553593fd608bb70dee7b7efea5c506f8e1b",
+        "ingested_at": "2026-09-12T14:06:38.630157+00:00",
+        "job_id": "job-880c9a13fa4b4bb5aacea7ebc85eb2e8",
+        "manifest_hash": "27cbf031cb28eaeb079d4af92c04a97289af9d38efdea02e7a94b0c5e5232f52",
+        "model": "gemini-2.5-flash",
+        "model_parameters": {
+          "edsl_class_name": "gemini-2.5-flash",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "google",
+          "model": "gemini-2.5-flash",
+          "parameters": {
+            "maxOutputTokens": 16000,
+            "max_tokens": 16000,
+            "stopSequences": [],
+            "temperature": 0.5,
+            "thinking_budget": null,
+            "topK": 1,
+            "topP": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/dutch.results.ep"
+      }
+    },
+    "home": {
+      "answer": {
+        "rebuttals": [
+          {
+            "argument": "The ruling accurately reflects Starbucks' continued pilot implementation, the introduction of a real-time release A/B test within the staffing and pricing constraints, and the competitive context. No causal link in the ruling conflicts with Starbucks' dossier or red lines. All cited actions and outcomes are consistent with available capabilities, constraints, and information rights.",
+            "cite": [],
+            "link": null,
+            "ruling_id": "move2-integrated-customer-competition",
+            "stance": "accept"
+          }
+        ]
+      },
+      "provenance": {
+        "answer_hash": "358695e776684e6205de17012044bc569623acfa3c9d4d790a43837f4cbd981d",
+        "ingested_at": "2026-09-12T14:06:39.375476+00:00",
+        "job_id": "job-ad8eb239b6534b768acbc7e80dc7a5fa",
+        "manifest_hash": "7fadda0c8918f56efe6dd6077926e653a03eb2dfa817810003c3adada49d6a23",
+        "model": "gpt-4.1",
+        "model_parameters": {
+          "edsl_class_name": "LanguageModel",
+          "edsl_version": "1.0.8.dev1",
+          "inference_service": "openai",
+          "model": "gpt-4.1",
+          "parameters": {
+            "frequency_penalty": 0,
+            "logprobs": false,
+            "max_tokens": 16000,
+            "presence_penalty": 0,
+            "reasoning_effort": null,
+            "temperature": 0.5,
+            "top_logprobs": 3,
+            "top_p": 1
+          }
+        },
+        "origin": "simulation",
+        "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/rebuttals/home.results.ep"
+      }
+    }
+  },
+  "resolution_job": "job-aeb125a32f2e4f1f8780726454e7c313",
+  "resolutions": {
+    "answer": {
+      "resolutions": [
+        {
+          "decision": "revise",
+          "reason": "Dunkin challenged the original ruling's mechanism link for the $1.50 discount on the breakfast Meal Deal, arguing that the ruling did not sufficiently account for the risk that discount-driven redemptions could cannibalize full-price transactions, potentially leading to unprofitable traffic. This is supported by dossier facts d.dunkin.k6 and d.dunkin.k7, which caution that redemption alone does not guarantee profit and that full accounting of incremental economics is necessary. The original ruling's mechanism link for Dunkin's offer is therefore revised to clarify that while the offer is implemented as committed, the causal claim about reliably improving Dunkin's competitive position is explicitly conditional on subsequent economic monitoring and opt-in/stop enforcement. All other mechanism links and outcome details remain unchanged. The revised ruling preserves the original action coverage, affected actors, and criterion links, but directly addresses the challenged mechanism link.",
+          "responses": [
+            {
+              "actor_id": "buyer",
+              "reason": "The revised ruling continues to reflect the independent segment behaviors and their responses to reliability, value, and in-store experience, as described in the buyer dossier and original move. No mechanism link affecting the buyer segments was challenged or altered."
+            },
+            {
+              "actor_id": "dunkin",
+              "reason": "The revision incorporates Dunkin's challenge by clarifying that the competitive benefit of the $1.50 discount is conditional on the economics monitored through opt-in/stop rules, in line with d.dunkin.k6 and d.dunkin.k7. This explicitly acknowledges that redemption without profit is not a guaranteed win for Dunkin."
+            },
+            {
+              "actor_id": "dutch",
+              "reason": "Dutch Bros' actions and mechanism links remain affirmed and are not affected by the Dunkin challenge. The revision does not alter the description or implementation of Dutch Bros' digital, loyalty, and staffing initiatives."
+            },
+            {
+              "actor_id": "home",
+              "reason": "Starbucks' pilot continuation and A/B test actions are affirmed. The revision to Dunkin's mechanism link does not affect Starbucks' operational commitments or measurement plans."
+            }
+          ],
+          "revision": {
+            "affected_actors": [
+              "buyer",
+              "dunkin",
+              "dutch",
+              "home"
+            ],
+            "basis": "judgment",
+            "branches": null,
+            "cases": [],
+            "chain": [
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.buyer.b3",
+                  "d.buyer.b4",
+                  "d.buyer.b5",
+                  "d.buyer.b6",
+                  "d.buyer.b7",
+                  "d.buyer.b8"
+                ],
+                "claim": "Morning customer segments act independently: commuters, habitual app users, and café visitors each respond to perceived delays, reliability, and in-store experience, but no measured market shares or switching probabilities are available.",
+                "link": "segment_response"
+              },
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.home.h5",
+                  "d.home.h6",
+                  "d.home.h7",
+                  "d.home.h8"
+                ],
+                "claim": "Starbucks continues the 20% café-order reservation, adds a real-time release of unused capacity in half of pilot cafés (A/B), and maintains the two-hour staffing cap and unchanged pricing.",
+                "link": "starbucks_cafe_reservation"
+              },
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.dutch.d4",
+                  "d.dutch.d5",
+                  "d.dutch.d6",
+                  "d.dutch.d7",
+                  "d.dutch.d8"
+                ],
+                "claim": "Dutch Bros continues geo-fenced digital campaigns, launches a repeat loyalty incentive for Order Ahead, and increases peak staffing to absorb incremental demand from frustrated Starbucks mobile customers.",
+                "link": "dutch_bros_campaign"
+              },
+              {
+                "basis": "dossier_fact",
+                "cases": [],
+                "cite": [
+                  "d.dunkin.k3",
+                  "d.dunkin.k4",
+                  "d.dunkin.k5",
+                  "d.dunkin.k6",
+                  "d.dunkin.k7",
+                  "d.dunkin.k8"
+                ],
+                "claim": "Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing and opt-in/stop rules, monitoring redemption and store-level economics. The competitive benefit of this offer is conditional on subsequent evidence that incremental redemption does not primarily cannibalize profitable full-price transactions, in line with d.dunkin.k6 and d.dunkin.k7.",
+                "link": "dunkin_meal_deal"
+              }
+            ],
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b6",
+              "d.buyer.b7",
+              "d.buyer.b8",
+              "d.dunkin.k3",
+              "d.dunkin.k4",
+              "d.dunkin.k5",
+              "d.dunkin.k6",
+              "d.dunkin.k7",
+              "d.dunkin.k8",
+              "d.dutch.d4",
+              "d.dutch.d5",
+              "d.dutch.d6",
+              "d.dutch.d7",
+              "d.dutch.d8",
+              "d.home.h4",
+              "d.home.h5",
+              "d.home.h6",
+              "d.home.h7",
+              "d.home.h8",
+              "d.home.h9"
+            ],
+            "kill_criteria": [],
+            "outcome": {
+              "board_delta": {
+                "calendar_period": "February 2027",
+                "public_strategy_history": [
+                  "January 2027: Starbucks launches peak-hour mobile pickup slot limits and reserves 20% of capacity for in-café orders in 50 pilot cafés. Instrumentation begins for pilot and comparison cafés.",
+                  "January 2027: Dunkin launches a $6 breakfast Meal Deal bundle in 15 consenting franchise stores near pilot cafés, with app promotion and local marketing. Store-level stop rules and monitoring are in place.",
+                  "January 2027: Dutch Bros launches a geo-fenced digital campaign promoting Order Ahead and a $1 credit for first-time users in 12 shops, with peak-hour staffing adjustments and messaging.",
+                  "January 2027: Morning customer segments respond: commuters abandon delayed Starbucks mobile orders, habitual app users tolerate limited delays but may switch after repeated issues, and café visitors continue in-person orders expecting improved experience.",
+                  "February 2027: Starbucks continues the pilot and introduces a real-time release of unused reserved café-order capacity to mobile orders in 25 of 50 pilot cafés as an A/B test. No price change; two-hour staff cap remains.",
+                  "February 2027: Dutch Bros continues geo-fenced digital campaigns, launches a loyalty promotion for repeat Order Ahead users, and increases peak staffing in 12 shops.",
+                  "February 2027: Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing, opt-in/stop rules, and weekly monitoring.",
+                  "February 2027: Morning customer segments: commuters and habitual app users increasingly avoid unreliable Starbucks mobile slots, switching to Dutch Bros, Dunkin, or home preparation; café visitors reinforce pilot Starbucks locations for in-person visits."
+                ]
+              },
+              "confidence": 0.8,
+              "description": "All February actions are implemented as committed. Starbucks continues the pilot and launches the real-time release A/B test in 25 pilot cafés. Dutch Bros and Dunkin both intensify their app-based acquisition and loyalty offers, and buyers allocate their business according to their declared segment behaviors. The competitive benefit of Dunkin's $1.50 discount is explicitly conditional on subsequent evidence that incremental redemptions do not primarily cannibalize full-price transactions. No observable measurement fields are updated; the board advances to February 2027 with an updated public strategy history, but all measured outcomes remain null."
+            },
+            "rationale": "All actors' actions remain compatible and mutually observable. The revision directly addresses Dunkin's challenge by clarifying that the competitive benefit of the $1.50 discount is conditional on subsequent economic monitoring to prevent unprofitable cannibalization, as cautioned by d.dunkin.k6 and d.dunkin.k7. No other mechanism links are challenged or revised; the board advances with the declared actions, segment behaviors, and experiments, but no measured quantitative outcome. No kill criterion is triggered.",
+            "resolves": [
+              "m2.buyer.a1",
+              "m2.buyer.a2",
+              "m2.buyer.a3",
+              "m2.dunkin.a1",
+              "m2.dunkin.a2",
+              "m2.dunkin.a3",
+              "m2.dutch.a1",
+              "m2.dutch.a2",
+              "m2.dutch.a3",
+              "m2.home.a1",
+              "m2.home.a2"
+            ],
+            "ruling_id": "move2-integrated-customer-competition"
+          },
+          "ruling_id": "move2-integrated-customer-competition"
+        }
+      ]
+    },
+    "provenance": {
+      "answer_hash": "3642238bc8b10de384f80026683a0aecd0568eda740f7a67cad1d661a23628c0",
+      "ingested_at": "2026-09-12T14:07:05.493573+00:00",
+      "job_id": "job-aeb125a32f2e4f1f8780726454e7c313",
+      "manifest_hash": "1bc514ecd441950a857bfe604c6fd59ac1f57b74c158dcf9b72d974bae8d5fc5",
+      "model": "gpt-4.1",
+      "model_parameters": {
+        "edsl_class_name": "LanguageModel",
+        "edsl_version": "1.0.8.dev1",
+        "inference_service": "openai",
+        "model": "gpt-4.1",
+        "parameters": {
+          "frequency_penalty": 0,
+          "logprobs": false,
+          "max_tokens": 16000,
+          "presence_penalty": 0,
+          "reasoning_effort": null,
+          "temperature": 0.5,
+          "top_logprobs": 3,
+          "top_p": 1
+        }
+      },
+      "origin": "simulation",
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/resolutions/control.results.ep"
+    }
+  },
+  "routing": {
+    "move2-integrated-customer-competition": {
+      "assessment": null,
+      "blocking": false,
+      "content_hash": "3c96109a78096b7c430d2d21b5647c55dc15a7f786a634e7834051a2e5b7db33",
+      "impact_score": 2.0,
+      "over_budget": true,
+      "reasons": [
+        "judgment",
+        "revised"
+      ],
+      "route": "provisional"
+    }
+  }
+}

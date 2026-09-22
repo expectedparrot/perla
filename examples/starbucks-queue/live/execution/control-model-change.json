@@ -1,0 +1,7 @@
+{
+  "after_attempt": 3,
+  "from": "anthropic:claude-sonnet-4-6",
+  "to": "openai:gpt-4.1",
+  "reason": "Two branch-delta validation failures and one invalid citation failure. Same registered job and evidence context; no response text edited.",
+  "applies": "Round one attempt four and subsequent control jobs"
+}

@@ -1,0 +1,109 @@
+{
+  "content": {
+    "affected_actors": [
+      "buyer",
+      "dunkin",
+      "dutch",
+      "home"
+    ],
+    "basis": "judgment",
+    "branches": null,
+    "cases": [],
+    "chain": [
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.buyer.b5",
+          "d.buyer.b8"
+        ],
+        "claim": "Habitual Starbucks app users who experienced >8 minute delays at pilot stores in January will divert to competitor mobile apps (notably Dutch Bros $1 Order Ahead or Dunkin's $1 bundle) at the start of February; their return to Starbucks depends on the competitor's service quality.",
+        "link": "mobile-delay-switch"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.buyer.b6"
+        ],
+        "claim": "In-store café visitors at pilot Starbucks locations, having experienced improved and more predictable wait times in January, will reinforce this behavior by choosing these locations more frequently for occasions valuing a reliable in-store experience.",
+        "link": "cafe-wait-reinforcement"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.buyer.b4",
+          "d.buyer.b8"
+        ],
+        "claim": "Time-pressed commuters will continue to check the Starbucks app but will more readily divert to Dutch Bros or Dunkin’ if the quoted pickup time risks lateness.",
+        "link": "commuter-diversion"
+      }
+    ],
+    "cite": [],
+    "kill_criteria": [],
+    "outcome": {
+      "board_delta": {
+        "calendar_period": "February 2027",
+        "public_strategy_history": [
+          {
+            "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+            "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+            "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+            "period": "January 2027",
+            "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+          },
+          {
+            "customer": "In February, habitual Starbucks app users who experienced repeated mobile delays (>8 minutes) at pilot stores divert to Dutch Bros or Dunkin’ via $1 app offers; their return depends on competitor service. Café visitors reinforce pilot-store behavior, increasing frequency when seeking a reliable in-store experience. Commuters continue to check the Starbucks app, but divert more readily to Dutch Bros, Dunkin, or home prep if quoted pickup times risk lateness.",
+            "dunkin": "Launched $1 discount breakfast bundle via app at 15 local franchise stores near pilot cafés; $12,000 allocated to incremental morning labor for speed, $8,000 to local app advertising/promotions. Stop rule: offer discontinued at any store where contribution margin worsens after one month.",
+            "dutch_bros": "Continued $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+            "period": "February 2027",
+            "starbucks": "Continued 20% peak café capacity reservation and mobile order limits in 50 pilot cafés; in 10, dynamically release half of unused reserved slots for mobile orders after 08:00 if café demand is below 15% of capacity. No change to price or staffing cap."
+          }
+        ]
+      },
+      "confidence": 0.95,
+      "description": "Buyer segments respond to January’s Starbucks pilot as follows: (1) Habitual app users who experienced repeated delays switch to Dutch Bros or Dunkin’ in early February, attracted by $1 offers; their return is contingent on rival service. (2) Café visitors reinforce their pilot-store habit, increasing frequency for in-store occasions. (3) Commuters remain app-checkers but will increasingly divert to competitors or home prep if Starbucks’ quoted pickup times threaten lateness. No segment weights are assigned, but all behaviors are present in the simulated market."
+    },
+    "rationale": "Each buyer action is directly mapped to the dossier simulation assumptions: habitual app users divert after repeated mobile delays (d.buyer.b5, b8), café visitors reinforce improved in-store experiences (d.buyer.b6), and commuters will check apps but divert if risk of lateness is high (d.buyer.b4, b8). No segment weights are assigned, but all behaviors are simulated as present. The public_strategy_history is updated to reflect these behavioral changes for February 2027.",
+    "resolves": [
+      "m2.buyer.a1",
+      "m2.buyer.a2",
+      "m2.buyer.a3"
+    ],
+    "ruling_id": "r2-buyer-behavior"
+  },
+  "content_hash": "ae9f9ed1725b3454d273601a12edaf9a7afb8bf87a00fe25eb460773b8f9649c",
+  "escalation_candidates": [
+    "judgment"
+  ],
+  "move": 2,
+  "provenance": {
+    "answer_hash": "714b6a3ecdcec3cd345a21355bef34897f1782da99d1740d216b16dc3de55d79",
+    "ingested_at": "2026-09-12T12:17:27.654170+00:00",
+    "job_id": "job-402e6c1b67294d12a1ffb03bfede9887",
+    "manifest_hash": "cefd24ff0dfd16e6ba3d55072b650ed911f4b787aa9f6a01c1fef4e5f232296c",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rulings-control/results-1.ep"
+  },
+  "rebuttals": [],
+  "resolution_mode": "agent",
+  "status": "pending_rebuttal"
+}

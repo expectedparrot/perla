@@ -1,0 +1,18 @@
+{
+  "fictional": true,
+  "as_of": "2029-01-01",
+  "observations": [
+    {"source": "move:1:home", "status": "resolved", "outcome": true, "evidence": "Fictional company records confirm all listed home actions by the first deadline."},
+    {"source": "move:1:rival", "status": "resolved", "outcome": true, "evidence": "Fictional rival product records confirm all listed actions by the first deadline."},
+    {"source": "move:1:startup", "status": "resolved", "outcome": false, "evidence": "Fictional startup records show the listed actions were not completed by the first deadline."},
+    {"source": "move:2:home", "status": "resolved", "outcome": true, "evidence": "Fictional home records confirm all second-round actions by their deadline."},
+    {"source": "move:2:rival", "status": "resolved", "outcome": false, "evidence": "Fictional rival records show the second-round actions were abandoned before the deadline."},
+    {"source": "move:2:startup", "status": "unresolved", "outcome": null, "evidence": "Fictional startup records are incomplete; whether all actions occurred remains unknown."},
+    {"source": "move:3:home", "status": "resolved", "outcome": true, "evidence": "Fictional home records confirm all third-round actions by their deadline."},
+    {"source": "move:3:rival", "status": "resolved", "outcome": false, "evidence": "Fictional rival records show the third-round actions did not occur by the deadline."},
+    {"source": "move:3:startup", "status": "unresolvable", "outcome": null, "evidence": "The scripted reality file stipulates that the relevant startup records were permanently lost."},
+    {"source": "ruling:1:r001", "status": "resolved", "outcome": true, "evidence": "Fictional staffing records show exactly 18 qualified teams at the first deadline."},
+    {"source": "ruling:2:r001", "status": "resolved", "outcome": false, "evidence": "Fictional staffing records show 16 qualified teams at the second deadline, rather than the predicted 17."},
+    {"source": "ruling:3:r001", "status": "resolved", "outcome": true, "evidence": "Fictional staffing records show exactly 16 qualified teams at the third deadline."}
+  ]
+}

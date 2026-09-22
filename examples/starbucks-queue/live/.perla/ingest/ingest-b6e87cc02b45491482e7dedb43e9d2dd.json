@@ -1,0 +1,48 @@
+{
+  "actor_id": "dunkin",
+  "answer": {
+    "actions": [
+      "Launch a coordinated opt-in mobile order bundle offer for breakfast in the 15 consenting Dunkin franchise locations near the Starbucks pilot cafés, emphasizing a $6 breakfast Meal Deal with mobile ordering convenience during the 7–10 a.m. peak weekday window.",
+      "Implement a local marketing campaign in January 2027 promoting the value and convenience of the mobile order bundle, with a cap on combined promotion and staffing spend at $20,000 for the month.",
+      "Monitor basket contribution, repeat visits, and labor costs closely to evaluate profitability and customer retention, with a decision rule to discontinue or adjust the offer if economics worsen after one month."
+    ],
+    "expected_responses": [
+      "Starbucks may intensify its focus on Smart Queue and café staffing to enhance mobile order throughput and customer experience during peak hours.",
+      "Dutch Bros may respond by promoting its drive-through and Order Ahead options to maintain share among morning beverage customers.",
+      "Some customers may shift from Starbucks mobile orders to Dunkin's value bundle if the offer is perceived as more convenient or cost-effective."
+    ],
+    "rationale": "Dunkin's strength lies in its established franchise footprint and value-oriented coffee-and-food offerings, supported by a mobile app with ordering capabilities. With Starbucks piloting capacity-aware mobile pickup slots that reserve 20% of peak café capacity for mobile orders, Dunkin should respond by reinforcing its competitive advantage in value and convenience through a focused, locally controlled offer. This approach leverages Dunkin's existing app and franchise network, aligns with the $20,000 monthly promotional budget, and addresses the priority to secure a repeatable breakfast basket and predictable pickup experience. The opt-in nature respects franchisee autonomy and local market conditions.",
+    "resource_commitments": [
+      "Allocate up to $20,000 in January 2027 for combined local promotion and staffing costs across the 15 participating franchise locations.",
+      "Dedicate staff time to manage and monitor the bundle offer performance, including basket contribution and repeat visits, on a weekly basis."
+    ]
+  },
+  "id": "ingest-b6e87cc02b45491482e7dedb43e9d2dd",
+  "kind": "moves",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "28e75442d2751513a4647777b3f5fed8c17e8d9c1973dfb2f0d11e48d8c4aea3",
+    "ingested_at": "2026-09-12T11:37:35.510114+00:00",
+    "job_id": "job-8a70a41de2a546fdb90afe3abe40d1ca",
+    "manifest_hash": "a23d3ea1f7fcedf697b697989f83e50fb2e566526e0b39dc9a0a3bdda879ee93",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-moves-dunkin/results-1.ep"
+  }
+}

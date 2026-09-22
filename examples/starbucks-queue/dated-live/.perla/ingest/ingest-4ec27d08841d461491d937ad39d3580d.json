@@ -1,0 +1,179 @@
+{
+  "actor_id": "control",
+  "answer": {
+    "rulings": [
+      {
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b8",
+              "d.home.h5"
+            ],
+            "claim": "Implementing a 20% reservation for in-café orders in 50 pilot Starbucks cafés during weekday peak hours will restrict the number of available mobile order slots, causing some habitual app users and time-pressed commuters to be quoted pickup times later than their personal thresholds. Some will abandon Starbucks for those occasions.",
+            "link": "mobile_slot_limit_effect"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b7",
+              "d.buyer.b8",
+              "d.dutch.d8",
+              "d.dunkin.k8"
+            ],
+            "claim": "Some mobile-dependent Starbucks customers who are denied a timely slot will divert to competitors (Dutch Bros, Dunkin) or home preparation, but the share is not quantified due to lack of measured segment weights or switching rates.",
+            "link": "buyer_switching"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k3",
+              "d.dunkin.k4",
+              "d.dunkin.k5",
+              "d.dunkin.k6",
+              "d.dunkin.k7",
+              "d.dunkin.k8",
+              "d.dutch.d4",
+              "d.dutch.d5",
+              "d.dutch.d6",
+              "d.dutch.d7",
+              "d.dutch.d8"
+            ],
+            "claim": "Dutch Bros and Dunkin are positioned to capture some diverted Starbucks demand through targeted app offers, staffing, and value bundles. However, their capacity and conversion rates are not measured or guaranteed.",
+            "link": "competitor_response"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b6",
+              "d.home.h4",
+              "d.home.h5"
+            ],
+            "claim": "In-store café visitors at Starbucks pilot locations are likely to experience shorter waits and a less congested environment due to the reserved capacity, potentially increasing their visit frequency if the effect is noticeable.",
+            "link": "cafe_experience"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h8",
+              "d.home.h9"
+            ],
+            "claim": "Starbucks will instrument order attempts, slot offers, completions, and staffing in both pilot and comparison cafés to enable later evaluation of wait reduction, lost mobile orders, and contribution. No real measurements are yet available; all observed fields remain null.",
+            "link": "measurement_and_instrumentation"
+          }
+        ],
+        "cite": [
+          "d.buyer.b3",
+          "d.buyer.b4",
+          "d.buyer.b5",
+          "d.buyer.b6",
+          "d.buyer.b7",
+          "d.buyer.b8",
+          "d.dunkin.k3",
+          "d.dunkin.k4",
+          "d.dunkin.k5",
+          "d.dunkin.k6",
+          "d.dunkin.k7",
+          "d.dunkin.k8",
+          "d.dutch.d4",
+          "d.dutch.d5",
+          "d.dutch.d6",
+          "d.dutch.d7",
+          "d.dutch.d8",
+          "d.home.h4",
+          "d.home.h5",
+          "d.home.h6",
+          "d.home.h8",
+          "d.home.h9"
+        ],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "adjusted_cafe_wait_reduction_pct": null,
+            "cafe_capacity_reservation_pct": 20,
+            "calendar_period": "January 2027",
+            "comparison_cohort_complete_customers": 0,
+            "complete_store_pairs": 0,
+            "incremental_daily_contribution_usd": null,
+            "measured_capacity_per_15min": null,
+            "mobile_repeat_change_pp": null,
+            "pilot_cohort_complete_customers": 0,
+            "public_strategy_history": [
+              {
+                "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+                "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+                "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "January 2027",
+                "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+              }
+            ]
+          },
+          "confidence": 0.9,
+          "description": "Starbucks pilot cafés implement capacity-aware mobile slot limits for weekday peak hours, reserving 20% of production capacity for in-café orders. Some mobile-dependent customers are denied timely slots and divert to competitors or home prep. Dutch Bros and Dunkin run targeted offers and increase staffing to capture diverted demand. In-store café visitors experience improved wait times. Starbucks instruments both pilot and comparison cafés for measurement, but all observed outcome fields remain null as no January 2027 data is yet available. The strategy history records all public January 2027 actions."
+        },
+        "rationale": "All actors' actions for January 2027 are compatible and interact through the morning peak coffee market. Starbucks implements a capacity reservation for in-café orders, which restricts mobile slot availability in pilot cafés. As a result, some habitual app users and time-pressed commuters are denied a timely Starbucks mobile pickup and will divert to competitors (Dutch Bros, Dunkin) or home preparation for those occasions. Both Dutch Bros and Dunkin respond with targeted offers and increased staffing to attract these customers, though their ability to convert all frustrated demand is limited by their own capacity and customer preferences. In-store Starbucks café visitors benefit from the reserved capacity, likely experiencing reduced wait times and a more pleasant environment. Starbucks instruments both pilot and comparison stores to measure order attempts, slot offers, completions, and staffing, but as no January 2027 data is yet available, all observed measurement fields (such as adjusted_cafe_wait_reduction_pct, incremental_daily_contribution_usd, mobile_repeat_change_pp, measured_capacity_per_15min, complete_store_pairs, pilot_cohort_complete_customers, comparison_cohort_complete_customers) remain null and complete counts at zero, per the measurement rule. The public_strategy_history is updated to reflect all public actions for January 2027. No kill criteria are met, as evaluation thresholds require observed evidence that does not yet exist.",
+        "resolves": [
+          "m1.buyer.a1",
+          "m1.buyer.a2",
+          "m1.buyer.a3",
+          "m1.dunkin.a1",
+          "m1.dunkin.a2",
+          "m1.dunkin.a3",
+          "m1.dunkin.a4",
+          "m1.dutch.a1",
+          "m1.dutch.a2",
+          "m1.home.a1",
+          "m1.home.a2"
+        ],
+        "ruling_id": "r1-integrated-jan27"
+      }
+    ]
+  },
+  "id": "ingest-4ec27d08841d461491d937ad39d3580d",
+  "kind": "rulings",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "28ac2198dd8d650e77e7608c42bd83205307bc848c2c8e488ceb6c49f3e6b53c",
+    "ingested_at": "2026-09-12T12:15:24.502623+00:00",
+    "job_id": "job-abf8b0ce5b89461a9ffd736f6132cb02",
+    "manifest_hash": "0795134fd1955f241d0600d071071bd8b74aa2dbadee0dce912a7bdfc251030f",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-1-rulings-control/results-1.ep"
+  }
+}

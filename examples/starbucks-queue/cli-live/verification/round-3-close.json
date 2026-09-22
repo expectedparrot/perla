@@ -1,0 +1,79 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla adjudicate close --move 3",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "adjudicate",
+      "close"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "Generate the optional inputs-only novelty baseline before evaluation.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "job",
+          "generate",
+          "novelty"
+        ]
+      }
+    ],
+    "data": {
+      "move": 3,
+      "board": {
+        "adjusted_cafe_wait_reduction_pct": null,
+        "assumed_contribution_per_transaction_usd": 3,
+        "assumed_loaded_labor_cost_per_hour_usd": 30,
+        "cafe_capacity_reservation_pct": 20,
+        "calendar_period": "March 2027",
+        "comparison_cafes": 50,
+        "comparison_cohort_complete_customers": 0,
+        "complete_store_pairs": 0,
+        "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+        "incremental_daily_contribution_usd": null,
+        "measured_capacity_per_15min": null,
+        "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+        "mobile_repeat_change_pp": null,
+        "peak_window": "Weekdays 07:00–10:00 local time",
+        "period_ends": {
+          "1": "2027-01-31",
+          "2": "2027-02-28",
+          "3": "2027-03-31"
+        },
+        "pilot_cafes": 50,
+        "pilot_cohort_complete_customers": 0,
+        "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+        "public_roster": [
+          "Starbucks (home)",
+          "Dutch Bros (competitor)",
+          "Dunkin (competitor)",
+          "Composite morning customers (assumed wildcard)"
+        ],
+        "public_strategy_history": [
+          "January 2027: Starbucks launches peak-hour mobile pickup slot limits and reserves 20% of capacity for in-café orders in 50 pilot cafés. Instrumentation begins for pilot and comparison cafés.",
+          "January 2027: Dunkin launches a $6 breakfast Meal Deal bundle in 15 consenting franchise stores near pilot cafés, with app promotion and local marketing. Store-level stop rules and monitoring are in place.",
+          "January 2027: Dutch Bros launches a geo-fenced digital campaign promoting Order Ahead and a $1 credit for first-time users in 12 shops, with peak-hour staffing adjustments and messaging.",
+          "January 2027: Morning customer segments respond: commuters abandon delayed Starbucks mobile orders, habitual app users tolerate limited delays but may switch after repeated issues, and café visitors continue in-person orders expecting improved experience.",
+          "February 2027: Starbucks continues the pilot and introduces a real-time release of unused reserved café-order capacity to mobile orders in 25 of 50 pilot cafés as an A/B test. No price change; two-hour staff cap remains.",
+          "February 2027: Dutch Bros continues geo-fenced digital campaigns, launches a loyalty promotion for repeat Order Ahead users, and increases peak staffing in 12 shops.",
+          "February 2027: Dunkin launches a $1.50 discount on the breakfast Meal Deal via app in 15 stores, with local marketing, opt-in/stop rules, and weekly monitoring.",
+          "February 2027: Morning customer segments: commuters and habitual app users increasingly avoid unreliable Starbucks mobile slots, switching to Dutch Bros, Dunkin, or home preparation; café visitors reinforce pilot Starbucks locations for in-person visits.",
+          "March 2027: Starbucks expands real-time release of unused reserved café-order capacity to mobile orders in all 50 pilot cafés, maintaining the 20% reservation for in-café orders and the two-hour peak staff cap. Instrumentation and in-app messaging continue.",
+          "March 2027: Dunkin continues the $1.50 app discount Meal Deal and launches a capped $2 Early Bird Bundle for mobile orders in 15 stores, with enhanced local marketing and weekly monitoring.",
+          "March 2027: Dutch Bros continues and expands geo-fenced Order Ahead campaigns, a $1 credit for first-time users, and a tiered loyalty program for repeat Order Ahead users, with dynamic staffing in 12 shops.",
+          "March 2027: Morning customer segments: commuters and habitual app users largely continue with Dutch Bros and Dunkin for reliability and value; Starbucks mobile order trust recovers only slightly. Café visitors maintain a strong preference for Starbucks pilot in-store experience."
+        ]
+      },
+      "closed_at": "2026-09-12T14:08:55.160590+00:00",
+      "escalation_debt": [
+        "round3-integrated-customer-dynamics"
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla job generate moves --move 3 --output round-3/moves",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "job",
+      "generate",
+      "moves"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "facilitate",
+        "description": "Inspect actor packages, choose execution models or human respondents, then ingest one answer per job.",
+        "mutating": false,
+        "networked": false,
+        "requires_approval": false
+      }
+    ],
+    "data": {
+      "jobs": [
+        {
+          "job_id": "job-e86ffb1ad6c74101ae183d3bdfd4d76d",
+          "actor_id": "buyer",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-e86ffb1ad6c74101ae183d3bdfd4d76d.jobs.ep",
+          "reused": false,
+          "mode": "agent"
+        },
+        {
+          "job_id": "job-ae69dc95bfd8479895ee0ceb919f22fd",
+          "actor_id": "dunkin",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-ae69dc95bfd8479895ee0ceb919f22fd.jobs.ep",
+          "reused": false,
+          "mode": "agent"
+        },
+        {
+          "job_id": "job-2c8a63703f3a4a259d67b1b69f7179fa",
+          "actor_id": "dutch",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-2c8a63703f3a4a259d67b1b69f7179fa.jobs.ep",
+          "reused": false,
+          "mode": "agent"
+        },
+        {
+          "job_id": "job-a2ca59d942bd4a9eba080a81d8f32258",
+          "actor_id": "home",
+          "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-a2ca59d942bd4a9eba080a81d8f32258.jobs.ep",
+          "reused": false,
+          "mode": "agent"
+        }
+      ],
+      "export": {
+        "directory": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves",
+        "version": 1,
+        "project_id": "51bf44d9-5a70-45d0-90cb-4578f7302299",
+        "jobs": [
+          {
+            "job_id": "job-e86ffb1ad6c74101ae183d3bdfd4d76d",
+            "actor_id": "buyer",
+            "kind": "moves",
+            "move": 3,
+            "package": "buyer.jobs.ep",
+            "results": "buyer.results.ep"
+          },
+          {
+            "job_id": "job-ae69dc95bfd8479895ee0ceb919f22fd",
+            "actor_id": "dunkin",
+            "kind": "moves",
+            "move": 3,
+            "package": "dunkin.jobs.ep",
+            "results": "dunkin.results.ep"
+          },
+          {
+            "job_id": "job-2c8a63703f3a4a259d67b1b69f7179fa",
+            "actor_id": "dutch",
+            "kind": "moves",
+            "move": 3,
+            "package": "dutch.jobs.ep",
+            "results": "dutch.results.ep"
+          },
+          {
+            "job_id": "job-a2ca59d942bd4a9eba080a81d8f32258",
+            "actor_id": "home",
+            "kind": "moves",
+            "move": 3,
+            "package": "home.jobs.ep",
+            "results": "home.results.ep"
+          }
+        ]
+      }
+    }
+  }
+}

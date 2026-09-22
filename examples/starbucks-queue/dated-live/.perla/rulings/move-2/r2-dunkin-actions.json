@@ -1,0 +1,109 @@
+{
+  "content": {
+    "affected_actors": [
+      "dunkin",
+      "buyer"
+    ],
+    "basis": "judgment",
+    "branches": null,
+    "cases": [],
+    "chain": [
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.dunkin.k3",
+          "d.dunkin.k5",
+          "d.dunkin.k6"
+        ],
+        "claim": "Dunkin launches a $1 discount breakfast bundle via app at all 15 consenting franchise stores near Starbucks pilot cafés during February 2027 morning peak.",
+        "link": "dunkin-discount-bundle"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.dunkin.k5",
+          "d.dunkin.k6"
+        ],
+        "claim": "Dunkin allocates $12,000 of monthly budget to incremental morning labor for fulfillment speed, and $8,000 to targeted local app advertising and promotions.",
+        "link": "dunkin-incremental-labor"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.dunkin.k7"
+        ],
+        "claim": "Dunkin sets a stop rule: discontinue the discount offer at any store where the store-level contribution margin worsens after one month.",
+        "link": "dunkin-stop-rule"
+      }
+    ],
+    "cite": [],
+    "kill_criteria": [],
+    "outcome": {
+      "board_delta": {
+        "calendar_period": "February 2027",
+        "public_strategy_history": [
+          {
+            "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+            "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+            "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+            "period": "January 2027",
+            "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+          },
+          {
+            "customer": "In February, habitual Starbucks app users who experienced repeated mobile delays (>8 minutes) at pilot stores divert to Dutch Bros or Dunkin’ via $1 app offers; their return depends on competitor service. Café visitors reinforce pilot-store behavior, increasing frequency when seeking a reliable in-store experience. Commuters continue to check the Starbucks app, but divert more readily to Dutch Bros, Dunkin, or home prep if quoted pickup times risk lateness.",
+            "dunkin": "Launched $1 discount breakfast bundle via app at 15 local franchise stores near pilot cafés; $12,000 allocated to incremental morning labor for speed, $8,000 to local app advertising/promotions. Stop rule: offer discontinued at any store where contribution margin worsens after one month.",
+            "dutch_bros": "Continued $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+            "period": "February 2027",
+            "starbucks": "Continued 20% peak café capacity reservation and mobile order limits in 50 pilot cafés; in 10, dynamically release half of unused reserved slots for mobile orders after 08:00 if café demand is below 15% of capacity. No change to price or staffing cap."
+          }
+        ]
+      },
+      "confidence": 0.98,
+      "description": "Dunkin implements all four committed actions: launches a $1 breakfast bundle via app at the 15 local franchise stores, allocates $12,000 to incremental labor and $8,000 to targeted app advertising/promotions for February 2027, and establishes a stop rule to discontinue the offer at any store with deteriorating contribution margin after one month. These actions are now observable in the public strategy history."
+    },
+    "rationale": "All Dunkin actions are within the stated capabilities and constraints: local franchise group, capped budget, and explicit stop rule (d.dunkin.k5, k6, k7). The $1 bundle, labor and advertising allocations, and stop rule are public and observable, so the public_strategy_history is updated accordingly.",
+    "resolves": [
+      "m2.dunkin.a1",
+      "m2.dunkin.a2",
+      "m2.dunkin.a3",
+      "m2.dunkin.a4"
+    ],
+    "ruling_id": "r2-dunkin-actions"
+  },
+  "content_hash": "768791ad79d4b5ffda421f60eafcfd45b09174f46c4a1a942dcafce58a192ac5",
+  "escalation_candidates": [
+    "judgment"
+  ],
+  "move": 2,
+  "provenance": {
+    "answer_hash": "714b6a3ecdcec3cd345a21355bef34897f1782da99d1740d216b16dc3de55d79",
+    "ingested_at": "2026-09-12T12:17:27.654170+00:00",
+    "job_id": "job-402e6c1b67294d12a1ffb03bfede9887",
+    "manifest_hash": "cefd24ff0dfd16e6ba3d55072b650ed911f4b787aa9f6a01c1fef4e5f232296c",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rulings-control/results-1.ep"
+  },
+  "rebuttals": [],
+  "resolution_mode": "agent",
+  "status": "pending_rebuttal"
+}

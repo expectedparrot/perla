@@ -1,0 +1,48 @@
+{
+  "actor_id": "dutch",
+  "answer": {
+    "actions": [
+      "Continue and optimize geo-fenced digital campaigns in 12 shops, refining messaging to highlight Dutch Bros' drive-through speed and Order Ahead convenience, particularly during peak morning hours (7-10 a.m.).",
+      "Launch a 'Bonus Point' or 'Double Punch' loyalty promotion specifically for repeat Order Ahead users in the 12 shops, incentivizing continued usage after their initial $1 credit redemption.",
+      "Proactively increase peak-hour staffing and implement real-time queue management protocols across the 12 shops to ensure service speed and consistency, monitoring drive-through times closely."
+    ],
+    "expected_responses": [
+      "Starbucks will likely continue to monitor its pilot program and customer flow. While they may not directly counter our loyalty program, they might observe shifts in mobile order behavior and potentially adjust their capacity management or messaging in future rounds if their pilot results show significant customer churn.",
+      "Dunkin will likely continue to focus on its value-oriented breakfast meal deals. They may observe general market shifts but are less likely to directly compete on drive-through speed or Order Ahead loyalty programs, given their current strategic focus.",
+      "Morning customers frustrated by Starbucks' delays will continue to seek faster, more convenient alternatives. Our optimized digital campaign will reinforce Dutch Bros as a viable option, and the new loyalty program will encourage those who tried us in January to become regular Order Ahead users, converting trial into habit."
+    ],
+    "rationale": "Starbucks' mobile order limits are creating friction for commuters and habitual app users, directly impacting the speed and convenience they seek. Our January actions began to capture this frustrated demand. For February, we must solidify these new customer relationships by encouraging repeat visits through a targeted loyalty program for Order Ahead users, building on the initial trial incentive. Simultaneously, we will reinforce our core value proposition of speed and convenience through optimized digital messaging and, critically, ensure our operational execution (staffing, queue management) can handle increased demand without compromising service quality. This strategy directly addresses our incentive to turn frustrated demand into durable repeat visits while protecting our service proposition.",
+    "resource_commitments": [
+      "Allocate $10,000 of the monthly incremental budget for geo-fenced digital campaign spend, optimizing ad placements and messaging.",
+      "Allocate up to $10,000 of the monthly incremental budget to cover the anticipated redemption costs (e.g., foregone contribution per transaction) for the 'Bonus Point' or 'Double Punch' loyalty promotion.",
+      "Allocate up to $10,000 of the monthly incremental budget for additional labor hours during peak times across the 12 shops (approximately 333 hours at $30/hour loaded cost) to maintain drive-through efficiency."
+    ]
+  },
+  "id": "ingest-be923ce70ab3462aa7898085628cdf5a",
+  "kind": "moves",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "e082df4210182fe9ff5b66b1d4fa5bf677e1f855c9fd775175c6300f3c807c19",
+    "ingested_at": "2026-09-12T14:04:12.105235+00:00",
+    "job_id": "job-c476ce77fdb24603ab0a45c49d9ec0e3",
+    "manifest_hash": "eb118c0fc28462e7f2f430923f7e87a94c7856d6953c0ea6e412768c6ba4c90d",
+    "model": "gemini-2.5-flash",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-flash",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-flash",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "max_tokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/moves/dutch.results.ep"
+  }
+}

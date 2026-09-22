@@ -1,0 +1,7 @@
+{
+  "stage": "submission",
+  "reason": "Expected Parrot rejected the configured API key or temporary token as invalid",
+  "remote_job_created": false,
+  "accepted_results": 0,
+  "next_action": "Refresh the configured credential before retrying submission"
+}

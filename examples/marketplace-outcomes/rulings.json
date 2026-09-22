@@ -1,0 +1,43 @@
+{
+  "rulings": [
+    {
+      "ruling_id": "r001",
+      "basis": "judgment",
+      "cite": ["d.home.h1", "d.rival.r1", "d.startup.s1"],
+      "rationale": "Concurrent discounts and subsidized delivery intensify competition for buyers and scarce delivery teams; the size of the effect is a teaching assumption",
+      "resolves": ["m1.home.a1", "m1.rival.a1", "m1.startup.a1"],
+      "affected_actors": ["home", "rival", "startup"],
+      "chain": [
+        {
+          "link": "L1",
+          "claim": "The home pilot starts with twenty qualified delivery teams",
+          "basis": "dossier_fact",
+          "cite": ["d.home.h1"]
+        },
+        {
+          "link": "L2",
+          "claim": "The incumbent can sustain a fee reduction across this move",
+          "basis": "dossier_fact",
+          "cite": ["d.rival.r1"]
+        },
+        {
+          "link": "L3",
+          "claim": "New enterprise accounts cannot complete review within the first eight-month move",
+          "basis": "testimony",
+          "cite": ["t.procurement"]
+        },
+        {
+          "link": "L4",
+          "claim": "Competition for existing accounts and delivery talent leaves eighteen home teams available",
+          "basis": "judgment"
+        }
+      ],
+      "outcome": {
+        "description": "Competition modestly reduces home delivery capacity while new enterprise demand is delayed",
+        "board_delta": {"home_qualified_teams": 18},
+        "confidence": 0.6
+      },
+      "kill_criteria": ["supply"]
+    }
+  ]
+}

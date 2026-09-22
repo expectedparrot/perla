@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perla — build the Starbucks case through commands</title><style>
+:root { color-scheme: light; --ink:#202a2a; --muted:#586361; --accent:#12624b; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:1.5rem; }
+body { margin:0; background:#fbfaf7; color:var(--ink); font:19px/1.72 Georgia,"Times New Roman",serif; }
+main { width:min(100% - 3rem, 820px); margin:0 auto; padding:4.5rem 0 3rem; }
+header { margin-bottom:3rem; }
+h1 { font-size:clamp(2.7rem,6vw,4.2rem); font-weight:normal; line-height:1.08; letter-spacing:-.035em; margin:.5em 0; }
+h2 { font-size:2rem; font-weight:normal; line-height:1.2; margin:3rem 0 1.2rem; }
+h3 { font-size:1.5rem; line-height:1.3; margin:2.2rem 0 1rem; }
+h4 { font-size:1.15rem; margin:1.6rem 0 .3rem; }
+h5 { font:600 .9rem/1.5 system-ui,sans-serif; }
+p { margin:.9rem 0 1.1rem; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px; overflow-wrap:anywhere; }
+a:hover { color:#06412f; }
+a:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.eyebrow, nav, .artifacts, .fact-id, footer, summary { font-family:system-ui,sans-serif; }
+.eyebrow { font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); }
+.dek { font-size:1.38rem; line-height:1.5; color:var(--muted); }
+nav { border-block:1px solid #d8dcd6; font-size:.95rem; padding:1.2rem 0; margin:2rem 0 3rem; }
+nav h2 { font:600 1.05rem/1.4 system-ui,sans-serif; margin:0 0 .8rem; }
+nav ol { margin:0; padding-left:1.6rem; }
+nav li { padding:.2rem 0; }
+.fact-id { font-size:.77rem; color:var(--muted); padding-right:.4rem; }
+code { font: .84em/1.6 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
+p code { background:#edf0e9; padding:.1em .25em; }
+.highlight { margin:1.3rem 0; background:#f0f2ed; border-left:3px solid #a8bdb0; }
+.highlight pre { margin:0; padding:1.1rem 1.2rem; overflow-x:auto; font-size:.87rem; line-height:1.65; tab-size:2; }
+.highlight code { font-size:inherit; overflow-wrap:normal; }
+.dossier-commands pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+details { border-block-end:1px solid #d8dcd6; padding:.8rem 0; margin:1rem 0; }
+summary { cursor:pointer; font-size:.95rem; color:var(--accent); }
+.prompt { white-space:pre-wrap; overflow-wrap:anywhere; font: .85rem/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.artifacts { font-size:.85rem; line-height:1.7; }
+blockquote { margin:1.2rem 0; padding-left:1.3rem; border-left:2px solid #a8bdb0; }
+.model-play { margin:2rem 0 2.8rem; border:1px solid #b9c7c2; background:#fff; }
+.play-header { margin:0; padding:1.2rem 1.5rem; background:#203e38; color:#fff; }
+.play-kicker, .play-model, .play-label, .play-caption, .play-context, .play-footer { font-family:system-ui,sans-serif; }
+.play-kicker { margin:0 0 .5rem; font-size:.73rem; line-height:1.6; letter-spacing:.07em; text-transform:uppercase; color:#d4e4de; }
+.play-header h3, .play-header h4 { margin:0; color:#fff; font:normal 1.65rem/1.3 Georgia,serif; }
+.play-model { margin:.55rem 0 0; font-size:.84rem; color:#e3ece8; }
+.play-input { padding:1.2rem 1.5rem; background:#edf1f2; border-bottom:1px solid #cdd6d5; }
+.play-output { padding:1.3rem 1.5rem; border-left:4px solid #26765b; }
+.play-label { margin:0 0 .7rem; font-size:.78rem; font-weight:750; letter-spacing:.065em; text-transform:uppercase; color:#29483f; }
+.play-caption { margin:.9rem 0 .45rem; font-size:.78rem; color:#52625e; }
+.play-instruction { margin:0; padding:0; border:0; font: .85rem/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.play-instruction p { margin:0; }
+.play-context { margin:.9rem 0 0; font-size:.82rem; line-height:1.65; color:#41524d; }
+.play-actions, .play-rationale { margin:0; padding:0; border:0; }
+.play-actions { font-size:1.1rem; line-height:1.7; }
+.play-actions p { margin:.5rem 0 1rem; }
+.play-actions p + p { padding-top:1rem; border-top:1px solid #e2e8e3; }
+.play-actions p:last-child, .play-rationale p:last-child { margin-bottom:0; }
+.play-rationale { font-size:1rem; }
+.play-footer { margin:0; padding:.8rem 1.5rem; border-top:1px solid #d9e1dc; color:#52625e; font-size:.78rem; line-height:1.6; }
+.status { border-left:3px solid #a07a37; padding-left:1rem; }
+footer { margin-top:3rem; padding-top:1rem; border-top:1px solid #d8dcd6; font-size:.8rem; color:var(--muted); }
+@media(max-width:600px) { body { font-size:17px; } main { width:calc(100% - 2rem); padding-top:2.5rem; } h2 { font-size:1.7rem; } .highlight pre { padding:.9rem; } }
+@media(max-width:600px) { .play-header, .play-input, .play-output { padding:1rem; } .play-footer { padding:.75rem 1rem; } .play-actions { font-size:1rem; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print { main { width:100%; padding:0; } body { font-size:11pt; background:white; } nav { display:none; } .highlight pre { white-space:pre-wrap; overflow-wrap:anywhere; } }
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #F00 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #04D } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #00F; font-weight: bold } /* Name.Class */
+.highlight .no { color: #800 } /* Name.Constant */
+.highlight .nd { color: #A2F } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #00F } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #BBB } /* Text.Whitespace */
+.highlight .mb { color: #666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666 } /* Literal.Number.Float */
+.highlight .mh { color: #666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #00F } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666 } /* Literal.Number.Integer.Long */</style></head><body><main><header><p class="eyebrow">Perla · Author the case</p><h1>Build the Starbucks game through commands.</h1><p class="dek">Turn a strategy question into a decision, evaluation criteria, shared information and four players with different interests.</p></header>
+<nav aria-label="Construction contents"><ol><li><a href="#decision">Define the experiment</a></li><li><a href="#criteria">Decide what would make it fail</a></li><li><a href="#board">Describe what everyone knows</a></li><li><a href="#initialize">Inspect and register the design</a></li><li><a href="#home">Build Starbucks</a></li><li><a href="#dutch">Build Dutch Bros</a></li><li><a href="#dunkin">Build Dunkin</a></li><li><a href="#buyer">Build the customer player</a></li><li><a href="#policy">Configure review and begin play</a></li></ol></nav>
+<p>This is a complete alternative to loading the prepared case files in the <a href="index.html#setup">tutorial</a>. It constructs the same decision, criteria, initial board, dossiers and review policy. All commands below run locally; no model calls occur during authoring. We supply public research and clearly labeled assumptions, then ask models to choose moves only after setup is complete.</p>
+<p>Complete the tutorial’s installation first. With the virtual environment active, start in the package source folder and create a fresh game directory. If you already loaded the case elsewhere, leave that game in its own directory.</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>games/starbucks-authored
+<span class="nb">cd</span><span class="w"> </span>games/starbucks-authored
+</code></pre></div>
+
+<section id="decision"><h2>Define what Starbucks is considering</h2>
+<p>The question is whether protecting café capacity during the morning peak improves service without losing too much mobile business. We make it specific enough for a rival to respond: 50 pilot cafés, a 20% reservation, unchanged prices and three months of play. The $3 transaction contribution is our operating assumption, not a reported store margin.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>game<span class="w"> </span>decision<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--statement<span class="w"> </span><span class="s1">'Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--offer<span class="w"> </span><span class="s1">'Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--segment<span class="w"> </span><span class="s1">'50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--pricing<span class="w"> </span><span class="s1">'Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--launch-period<span class="w"> </span><span class="s1">'January 2027; a proposed experiment, not an announced Starbucks policy'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--scope<span class="w"> </span><span class="s1">'50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--moves<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--months-per-move<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
+<p><code>game decision set</code> starts a draft in <code>.perla-design</code> in this directory. Its fields describe the proposed experiment, including the monthly decision schedule. The response reports <code>ready_to_initialize: false</code> because we have not yet supplied evaluation criteria or the public situation. You can revise the decision by repeating this command before initialization.</p></section>
+<section id="criteria"><h2>Write the conditions that would make the pilot fail</h2>
+<p>A persuasive story about shorter queues is insufficient. We need observable conditions that would count against continuing the experiment. Each criterion therefore names a failure condition, what we would measure, a threshold and a deadline.</p>
+<h3>Service: enough improvement across enough stores</h3>
+<p>We propose a 20% reduction in the 90th-percentile café wait by February, after adjustment against comparison cafés. Requiring 40 complete pairs prevents a handful of favorable stores from carrying the conclusion.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>game<span class="w"> </span>criterion<span class="w"> </span>add<span class="w"> </span>service<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--condition<span class="w"> </span><span class="s1">'The baseline-adjusted reduction in peak café order-to-handoff p90 wait is less than 20 percent by move two across at least forty complete pilot/comparison store pairs'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--observable<span class="w"> </span><span class="s1">'adjusted_cafe_wait_reduction_pct; equally weighted store-pair changes in p90 wait, comparing peak weekday windows before and after the pilot; complete_store_pairs &gt;= 40'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--threshold<span class="w"> </span><span class="s1">'Below 20% reduction; fewer than 40 complete pairs or missing baseline/wait evidence is unevaluated'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--deadline-move<span class="w"> </span><span class="m">2</span>
+</code></pre></div>
+
+<h3>Economics: recover the labor cost across all channels</h3>
+<p>The pilot fails this test if incremental daily contribution remains negative by March. Count lost mobile purchases and transfers between channels as well as any new café business.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>game<span class="w"> </span>criterion<span class="w"> </span>add<span class="w"> </span>economics<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--condition<span class="w"> </span><span class="s1">'Adjusted daily contribution per pilot café after lost orders, substitution between channels and incremental staffing is negative by move three across at least forty complete store pairs'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--observable<span class="w"> </span><span class="s1">'incremental_daily_contribution_usd after matched-store baseline adjustment, including all channels and added labor; complete_store_pairs &gt;= 40'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--threshold<span class="w"> </span><span class="s1">'Below $0 per café per day; incomplete transaction or cost evidence is unevaluated'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--deadline-move<span class="w"> </span><span class="m">3</span>
+</code></pre></div>
+
+<h3>Retention: keep the baseline mobile customers</h3>
+<p>A customer who buys at the counter still returns to Starbucks. Track repeat purchasing across its channels, and require complete follow-up for at least 1,000 customers in each arm.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>game<span class="w"> </span>criterion<span class="w"> </span>add<span class="w"> </span>retention<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--condition<span class="w"> </span><span class="s1">'Thirty-day repeat purchase among baseline mobile customers falls by more than three percentage points relative to the comparison-cohort change by move three'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--observable<span class="w"> </span><span class="s1">'mobile_repeat_change_pp; compare baseline-defined cohorts across all Starbucks purchase channels, with at least 1000 customers per arm and complete 30-day follow-up'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--threshold<span class="w"> </span><span class="s1">'Below -3 percentage points; incomplete cohorts or missing follow-up is unevaluated'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--deadline-move<span class="w"> </span><span class="m">3</span>
+</code></pre></div>
+
+<p>These thresholds are case-design choices. Missing evidence leaves a criterion unevaluated. To change an existing criterion before initialization, repeat its command with <code>--replace</code>; reusing its ID with different content otherwise fails.</p></section>
+<section id="board"><h2>Describe the shared starting situation</h2>
+<p>The board is the information every player can see at the start of a round. Here we establish the calendar, public participants, pilot scope and assumptions. We deliberately leave actual performance unmeasured: <code>--unknown</code> records a missing observation, while <code>--number 0</code> records an observed-sample count of zero.</p>
+<p><code>--text</code> supplies prose, <code>--number</code> supplies a number, and <code>--empty-list</code> starts a list. <code>append</code> adds a text entry. A dotted field name such as <code>period_ends.1</code> places the first round’s date inside the calendar schedule. The measurement rule tells control how to distinguish imagined developments from measured results.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>evidence_status<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="s1">'Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>calendar_period<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="s1">'January 2027'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>period_ends.1<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="m">2027</span>-01-31
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>period_ends.2<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="m">2027</span>-02-28
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>period_ends.3<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="m">2027</span>-03-31
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>public_roster<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--empty-list
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span>append<span class="w"> </span>public_roster<span class="w"> </span><span class="s1">'Starbucks (home)'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span>append<span class="w"> </span>public_roster<span class="w"> </span><span class="s1">'Dutch Bros (competitor)'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span>append<span class="w"> </span>public_roster<span class="w"> </span><span class="s1">'Dunkin (competitor)'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span>append<span class="w"> </span>public_roster<span class="w"> </span><span class="s1">'Composite morning customers (assumed wildcard)'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>pilot_cafes<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">50</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>comparison_cafes<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">50</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>peak_window<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="s1">'Weekdays 07:00–10:00 local time'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>cafe_capacity_reservation_pct<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">20</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>assumed_contribution_per_transaction_usd<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">3</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>measured_capacity_per_15min<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unknown
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>complete_store_pairs<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">0</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>adjusted_cafe_wait_reduction_pct<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unknown
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>incremental_daily_contribution_usd<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unknown
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>mobile_repeat_change_pp<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unknown
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>pilot_cohort_complete_customers<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">0</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>comparison_cohort_complete_customers<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">0</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>measurement_rule<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="s1">'Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>public_market_context<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--text<span class="w"> </span><span class="s1">'Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.'</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>assumed_loaded_labor_cost_per_hour_usd<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--number<span class="w"> </span><span class="m">30</span>
+
+perla<span class="w"> </span>game<span class="w"> </span>board<span class="w"> </span><span class="nb">set</span><span class="w"> </span>public_strategy_history<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--empty-list
+</code></pre></div>
+
+<p>For your own case, choose shared information deliberately. The private budgets and limits below belong in the corresponding player’s dossier. The shared board should not give competitors access to another player’s confidential plans.</p></section>
+<section id="initialize"><h2>Inspect the draft, then register it</h2>
+<p><code>game show</code> displays the complete draft and any validation issues. At this point <code>ready_to_initialize</code> should be true. Read it before running the next command: initialization fixes the decision and criteria for this experiment.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>game<span class="w"> </span>show
+
+perla<span class="w"> </span>init<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--delegate<span class="w"> </span>dossiers<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--delegate<span class="w"> </span>rulings
+</code></pre></div>
+
+<p>Without <code>--input</code>, <code>init</code> reads the local command-built draft. It creates the same <code>.perla</code> game record as initialization from a file. The draft remains available for inspection, but further design edits are refused once the game is initialized. A different proposal belongs in a fresh game directory.</p>
+<p>The delegation flags allow this automated walkthrough to proceed without human sign-off on dossiers and rulings. For a facilitated exercise, omit them and follow the <a href="commands.html#human-review">human-review procedure</a>.</p></section>
+<section id="home"><h2>Build Starbucks: service, digital convenience and contribution</h2>
+<p>First register the company whose decision we are testing. Then give it sourced history and financial context, followed by explicit assumptions about authority, economics and information. Its management tension is concrete: improving café service can hurt mobile convenience, and added staff must earn back their cost.</p>
+<p>A fact command records a claim under a stable ID and identifies its source. Incentives describe what the player wants; constraints limit its choices; capabilities identify what it can do; red lines state what it must not assume. A partial dossier stays a draft until it has sourced facts and all four kinds of strategy statements. Completing those fields makes it available for play; later entries enrich it.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>actor<span class="w"> </span>add<span class="w"> </span>home<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>Starbucks<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--role<span class="w"> </span>home
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h1<span class="w"> </span><span class="s1">'Reported history: Starbucks began in Seattle in 1971. Its evolution from a bean merchant into a coffeehouse makes the in-store experience part of the proposition, not simply a distribution expense. The strategic implication is an author inference.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://about.starbucks.com/about-us/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h2<span class="w"> </span><span class="s1">'Reported financials: Q3 fiscal 2026 North America revenue was $7,395.1 million, operating income $1,008.9 million and operating margin 13.6%. These are segment figures, not pilot-store unit economics.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h3<span class="w"> </span><span class="s1">'Reported demand: US comparable sales increased 7.9% and comparable transactions 4.2% in Q3 fiscal 2026. This case tests sustaining growth; it does not assume that current transactions are declining.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h4<span class="w"> </span><span class="s1">'Reported strategy: Back to Starbucks combines staffing and scheduling investment, Smart Queue order sequencing, and restoration of the coffeehouse experience. These capabilities are public; the proposed 20% reservation is not an announced policy.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://about.starbucks.com/press/2026/back-to-starbucks-two-year-anniversary/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h5<span class="w"> </span><span class="s1">'Assumed operating authority: 50 pilot and 50 comparison company-operated cafés; weekdays 07:00–10:00; reserve 20% of measured 15-minute capacity for café orders. Price unchanged. Each pilot café may add at most two peak staff-hours per weekday. Rollback or narrower time windows are allowed; expansion beyond 50 is not.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h6<span class="w"> </span><span class="s1">'Assumed economics: $3 contribution per incremental or lost transaction before additional staffing. Assume fully loaded incremental labor costs $30/hour for sensitivity calculations. Two added hours cost $60/store/day and require 20 genuinely incremental transactions to break even before other costs. No actual store margins, baselines or demand elasticities are supplied.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h7<span class="w"> </span><span class="s1">'Assumed management problem: The operations lead is accountable for café service and labor spend; the digital lead for reliable pickup and repeat behavior; the finance lead for all-channel contribution. Optimizing one channel at another’s expense is not success. These are role tensions constructed for the game, not testimony from executives.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h8<span class="w"> </span><span class="s1">'Assumed information rights: The team can instrument its own order attempts, offered pickup slots, completed orders, refunds, staffing hours and baseline-linked repeat purchases; it cannot see rivals’ transaction logs or know where a rejected mobile user ultimately buys. Available instrumentation is a capability, not already collected evidence.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>home<span class="w"> </span>h9<span class="w"> </span><span class="s1">'Assumed decision rules: By round two seek at least a 20% adjusted café p90 wait reduction across 40 complete pairs. By round three require nonnegative daily contribution and no worse than a 3pp adjusted repeat decline with 1,000 complete customers per arm. Missing evidence cannot pass these gates.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>home<span class="w"> </span><span class="s1">'Restore a credible coffeehouse visit without sacrificing digital convenience (h1, h4).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>home<span class="w"> </span><span class="s1">'Defend positive transaction momentum while earning back added labor through all-channel contribution (h2, h3, h6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>home<span class="w"> </span><span class="s1">'Make a reversible operational choice before the March decision deadline (h5, h9).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>home<span class="w"> </span><span class="s1">'The two-hour staff allowance, unchanged prices and 50-store limit are binding game constraints (h5).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>home<span class="w"> </span><span class="s1">'Segment margin is not a local cost curve; no store p90 waits or mobile churn elasticity is known (h2, h6, h8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>home<span class="w"> </span><span class="s1">'A booked later slot is not revenue until a purchase completes; competitor substitution is only partly observable (h8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>home<span class="w"> </span><span class="s1">'Use existing sequencing and staffing practices as the implementation base (h4).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>home<span class="w"> </span><span class="s1">'Offer honest later pickup times, test narrower reservation windows and release unused capacity within the pilot (h5).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>home<span class="w"> </span><span class="s1">'Build paired-store measurement, attempt-to-purchase funnels and baseline cohorts using internal instrumentation (h8, h9).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>home<span class="w"> </span><span class="s1">'Do not invent operating measurements or declare the economics gate passed from a better wait-time story alone (h6, h9).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>home<span class="w"> </span><span class="s1">'Do not promise a national rollout or exceed the staffing cap (h5).'</span>
+</code></pre></div>
+
+<p>The h6 economics imply a $60 daily labor bill and 20 incremental transactions to cover it. That calculation can inform a move without prescribing one: the player can narrow the reservation window or release unused capacity within its authority. <a href="reference.html#player-home">Read the background and sources as prose</a>.</p></section>
+<section id="dutch"><h2>Build Dutch Bros: win a repeat visit without creating a queue</h2>
+<p>This player controls a local group of drive-through shops. Its acquisition budget makes an immediate response possible, while staffing and lane capacity make indiscriminate discounting costly. Its own order and redemption data cannot reveal who was rejected inside Starbucks’ app.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>actor<span class="w"> </span>add<span class="w"> </span>dutch<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span><span class="s1">'Dutch Bros'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--role<span class="w"> </span>competitor
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d1<span class="w"> </span><span class="s1">'Reported history: Brothers Dane and Travis Boersma founded Dutch Bros in Grants Pass, Oregon, in 1992. The brand grew from an espresso pushcart around beverages and personal service; drive-through convenience is central to its operating identity.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://investors.dutchbros.com/overview/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d2<span class="w"> </span><span class="s1">'Reported financials: Q2 2026 total revenue was $550.9 million, up 32.5% from $415.8 million. Company-operated same-shop sales grew 8.3%, including 3.4% transaction growth. Company revenue and company-operated comparable sales are distinct measures.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://investors.dutchbros.com/financials/quarterly-results/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d3<span class="w"> </span><span class="s1">'Reported expansion: Dutch Bros opened 48 shops in Q2 2026, 44 company-operated. Inference: managers must preserve existing-shop execution while allocating staff and attention to growth. This does not establish spare local capacity.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://investors.dutchbros.com/financials/quarterly-results/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d4<span class="w"> </span><span class="s1">'Reported capability: Dutch Bros offers app-based Order Ahead at participating shops. Pickup availability varies by location. This does not establish that every location in a hypothetical pilot market supports the feature.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://www.dutchbros.com/order-ahead/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d5<span class="w"> </span><span class="s1">'Assumed local remit: The player controls 12 participating company-operated shops near some of the Starbucks pilot cafés. It can adjust shifts, app messaging and local acquisition offers, but cannot open a new shop within the three-round horizon.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d6<span class="w"> </span><span class="s1">'Assumed commercial envelope: Maximum incremental acquisition and labor budget $30,000 across these 12 shops per month. A $1 trial credit is a permitted option, not a precommitted action. Local variable contribution, queue capacity and cohort acquisition cost are unknown and must be estimated or measured before scaling.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d7<span class="w"> </span><span class="s1">'Assumed backstory: A regional operator has spent the preceding quarter integrating new staff and protecting service consistency. The local team wants repeat demand, not a one-week promotion that overwhelms the lane. This managerial history is scenario design, not reported company information.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dutch<span class="w"> </span>d8<span class="w"> </span><span class="s1">'Assumed information rights: The operator sees its own lane times, app orders, rewards redemptions and repeat visits; it sees public Starbucks slot availability and public offers. It cannot target a verified list of customers rejected inside Starbucks’ app or read either rival’s private budget.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Turn frustrated morning demand into repeat visits while protecting the service proposition (d1, d4).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Make existing-shop growth durable as expansion absorbs managerial capacity (d2, d3, d7).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'12 shops, a $30,000 monthly incremental envelope and no new construction within the game (d5, d6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Order Ahead availability is location-dependent; there is no measured spare capacity or proven local acquisition cost (d4, d6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Public observation does not reveal individual rejected Starbucks customers (d8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Run a geographically limited app offer and shift labor toward a measurable morning bottleneck (d4, d5).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Measure redeemed offers and subsequent full-price visits in the own-brand cohort (d8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Do not assume every lost Starbucks order becomes a Dutch Bros order (d8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>dutch<span class="w"> </span><span class="s1">'Do not subsidize demand beyond the monthly envelope or promise a pickup time unsupported by local throughput (d6, d7).'</span>
+</code></pre></div>
+
+<p>These limits leave the player room to choose between staffing, acquisition and protecting service consistency. <a href="reference.html#player-dutch">Read the full background and sources</a>.</p></section>
+<section id="dunkin"><h2>Build Dunkin: an offer the franchisees can sustain</h2>
+<p>The relevant decision maker coordinates consenting local restaurants. Its coffee-and-food basket creates a different offer from a beverage-only discount, but franchise economics constrain reimbursement, participation and promotion spending.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>actor<span class="w"> </span>add<span class="w"> </span>dunkin<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>Dunkin<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--role<span class="w"> </span>competitor
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k1<span class="w"> </span><span class="s1">'Reported history and footprint: Founded in 1950, Dunkin describes more than 14,000 restaurants in nearly 40 markets. Its franchise footprint and routine coffee-and-food occasion provide a different operating model from a company-run café pilot.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://www.dunkindonuts.com/about-us/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k2<span class="w"> </span><span class="s1">'Reported ownership and transaction economics: Inspire completed the acquisition of Dunkin Brands in December 2020 in a transaction valued at $11.3 billion including assumed debt. That figure is an acquisition value for Dunkin Brands, not Dunkin revenue, available cash or franchisee profit. Current local margins are not supplied.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://inspirebrands.com/inspire-brands-completes-acquisition-of-dunkin-brands/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k3<span class="w"> </span><span class="s1">'Reported commercial capability: The Dunkin app supports advance ordering, rewards and offers. Consumer terms and participation vary; app capability alone does not demonstrate shorter queues.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://www.dunkindonuts.com/en/mobile-app
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k4<span class="w"> </span><span class="s1">'Reported positioning: A September 2026 campaign advertised a $6 breakfast Meal Deal. It supplies evidence of a coffee-and-food value proposition; neither that January 2027 price nor universal franchise participation is assumed.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://news.dunkindonuts.com/blog/ttailgate-season-runs-on-dunkin-september2026
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k5<span class="w"> </span><span class="s1">'Assumed authority: The player represents a consenting local group of 15 franchised restaurants near some pilot cafés. It can coordinate a local opt-in offer and shared marketing but cannot order all US franchisees to participate. No new sites within three months.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k6<span class="w"> </span><span class="s1">'Assumed finances: Combined incremental local promotion and staffing spend is capped at $20,000 per month. For a proposed $1 discount, test a $2–$4 pre-discount contribution range; these are illustrative sensitivities, not disclosed unit economics. Franchise operators bear local labor and discount costs unless an explicit reimbursement is budgeted.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k7<span class="w"> </span><span class="s1">'Assumed backstory: The operator group has disagreed over prior offer redemptions that brought traffic without profitable food attachment. Its immediate priority is a repeatable breakfast basket and predictable pickup, with an explicit exit for stores whose economics worsen. This is a constructed governance tension.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>dunkin<span class="w"> </span>k8<span class="w"> </span><span class="s1">'Assumed information rights: Participating stores can see their own basket mix, discount cost, staffing and repeat rewards visits, and public competitor offers. They cannot see Starbucks’ mobile customer identity or confidential café capacity. National campaign coordination and franchisor reimbursement are not granted.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'Win the whole breakfast occasion through a predictable, attractive coffee-and-food basket (k3, k4).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'Keep participating franchisees economically willing to continue; redemption alone is not profit (k5, k6, k7).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'Only the 15 consenting stores are controllable; the group cannot impose a national price (k5).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'The $20,000 monthly envelope includes incentives and staffing; actual unit margins remain unknown (k2, k6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'No inferred access to competitors’ customer records or automatic corporate reimbursement (k8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'Design an opt-in morning bundle or app offer with local stop rules and cost accounting (k3, k5, k6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'Measure basket contribution and repeat visits after discounts expire (k7, k8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'Do not describe acquisition value as operating revenue or promotion funding (k2).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>dunkin<span class="w"> </span><span class="s1">'Do not claim a local discount works without accounting for full-price purchases that would have occurred anyway (k6, k7).'</span>
+</code></pre></div>
+
+<p>The constructed disagreement over traffic versus profitable food attachment gives the player a reason to care about the whole purchase. <a href="reference.html#player-dunkin">Read the full background and sources</a>.</p></section>
+<section id="buyer"><h2>Build customers with somewhere else to go</h2>
+<p>The customer player represents three designed occasions, each with different time and spending limits. It receives public offers and its own experiences. Home preparation, postponement and no purchase remain possible, so a rejected mobile order need not become a competitor’s sale. These assumptions are not measured segment weights or customer testimony.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>actor<span class="w"> </span>add<span class="w"> </span>buyer<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span><span class="s1">'Morning customers (composite)'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--role<span class="w"> </span>wildcard
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b1<span class="w"> </span><span class="s1">'Reported category context: NCA’s June 2026 report says 47% of American adults consumed specialty coffee in the past day. Among past-day specialty drinkers, 36% had coffee prepared outside the home, versus 23% among traditional coffee drinkers. These national aggregates are not local switching probabilities.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://www.ncausa.org/newsroom/Specialty-Coffee-Consumption-Remains-at-Record-High
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b2<span class="w"> </span><span class="s1">'Reported choices: Dutch Bros Order Ahead is available at participating shops; Dunkin offers app ordering and rewards. A credible alternative depends on the particular route and location, not merely national brand availability.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>https://www.dutchbros.com/order-ahead/
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b3<span class="w"> </span><span class="s1">'Assumed character: This player is a composite of morning purchase occasions, not a single person controlling the market and not a recruited survey panel. It may describe different segment choices but may not report votes or measured percentages.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b4<span class="w"> </span><span class="s1">'Assumed commuter occasion: A weekday commuter buys before a fixed work start, has 10 minutes of discretionary travel-and-wait time, and an $8 coffee-and-light-breakfast ceiling. A 4-minute detour consumes real slack. These figures are illustrative constraints, not survey findings.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b5<span class="w"> </span><span class="s1">'Assumed habitual-app occasion: A repeat Starbucks buyer values a familiar customization and prepaid ordering, allows an 8-minute pickup delay when communicated before paying, and may switch temporarily after two unreliable mornings. Loyalty friction exists, but its monetary value and prevalence are unknown.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b6<span class="w"> </span><span class="s1">'Assumed café occasion: A customer intends to sit for 25 minutes before a meeting and has a $7 drink budget. Predictable handoff and an available place to sit matter; a cheap drive-through is not a complete substitute for this occasion.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b7<span class="w"> </span><span class="s1">'Assumed outside option and household economics: Some mornings the customer can prepare coffee at home using an illustrative $1 marginal ingredient cost; time, preparation equipment and taste differ. Skipping the purchase or buying later is permissible. These examples do not establish local market shares.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>fact<span class="w"> </span>buyer<span class="w"> </span>b8<span class="w"> </span><span class="s1">'Assumed information rights: Customers see quoted pickup times, prices, offers, public store conditions and their own experience. They do not know confidential staffing plans, rivals’ margins, adjudicator confidence, or other customers’ behavior. No segment weights or demand elasticity have been measured.'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span><span class="s1">'Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation.'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'Minimize the total cost of the actual occasion: spending, detour, waiting and risk of being late (b4, b5, b6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>incentive<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'Preserve an enjoyable and reliable routine, with home preparation and postponement as real alternatives (b5, b7).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'Each occasion has its own explicit time and spending ceiling; do not average them into a universal customer (b4, b5, b6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>constraint<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'No measured segment weights, switching probability or real participant testimony exists (b1, b3, b8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'Choose a brand, channel, later time, home preparation or no purchase based on the public offer (b2, b7, b8).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>capability<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'State contingent choices separately for commuters, habitual app users and café visitors, without inventing population shares (b3, b4, b5, b6).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'Do not claim to have interviewed customers or treat model choices as observed demand (b3).'</span>
+
+perla<span class="w"> </span>dossier<span class="w"> </span>red-line<span class="w"> </span>buyer<span class="w"> </span><span class="s1">'Do not read private competitor dossiers or claim that a national consumption statistic predicts local churn (b1, b8).'</span>
+</code></pre></div>
+
+<p>The time limits will influence the model’s responses. When an eight-minute tolerance appears again in a move, that is an input being applied. <a href="reference.html#player-buyer">Read the complete situations and information limits</a>.</p></section>
+<section id="policy"><h2>Choose review settings and check readiness</h2>
+<p>Set the review policy directly. We allocate zero human reviews to escalated rulings for this automated exercise. The confidence threshold governs automatic eligibility of otherwise unflagged rulings based on dossier facts. The judgment-share threshold produces a warning when more than 40% of a closed round’s rulings rest on judgment. Player objections still run.</p>
+<div class="highlight"><pre><span></span><code>perla<span class="w"> </span>adjudicate<span class="w"> </span>policy<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--human-budget<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--auto-confidence<span class="w"> </span><span class="m">0</span>.7<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--judgment-share-threshold<span class="w"> </span><span class="m">0</span>.4
+
+perla<span class="w"> </span>status
+</code></pre></div>
+
+<p>The status should report <code>data.phase: move_generation</code> and an empty <code>missing_dossiers</code> list. You have built the complete case without loading a JSON input file. The decision, criteria, board, four dossiers and policy match the tutorial’s supplied case; no model has chosen a move yet.</p>
+<p>Continue with <a href="index.html#control">how control uses this evidence</a>, then <a href="index.html#round-1">choose the models and play January</a>. Stay in this game directory for the Perla and ep commands.</p></section>
+<footer><p><a href="index.html">Tutorial</a> · <a href="reference.html">Evidence and transcripts</a> · <a href="commands.html">Execution commands</a></p></footer>
+</main></body></html>

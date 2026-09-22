@@ -1,0 +1,33 @@
+{
+  "job_id": "job-a7bbdf034126405582b8358ed0b63974",
+  "actor_id": "buyer",
+  "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/.perla/jobs/job-a7bbdf034126405582b8358ed0b63974.jobs.ep",
+  "reused": false,
+  "kind": "rebuttals",
+  "move": 3,
+  "label": "round-3-rebuttals-buyer",
+  "service": "google",
+  "model": "gemini-2.5-pro",
+  "attempt": 1,
+  "result": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-rebuttals-buyer/results-1.ep",
+  "command": [
+    "ep",
+    "run",
+    "--jobs",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/.perla/jobs/job-a7bbdf034126405582b8358ed0b63974.jobs.ep",
+    "--model_list",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-rebuttals-buyer/model.ep",
+    "--background",
+    "--wait",
+    "--timeout",
+    "900",
+    "--task-timeout",
+    "600",
+    "--remote_inference_results_visibility",
+    "private",
+    "--fresh",
+    "--output",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-rebuttals-buyer/results-1.ep"
+  ],
+  "prepared_at": "2026-09-12T12:19:55.258159+00:00"
+}

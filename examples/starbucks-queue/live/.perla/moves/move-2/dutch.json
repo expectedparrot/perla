@@ -1,0 +1,46 @@
+{
+  "actor_id": "dutch",
+  "committed_at": "2026-09-12T12:07:33.352987+00:00",
+  "content": {
+    "actions": [
+      "Allocate 20 additional labor hours per week per shop (4 hours per weekday during 7-10 a.m.) at the 12 participating shops, effective January 15–31, 2027. This will ensure sufficient staff to maintain drive-through speed and service quality during peak morning hours.",
+      "Launch a targeted app promotion offering a $1 credit for first-time Order Ahead users at the 12 participating shops, valid from January 15–31, 2027. This offer will be capped at 250 redemptions per shop or until the allocated budget for this promotion is exhausted, whichever comes first."
+    ],
+    "expected_responses": [
+      "Starbucks: May observe a slight decrease in their mobile order volume in the pilot areas, or an increase in walk-in traffic (their intended benefit). They are unlikely to directly detect our increased staffing or the specific Order Ahead offer details (d8) but may notice an increase in traffic at nearby Dutch Bros locations. Their response will likely depend on their own internal data regarding their pilot's success and customer churn.",
+      "Dunkin: As a competitor also targeting mobile users with a value offer, Dunkin may notice increased activity at Dutch Bros. They might intensify their own local marketing efforts or adjust their breakfast bundle offer to maintain their competitive edge, especially if they see a shift in customer preferences towards Dutch Bros' beverage-focused convenience.",
+      "Composite Morning Customers: Customers experiencing issues with Starbucks' mobile slots will find a clear, incentivized alternative at Dutch Bros. Those who value speed and convenience will likely try the Order Ahead offer. A positive experience, supported by increased staffing, should lead to a portion of these new customers becoming repeat visitors. Some may still opt for Dunkin's value bundle or home preparation."
+    ],
+    "rationale": "Starbucks' new capacity reservation policy for mobile orders during peak hours (7-10 a.m. weekdays) creates an opportunity to capture frustrated customers seeking quick, convenient alternatives. Our actions are designed to directly address this by:\n*   **Protecting Service Quality:** The increased labor allocation ensures that any surge in demand, particularly from mobile switchers, can be handled efficiently, maintaining our core drive-through speed and personal service (d1, d7). This prevents overwhelming our lanes and ensures a positive first experience, crucial for repeat visits.\n*   **Acquiring New Mobile Customers:** The $1 Order Ahead credit specifically targets mobile-first customers who may be experiencing delays or unavailability at Starbucks. It incentivizes them to try Dutch Bros' convenient Order Ahead platform, aiming to convert them into loyal, repeat customers (d4, incentives). The cap manages risk and budget (d6, d7).",
+    "resource_commitments": [
+      "Labor: $14,400 (12 shops * 4 additional hours/weekday * 5 weekdays/week * 2 weeks * $30/hour).",
+      "Acquisition (Order Ahead Credit): $3,000 (12 shops * 250 redemptions/shop * $1/redemption).",
+      "Total Committed: $17,400 out of a $30,000 monthly budget envelope. The remaining $12,600 will be held in reserve for potential local marketing efforts or to extend the offer based on initial performance data."
+    ]
+  },
+  "content_hash": "70d677ab2784bc35ea15bf287db2e3b1c715b2d7c209205cfe2f5fe233192553",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "70d677ab2784bc35ea15bf287db2e3b1c715b2d7c209205cfe2f5fe233192553",
+    "ingested_at": "2026-09-12T12:07:33.352987+00:00",
+    "job_id": "job-9bccd9c03aee4110b682829afd1820bd",
+    "manifest_hash": "214b002854d3257216de112cbef7ff18121fffce02b055c3783e094b734e1931",
+    "model": "gemini-2.5-flash",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-flash",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-flash",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-moves-dutch/results-1.ep"
+  }
+}

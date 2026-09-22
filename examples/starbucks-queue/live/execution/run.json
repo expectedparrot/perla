@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-12T10:49:00.914413+00:00",
+  "models": {
+    "home": [
+      "openai",
+      "gpt-4.1"
+    ],
+    "dutch": [
+      "google",
+      "gemini-2.5-flash"
+    ],
+    "dunkin": [
+      "openai",
+      "gpt-4.1-mini"
+    ],
+    "buyer": [
+      "google",
+      "gemini-2.5-pro"
+    ],
+    "control": [
+      "anthropic",
+      "claude-sonnet-4-6"
+    ]
+  },
+  "human_review": "Delegated for this model-only documentation demonstration",
+  "human_budget": 0,
+  "source_case": "docs/case/starbucks-queue",
+  "rounds": 3
+}

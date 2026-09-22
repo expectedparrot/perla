@@ -1,0 +1,22 @@
+{
+  "moves": {
+    "actions": [
+      "Launch a $1 discount breakfast bundle offer through the Dunkin app at all 15 consenting franchise stores near the Starbucks pilot cafés during the February 2027 morning peak (7-10 a.m. weekdays).",
+      "Allocate $12,000 of the $20,000 monthly budget to incremental morning labor to improve order fulfillment speed and reduce wait times, aiming to compete with Starbucks' capacity-aware mobile pickup slots.",
+      "Use $8,000 for targeted local app advertising and promotions to drive repeat visits and encourage use of the $1 discount bundle, with monitoring of basket contribution and repeat customer behavior.",
+      "Set a stop rule to discontinue the discount offer at any store where the store-level contribution margin worsens after one month."
+    ],
+    "rationale": "The $1 discount bundle leverages Dunkin's value positioning and app capabilities to attract time-sensitive breakfast customers who might otherwise try Starbucks' capacity-aware mobile ordering. Allocating most of the budget to labor addresses the need for predictable and fast order fulfillment, which is critical to prevent customer abandonment and competitor switching. Targeted marketing supports repeat usage to build a sustainable basket. The stop rule protects franchisees from unprofitable promotions, consistent with prior concerns about traffic without profitable food attachment.",
+    "resource_commitments": [
+      "$12,000/month for incremental morning labor costs across 15 stores in February 2027",
+      "$8,000/month for targeted local app advertising and promotional incentives",
+      "Offer a $1 discount on a coffee-and-food breakfast bundle via the Dunkin app during 7-10 a.m. weekdays"
+    ],
+    "expected_responses": [
+      "Starbucks may maintain or tighten their 20% capacity reservation for in-café orders, possibly improving mobile pickup slot availability or further optimizing staffing.",
+      "Dutch Bros may respond by increasing their geo-targeted $1 Order Ahead offers or adding incremental labor to maintain competitive speed and value.",
+      "Some customers may shift from Starbucks or Dutch Bros to Dunkin due to the value bundle and improved order predictability.",
+      "Franchisees will monitor store-level economics closely and may opt out of the discount if contribution margins deteriorate."
+    ]
+  }
+}

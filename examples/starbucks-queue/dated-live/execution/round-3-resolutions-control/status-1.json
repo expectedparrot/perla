@@ -1,0 +1,23 @@
+{
+  "job_uuid": "6f97837a-d1a4-4c13-a804-50d66d2e6be9",
+  "results_uuid": "28dda2f2-e67e-4371-9272-5f0289a9b2e2",
+  "results_url": "https://www.expectedparrot.com/content/28dda2f2-e67e-4371-9272-5f0289a9b2e2",
+  "status": "completed",
+  "version": "1.0.8.dev1",
+  "job_json_string": null,
+  "latest_job_run_details": {
+    "interview_details": {
+      "total_interviews": 1,
+      "interviews_with_exceptions": 0,
+      "completed_interviews": 1,
+      "exception_summary": []
+    },
+    "failure_reason": null,
+    "failure_description": null,
+    "error_report_uuid": null,
+    "cost_credits": 3.39,
+    "cost_usd": 0.0339,
+    "expenses": [],
+    "results_available": null
+  }
+}

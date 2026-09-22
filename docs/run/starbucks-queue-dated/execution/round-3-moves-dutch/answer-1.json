@@ -1,0 +1,19 @@
+{
+  "moves": {
+    "actions": [
+      "Allocate $15,000 for incremental morning labor across 12 participating shops for March 2027. This labor will be deployed to optimize drive-through speed and Order Ahead fulfillment during peak hours (7-10 a.m.).",
+      "Allocate $15,000 for a geo-targeted $1 Order Ahead app offer for new and lapsed users at 12 participating shops for March 2027. This offer is designed to capture customers experiencing delays at competitors and encourage trial.",
+      "Implement a local review process to monitor lane times, Order Ahead volume, and repeat visits for customers redeeming the $1 offer, using this data to refine labor deployment and assess the offer's effectiveness in driving sustainable repeat business."
+    ],
+    "rationale": "The current market dynamics, with Starbucks continuing mobile order limitations and customer diversion, present a sustained opportunity to attract new customers. Maintaining a consistent, compelling offer ($1 Order Ahead) combined with reliable, fast service (incremental labor) is crucial for converting trial users into loyal, full-price repeat customers, aligning with our incentive to build durable existing-shop growth. The continued investment ensures Dutch Bros remains a strong alternative for time-pressed commuters, reinforcing our brand identity for speed and convenience. By adding a monitoring and refinement process, we ensure our resource allocation is optimized and that we are learning from the experiment to inform future strategy, without exceeding our budget or promising unsupported service levels.",
+    "resource_commitments": [
+      "$15,000 for incremental morning labor (March 2027)",
+      "$15,000 for geo-targeted $1 Order Ahead app offer (March 2027)"
+    ],
+    "expected_responses": [
+      "Starbucks will likely continue its pilot program, potentially making further minor adjustments to capacity management based on their internal data. They will observe continued customer diversion from their pilot stores.",
+      "Dunkin will likely continue its aggressive $1 discount breakfast bundle and associated marketing efforts, especially if their initial assessment shows positive contribution margins. They will remain a strong competitor for value-seeking customers.",
+      "Customers experiencing continued long waits or limited mobile slots at Starbucks will continue to divert to Dutch Bros or Dunkin. Our consistent offer and improved service should encourage repeat visits and build loyalty among those who try Dutch Bros."
+    ]
+  }
+}

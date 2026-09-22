@@ -1,0 +1,48 @@
+{
+  "actor_id": "home",
+  "committed_at": "2026-09-12T14:07:43.292535+00:00",
+  "content": {
+    "actions": [
+      "Continue the pilot with 50 cafés through March 2027, maintaining the 20% peak capacity reservation for in-café orders and the two-hour peak staff cap.",
+      "Expand the real-time release of unused reserved café-order capacity to mobile orders to all 50 pilot cafés for March 2027 (ending the A/B test after February), with clear in-app messaging about slot availability and real-time updates."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin are likely to continue or intensify their digital and value promotions, possibly expanding targeted offers or highlighting speed and reliability versus Starbucks.",
+      "Some mobile customers who previously abandoned Starbucks may return if slot availability improves, but competitors may attempt to lock in recent switchers with loyalty or convenience offers.",
+      "In-café customers should continue to perceive an improved experience, as the underlying reservation for café orders remains in place."
+    ],
+    "rationale": "The pilot so far has protected the in-café experience but at the cost of mobile order reliability and repeat business, risking channel shift to competitors. Expanding the real-time release of unused reserved capacity to all pilot cafés aims to reduce mobile order abandonment without sacrificing the café experience, leveraging existing capabilities and instrumentation. This move is reversible, stays within the staffing cap, and does not require a price change or national rollout. It aligns with the need to defend transaction momentum and maximize all-channel contribution before the March decision deadline.",
+    "resource_commitments": [
+      "Continue incremental peak staffing (up to 2 hours per weekday per pilot café) through March 2027.",
+      "Extend and monitor the real-time release system and related in-app messaging to all 50 pilot cafés, requiring digital operations and store staff coordination.",
+      "Maintain instrumentation for order attempts, completions, and repeat behavior in both pilot and comparison cafés."
+    ]
+  },
+  "content_hash": "54ff87d3a155fa2dc28a248b52c810099fbc82f01336e6afa053bbf719dc0f13",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "54ff87d3a155fa2dc28a248b52c810099fbc82f01336e6afa053bbf719dc0f13",
+    "ingested_at": "2026-09-12T14:07:43.292535+00:00",
+    "job_id": "job-a2ca59d942bd4a9eba080a81d8f32258",
+    "manifest_hash": "bb25cd3ba189130234808bfdb33dce76103c07fc709430293486a637fdaa3276",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves/home.results.ep"
+  }
+}

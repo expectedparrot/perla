@@ -1,0 +1,18 @@
+{
+  "moves": {
+    "actions": [
+      "Implement a pilot program in 50 company-operated US cafés (with 50 matched comparisons) during January 2027, reserving 20% of measured 15-minute peak capacity (weekdays 07:00–10:00) for in-café orders and capping mobile pickup slots accordingly.",
+      "Instrument all pilot and comparison stores to capture order attempts, offered pickup slots, completed orders, refunds, staffing hours, and repeat purchases, building paired-store and attempt-to-purchase funnel measurement for the pilot period."
+    ],
+    "rationale": "Starbucks’ key incentive is to restore the in-café experience while defending digital transaction growth and segment contribution. By reserving capacity for café orders, the pilot protects the coffeehouse visit during peak hours without removing mobile convenience, directly testing if this operational change can reduce in-café wait times (a strategic priority) without harming overall contribution or customer repeat. Instrumentation is essential to track tradeoffs and satisfy the requirement for measured evidence before any further rollout or rollback. The actions are reversible and fit within the staffing, pricing, and scope constraints.",
+    "resource_commitments": [
+      "Add up to two incremental staff-hours per peak weekday per pilot store (max $60/store/day in labor) for January 2027.",
+      "Deploy internal measurement tools to all 100 cafés for the pilot period, ensuring data capture on all required metrics for paired analysis."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin may highlight their consistently available mobile or drive-through options if Starbucks customers encounter limited mobile slots, potentially targeting digital-first customers with promotions.",
+      "Some mobile customers may shift to competitors or off-peak times if peak slots fill, but improved in-café experience could retain or recapture café-first customers.",
+      "Both competitors may monitor Starbucks’ operational results but are unlikely to immediately match the reservation policy unless it proves highly effective."
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "error": "{\"code\": \"E_CITATION\", \"message\": \"Citation is absent from the control job's evidence snapshot.\", \"remediation\": \"Inspect perla status for the next step.\"}"
+}

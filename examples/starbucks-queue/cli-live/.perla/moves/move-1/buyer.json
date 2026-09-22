@@ -1,0 +1,45 @@
+{
+  "actor_id": "buyer",
+  "committed_at": "2026-09-12T13:39:20.251070+00:00",
+  "content": {
+    "actions": [
+      "As a Habitual App User, if my usual mobile order time slot is unavailable, I will accept a new pickup time if it's within an 8-minute delay. If this happens more than twice in a week, or the delay is longer, I will try the app for a nearby Dunkin' or Dutch Bros.",
+      "As a Commuter, if the Starbucks app shows my order will be delayed at all, I will immediately abandon it. My time is too tight. I will check if a competitor is on my direct route for a faster option; otherwise, I will skip buying coffee altogether to ensure I'm not late for work.",
+      "As a Café Visitor, I will continue to go inside to order. I am hopeful this new policy will make my experience better by reducing the crowd and shortening the line for in-person service."
+    ],
+    "expected_responses": [
+      "We don't expect competitors like Dunkin' or Dutch Bros to make any major changes in response to this small-scale test. We assume their service will remain consistent. For us, their normal, predictable service will become more attractive if our Starbucks routine is disrupted. They may gain some of our business by simply continuing to operate as they always have, acting as a reliable alternative."
+    ],
+    "rationale": "Our decisions are based entirely on the needs of our specific morning routine. For some of us, like commuters, every second counts, and the risk of being late for work is not worth any particular brand of coffee. Any friction or delay introduced by this new system will force an immediate change in our behavior. For others who are habitual app users, we have some loyalty and flexibility, but that patience is limited. A reliable routine is important, and if the app becomes unreliable, we'll look for alternatives. For those of us who come to the café for the experience, we see this change as a potential positive. We've been frustrated by the crowds of mobile-order customers, and if reserving capacity for us makes the visit more pleasant and predictable, we're more likely to keep coming back.",
+    "resource_commitments": [
+      "Our daily coffee budget (around $7-$8) is not committed to any single company. It will go to whichever coffee shop—Starbucks, Dunkin', Dutch Bros, or another local spot—can meet our needs for speed, convenience, and experience on any given morning.",
+      "We are willing to spend a few minutes downloading and setting up a competitor's app if our primary choice becomes unreliable."
+    ]
+  },
+  "content_hash": "4f71b7ba0efbe44b2026d9cfdf7e2d59452fd2af8c79e7685c4c94b91e145088",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "4f71b7ba0efbe44b2026d9cfdf7e2d59452fd2af8c79e7685c4c94b91e145088",
+    "ingested_at": "2026-09-12T13:39:20.251070+00:00",
+    "job_id": "job-5ea55ea206dd47deabb010d2bd703114",
+    "manifest_hash": "ee138facbf3184f5fdbda5c005e6be9e312441c264a14fd23280df6f0d68c07f",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "max_tokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-1/moves/buyer.results.ep"
+  }
+}

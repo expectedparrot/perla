@@ -1,0 +1,85 @@
+{
+  "command": "ep run --jobs round-3/moves/home.jobs.ep --model_list models/home.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/moves/home.results.ep",
+  "exit_code": 0,
+  "stdout": {
+    "status": "ok",
+    "data": {
+      "results": [],
+      "meta": {
+        "input_mode": "jobs",
+        "model_count": 1,
+        "agent_count": 1,
+        "scenario_count": 1,
+        "result_count": 0,
+        "n": 1,
+        "local": false,
+        "remote_job": {
+          "background": true,
+          "job_uuid": "f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57",
+          "creation_data": {
+            "uuid": "f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57",
+            "description": "",
+            "status": "queued",
+            "iterations": "",
+            "visibility": "",
+            "version": "1.0.8.dev1"
+          },
+          "new_format": true,
+          "progress_bar_url": "https://www.expectedparrot.com/home/remote-job-progress/f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57",
+          "remote_inference_url": "https://www.expectedparrot.com/home/remote-inference",
+          "remote_cache_url": "https://www.expectedparrot.com/home/remote-cache",
+          "commands": {
+            "status": "ep jobs status f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57",
+            "results": "ep jobs results f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57 --output results.ep",
+            "errors": "ep jobs errors f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57 --output error.md"
+          },
+          "wait": {
+            "completed": true,
+            "timed_out": false,
+            "polls": 2,
+            "elapsed_seconds": 10.297,
+            "last_status": "completed",
+            "status": {
+              "job_uuid": "f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57",
+              "results_uuid": "b9696509-2e15-426a-91ca-63fa605bf00d",
+              "results_url": "https://www.expectedparrot.com/content/b9696509-2e15-426a-91ca-63fa605bf00d",
+              "status": "completed",
+              "version": "1.0.8.dev1",
+              "job_json_string": null,
+              "latest_job_run_details": {
+                "interview_details": {
+                  "total_interviews": 1,
+                  "interviews_with_exceptions": 0,
+                  "completed_interviews": 1,
+                  "exception_summary": []
+                },
+                "failure_reason": null,
+                "failure_description": null,
+                "error_report_uuid": null,
+                "cost_credits": 0.83,
+                "cost_usd": 0.0083,
+                "expenses": [],
+                "results_available": null
+              }
+            },
+            "results_uuid": "b9696509-2e15-426a-91ca-63fa605bf00d",
+            "result_count": 1,
+            "saved": {
+              "path": "round-3/moves/home.results.ep",
+              "format": "ep",
+              "object_type": "Results",
+              "commit": "f6ebd6a747ae199b21d9fdbb2cf1f3058a622816"
+            }
+          }
+        },
+        "saved": {
+          "path": "round-3/moves/home.results.ep",
+          "format": "ep",
+          "object_type": "Results",
+          "commit": "f6ebd6a747ae199b21d9fdbb2cf1f3058a622816"
+        }
+      }
+    },
+    "warnings": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "actor_id": "buyer",
+  "answer": {
+    "actions": [
+      "Commuter segment: Having experienced delays or unavailable slots in January, we will now check the Starbucks app for pickup times before leaving home. If the quoted time is more than 5-7 minutes out or falls outside our tight travel window, we will immediately switch to a competitor like Dutch Bros or Dunkin' that is on our route, or make coffee at home. We will not place a Starbucks order and hope for the best.",
+      "Habitual app user segment: After tolerating some issues in January, our patience is wearing thin. If we encounter unavailable slots or delayed orders for a second or third time this month, we will actively download and try a competitor's app. The $1 credit from Dutch Bros makes trying their Order Ahead service a low-risk experiment. We are now actively looking for a reliable alternative, even if we prefer our usual Starbucks drink.",
+      "Café visitor segment: The in-store experience at the pilot Starbucks locations has genuinely improved. The line is shorter and the atmosphere is less chaotic without the massive crowd waiting for mobile orders. We will continue to choose these Starbucks locations for our morning coffee and meeting spot, reinforcing this positive change with our continued business."
+    ],
+    "expected_responses": [
+      "We expect Starbucks to see a continued, and possibly accelerated, decline in mobile order volume at its pilot stores during peak hours, but a stabilization or slight increase in in-store transactions. Their challenge will be interpreting this conflicting data.",
+      "We expect Dutch Bros and Dunkin' to see a noticeable increase in first-time and repeat app users at their locations near the Starbucks pilot stores. They will likely attribute this to the success of their own campaigns and continue them."
+    ],
+    "rationale": "Our behavior in February is a direct result of our experiences in January. The Starbucks pilot has created two distinct experiences. For mobile users, especially those on a tight schedule like commuters, the new system introduced unreliability. After being burned once, we are now risk-averse and will plan our morning around a predictable outcome, even if it means switching brands. For habitual users, the friction is now high enough to overcome our loyalty and prompt us to explore the very convenient and well-promoted offers from Dunkin' and Dutch Bros. Conversely, for those of us who come into the café, Starbucks has successfully addressed a major pain point—crowding and long waits—making the in-store experience superior and earning our repeat business.",
+    "resource_commitments": [
+      "Commuter spending: Our daily $8 budget is now allocated to the most time-efficient option each morning, which may no longer be Starbucks.",
+      "Habitual app user spending: We are allocating time to learn new apps and will shift our spending to Dutch Bros or Dunkin' on days we try their services.",
+      "Café visitor spending: We are consistently committing our $7 budget and 25-minute time blocks to the pilot Starbucks locations due to the improved environment."
+    ]
+  },
+  "id": "ingest-1d83385f5912490d995e27cc65fcf2dd",
+  "kind": "moves",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "f00458afd83f16925dc147c1c9e1c1afb5427f6cefbb4a3a7345612e24af3d7c",
+    "ingested_at": "2026-09-12T14:04:11.871241+00:00",
+    "job_id": "job-43e6c652da5b498096ff777f2b26b3a4",
+    "manifest_hash": "b2ee17579db952b98c6eebc4e4a0d092d02a1cbd26116dc2a561e7d88493c833",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "max_tokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/moves/buyer.results.ep"
+  }
+}

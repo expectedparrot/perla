@@ -1,0 +1,33 @@
+{
+  "attempt": 1,
+  "receipt": {
+    "actor_id": "dunkin",
+    "move": 2,
+    "content_hash": "840f680e9e2cb5500be911dd9b21d551bb48b860b105f95d75bf971a12b06021",
+    "provenance": {
+      "origin": "simulation",
+      "model": "gpt-4.1-mini",
+      "model_parameters": {
+        "model": "gpt-4.1-mini",
+        "parameters": {
+          "frequency_penalty": 0,
+          "logprobs": false,
+          "max_tokens": 16000,
+          "presence_penalty": 0,
+          "reasoning_effort": null,
+          "temperature": 0.5,
+          "top_logprobs": 3,
+          "top_p": 1
+        },
+        "inference_service": "openai",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "LanguageModel"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-moves-dunkin/results-1.ep",
+      "job_id": "job-75f937e0912e481bb6d3f28fe6a6316d",
+      "manifest_hash": "3df10b9d342d8b1140e10d09fa722dd5b8a309f9d98d44509b19d41ad58054b6",
+      "ingested_at": "2026-09-12T12:07:33.141172+00:00",
+      "answer_hash": "840f680e9e2cb5500be911dd9b21d551bb48b860b105f95d75bf971a12b06021"
+    }
+  }
+}

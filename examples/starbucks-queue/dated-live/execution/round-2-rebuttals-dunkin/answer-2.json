@@ -1,0 +1,20 @@
+{
+  "rebuttals": {
+    "rebuttals": [
+      {
+        "ruling_id": "r2-buyer-behavior",
+        "stance": "accept",
+        "argument": "The ruling accurately reflects the dossier facts about buyer behavior in response to mobile order delays and competitor offers, consistent with documented assumptions about habitual app users, café visitors, and commuters.",
+        "link": null,
+        "cite": []
+      },
+      {
+        "ruling_id": "r2-dunkin-actions",
+        "stance": "accept",
+        "argument": "The ruling correctly states Dunkin's committed actions for February 2027, including the $1 discount bundle launch at 15 franchise stores, budget allocations for labor and advertising, and the stop rule for contribution margin monitoring, all supported by Dunkin dossier facts.",
+        "link": null,
+        "cite": []
+      }
+    ]
+  }
+}

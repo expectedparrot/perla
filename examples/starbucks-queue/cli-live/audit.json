@@ -1,0 +1,427 @@
+{
+  "project_id": "51bf44d9-5a70-45d0-90cb-4578f7302299",
+  "closed_rounds": 3,
+  "accepted_responses": 30,
+  "remote_submissions": 30,
+  "reported_cost_usd": 0.4362,
+  "execution": "Actual ep run CLI calls; named Perla exports and batch imports",
+  "submission_order": "Independent actors were submitted concurrently within each stage; stages remained sequential",
+  "case_dossiers": "Exact matches to the original tutorial case",
+  "actual_measurements": "Absent; observed metrics remain null and sample counts zero",
+  "validation": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "workflow",
+      "validate"
+    ],
+    "warnings": [
+      {
+        "code": "E_JUDGMENT_SHARE",
+        "message": "Round 1 judgment share 100% exceeds its configured threshold."
+      },
+      {
+        "code": "W_ESCALATION_DEBT",
+        "message": "Round 1 closed with unassessed escalation candidates: pilot-jan27-integrated."
+      },
+      {
+        "code": "E_JUDGMENT_SHARE",
+        "message": "Round 2 judgment share 100% exceeds its configured threshold."
+      },
+      {
+        "code": "W_ESCALATION_DEBT",
+        "message": "Round 2 closed with unassessed escalation candidates: move2-integrated-customer-competition."
+      },
+      {
+        "code": "E_JUDGMENT_SHARE",
+        "message": "Round 3 judgment share 100% exceeds its configured threshold."
+      },
+      {
+        "code": "W_ESCALATION_DEBT",
+        "message": "Round 3 closed with unassessed escalation candidates: round3-integrated-customer-dynamics."
+      }
+    ],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "Generate the optional inputs-only novelty baseline before evaluation.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "job",
+          "generate",
+          "novelty"
+        ]
+      }
+    ],
+    "data": {
+      "valid": true,
+      "audited_jobs": 30,
+      "audited_commits": 12
+    }
+  },
+  "accepted_jobs": [
+    {
+      "job_id": "job-0ca98f2d47cd4d12ba202dfaa7200aec",
+      "round": 2,
+      "kind": "moves",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "command": "ep run --jobs round-2/moves/dunkin.jobs.ep --model_list models/dunkin.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/moves/dunkin.results.ep",
+      "remote_job_uuid": "86670b6e-c8bc-4f34-b887-0e2deef1b3f7",
+      "results_uuid": "eca5ade7-8b20-4038-8d8c-ce62d352f8cf",
+      "results_sha256": "8422b9773786122fefe27a4f0048787e16945c8dd7c6d64c0f3a03600a4ebb31",
+      "results_file": "round-2/moves/dunkin.results.ep"
+    },
+    {
+      "job_id": "job-0e242d9937c34fadbf4a3e8833c4b2ec",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "command": "ep run --jobs round-1/rebuttals/buyer.jobs.ep --model_list models/buyer.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/rebuttals/buyer.results.ep",
+      "remote_job_uuid": "a3eb5916-88d0-4341-9666-2d7aa0dbd64e",
+      "results_uuid": "edc1eac6-4ad1-47d3-841d-b5548f97c09f",
+      "results_sha256": "10f5dc64ff354e97e8d2690807333e9568a82439291483060e6f6e0c155f400c",
+      "results_file": "round-1/rebuttals/buyer.results.ep"
+    },
+    {
+      "job_id": "job-1b54cd243d8148cba30e14413fa14305",
+      "round": 2,
+      "kind": "moves",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-2/moves/home.jobs.ep --model_list models/home.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/moves/home.results.ep",
+      "remote_job_uuid": "8791e3d3-34ea-462e-86f1-e2f2ac298182",
+      "results_uuid": "438d2134-1fe0-4450-baa4-6b81bbb06b2a",
+      "results_sha256": "80002198899d58bbbe13cf3c604187fcbc065b83172dfafd7246324499c1df56",
+      "results_file": "round-2/moves/home.results.ep"
+    },
+    {
+      "job_id": "job-2c8a63703f3a4a259d67b1b69f7179fa",
+      "round": 3,
+      "kind": "moves",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "command": "ep run --jobs round-3/moves/dutch.jobs.ep --model_list models/dutch.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/moves/dutch.results.ep",
+      "remote_job_uuid": "ee02b952-ac06-423f-ba35-ecb6c528e3b0",
+      "results_uuid": "ce6394e3-8786-441f-b2f3-27c7141f83d5",
+      "results_sha256": "9f42a3a378fd24a062c2c4d96222ecb65c14c4a3adbdcca8c542a77b1609d5b9",
+      "results_file": "round-3/moves/dutch.results.ep"
+    },
+    {
+      "job_id": "job-36ca5357ad9b4edfaf5b73abdd44b60c",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "command": "ep run --jobs round-1/rebuttals/dunkin.jobs.ep --model_list models/dunkin.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/rebuttals/dunkin.results.ep",
+      "remote_job_uuid": "cc55dff0-24fb-485b-a90e-4eaa3ed8d6f2",
+      "results_uuid": "7d46de4b-fcf0-4cc1-8f2c-fd7d01edf710",
+      "results_sha256": "f245d83330196a2424fa96afd8fb26d26308bf7f952c71b17171c62fd8a0317a",
+      "results_file": "round-1/rebuttals/dunkin.results.ep"
+    },
+    {
+      "job_id": "job-36f0830a82694e8a8650f9519dcd2d63",
+      "round": 3,
+      "kind": "rulings",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-3/rulings/control.jobs.ep --model_list models/control.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/rulings/control.results.ep",
+      "remote_job_uuid": "bdc67eeb-9dbd-45ae-b89d-120b32734ea5",
+      "results_uuid": "22173304-6127-4142-ae96-9185257d9d60",
+      "results_sha256": "884822a2dc92ab9e6bd6e4a450c094d686b1146d21b962b552b6ef77566e9ee3",
+      "results_file": "round-3/rulings/control.results.ep"
+    },
+    {
+      "job_id": "job-43e6c652da5b498096ff777f2b26b3a4",
+      "round": 2,
+      "kind": "moves",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "command": "ep run --jobs round-2/moves/buyer.jobs.ep --model_list models/buyer.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/moves/buyer.results.ep",
+      "remote_job_uuid": "ba18a0e9-56aa-440b-8ce2-9626873136aa",
+      "results_uuid": "30d25423-f709-4150-ba97-5e51aeac4396",
+      "results_sha256": "cf452f15c7fcb7e89bd48a98fc8942e46f395284a0bd33601dc733c3a3aea8bc",
+      "results_file": "round-2/moves/buyer.results.ep"
+    },
+    {
+      "job_id": "job-46ee6226ed0642dbb2e024e2ff377153",
+      "round": 1,
+      "kind": "moves",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "command": "ep run --jobs round-1/moves/dutch.jobs.ep --model_list models/dutch.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/moves/dutch.results.ep",
+      "remote_job_uuid": "16c96a2e-e3f9-4523-8b1d-cb611b4ee197",
+      "results_uuid": "a19df966-41f0-4c0a-81c2-b6a2cdc4f4df",
+      "results_sha256": "c4a6f13870e0f56b32d704c0bd258a0e34c3585eab0f765c8d29c414158e2dfe",
+      "results_file": "round-1/moves/dutch.results.ep"
+    },
+    {
+      "job_id": "job-5ea55ea206dd47deabb010d2bd703114",
+      "round": 1,
+      "kind": "moves",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "command": "ep run --jobs round-1/moves/buyer.jobs.ep --model_list models/buyer.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/moves/buyer.results.ep",
+      "remote_job_uuid": "813fc5df-33c2-4e57-9ee8-471510fb98fa",
+      "results_uuid": "dbec29fc-d9cf-42da-a538-449326c454c9",
+      "results_sha256": "f7ce8cd93c042902bf47f0c848beca61c14549df1a7d5dbf29fb8e584089764a",
+      "results_file": "round-1/moves/buyer.results.ep"
+    },
+    {
+      "job_id": "job-880c9a13fa4b4bb5aacea7ebc85eb2e8",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "command": "ep run --jobs round-2/rebuttals/dutch.jobs.ep --model_list models/dutch.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/rebuttals/dutch.results.ep",
+      "remote_job_uuid": "d4b228f4-f451-4fa0-8e7e-b4f71d15cc49",
+      "results_uuid": "a86117d8-35ef-45d2-89ec-1df9fa6c7432",
+      "results_sha256": "d7d46ba5b0e0d1d1ab0cfe5aa96e88eb9b93813d1154c5bc0281ef4be76aeedd",
+      "results_file": "round-2/rebuttals/dutch.results.ep"
+    },
+    {
+      "job_id": "job-8ffe9ca81fba47fb8d9f8a02bca8a596",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "command": "ep run --jobs round-1/rebuttals/dutch.jobs.ep --model_list models/dutch.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/rebuttals/dutch.results.ep",
+      "remote_job_uuid": "023f16e0-1090-40ec-b219-23bc676f1047",
+      "results_uuid": "3e1506f7-a722-4516-bf5d-0badb56d787f",
+      "results_sha256": "708ee24b1a5ce375f7a476d948fee75cca82cfbd93c47b052ea7c04b28db9d2e",
+      "results_file": "round-1/rebuttals/dutch.results.ep"
+    },
+    {
+      "job_id": "job-981f2d3dc9f14146bd937bac9d10c714",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-3/rebuttals/home.jobs.ep --model_list models/home.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/rebuttals/home.results.ep",
+      "remote_job_uuid": "200429d9-6a9f-4b1e-8e5b-2ed2822cd7f7",
+      "results_uuid": "73517d05-5bd9-4c77-b5ee-0d5c3b78634a",
+      "results_sha256": "e15587fd399278498b33b68212d2eb6f8a8a38476eabdc1d09f4e02421f35da0",
+      "results_file": "round-3/rebuttals/home.results.ep"
+    },
+    {
+      "job_id": "job-a2ca59d942bd4a9eba080a81d8f32258",
+      "round": 3,
+      "kind": "moves",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-3/moves/home.jobs.ep --model_list models/home.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/moves/home.results.ep",
+      "remote_job_uuid": "f2976e5f-efcc-4aca-bf79-6b5e9bfb6b57",
+      "results_uuid": "b9696509-2e15-426a-91ca-63fa605bf00d",
+      "results_sha256": "d998bbafbf3618da454d31b735b634f87cbc71f8e397523dff4969b6f70f9699",
+      "results_file": "round-3/moves/home.results.ep"
+    },
+    {
+      "job_id": "job-a3ad587b4f2a41fdb6887bd335011222",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "command": "ep run --jobs round-3/rebuttals/dunkin.jobs.ep --model_list models/dunkin.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/rebuttals/dunkin.results.ep",
+      "remote_job_uuid": "522ac576-4f58-49e9-95fb-bec6bd4bb983",
+      "results_uuid": "17b4577d-6794-4b04-83f0-95d5814fc3f2",
+      "results_sha256": "4edae41327bf290a134e1ff9515a3b7a65bac10db410852251fdaa29f62880e9",
+      "results_file": "round-3/rebuttals/dunkin.results.ep"
+    },
+    {
+      "job_id": "job-a67c5570173e4a6ebf93dae5e29452e8",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "command": "ep run --jobs round-3/rebuttals/dutch.jobs.ep --model_list models/dutch.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/rebuttals/dutch.results.ep",
+      "remote_job_uuid": "aae92121-7bd1-4ae7-9b05-2fbedb31c5a6",
+      "results_uuid": "80fe1c3a-44fb-450f-924f-d953c5bfde5c",
+      "results_sha256": "98bc3bea3239266b56713c4a7d60429115e0fdf9e36f01ddafa3bf6e6fed2250",
+      "results_file": "round-3/rebuttals/dutch.results.ep"
+    },
+    {
+      "job_id": "job-a67ed311dae84489a23cdc6b58483fb2",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "command": "ep run --jobs round-2/rebuttals/buyer.jobs.ep --model_list models/buyer.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/rebuttals/buyer.results.ep",
+      "remote_job_uuid": "f58fe28f-87fd-4aaf-8aad-e3915332bb3b",
+      "results_uuid": "33ef052a-8a5b-4329-aab4-665c9f7ed736",
+      "results_sha256": "5305eec64eaac050f126d2b49be60be7290d2fe43da436b810d9c83f790c0d1a",
+      "results_file": "round-2/rebuttals/buyer.results.ep"
+    },
+    {
+      "job_id": "job-ad8eb239b6534b768acbc7e80dc7a5fa",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-2/rebuttals/home.jobs.ep --model_list models/home.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/rebuttals/home.results.ep",
+      "remote_job_uuid": "95b35713-4e34-4402-9fed-37f3aa300884",
+      "results_uuid": "cb6d43df-e6cd-4d61-a607-a8909eeac339",
+      "results_sha256": "80449862d9d02060a767e882d0ff268b7271995e022d16c105aaf25368e25bb4",
+      "results_file": "round-2/rebuttals/home.results.ep"
+    },
+    {
+      "job_id": "job-ae69dc95bfd8479895ee0ceb919f22fd",
+      "round": 3,
+      "kind": "moves",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "command": "ep run --jobs round-3/moves/dunkin.jobs.ep --model_list models/dunkin.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/moves/dunkin.results.ep",
+      "remote_job_uuid": "03a68a7b-8470-4c6e-ae6a-03783c2a8a51",
+      "results_uuid": "a2421afa-9540-4fbc-8be2-3901a1fc1497",
+      "results_sha256": "ca7489e4a30993c6edb6b5dbce2695718c9b2b99338225f95bd3642bf1a77f99",
+      "results_file": "round-3/moves/dunkin.results.ep"
+    },
+    {
+      "job_id": "job-aeb125a32f2e4f1f8780726454e7c313",
+      "round": 2,
+      "kind": "resolutions",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-2/resolutions/control.jobs.ep --model_list models/control.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/resolutions/control.results.ep",
+      "remote_job_uuid": "db879b8b-caf8-4fd2-ba68-08852037e813",
+      "results_uuid": "b37e3041-2628-401e-be5c-cf59e00d4a50",
+      "results_sha256": "05dae0c779190db094e5209f8096eedf91c1e9269bf853331dc88ce23a913ec7",
+      "results_file": "round-2/resolutions/control.results.ep"
+    },
+    {
+      "job_id": "job-c476ce77fdb24603ab0a45c49d9ec0e3",
+      "round": 2,
+      "kind": "moves",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "command": "ep run --jobs round-2/moves/dutch.jobs.ep --model_list models/dutch.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/moves/dutch.results.ep",
+      "remote_job_uuid": "7ba03921-30c7-4292-92ee-cf646fb3403f",
+      "results_uuid": "32b5eb42-0df8-4375-b008-df69f2ee3bd4",
+      "results_sha256": "4a189e495d01d20c4d2ad93c73e8f61565b9e21a0112be2ff41857fe56f5dd3c",
+      "results_file": "round-2/moves/dutch.results.ep"
+    },
+    {
+      "job_id": "job-c739d86a9bd2456daccdc0bd614c7bfb",
+      "round": 1,
+      "kind": "moves",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-1/moves/home.jobs.ep --model_list models/home.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/moves/home.results.ep",
+      "remote_job_uuid": "297065cb-c5fd-46f5-bcf5-c569f5c710f4",
+      "results_uuid": "4803ebc1-66fa-48fd-8b9e-bbe3836ada3c",
+      "results_sha256": "6e6f6e0aa8526e6e4dcf3d7553100e2c4c2d9bf0c3669dbe85afd8e3049a402f",
+      "results_file": "round-1/moves/home.results.ep"
+    },
+    {
+      "job_id": "job-d14c01370b504794919c468faaf8820c",
+      "round": 1,
+      "kind": "resolutions",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-1/resolutions/control.jobs.ep --model_list models/control.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/resolutions/control.results.ep",
+      "remote_job_uuid": "da36164e-2df4-444e-a55f-d95ac448431e",
+      "results_uuid": "fca3af35-3b5e-4910-8dbb-40e9ea9f5ed9",
+      "results_sha256": "d66f1552ae157eda30589c72d59a308f8d2dd9f19488e9e36afc22edeca43d2a",
+      "results_file": "round-1/resolutions/control.results.ep"
+    },
+    {
+      "job_id": "job-dbe761d3356b4afb88daa9ee38128eb9",
+      "round": 1,
+      "kind": "moves",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "command": "ep run --jobs round-1/moves/dunkin.jobs.ep --model_list models/dunkin.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/moves/dunkin.results.ep",
+      "remote_job_uuid": "969076de-f8a4-4190-868d-f45a2ad7bb0d",
+      "results_uuid": "b0469336-6480-469a-8e86-16f9f4708866",
+      "results_sha256": "59ff4df92ee5cdeff4a9c94039b6b2ccfbe2e6b863af3a9d58bacef82e44d0ef",
+      "results_file": "round-1/moves/dunkin.results.ep"
+    },
+    {
+      "job_id": "job-dff222f8ed8c41189f3ba70a39beb84e",
+      "round": 1,
+      "kind": "rulings",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-1/rulings/control.jobs.ep --model_list models/control.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/rulings/control.results.ep",
+      "remote_job_uuid": "2223b8ad-8131-431d-bb41-98cd9bc07a3f",
+      "results_uuid": "e337d83d-81a7-4c29-b7e6-f51a131abe10",
+      "results_sha256": "2ddda0e15324501fb87f5a7a4c9e7344f04b58b9d18e5888ec027e9494bfba8e",
+      "results_file": "round-1/rulings/control.results.ep"
+    },
+    {
+      "job_id": "job-e86ffb1ad6c74101ae183d3bdfd4d76d",
+      "round": 3,
+      "kind": "moves",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "command": "ep run --jobs round-3/moves/buyer.jobs.ep --model_list models/buyer.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/moves/buyer.results.ep",
+      "remote_job_uuid": "4284a539-4825-4048-856d-447af049e28b",
+      "results_uuid": "55998511-eb40-41cd-9f5d-986381ce68ef",
+      "results_sha256": "50d5c325da5f188f6936af428797020263ca5c924ac0b281be5bed6164210f57",
+      "results_file": "round-3/moves/buyer.results.ep"
+    },
+    {
+      "job_id": "job-f0a68b1ff2ef49229567249d1afcd0be",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "command": "ep run --jobs round-2/rebuttals/dunkin.jobs.ep --model_list models/dunkin.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/rebuttals/dunkin.results.ep",
+      "remote_job_uuid": "fa9b4519-17bf-41b2-8cdc-89ec1c0c6b7d",
+      "results_uuid": "4dd75ef6-3d84-45d6-86e2-0e6ca1052ce4",
+      "results_sha256": "4eb00035c1f71aff9a87b2d11ec47bafc2de719c15c1ad348abbcb059d1348be",
+      "results_file": "round-2/rebuttals/dunkin.results.ep"
+    },
+    {
+      "job_id": "job-f2988c13f7b24afbb9f49c2e79c9bd4d",
+      "round": 2,
+      "kind": "rulings",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-2/rulings/control.jobs.ep --model_list models/control.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-2/rulings/control.results.ep",
+      "remote_job_uuid": "485f7e52-b09c-4212-b83b-73fe445916d1",
+      "results_uuid": "b8f79fd0-8bbc-4a83-8f57-7a1570dac95a",
+      "results_sha256": "be6c8ba8b6d014073b9e09540e20822ac5b358bc5db9730294b33ebd15f28f2e",
+      "results_file": "round-2/rulings/control.results.ep"
+    },
+    {
+      "job_id": "job-fbf9f8249d5648a098c4c7dfb5634bae",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "command": "ep run --jobs round-3/rebuttals/buyer.jobs.ep --model_list models/buyer.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/rebuttals/buyer.results.ep",
+      "remote_job_uuid": "a2ac1499-8621-4a65-8457-3599e37c5956",
+      "results_uuid": "17231346-55c4-490e-9101-7c02afc73864",
+      "results_sha256": "c60578cef51523444daa57fa360e71a1d8e4ef5ab001e7f5ea7636ab9118a857",
+      "results_file": "round-3/rebuttals/buyer.results.ep"
+    },
+    {
+      "job_id": "job-fdd9460d9e1044f89d71db21b96bc982",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-1/rebuttals/home.jobs.ep --model_list models/home.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-1/rebuttals/home.results.ep",
+      "remote_job_uuid": "48cb8fdc-0dec-442d-92af-2f4918eabbbd",
+      "results_uuid": "c3d41931-3d79-4df2-aa5d-5ffe1b0da407",
+      "results_sha256": "7dbd191a57be091d8f34fd2c4c353e9007034d643b179cf8521fe4ff74b87e10",
+      "results_file": "round-1/rebuttals/home.results.ep"
+    },
+    {
+      "job_id": "job-fe40434a5f654adbbb86312f6bfed246",
+      "round": 3,
+      "kind": "resolutions",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "command": "ep run --jobs round-3/resolutions/control.jobs.ep --model_list models/control.ep --background --wait --timeout 900 --task-timeout 600 --remote_inference_results_visibility private --fresh --output round-3/resolutions/control.results.ep",
+      "remote_job_uuid": "7cf16f17-417f-438f-a127-c3c86a03f5e9",
+      "results_uuid": "ec5889d4-737a-4aa7-937e-f52a66ed3194",
+      "results_sha256": "5daf9278a99458120519ebc10b94a3fa8c3140176ae4f28897c195e3ed43a7ca",
+      "results_file": "round-3/resolutions/control.results.ep"
+    }
+  ]
+}

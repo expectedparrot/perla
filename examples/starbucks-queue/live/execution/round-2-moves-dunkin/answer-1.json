@@ -1,0 +1,23 @@
+{
+  "moves": {
+    "actions": [
+      "Launch a targeted $5 breakfast bundle offer with opt-in mobile ordering at the 15 franchise locations near Starbucks pilot cafés for the month of February 2027.",
+      "Allocate a $15,000 portion of the $20,000 monthly budget to local digital and in-store marketing to drive awareness and adoption of the bundle offer.",
+      "Use the remaining $5,000 to fund up to 50 additional labor hours across the 15 locations during the 7–10 a.m. peak window on weekdays to ensure smooth order fulfillment and reduce wait times.",
+      "Implement a local stop rule to pause the offer at any store where the incremental economics worsen after two weeks based on basket contribution and repeat visit data."
+    ],
+    "rationale": "The $5 breakfast bundle offers a compelling value proposition aligned with Dunkin's coffee-and-food focus, aiming to increase repeat visits and basket size. Optimizing labor during peak hours ensures service quality and mitigates lost sales from mobile order capacity constraints. The local stop rule manages franchisee economic risk, addressing previous concerns about unprofitable traffic increases. The marketing spend is calibrated to drive awareness without exceeding budget constraints.",
+    "resource_commitments": [
+      "Budget cap of $20,000 for February 2027 across 15 franchise locations.",
+      "Up to 50 additional labor hours during weekday mornings (7–10 a.m.) distributed as needed.",
+      "$15,000 dedicated to local marketing and promotion of the breakfast bundle.",
+      "Data tracking on basket contribution, discount cost, staffing, and repeat visits for decision-making."
+    ],
+    "expected_responses": [
+      "Starbucks pilot cafés may experience some customer redirection to Dunkin due to attractive bundle pricing and reliable mobile order capacity.",
+      "Dutch Bros may respond by increasing promotions or labor hours to defend their drive-through and Order Ahead advantage.",
+      "Some customers may shift from home preparation or skipping breakfast to purchasing at Dunkin if the bundle and service are perceived as convenient and valuable.",
+      "Franchisees will monitor economics closely and may opt out if the offer reduces profitability, ensuring sustainable participation."
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "job_id": "job-7e88696bfe2547358ca9f10777c0df89",
+  "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/.perla/jobs/job-7e88696bfe2547358ca9f10777c0df89.jobs.ep",
+  "actor_id": "control",
+  "kind": "rulings",
+  "move": 1,
+  "label": "round-1-rulings-control",
+  "service": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "attempt": 3,
+  "result": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-rulings-control/results-3.ep",
+  "command": [
+    "ep",
+    "run",
+    "--jobs",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/.perla/jobs/job-7e88696bfe2547358ca9f10777c0df89.jobs.ep",
+    "--model_list",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-rulings-control/model.ep",
+    "--background",
+    "--wait",
+    "--timeout",
+    "900",
+    "--task-timeout",
+    "600",
+    "--remote_inference_results_visibility",
+    "private",
+    "--fresh",
+    "--output",
+    "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-rulings-control/results-3.ep"
+  ],
+  "prepared_at": "2026-09-12T11:46:15.996561+00:00"
+}

@@ -1,0 +1,55 @@
+<header><p class="eyebrow">Perla · Author the case</p><h1>Build the Starbucks game through commands.</h1><p class="dek">Turn a strategy question into a decision, evaluation criteria, shared information and four players with different interests.</p></header>
+<nav aria-label="Construction contents"><ol><li><a href="#decision">Define the experiment</a></li><li><a href="#criteria">Decide what would make it fail</a></li><li><a href="#board">Describe what everyone knows</a></li><li><a href="#initialize">Inspect and register the design</a></li><li><a href="#home">Build Starbucks</a></li><li><a href="#dutch">Build Dutch Bros</a></li><li><a href="#dunkin">Build Dunkin</a></li><li><a href="#buyer">Build the customer player</a></li><li><a href="#policy">Configure review and begin play</a></li></ol></nav>
+<p>This is a complete alternative to loading the prepared case files in the <a href="index.html#setup">tutorial</a>. It constructs the same decision, criteria, initial board, dossiers and review policy. All commands below run locally; no model calls occur during authoring. We supply public research and clearly labeled assumptions, then ask models to choose moves only after setup is complete.</p>
+<p>Complete the tutorial’s installation first. With the virtual environment active, start in the package source folder and create a fresh game directory. If you already loaded the case elsewhere, leave that game in its own directory.</p>
+<pre data-language="bash">mkdir -p games/starbucks-authored
+cd games/starbucks-authored</pre>
+<section id="decision"><h2>Define what Starbucks is considering</h2>
+<p>The question is whether protecting café capacity during the morning peak improves service without losing too much mobile business. We make it specific enough for a rival to respond: 50 pilot cafés, a 20% reservation, unchanged prices and three months of play. The $3 transaction contribution is our operating assumption, not a reported store margin.</p>
+{{BUILD_DECISION}}
+<p><code>game decision set</code> starts a draft in <code>.perla-design</code> in this directory. Its fields describe the proposed experiment, including the monthly decision schedule. The response reports <code>ready_to_initialize: false</code> because we have not yet supplied evaluation criteria or the public situation. You can revise the decision by repeating this command before initialization.</p></section>
+<section id="criteria"><h2>Write the conditions that would make the pilot fail</h2>
+<p>A persuasive story about shorter queues is insufficient. We need observable conditions that would count against continuing the experiment. Each criterion therefore names a failure condition, what we would measure, a threshold and a deadline.</p>
+<h3>Service: enough improvement across enough stores</h3>
+<p>We propose a 20% reduction in the 90th-percentile café wait by February, after adjustment against comparison cafés. Requiring 40 complete pairs prevents a handful of favorable stores from carrying the conclusion.</p>
+{{BUILD_SERVICE}}
+<h3>Economics: recover the labor cost across all channels</h3>
+<p>The pilot fails this test if incremental daily contribution remains negative by March. Count lost mobile purchases and transfers between channels as well as any new café business.</p>
+{{BUILD_ECONOMICS}}
+<h3>Retention: keep the baseline mobile customers</h3>
+<p>A customer who buys at the counter still returns to Starbucks. Track repeat purchasing across its channels, and require complete follow-up for at least 1,000 customers in each arm.</p>
+{{BUILD_RETENTION}}
+<p>These thresholds are case-design choices. Missing evidence leaves a criterion unevaluated. To change an existing criterion before initialization, repeat its command with <code>--replace</code>; reusing its ID with different content otherwise fails.</p></section>
+<section id="board"><h2>Describe the shared starting situation</h2>
+<p>The board is the information every player can see at the start of a round. Here we establish the calendar, public participants, pilot scope and assumptions. We deliberately leave actual performance unmeasured: <code>--unknown</code> records a missing observation, while <code>--number 0</code> records an observed-sample count of zero.</p>
+<p><code>--text</code> supplies prose, <code>--number</code> supplies a number, and <code>--empty-list</code> starts a list. <code>append</code> adds a text entry. A dotted field name such as <code>period_ends.1</code> places the first round’s date inside the calendar schedule. The measurement rule tells control how to distinguish imagined developments from measured results.</p>
+{{BUILD_BOARD}}
+<p>For your own case, choose shared information deliberately. The private budgets and limits below belong in the corresponding player’s dossier. The shared board should not give competitors access to another player’s confidential plans.</p></section>
+<section id="initialize"><h2>Inspect the draft, then register it</h2>
+<p><code>game show</code> displays the complete draft and any validation issues. At this point <code>ready_to_initialize</code> should be true. Read it before running the next command: initialization fixes the decision and criteria for this experiment.</p>
+{{BUILD_INITIALIZE}}
+<p>Without <code>--input</code>, <code>init</code> reads the local command-built draft. It creates the same <code>.perla</code> game record as initialization from a file. The draft remains available for inspection, but further design edits are refused once the game is initialized. A different proposal belongs in a fresh game directory.</p>
+<p>The delegation flags allow this automated walkthrough to proceed without human sign-off on dossiers and rulings. For a facilitated exercise, omit them and follow the <a href="commands.html#human-review">human-review procedure</a>.</p></section>
+<section id="home"><h2>Build Starbucks: service, digital convenience and contribution</h2>
+<p>First register the company whose decision we are testing. Then give it sourced history and financial context, followed by explicit assumptions about authority, economics and information. Its management tension is concrete: improving café service can hurt mobile convenience, and added staff must earn back their cost.</p>
+<p>A fact command records a claim under a stable ID and identifies its source. Incentives describe what the player wants; constraints limit its choices; capabilities identify what it can do; red lines state what it must not assume. A partial dossier stays a draft until it has sourced facts and all four kinds of strategy statements. Completing those fields makes it available for play; later entries enrich it.</p>
+{{BUILD_HOME}}
+<p>The h6 economics imply a $60 daily labor bill and 20 incremental transactions to cover it. That calculation can inform a move without prescribing one: the player can narrow the reservation window or release unused capacity within its authority. <a href="reference.html#player-home">Read the background and sources as prose</a>.</p></section>
+<section id="dutch"><h2>Build Dutch Bros: win a repeat visit without creating a queue</h2>
+<p>This player controls a local group of drive-through shops. Its acquisition budget makes an immediate response possible, while staffing and lane capacity make indiscriminate discounting costly. Its own order and redemption data cannot reveal who was rejected inside Starbucks’ app.</p>
+{{BUILD_DUTCH}}
+<p>These limits leave the player room to choose between staffing, acquisition and protecting service consistency. <a href="reference.html#player-dutch">Read the full background and sources</a>.</p></section>
+<section id="dunkin"><h2>Build Dunkin: an offer the franchisees can sustain</h2>
+<p>The relevant decision maker coordinates consenting local restaurants. Its coffee-and-food basket creates a different offer from a beverage-only discount, but franchise economics constrain reimbursement, participation and promotion spending.</p>
+{{BUILD_DUNKIN}}
+<p>The constructed disagreement over traffic versus profitable food attachment gives the player a reason to care about the whole purchase. <a href="reference.html#player-dunkin">Read the full background and sources</a>.</p></section>
+<section id="buyer"><h2>Build customers with somewhere else to go</h2>
+<p>The customer player represents three designed occasions, each with different time and spending limits. It receives public offers and its own experiences. Home preparation, postponement and no purchase remain possible, so a rejected mobile order need not become a competitor’s sale. These assumptions are not measured segment weights or customer testimony.</p>
+{{BUILD_BUYER}}
+<p>The time limits will influence the model’s responses. When an eight-minute tolerance appears again in a move, that is an input being applied. <a href="reference.html#player-buyer">Read the complete situations and information limits</a>.</p></section>
+<section id="policy"><h2>Choose review settings and check readiness</h2>
+<p>Set the review policy directly. We allocate zero human reviews to escalated rulings for this automated exercise. The confidence threshold governs automatic eligibility of otherwise unflagged rulings based on dossier facts. The judgment-share threshold produces a warning when more than 40% of a closed round’s rulings rest on judgment. Player objections still run.</p>
+{{BUILD_POLICY}}
+<p>The status should report <code>data.phase: move_generation</code> and an empty <code>missing_dossiers</code> list. You have built the complete case without loading a JSON input file. The decision, criteria, board, four dossiers and policy match the tutorial’s supplied case; no model has chosen a move yet.</p>
+<p>Continue with <a href="index.html#control">how control uses this evidence</a>, then <a href="index.html#round-1">choose the models and play January</a>. Stay in this game directory for the Perla and ep commands.</p></section>
+<footer><p><a href="index.html">Tutorial</a> · <a href="reference.html">Evidence and transcripts</a> · <a href="commands.html">Execution commands</a></p></footer>

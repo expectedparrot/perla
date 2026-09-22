@@ -1,0 +1,10 @@
+{
+  "context_hash": "a0db8a17449db352078e030720e517454ac6498a12210ebd9a4c7ec995948855",
+  "job_id": "job-fd52c409380f4bfe901a5230c4b866dd",
+  "move": 2,
+  "opened_at": "2026-09-12T12:07:33.812333+00:00",
+  "rulings": {
+    "move2-integrated-customer-competition": "224e286db76839aebe048b211b731a2bd0fccd18bb30b3bf0181031900571b48"
+  },
+  "status": "awaiting_rebuttals"
+}

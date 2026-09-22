@@ -1,0 +1,133 @@
+{
+  "content": {
+    "affected_actors": [
+      "buyer",
+      "dunkin",
+      "dutch",
+      "home"
+    ],
+    "basis": "judgment",
+    "branches": null,
+    "cases": [],
+    "chain": [
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.home.h5",
+          "d.home.h6"
+        ],
+        "claim": "Starbucks implements capacity-aware mobile pickup slots in 50 pilot cafés during weekday peak, reserving 20% of measured 15-minute production capacity for in-café orders. Later mobile pickup times are offered when allocation is full. Up to two incremental staff hours per peak morning are permitted per pilot café.",
+        "link": "starbucks-pilot-execution"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.home.h8"
+        ],
+        "claim": "Starbucks instruments all order attempts, offered pickup slots, completed orders, refunds, and incremental staffing hours in both pilot and 50 comparison cafés, beginning baseline and intervention measurement.",
+        "link": "starbucks-instrumentation"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.buyer.b4",
+          "d.buyer.b5",
+          "d.buyer.b6",
+          "d.buyer.b7",
+          "d.buyer.b8"
+        ],
+        "claim": "Commuters abandon Starbucks mobile orders if delayed at all, seeking a competitor on their direct route or skipping coffee. Habitual app users accept up to 8 minutes’ delay, but, if this happens more than twice a week or the delay is longer, they try Dunkin’ or Dutch Bros. Café visitors continue to order inside, expecting a better experience from the reserved capacity.",
+        "link": "buyer-segment-responses"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.dunkin.k5",
+          "d.dunkin.k6",
+          "d.dunkin.k7"
+        ],
+        "claim": "Dunkin launches a local opt-in $6 breakfast Meal Deal in 15 consenting franchise stores near pilot cafés for January 2027, promoted via the Dunkin app with advance ordering and rewards. Franchisees monitor basket contribution, repeat visits, and staffing costs, with stop rules to exit stores where the offer reduces profitability or cannibalizes full-price sales. Shared local marketing emphasizes value and convenience.",
+        "link": "dunkin-bundle-offer"
+      },
+      {
+        "basis": "dossier_fact",
+        "cases": [],
+        "cite": [
+          "d.dutch.d4",
+          "d.dutch.d5",
+          "d.dutch.d6"
+        ],
+        "claim": "Dutch Bros launches a geo-fenced digital advertising campaign targeting areas around 12 shops during weekday peak hours, highlighting Order Ahead and offering a $1 credit for first-time Order Ahead users. Staffing is proactively adjusted for peak throughput. App and in-store messaging reinforce speed and convenience.",
+        "link": "dutch-order-ahead-campaign"
+      }
+    ],
+    "cite": [],
+    "kill_criteria": [],
+    "outcome": {
+      "board_delta": {
+        "calendar_period": "January 2027",
+        "public_strategy_history": [
+          "January 2027: Starbucks launches peak-hour mobile pickup slot limits and reserves 20% of capacity for in-café orders in 50 pilot cafés. Instrumentation begins for pilot and comparison cafés.",
+          "January 2027: Dunkin launches a $6 breakfast Meal Deal bundle in 15 consenting franchise stores near pilot cafés, with app promotion and local marketing. Store-level stop rules and monitoring are in place.",
+          "January 2027: Dutch Bros launches a geo-fenced digital campaign promoting Order Ahead and a $1 credit for first-time users in 12 shops, with peak-hour staffing adjustments and messaging.",
+          "January 2027: Morning customer segments respond: commuters abandon delayed Starbucks mobile orders, habitual app users tolerate limited delays but may switch after repeated issues, and café visitors continue in-person orders expecting improved experience."
+        ]
+      },
+      "confidence": 1.0,
+      "description": "All round-one actions are executed as described. Starbucks launches the capacity-aware mobile pickup pilot and begins instrumentation. Dunkin and Dutch Bros deploy their local offers and staffing adjustments. Customer segments respond according to their stated contingencies. No outcome metrics are yet observed."
+    },
+    "rationale": "All committed actions are within stated capabilities and constraints for the January 2027 period. Starbucks executes the pilot as described, limiting mobile pickup slots in 50 pilot cafés during peak hours and reserving 20% of capacity for in-café orders. Instrumentation and measurement begin as planned. Buyer segments respond as committed: commuters abandon delayed mobile orders and may switch or skip, habitual app users tolerate some delay but defect if reliability drops, and café visitors expect a less crowded in-store experience. Dunkin and Dutch Bros both launch targeted local offers and marketing campaigns, aiming to capture any displaced Starbucks demand, but remain within budget and operational constraints. No party exceeds its stated authority, budget, or scope. No kill criteria are met at this stage. No measured outcomes are available yet; this round sets the experimental and competitive context for future evaluation.",
+    "resolves": [
+      "m1.buyer.a1",
+      "m1.buyer.a2",
+      "m1.buyer.a3",
+      "m1.dunkin.a1",
+      "m1.dunkin.a2",
+      "m1.dunkin.a3",
+      "m1.dunkin.a4",
+      "m1.dunkin.a5",
+      "m1.dutch.a1",
+      "m1.dutch.a2",
+      "m1.home.a1",
+      "m1.home.a2"
+    ],
+    "ruling_id": "pilot-jan27-integrated"
+  },
+  "content_hash": "ae71d1b52b2608490898b8759bd7bbd3e415171990cd16e1b02e9b4d56748be0",
+  "escalation_candidates": [
+    "judgment"
+  ],
+  "move": 1,
+  "provenance": {
+    "answer_hash": "944e2e08ffe4873ad8bae16ef131aab9af1232483a018bdae473a9f3f06f8ab3",
+    "ingested_at": "2026-09-12T13:44:14.980351+00:00",
+    "job_id": "job-dff222f8ed8c41189f3ba70a39beb84e",
+    "manifest_hash": "a29128a6a8e600394c2b9ac41138869492f84c210f7347ccf3087e09bb3182ad",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-1/rulings/control.results.ep"
+  },
+  "rebuttals": [],
+  "resolution_mode": "agent",
+  "status": "pending_rebuttal"
+}

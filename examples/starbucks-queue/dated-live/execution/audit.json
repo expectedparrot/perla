@@ -1,0 +1,331 @@
+{
+  "project_id": "aea4062c-852f-45f1-b8bc-cbb7361701e1",
+  "closed_rounds": 3,
+  "accepted_responses": 30,
+  "response_counts": {
+    "moves": 12,
+    "rebuttals": 12,
+    "resolutions": 3,
+    "rulings": 3
+  },
+  "rejected_attempts": 2,
+  "remote_jobs": 32,
+  "reported_cost_usd": 0.5114,
+  "escalation_debt": [
+    "round-1:r1-integrated-jan27",
+    "round-2:r2-buyer-behavior",
+    "round-2:r2-dunkin-actions",
+    "round-2:r2-dutch-actions",
+    "round-2:r2-home-actions",
+    "round-3:m3-integrated"
+  ],
+  "final_calendar_period": "March 2027",
+  "actual_measurements": "absent; all decision metrics remain null and observed sample counts zero",
+  "audit": {
+    "valid": true,
+    "audited_jobs": 30,
+    "audited_commits": 12
+  },
+  "accepted_jobs": [
+    {
+      "job_id": "job-82fd3d6a6dff40238c3bd1eeeae0b5c2",
+      "round": 1,
+      "kind": "moves",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "attempt": 1,
+      "remote_job_uuid": "cbde857d-3e39-4a55-83b8-cd4e930772a7",
+      "results_sha256": "a7cd58ff643855d64177d8a0b72f91b402b4044cf6a129756154dc33c347eca1"
+    },
+    {
+      "job_id": "job-fefe7f85a666430e82d8061d0d5df797",
+      "round": 1,
+      "kind": "moves",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "attempt": 1,
+      "remote_job_uuid": "dca2d307-a69d-4daa-9084-d32c4cb66eee",
+      "results_sha256": "a8b4ca25ee23783ca14b7a0aa9096ceea9eac423e0bb28522a25fba9ff3071d5"
+    },
+    {
+      "job_id": "job-88bb586fee3448ceb188a47df33e2bd6",
+      "round": 1,
+      "kind": "moves",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "attempt": 1,
+      "remote_job_uuid": "77f62f8d-f8f5-4a9d-b38e-45bae767e11c",
+      "results_sha256": "3065c7185ff61585548629b9ae00e2fd9afc04053563e4cddf5e5bc65919d244"
+    },
+    {
+      "job_id": "job-34870514ef6b493f92d085adc8d9401d",
+      "round": 1,
+      "kind": "moves",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "8d481d54-2fcb-4b1e-a7ff-ecdb3a2aa2c6",
+      "results_sha256": "11a7e3670179dc948915e6890013bd34eaf2b58d4b57daa082a2536cfcefd419"
+    },
+    {
+      "job_id": "job-e40348714d344de4b938e88746d2295a",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "attempt": 1,
+      "remote_job_uuid": "0a8745ee-cdd8-4448-ba41-7f5591bddcee",
+      "results_sha256": "b73253bf073a9cb03a044e80e09f29522f2662d651525bd4fefc9fbf4c6a3037"
+    },
+    {
+      "job_id": "job-e6c56c2616734f38841c63af330256cd",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "attempt": 1,
+      "remote_job_uuid": "88171c93-f559-48be-97ea-274a2f12ed5d",
+      "results_sha256": "7e1a630f8e494114e04a1920bb43b3050c3103674c49694bb0f9610b871f66f7"
+    },
+    {
+      "job_id": "job-5248b065fbe54456b70438e73654d377",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "attempt": 1,
+      "remote_job_uuid": "ec552b0a-78ec-450a-a13b-1521e8dd54ed",
+      "results_sha256": "570be34be29d4da0e39864a7109ed0c55ea3b8210f4834ac003a1af75116d762"
+    },
+    {
+      "job_id": "job-51a9c52630ec49beabb6103b99e67c3e",
+      "round": 1,
+      "kind": "rebuttals",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "4ead0ffa-fc0e-47c0-9991-70dbf7570515",
+      "results_sha256": "450a1b9c788dca0f07fea70194fb58305195524bee403ba22dd9f497d36e73be"
+    },
+    {
+      "job_id": "job-e8d2fbffa5e6474dafe87f439decac2d",
+      "round": 1,
+      "kind": "resolutions",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "8e4ec73e-a3e1-466c-8ff9-ec8f3461bfd9",
+      "results_sha256": "a34d7105e1f36eaa454bfc03f4b01cf5fdb956f6d42536d2176ffc9a9ae857f6"
+    },
+    {
+      "job_id": "job-abf8b0ce5b89461a9ffd736f6132cb02",
+      "round": 1,
+      "kind": "rulings",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "6401ffea-73a2-4f8d-9a2d-af18aa3ff71f",
+      "results_sha256": "35af6e67e9963c4e129dd9052dad301aaec9e0d3bca5d0aff71f0cb6d299efba"
+    },
+    {
+      "job_id": "job-eca814078b344531a7bb45d9dfd4e359",
+      "round": 2,
+      "kind": "moves",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "attempt": 1,
+      "remote_job_uuid": "43df8ac0-72ec-4a42-94f6-ffa58723def3",
+      "results_sha256": "bf9314dbeef6baf6f6170ca2ca10f3d44a914c5dc38ee5ade394a30e0b9a532c"
+    },
+    {
+      "job_id": "job-488bb7f6ab984f44b7c5dff5cd2d47ae",
+      "round": 2,
+      "kind": "moves",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "attempt": 1,
+      "remote_job_uuid": "5c10d6a3-a33a-40d5-853d-3485828c6c6a",
+      "results_sha256": "267861b420c5fb7ea5c8a3a9bca66799a080e25f4124c6518a3530374616acac"
+    },
+    {
+      "job_id": "job-e639f12d9bc64df6a0d0359060446613",
+      "round": 2,
+      "kind": "moves",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "attempt": 1,
+      "remote_job_uuid": "ef4ce056-4584-4c22-8136-0a26cf189091",
+      "results_sha256": "dd5420eba895a9dc39178f3d6e35391b78d10367c785e32cca6bbf6ced928116"
+    },
+    {
+      "job_id": "job-659a154c465c4aadb5fde58f36a30226",
+      "round": 2,
+      "kind": "moves",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "3b30a692-1fe1-4d91-975d-e3b494aa7c5c",
+      "results_sha256": "0740b033d34c8d9ab258d6ad5b1ba358649686c2030a1373554c236064f22151"
+    },
+    {
+      "job_id": "job-dfbef0a42cb44fad8bd70ddeb907b549",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "attempt": 1,
+      "remote_job_uuid": "92721ea0-db6a-435e-b794-bfecdf5ebe8e",
+      "results_sha256": "44b08ccdd4a0832534875db6c1f7f69369003244d6508f84524d7c7153e1df9d"
+    },
+    {
+      "job_id": "job-98b9ab734c4042b49e2c0ed5ada31c02",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "attempt": 2,
+      "remote_job_uuid": "bb9cdddb-ab35-4111-a495-a1bd48cca8fe",
+      "results_sha256": "301c6537a5d38506a148a99d0d848578a70e145c164c7038897b198e4668ad16"
+    },
+    {
+      "job_id": "job-ed48ee2072eb491a9b74d04d43a942d7",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "attempt": 1,
+      "remote_job_uuid": "6b6a1eed-c8bb-4003-bcdc-997c8d82d045",
+      "results_sha256": "d9a73ab3713348d0470f6c9f350af00c138792e5cea70d16314a0697e310b8a9"
+    },
+    {
+      "job_id": "job-1730a003d6394af3a8c9b1a748981792",
+      "round": 2,
+      "kind": "rebuttals",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "attempt": 2,
+      "remote_job_uuid": "32be27a6-b806-4a2f-b955-6b56a8a4bf78",
+      "results_sha256": "05bae2474afbc4307859869ef5b4f42670e2c701d21b1aba0b01f75314bd4c02"
+    },
+    {
+      "job_id": "job-e90df26fd7e04c98ae29ae3fc8479930",
+      "round": 2,
+      "kind": "resolutions",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "8b91bdfd-d5f2-4e84-be1b-4fb643bc2fe9",
+      "results_sha256": "7a8bdb7a29de0b27d51691176027df154d3d8b1dd2a0b8f1c016fc0f4b9000f7"
+    },
+    {
+      "job_id": "job-402e6c1b67294d12a1ffb03bfede9887",
+      "round": 2,
+      "kind": "rulings",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "723219b5-f77c-4066-b6fc-a57cd04d8bc0",
+      "results_sha256": "c63bfdd14e4f299634f77ba48a39c2cec5f860fc669462ffd3903450c8b4c322"
+    },
+    {
+      "job_id": "job-1393d0ca39b0422a9587c5ab105bc3f8",
+      "round": 3,
+      "kind": "moves",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "attempt": 1,
+      "remote_job_uuid": "5a6d050e-32b2-4724-b895-e81d1b4d9056",
+      "results_sha256": "5caad5da6f256527c1d9e44d680dc44d3ecd47f7f7791c8393dce4fc48da895a"
+    },
+    {
+      "job_id": "job-b905fe98900c47e19c18a9f0246582d6",
+      "round": 3,
+      "kind": "moves",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "attempt": 1,
+      "remote_job_uuid": "91bb9936-49fa-4dcb-9308-3dfa7c3a8f70",
+      "results_sha256": "fa0e55e56fe9c07f52424c90064191127323245c5650df6f262e982c006cbde9"
+    },
+    {
+      "job_id": "job-3ba79de627f8470ea706704767960db3",
+      "round": 3,
+      "kind": "moves",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "attempt": 1,
+      "remote_job_uuid": "ec88d5b5-e918-472b-8b9d-03b53c85c5cc",
+      "results_sha256": "5e7939c1f7fe21ba0071bc67c729b115d99ca785ce6abb6d6c5662df83f4434d"
+    },
+    {
+      "job_id": "job-473eaeec1ac74a38aa050e5aaa0171ff",
+      "round": 3,
+      "kind": "moves",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "77d47b9b-c1d8-471e-b434-c58c1f07aa40",
+      "results_sha256": "7397a46086c68ba5f8847cd4728849e4d28f99b81a07a66e986a2c6fea49a526"
+    },
+    {
+      "job_id": "job-a7bbdf034126405582b8358ed0b63974",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "buyer",
+      "model": "gemini-2.5-pro",
+      "attempt": 1,
+      "remote_job_uuid": "f9a7555d-6a47-463d-9d9c-6997a114bf87",
+      "results_sha256": "72f80fd2bff1e9cbe70a9a72fc000ba74b420907d699c08a039c3ccc93d55c6e"
+    },
+    {
+      "job_id": "job-f4ad6b37ac7c454ea36007b8786e0fb2",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "dunkin",
+      "model": "gpt-4.1-mini",
+      "attempt": 1,
+      "remote_job_uuid": "681520d9-6919-4816-85e5-7aff88e75aae",
+      "results_sha256": "c9e0e15cbd358fd0c893cfde9d2d8c32f33de85282ed9d76bf31b29ae38c3f64"
+    },
+    {
+      "job_id": "job-6b8ff605c1cd48f5b37f3bb7c1b68710",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "dutch",
+      "model": "gemini-2.5-flash",
+      "attempt": 1,
+      "remote_job_uuid": "e8c202d4-a65c-4554-8861-7970f7e849e7",
+      "results_sha256": "03c94d7da56ecca145c74bb8416818a372c9fa5cce501bbd9ac9c7ed74a99a0d"
+    },
+    {
+      "job_id": "job-b9195ce0f0d542eaacd072c2ce06938f",
+      "round": 3,
+      "kind": "rebuttals",
+      "actor": "home",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "a8cecf88-410f-48d8-b38a-14b5b008a6cc",
+      "results_sha256": "e7daac21a19a039360ea65e6cb6bf0ab7a57e4c9af7d87064c69ad9c7c889404"
+    },
+    {
+      "job_id": "job-2e652466766a4eddb6f02682bece34e0",
+      "round": 3,
+      "kind": "resolutions",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "6f97837a-d1a4-4c13-a804-50d66d2e6be9",
+      "results_sha256": "7bc31c6fbd49c8c66fefba7e5cfb05fa3651b6e0dc663592f724f635347a2deb"
+    },
+    {
+      "job_id": "job-f49c27486a574176bc8c4160d72bed40",
+      "round": 3,
+      "kind": "rulings",
+      "actor": "control",
+      "model": "gpt-4.1",
+      "attempt": 1,
+      "remote_job_uuid": "8b78ff38-7f2d-4a14-bc86-2d884c52b4a9",
+      "results_sha256": "7c23cd64cd81218de1b5c5f75ff755b3007f9fa56a8c2a12cf3a3d5ad77d427d"
+    }
+  ]
+}

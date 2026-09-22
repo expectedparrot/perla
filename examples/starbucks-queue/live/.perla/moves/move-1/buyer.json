@@ -1,0 +1,47 @@
+{
+  "actor_id": "buyer",
+  "committed_at": "2026-09-12T11:37:35.303663+00:00",
+  "content": {
+    "actions": [
+      "As a habitual app user, if my Starbucks mobile order pickup time is delayed by more than 8 minutes from my desired time, I will check the Dutch Bros and Dunkin apps. If I experience two such delays in a week, I will switch my daily purchase to the more reliable competitor for the remainder of the month.",
+      "As a time-sensitive commuter, if the Starbucks app offers a pickup time that uses up my 10-minute travel slack, I will abandon the order. I will immediately drive to the nearest competitor on my route (Dutch Bros or Dunkin) and use their drive-through. If this happens twice, that competitor becomes my new default morning stop.",
+      "As a walk-in café customer, I will continue to order in person. I will make no changes to my routine, as this new policy is designed to make my experience better."
+    ],
+    "expected_responses": [
+      "I don't expect Dutch Bros or Dunkin to change their pricing or marketing in response to this small pilot. They likely won't even notice it on a corporate level.",
+      "I do expect that the individual Dutch Bros and Dunkin locations near the 50 pilot Starbucks stores will see a slight increase in mobile and drive-through orders between 7:00 and 10:00 a.m. from customers like me who were turned away by the Starbucks app.",
+      "I expect these competitors to simply absorb my business. If their existing service is fast and reliable, they will successfully convert me into a regular customer without having to do anything new."
+    ],
+    "rationale": "My goal is a reliable and timely morning coffee that fits my specific needs for that day. A predictable routine is valuable, but not at the cost of being late for work or adding significant stress to my morning. The proposed Starbucks pilot creates winners and losers among us. For mobile users like commuters and some habitual buyers, the new system introduces a risk of unacceptable delays. My dossier states I have a hard time limit (for commuters) or a specific tolerance for delays (for habitual app users). If Starbucks breaks these limits, I will use my other options—competing coffee shops, which are readily available. For walk-in customers, the policy change is a benefit, reducing in-store congestion and making the experience more pleasant, which reinforces that habit.",
+    "resource_commitments": [
+      "I am prepared to redirect my daily spending of $7-$8 from Starbucks to either Dutch Bros or Dunkin on any day the Starbucks service fails.",
+      "I will commit the 5-10 minutes required to download a competitor's app, create an account, and learn their menu if my Starbucks routine is disrupted more than once.",
+      "I am committing my loyalty. I am willing to break my established Starbucks habit and form a new one with a competitor if they prove to be more reliable during the peak morning rush."
+    ]
+  },
+  "content_hash": "4c8e56d4818af788b6650902cb48565e25ac0598ced3d2fc1cd7bf2f60e3f86f",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "4c8e56d4818af788b6650902cb48565e25ac0598ced3d2fc1cd7bf2f60e3f86f",
+    "ingested_at": "2026-09-12T11:37:35.303663+00:00",
+    "job_id": "job-d3d457e34cd043e0a6a123e461a22e0c",
+    "manifest_hash": "b178ed7c77fe467230bf966d23c2c79238f6b1aec046e5a1d375036167e5322e",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-moves-buyer/results-1.ep"
+  }
+}

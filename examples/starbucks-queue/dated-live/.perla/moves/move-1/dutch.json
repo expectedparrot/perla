@@ -1,0 +1,45 @@
+{
+  "actor_id": "dutch",
+  "committed_at": "2026-09-12T12:15:06.010258+00:00",
+  "content": {
+    "actions": [
+      "Allocate $15,000/month for incremental labor during weekday morning peak (7-10 AM) across the 12 company-operated shops, focusing on optimizing drive-through speed and service quality.",
+      "Launch a geo-targeted app promotion for $1 off the first Order Ahead purchase for new or lapsed users, valid during weekday mornings (7-10 AM), in the vicinity of the 12 pilot shops. Allocate up to $15,000/month for this promotion."
+    ],
+    "expected_responses": [
+      "Starbucks (home): Starbucks will likely continue to monitor their own capacity utilization and customer flow within their pilot stores. If they observe a significant drop in mobile order volume or an increase in abandoned orders, they may adjust their capacity reservation or mobile slot availability. They may also notice increased traffic at nearby Dutch Bros locations, but their primary focus will remain on optimizing their own pilot's performance.",
+      "Dunkin (competitor): Dunkin, also a competitor in the morning beverage market with mobile ordering and value propositions, may also attempt to capture any frustrated Starbucks customers. They might respond with their own value-focused promotions or by highlighting their mobile ordering convenience, potentially increasing their morning staffing or local marketing efforts.",
+      "Composite morning customers (assumed wildcard): Customers experiencing friction at Starbucks may shift to Dutch Bros due to our emphasis on speed, drive-through convenience, and the Order Ahead incentive. Others might opt for Dunkin's offerings, revert to home preparation, or simply adjust their Starbucks visit time if the later pickup slots are acceptable."
+    ],
+    "rationale": "Starbucks' new policy of limiting peak-time mobile orders and reserving capacity for in-cafe customers creates a potential point of friction for their mobile-first customers who prioritize speed and convenience. Dutch Bros' core identity is drive-through convenience and personal service, supported by our Order Ahead capability. By proactively increasing staffing during these critical morning hours, we aim to ensure our service remains fast and consistent, reinforcing our brand promise and capacity to handle increased demand. The geo-targeted app promotion directly incentivizes new and lapsed customers, who may be experiencing delays or restrictions at Starbucks, to try our convenient Order Ahead service. This strategy leverages our existing capabilities, stays within our budget, and aims to convert frustrated demand into durable repeat visits, aligning with our incentive to grow existing shops sustainably.",
+    "resource_commitments": [
+      "$15,000 per month for incremental labor costs (approximately 41.6 additional labor hours per shop per month at $30/hour, or 2 hours per weekday morning per shop) across the 12 shops.",
+      "$15,000 per month for customer acquisition incentives (up to 15,000 $1-off offers) via the app, geo-targeted to the 12 shops' vicinity during 7-10 AM weekdays."
+    ]
+  },
+  "content_hash": "5ab8603f8a9e77caaf1809e6bde19460031b81dea74788d45442c3141e54d3de",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "5ab8603f8a9e77caaf1809e6bde19460031b81dea74788d45442c3141e54d3de",
+    "ingested_at": "2026-09-12T12:15:06.010258+00:00",
+    "job_id": "job-88bb586fee3448ceb188a47df33e2bd6",
+    "manifest_hash": "0abd26eb2e7f6f9564e5b9b0807568db5b7b90ef183691d98ae71d07d2aafd77",
+    "model": "gemini-2.5-flash",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-flash",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-flash",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-1-moves-dutch/results-1.ep"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "actor_id": "dutch",
+  "answer": {
+    "actions": [
+      "From January 1st, 2027, allocate an additional 20 labor hours per week (4 hours/weekday, 7-10 a.m.) at each of the 12 participating company-operated shops. These hours are dedicated to enhancing drive-through speed and Order Ahead fulfillment during peak morning operations, ensuring efficient service for all customers.",
+      "From January 15th to January 31st, 2027, launch an in-app and local social media campaign promoting Dutch Bros' Order Ahead for quick morning pickups (7-10 a.m.). Offer a $1 credit for first-time Order Ahead users at these 12 shops, capped at 100 redemptions per shop, or until the remaining monthly budget is exhausted."
+    ],
+    "expected_responses": [
+      "**Starbucks:** Will likely monitor their own mobile order fulfillment times, café capacity utilization, and customer feedback. If they observe a significant drop in mobile orders or an increase in walk-away customers during peak, they might adjust their capacity reservation or offer structure. They are unlikely to directly respond to a small, localized Dutch Bros promotion unless it scales significantly.",
+      "**Dunkin:** Might observe Starbucks' policy and Dutch Bros' response. If they perceive an opportunity, they could increase their own morning promotions or staffing, especially in areas where they overlap with Starbucks' pilot stores, emphasizing their speed and value proposition.",
+      "**Composite Morning Customers:** Some will adapt to Starbucks' new slots, some will shift to in-cafe orders, some will try alternatives like Dutch Bros or Dunkin, and some might shift to home preparation or forgo their morning coffee. Our actions aim to capture a segment of those seeking alternatives, particularly those valuing speed and convenience."
+    ],
+    "rationale": "Starbucks' new peak-time mobile-order admission limits are likely to create friction and frustration for some of their mobile-first customers seeking immediate convenience. Dutch Bros, with its drive-through model and Order Ahead capability, is ideally positioned to capture this displaced demand. Our strategy focuses on two key areas:\n1.  **Operational Excellence:** By increasing labor during peak morning hours, we ensure that any influx of new customers does not compromise our core value proposition of speed and personal service (d1, d7). This protects our existing customer experience while preparing for new demand.\n2.  **Targeted Acquisition:** A small, controlled incentive ($1 credit) for first-time Order Ahead users, coupled with clear messaging about our convenience, directly targets those customers most likely to be inconvenienced by Starbucks' policy. Starting mid-month allows for initial customer frustration at Starbucks to build, making our offer more appealing. This approach is designed to convert frustrated demand into durable repeat visits, aligning with our incentive for existing-shop growth (d2, d3, d7). We are not subsidizing beyond our envelope and are not promising unsupported pickup times (d6, d7).",
+    "resource_commitments": [
+      "**Labor:** $28,800 for January 2027 ($2,400 per shop for 12 shops) for an additional 20 hours/week/shop (4 hours/weekday, 7-10 a.m.) dedicated to peak morning operations. This is based on an assumed loaded labor cost of $30/hour (board.assumed_loaded_labor_cost_per_hour_usd).",
+      "**Promotional Credits:** Up to $1,200 for January 2027 ($1 credit for up to 100 first-time Order Ahead redemptions per shop across 12 shops) for the period of January 15-31. This utilizes the remaining portion of the $30,000 monthly incremental budget (d6).",
+      "**Marketing Materials:** Minimal cost for in-app messaging and local social media posts, leveraging existing platforms, assumed to be negligible within the existing operational budget."
+    ]
+  },
+  "id": "ingest-125193ae66cd46ae91f3502440564c47",
+  "kind": "moves",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "e0b5ca5cf53dde9abe424054a37c1010a40b29b91e7b6b245c09ae1786b3fe61",
+    "ingested_at": "2026-09-12T11:37:35.705339+00:00",
+    "job_id": "job-65d1d37ce41d46fb89f9a94fddc842ea",
+    "manifest_hash": "3dd43a028698e675f85624735d3b32a66345c0f434da754f072eb04b38de880b",
+    "model": "gemini-2.5-flash",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-flash",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-flash",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-moves-dutch/results-1.ep"
+  }
+}

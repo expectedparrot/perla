@@ -1,0 +1,160 @@
+{
+  "rulings": {
+    "rulings": [
+      {
+        "ruling_id": "r3-customer-competitor-interaction",
+        "basis": "judgment",
+        "resolves": [
+          "m3.buyer.a1",
+          "m3.buyer.a2",
+          "m3.buyer.a3",
+          "m3.dunkin.a1",
+          "m3.dunkin.a2",
+          "m3.dunkin.a3",
+          "m3.dutch.a1",
+          "m3.dutch.a2",
+          "m3.dutch.a3",
+          "m3.home.a1",
+          "m3.home.a2"
+        ],
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "kill_criteria": [],
+        "cite": [
+          "d.buyer.b2",
+          "d.buyer.b3",
+          "d.buyer.b4",
+          "d.buyer.b5",
+          "d.buyer.b6",
+          "d.buyer.b7",
+          "d.buyer.b8",
+          "d.dunkin.k3",
+          "d.dunkin.k4",
+          "d.dunkin.k5",
+          "d.dunkin.k6",
+          "d.dunkin.k7",
+          "d.dunkin.k8",
+          "d.dutch.d4",
+          "d.dutch.d5",
+          "d.dutch.d6",
+          "d.dutch.d7",
+          "d.dutch.d8",
+          "d.home.h4",
+          "d.home.h5",
+          "d.home.h6",
+          "d.home.h7",
+          "d.home.h8",
+          "d.home.h9"
+        ],
+        "cases": [],
+        "chain": [
+          {
+            "link": "starbucks-cafe-service",
+            "claim": "Starbucks maintains the 20% peak café capacity reservation pilot, with capped mobile slots and up to two additional peak staff-hours per weekday per pilot store, prioritizing in-café experience and robust paired-store measurement.",
+            "basis": "dossier_fact",
+            "cite": [
+              "d.home.h5",
+              "d.home.h6",
+              "d.home.h8",
+              "d.home.h9"
+            ]
+          },
+          {
+            "link": "mobile-order-redirect",
+            "claim": "Some morning customers encountering unavailable or delayed Starbucks mobile slots redirect purchases to the nearby Dunkin' $5 bundle or Dutch Bros Order Ahead, depending on proximity and prior experience; others may prepare at home or skip.",
+            "basis": "dossier_fact",
+            "cite": [
+              "d.buyer.b2",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b7",
+              "d.buyer.b8"
+            ]
+          },
+          {
+            "link": "dunkin-bundle-uptake",
+            "claim": "Dunkin’s $5 breakfast bundle with local marketing and added peak labor captures mobile demand diverted from Starbucks, with franchise stop rules protecting against unprofitable participation.",
+            "basis": "dossier_fact",
+            "cite": [
+              "d.dunkin.k3",
+              "d.dunkin.k4",
+              "d.dunkin.k5",
+              "d.dunkin.k6",
+              "d.dunkin.k7",
+              "d.dunkin.k8"
+            ]
+          },
+          {
+            "link": "dutch-retention-offer",
+            "claim": "Dutch Bros continues to acquire and retain some redirected Starbucks customers through a capped $1 first-time Order Ahead credit, a $0.50 follow-up credit, and increased peak labor, while also implementing queue time measurements to monitor service viability.",
+            "basis": "dossier_fact",
+            "cite": [
+              "d.dutch.d4",
+              "d.dutch.d5",
+              "d.dutch.d6",
+              "d.dutch.d7",
+              "d.dutch.d8"
+            ]
+          },
+          {
+            "link": "customer-occasion-segmentation",
+            "claim": "Commuter and habitual app user occasions are most likely to switch brands when mobile slots are unavailable, while café sit-down occasions remain loyal to Starbucks pilot locations due to improved in-café experience.",
+            "basis": "dossier_fact",
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b6"
+            ]
+          }
+        ],
+        "outcome": {
+          "description": "Starbucks maintains its pilot configuration and continues to instrument order flow, with some peak-time mobile demand shifting to Dunkin and Dutch Bros due to slot caps. Dunkin and Dutch Bros successfully attract a portion of redirected demand through targeted offers and service investments, while walk-in café customers at Starbucks benefit from improved wait times. No pilot rollback or escalation occurs this round. No measured outcomes or kill criteria are triggered; all measurement fields remain null pending actual evidence.",
+          "board_delta": {
+            "adjusted_cafe_wait_reduction_pct": null,
+            "assumed_contribution_per_transaction_usd": 3,
+            "assumed_loaded_labor_cost_per_hour_usd": 30,
+            "cafe_capacity_reservation_pct": 20,
+            "calendar_period": "February 2027",
+            "comparison_cafes": 50,
+            "comparison_cohort_complete_customers": 0,
+            "complete_store_pairs": 0,
+            "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+            "incremental_daily_contribution_usd": null,
+            "measured_capacity_per_15min": null,
+            "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+            "mobile_repeat_change_pp": null,
+            "peak_window": "Weekdays 07:00–10:00 local time",
+            "period_ends": {
+              "1": "2027-01-31",
+              "2": "2027-02-28",
+              "3": "2027-03-31"
+            },
+            "pilot_cafes": 50,
+            "pilot_cohort_complete_customers": 0,
+            "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+            "public_roster": [
+              "Starbucks (home)",
+              "Dutch Bros (competitor)",
+              "Dunkin (competitor)",
+              "Composite morning customers (assumed wildcard)"
+            ],
+            "public_strategy_history": [
+              "January 2027: Starbucks pilots 20% peak café capacity reservation for in-café orders in 50 US cafés, capping mobile slots and adding up to two peak staff-hours per weekday per pilot store. Instrumentation deployed for order attempts, slot offers, completions, refunds, staffing, and repeat purchases.",
+              "January 2027: Dunkin launches a $6 breakfast bundle with opt-in mobile ordering and local marketing in 15 franchise locations near Starbucks pilot cafés, with a $20,000 budget cap.",
+              "January 2027: Dutch Bros allocates 20 additional labor hours per week per shop (4 hours/weekday, 7–10 a.m.) at 12 participating shops and promotes a $1 Order Ahead credit for first-time users from January 15–31, capped at 100 redemptions per shop or budget exhaustion.",
+              "January 2027: Composite morning customer segments respond as follows: commuters and habitual app users, when encountering unavailable or delayed Starbucks mobile slots, may redirect purchases to competitors (Dunkin or Dutch Bros) or may instead prepare coffee at home, postpone, or skip the purchase if a detour is inconvenient; walk-in café customers benefit from the new policy and do not switch.",
+              "February 2027: Starbucks continues the 20% peak café capacity reservation pilot in 50 US cafés, maintaining capped mobile slots and up to two additional peak staff-hours per weekday per store. Dunkin launches a $5 breakfast bundle with opt-in mobile ordering, $15,000 in local marketing, and $5,000 for peak labor at 15 consenting franchise locations, with a stop rule for unprofitable stores. Dutch Bros maintains increased peak labor and a $1 Order Ahead credit for first-time users at 12 shops, capped at 250 redemptions per shop or budget exhaustion; actual queue capacity to serve redirected demand is unmeasured. Composite morning customers continue to redirect mobile orders to the most convenient competitor when Starbucks slots are unavailable or delayed, or otherwise prepare at home or skip."
+            ]
+          },
+          "confidence": 0.7
+        },
+        "branches": null
+      }
+    ]
+  }
+}

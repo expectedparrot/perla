@@ -1,0 +1,10 @@
+{
+  "context_hash": "a21413f16faf34c10b4afe2811e6f563bc704344a976dce38582a8c0af4d22e6",
+  "job_id": "job-dff222f8ed8c41189f3ba70a39beb84e",
+  "move": 1,
+  "opened_at": "2026-09-12T13:39:21.246183+00:00",
+  "rulings": {
+    "pilot-jan27-integrated": "f56688ba1c257f4f003152ee87a24ca2f03326b5eda70dcd7fdfa33203dcd615"
+  },
+  "status": "awaiting_rebuttals"
+}

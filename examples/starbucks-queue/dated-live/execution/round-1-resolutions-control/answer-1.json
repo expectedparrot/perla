@@ -1,0 +1,30 @@
+{
+  "resolutions": {
+    "resolutions": [
+      {
+        "ruling_id": "r1-integrated-jan27",
+        "decision": "affirm",
+        "reason": "All rebuttals from affected actors (buyer, Dunkin, Dutch Bros, Starbucks/home) accept the original ruling as an accurate and evidence-based integration of January 2027 commitments and interactions. The ruling reflects the supplied dossiers, public strategy history, and mechanism links, without introducing unsourced claims or extending past-dated actions. All challenged mechanism links are addressed directly, and the ruling preserves action coverage, affected actors, and criterion links as required. No revision is necessary.",
+        "responses": [
+          {
+            "actor_id": "buyer",
+            "reason": "Accepted: The ruling accurately reflects the conditional behavior of app-dependent and in-store customers, as well as the anticipated outcomes for each segment, consistent with the buyer dossier and constraints."
+          },
+          {
+            "actor_id": "dunkin",
+            "reason": "Accepted: The ruling covers Dunkin's local opt-in Meal Deal, promotion, and stop rule, and correctly describes competitive dynamics and measurement boundaries per the Dunkin dossier."
+          },
+          {
+            "actor_id": "dutch",
+            "reason": "Accepted: The ruling describes Dutch Bros' labor and app offer commitments, and the competitive context, in line with the Dutch Bros dossier and scenario assumptions."
+          },
+          {
+            "actor_id": "home",
+            "reason": "Accepted: The ruling accurately details Starbucks' implementation of capacity reservation, instrumentation, and measurement status, without inferring unsourced outcomes, as required by the home dossier."
+          }
+        ],
+        "revision": null
+      }
+    ]
+  }
+}

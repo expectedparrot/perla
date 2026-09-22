@@ -1,0 +1,20 @@
+{
+  "rebuttals": {
+    "rebuttals": [
+      {
+        "ruling_id": "r2-buyer-behavior",
+        "stance": "accept",
+        "argument": "The described buyer behaviors—diversion of habitual app users after repeated mobile delays, reinforcement of in-store café visits, and commuter diversion on lateness risk—are consistent with the simulation assumptions and do not conflict with Starbucks' known dossier facts or scenario constraints.",
+        "link": null,
+        "cite": []
+      },
+      {
+        "ruling_id": "r2-home-actions",
+        "stance": "accept",
+        "argument": "The continued 20% peak café reservation and mobile order admission limits across all 50 pilot cafés, along with the controlled test of dynamic release in 10 cafés, are within the allowed scope, staffing, and measurement constraints specified in the Starbucks dossier.",
+        "link": null,
+        "cite": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "rulings": {
+    "rulings": [
+      {
+        "ruling_id": "r1_home_pilot_launch",
+        "basis": "dossier_fact",
+        "rationale": "Starbucks commits to launching the capacity-reservation pilot (m1.home.a1) and its instrumentation layer (m1.home.a2) across 50 pilot and 50 comparison cafés during January 2027. The 20% peak capacity reservation for in-café orders is implemented per d.home.h5. Instrumentation to capture order attempts, offered slots, completed orders, refunds, staffing hours, and repeat purchases is deployed per d.home.h8. These are operational commitments within declared authority; no measured outcomes yet exist because the board states all observed fields are null and sample counts are zero.",
+        "resolves": [
+          "m1.home.a1",
+          "m1.home.a2"
+        ],
+        "affected_actors": [
+          "home",
+          "buyer"
+        ],
+        "cite": [
+          "d.home.h4",
+          "d.home.h5",
+          "d.home.h6",
+          "d.home.h7",
+          "d.home.h8",
+          "d.home.h9"
+        ],
+        "chain": [
+          {
+            "link": "pilot_activation",
+            "basis": "dossier_fact",
+            "claim": "Starbucks has operational authority to implement the 20% capacity reservation at 50 company-operated pilot cafés and to instrument all 100 stores during January 2027, within the staffing cap of two incremental peak hours per store per weekday.",
+            "cite": [
+              "d.home.h5"
+            ]
+          },
+          {
+            "link": "slot_cap_effect",
+            "basis": "dossier_fact",
+            "claim": "Capping mobile pickup slots means some mobile customers who previously received an immediate or near-immediate slot will instead be offered a later pickup time or find no available slot during peak. The magnitude of slot displacement is unknown because measured_capacity_per_15min remains null.",
+            "cite": [
+              "d.home.h5",
+              "d.home.h8"
+            ]
+          },
+          {
+            "link": "instrumentation_deployed",
+            "basis": "dossier_fact",
+            "claim": "Internal instrumentation is deployed but no data has accumulated at move-one close; all observed sample counts remain at zero and measured fields remain null per board rules.",
+            "cite": [
+              "d.home.h8",
+              "d.home.h9"
+            ]
+          },
+          {
+            "link": "kill_criteria_unevaluated",
+            "basis": "dossier_fact",
+            "claim": "Service criterion (id: service) requires adjusted_cafe_wait_reduction_pct and complete_store_pairs >= 40 by move two; economics and retention criteria require complete transaction and cohort evidence by move three. All are unevaluated at move one because evidence fields are null.",
+            "cite": [
+              "d.home.h9"
+            ]
+          }
+        ],
+        "outcome": {
+          "description": "Pilot and instrumentation are live as of January 1 2027. No measured outcome fields are populated; all observed fields remain null and sample counts at zero. The pilot creates the structural condition (mobile slot caps) that drives buyer and competitor responses adjudicated in subsequent rulings.",
+          "board_delta": {
+            "calendar_period": "2027-01-31",
+            "complete_store_pairs": 0,
+            "pilot_cohort_complete_customers": 0,
+            "comparison_cohort_complete_customers": 0,
+            "adjusted_cafe_wait_reduction_pct": null,
+            "mobile_repeat_change_pp": null,
+            "incremental_daily_contribution_usd": null,
+            "public_strategy_history": [
+              "Move 1 — Starbucks: Launched 50-café peak capacity-reservation pilot (20% of measured 15-min capacity reserved for in-café orders, weekdays 07:00–10:00) and instrumentation across 100 stores. Mobile pickup slots capped during peak. No measured outcomes yet."
+            ]
+          },
+          "confidence": 0.95
+        },
+        "kill_criteria": [
+          "service",
+          "economics",
+          "retention"
+        ],
+        "branches": null
+      },
+      {
+        "ruling_id": "r2_buyer_response_to_slot_caps",
+        "basis": "judgment",
+        "rationale": "The three buyer personas (m1.buyer.a1 habitual app user, m1.buyer.a2 time-sensitive commuter, m1.buyer.a3 walk-in café customer) interact directly with the Starbucks slot-cap created by m1.home.a1. Each persona's trigger conditions are contingent on the actual slot displacement they experience, which depends on the unknown measured_capacity_per_15min. Because no measured capacity baseline, no slot-fill rate, and no population share across segments exist (d.buyer.b3, d.buyer.b8), the adjudication cannot resolve a single deterministic outcome. A branch is required on the rate of mobile slot displacement.",
+        "resolves": [
+          "m1.buyer.a1",
+          "m1.buyer.a2",
+          "m1.buyer.a3"
+        ],
+        "affected_actors": [
+          "buyer",
+          "home",
+          "dutch",
+          "dunkin"
+        ],
+        "cite": [
+          "d.buyer.b3",
+          "d.buyer.b4",
+          "d.buyer.b5",
+          "d.buyer.b6",
+          "d.buyer.b7",
+          "d.buyer.b8",
+          "d.home.h5",
+          "d.home.h6"
+        ],
+        "chain": [
+          {
+            "link": "slot_displacement_rate_unknown",
+            "basis": "dossier_fact",
+            "claim": "The share of peak mobile requests that receive a materially later slot depends on measured_capacity_per_15min, which is null. Without this, neither the frequency of buyer trigger events nor their aggregate magnitude can be computed.",
+            "cite": [
+              "d.home.h5",
+              "d.buyer.b8"
+            ]
+          },
+          {
+            "link": "commuter_hard_limit",
+            "basis": "dossier_fact",
+            "claim": "The commuter persona (m1.buyer.a2) has a hard 10-minute travel-slack ceiling; any offered pickup time consuming that slack causes an immediate order abandonment and same-occasion competitor visit. Two such events make the competitor the default stop. This threshold is structural, not probabilistic, once triggered.",
+            "cite": [
+              "d.buyer.b4"
+            ]
+          },
+          {
+            "link": "habitual_app_user_tolerance",
+            "basis": "dossier_fact",
+            "claim": "The habitual app-user persona (m1.buyer.a1) tolerates up to an 8-minute delay before checking competitors; two such delays in a week trigger a month-remainder switch. Loyalty friction exists but its monetary value is unknown.",
+            "cite": [
+              "d.buyer.b5"
+            ]
+          },
+          {
+            "link": "walkin_unaffected",
+            "basis": "dossier_fact",
+            "claim": "The walk-in café persona (m1.buyer.a3) is unaffected by mobile slot caps; in-café order capacity is protected at 20% by the pilot design. This persona's routine is unchanged.",
+            "cite": [
+              "d.buyer.b6",
+              "d.home.h5"
+            ]
+          },
+          {
+            "link": "competitor_availability_conditional",
+            "basis": "dossier_fact",
+            "claim": "Whether displaced buyers can actually use Dutch Bros Order Ahead or Dunkin app ordering depends on route proximity and location-level feature availability, both of which vary and are not universally established.",
+            "cite": [
+              "d.buyer.b2",
+              "d.dutch.d4",
+              "d.dunkin.k3"
+            ]
+          }
+        ],
+        "outcome": {
+          "description": "Walk-in buyers are unaffected. Mobile buyers (commuter and habitual-app segments) experience trigger events only if slot displacement reaches their personal thresholds. The rate of such displacement is the unresolved branch variable. Simulated outcomes below are declared as judgment, not measurement.",
+          "board_delta": {},
+          "confidence": 0.5
+        },
+        "kill_criteria": [
+          "retention",
+          "economics"
+        ],
+        "branches": {
+          "uncertainty": "Rate of peak mobile slot displacement: whether the 20% capacity reservation materially delays enough mobile orders to trigger buyer switching thresholds. This depends on the unknown measured_capacity_per_15min and the actual share of peak demand that is mobile. No measured data exists.",
+          "options": [
+            {
+              "id": "low_displacement",
+              "description": "Measured peak capacity is sufficient that the 20% café reservation rarely forces mobile slots beyond buyer tolerance thresholds. Fewer than one in five mobile users across pilot stores encounter a trigger event in a given week. Walk-in experience improves modestly. Competitor pickup at Dutch Bros and Dunkin sees minimal incremental demand from Starbucks displacement. Buyer churn to competitors is within normal variance and below the 3pp retention threshold.",
+              "probability": 0.4,
+              "board_delta": {
+                "simulated_mobile_displacement_rate": "low (<20% of peak mobile requests displaced beyond tolerance)",
+                "simulated_buyer_competitor_shift": "marginal; below detection threshold at move-one instrumentation volumes",
+                "simulated_walkin_experience": "modestly improved due to reduced congestion"
+              }
+            },
+            {
+              "id": "moderate_displacement",
+              "description": "A meaningful share of peak mobile requests (20–50%) receive slots beyond buyer tolerance thresholds at busier pilot stores. Commuter and habitual-app buyers begin checking Dutch Bros and Dunkin apps; a subset who encounter two trigger events within a week shift for the month remainder. Competitor locations with drive-through or Order Ahead on the commute route capture some of this demand. Walk-in experience improves noticeably. Aggregate displacement is detectable in instrumentation by move two but may not breach kill criteria thresholds alone.",
+              "probability": 0.45,
+              "board_delta": {
+                "simulated_mobile_displacement_rate": "moderate (20–50% of peak mobile requests displaced beyond tolerance at higher-volume pilot stores)",
+                "simulated_buyer_competitor_shift": "detectable; subset of commuter and habitual-app buyers switches for month remainder",
+                "simulated_walkin_experience": "noticeably improved"
+              }
+            },
+            {
+              "id": "high_displacement",
+              "description": "Capacity is tighter than anticipated; the majority of peak mobile slots are pushed beyond buyer thresholds. Large-scale commuter and habitual-app switching occurs within the first two weeks. Competitor locations see a surge in morning drive-through and Order Ahead demand. Walk-in experience may also degrade if displaced mobile buyers arrive in-person instead. Risk to retention and economics kill criteria materially elevated.",
+              "probability": 0.15,
+              "board_delta": {
+                "simulated_mobile_displacement_rate": "high (>50% of peak mobile requests displaced beyond tolerance)",
+                "simulated_buyer_competitor_shift": "substantial; multi-week switching by commuter and habitual-app segments",
+                "simulated_walkin_experience": "mixed; some improvement offset by in-person overflow"
+              }
+            }
+          ],
+          "played": "moderate_displacement"
+        }
+      },
+      {
+        "ruling_id": "r3_competitor_response_dutch_dunkin",
+        "basis": "judgment",
+        "rationale": "Dutch Bros (m1.dutch.a1, m1.dutch.a2) and Dunkin (m1.dunkin.a1, m1.dunkin.a2, m1.dunkin.a3) both commit resources and launch offers in January 2027 at geographically overlapping locations. Their actions interact with buyer displacement from r2 and with each other through competition for the same displaced morning segment. The adjudication integrates all five competitor actions because their mechanism chains share a common demand source (displaced Starbucks mobile buyers) and a common constraint (neither competitor can observe Starbucks' private customer list per d.dutch.d8 and d.dunkin.k8).",
+        "resolves": [
+          "m1.dutch.a1",
+          "m1.dutch.a2",
+          "m1.dunkin.a1",
+          "m1.dunkin.a2",
+          "m1.dunkin.a3"
+        ],
+        "affected_actors": [
+          "dutch",
+          "dunkin",
+          "buyer",
+          "home"
+        ],
+        "cite": [
+          "d.dutch.d1",
+          "d.dutch.d4",
+          "d.dutch.d5",
+          "d.dutch.d6",
+          "d.dutch.d7",
+          "d.dutch.d8",
+          "d.dunkin.k3",
+          "d.dunkin.k4",
+          "d.dunkin.k5",
+          "d.dunkin.k6",
+          "d.dunkin.k7",
+          "d.dunkin.k8"
+        ],
+        "chain": [
+          {
+            "link": "dutch_labor_commitment",
+            "basis": "dossier_fact",
+            "claim": "Dutch Bros commits 20 additional labor hours per week (4 hours/weekday, 07:00–10:00) across 12 shops from January 1. At $30/loaded hour this is $2,400/shop/month = $28,800 total, within the $30,000 envelope (d.dutch.d6). This improves drive-through throughput and Order Ahead fulfillment capacity at these 12 locations.",
+            "cite": [
+              "d.dutch.d5",
+              "d.dutch.d6"
+            ]
+          },
+          {
+            "link": "dutch_acquisition_offer",
+            "basis": "dossier_fact",
+            "claim": "Dutch Bros launches a $1 first-time Order Ahead credit (Jan 15–31, up to 100 redemptions/shop across 12 shops = max $1,200 credit cost) via in-app and social media. Remaining budget after labor: ~$1,200, which caps total promotional exposure. This offer is visible only to users who see the app or local social media, not targeted to a verified list of rejected Starbucks customers (d.dutch.d8).",
+            "cite": [
+              "d.dutch.d4",
+              "d.dutch.d5",
+              "d.dutch.d6",
+              "d.dutch.d8"
+            ]
+          },
+          {
+            "link": "dunkin_bundle_offer",
+            "basis": "dossier_fact",
+            "claim": "Dunkin's 15 consenting franchise stores launch a $6 breakfast Meal Deal mobile bundle with local marketing, capped at $20,000 combined promotion and staffing for January. This leverages the app ordering capability (k3) and value positioning (k4) without committing all US franchisees.",
+            "cite": [
+              "d.dunkin.k3",
+              "d.dunkin.k4",
+              "d.dunkin.k5",
+              "d.dunkin.k6"
+            ]
+          },
+          {
+            "link": "demand_source_contingency",
+            "basis": "dossier_fact",
+            "claim": "Both competitors' incremental morning demand depends on whether Starbucks mobile slot caps actually displace buyers (r2 branch) and whether those buyers' routes pass a participating Dutch Bros or Dunkin location. Neither competitor can verify which Starbucks customers were rejected (d.dutch.d8, d.dunkin.k8), so their offers function as broad ambient signals, not targeted intercepts.",
+            "cite": [
+              "d.dutch.d8",
+              "d.dunkin.k8",
+              "d.buyer.b2"
+            ]
+          },
+          {
+            "link": "dutch_service_protection",
+            "basis": "dossier_fact",
+            "claim": "Dutch Bros' backstory (d.dutch.d7) indicates the regional operator prioritizes service consistency. Additional labor (m1.dutch.a1) is the mechanism that makes the acquisition offer (m1.dutch.a2) credible without overwhelming lanes. If displacement is high (r2 high_displacement branch), lane saturation risk rises despite added labor.",
+            "cite": [
+              "d.dutch.d7",
+              "d.dutch.d5"
+            ]
+          },
+          {
+            "link": "dunkin_exit_discipline",
+            "basis": "dossier_fact",
+            "claim": "Dunkin's decision rule (m1.dunkin.a3) to discontinue if economics worsen after one month provides a structural brake; if basket contribution per visit does not clear the discount and added staffing cost, the offer is adjusted or withdrawn in February.",
+            "cite": [
+              "d.dunkin.k6",
+              "d.dunkin.k7"
+            ]
+          },
+          {
+            "link": "budget_adequacy",
+            "basis": "judgment",
+            "claim": "Both competitors' budgets are within declared envelopes and can be executed without external approvals. However, the incremental revenue uplift is unknown because actual displaced buyer volumes and their conversion rates are not measured. Declared judgment: offers are feasible and launched; their economic returns cannot be computed at move one.",
+            "cite": [
+              "d.dutch.d6",
+              "d.dunkin.k6"
+            ]
+          }
+        ],
+        "outcome": {
+          "description": "Both Dutch Bros and Dunkin have successfully committed and launched their January 2027 morning offers within budget envelopes. Dutch Bros adds peak labor at 12 shops from January 1 and activates a $1 Order Ahead credit from January 15. Dunkin activates the $6 Meal Deal bundle at 15 consenting franchise locations with a $20,000 spend cap. Both offers are live and potentially visible to displaced Starbucks mobile buyers, but actual incremental volume depends on the r2 displacement branch played (moderate_displacement). Neither competitor can measure Starbucks-specific rejection rates. Dunkin's exit discipline means February continuation is contingent on January economics. No measured revenue or visit data exists at move-one close; simulated fields are declared below as judgment.",
+          "board_delta": {
+            "public_strategy_history": [
+              "Move 1 — Starbucks: Launched 50-café peak capacity-reservation pilot (20% of measured 15-min capacity reserved for in-café orders, weekdays 07:00–10:00) and instrumentation across 100 stores. Mobile pickup slots capped during peak. No measured outcomes yet.",
+              "Move 1 — Dutch Bros: Added 20 peak labor hours/week at 12 shops from Jan 1 (est. $28,800 labor cost). Launched $1 first-time Order Ahead credit (Jan 15–31, max 100 redemptions/shop) via in-app and social media. Total budget ~$30,000.",
+              "Move 1 — Dunkin: Activated $6 breakfast Meal Deal mobile bundle at 15 consenting franchise locations with local marketing. Combined promotion and staffing capped at $20,000 for January. Exit decision rule in place after one month.",
+              "Move 1 — Buyer: Walk-in persona unaffected. Commuter and habitual-app personas have declared contingent switching rules triggered by slot delays exceeding personal tolerance thresholds. No switching events confirmed yet; trigger frequency depends on unresolved slot displacement rate."
+            ],
+            "simulated_dutch_jan_labor_cost_usd": 28800,
+            "simulated_dutch_jan_promo_cost_usd_max": 1200,
+            "simulated_dunkin_jan_promo_staffing_cap_usd": 20000,
+            "simulated_competitor_incremental_morning_visits": "unknown; contingent on r2 moderate_displacement branch and route proximity",
+            "simulated_dutch_order_ahead_redemptions_max": 1200,
+            "simulated_dunkin_basket_economics_known": false
+          },
+          "confidence": 0.75
+        },
+        "kill_criteria": [
+          "economics",
+          "retention"
+        ],
+        "branches": null
+      }
+    ]
+  }
+}

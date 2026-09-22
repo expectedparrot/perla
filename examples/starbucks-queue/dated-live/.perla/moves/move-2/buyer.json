@@ -1,0 +1,45 @@
+{
+  "actor_id": "buyer",
+  "committed_at": "2026-09-12T12:16:53.592159+00:00",
+  "content": {
+    "actions": [
+      "Habitual Starbucks app users who experienced significant mobile order delays (>8 minutes) at pilot stores in January will begin February by trying competitor mobile apps, drawn by promotions like the Dutch Bros $1 Order Ahead offer. Their return to Starbucks is now contingent on the quality of the competitor's service.",
+      "In-store café visitors at the pilot Starbucks locations, having experienced shorter and more predictable wait times in January, will reinforce this behavior in February. We will choose these locations more frequently for occasions that value a reliable in-store experience.",
+      "Time-pressed commuters will continue to check the Starbucks app before committing, but will more readily divert to Dutch Bros or Dunkin' on any morning the quoted pickup time creates a risk of being late."
+    ],
+    "expected_responses": [
+      "We expect Starbucks to see a mixed signal from the pilot: happier in-store customers and higher in-store sales, but a potential drop in mobile order volume and the loss of some previously loyal app users to competitors. They might adjust the 20% capacity reservation.",
+      "We expect Dutch Bros and Dunkin' to see a measurable increase in new customer trials and mobile orders at their locations near the pilot stores. They will likely continue their promotions to try and make our new habits stick."
+    ],
+    "rationale": "My choices are a direct reaction to the new reality at the pilot Starbucks stores and the offers from competitors. The Starbucks policy has improved the experience for one type of visit (in-café) at the expense of another (peak-time mobile orders). For those of us who rely on the app for a quick pickup, the new system can be unreliable. When competitors like Dutch Bros and Dunkin' make it easy and cheap to try their service, it's a logical time to explore new routines. Conversely, when I actually want to sit in a café, the pilot stores have become more pleasant and reliable, so I'll go there more often for that purpose.",
+    "resource_commitments": [
+      "Attention and Time: We are willing to spend the time to download a new app and learn a new ordering routine if the incentive is strong enough (like a $1 offer) and our current routine is broken.",
+      "Daily Spend: Our daily budget for coffee and breakfast will be reallocated to the brand that best meets the needs of a specific morning's occasion—be it speed, value, or in-store experience."
+    ]
+  },
+  "content_hash": "9dc32d969421a2563a650a198df0880835440f5b0ae9dc045be856cd6f3abfa7",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "9dc32d969421a2563a650a198df0880835440f5b0ae9dc045be856cd6f3abfa7",
+    "ingested_at": "2026-09-12T12:16:53.592159+00:00",
+    "job_id": "job-eca814078b344531a7bb45d9dfd4e359",
+    "manifest_hash": "3db46255eaee9987e5a90a8cd282be592c682d18efd05b440cc5728a630f6e39",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-moves-buyer/results-1.ep"
+  }
+}

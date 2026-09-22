@@ -1,0 +1,30 @@
+{
+  "resolutions": {
+    "resolutions": [
+      {
+        "ruling_id": "m3-integrated",
+        "decision": "affirm",
+        "reason": "All four actors' rebuttals accept the integrated round 3 ruling as accurately representing their actions, constraints, and the competitive and customer dynamics described in the dossiers. The ruling is fully grounded in cited dossier facts, and all challenged mechanism links are addressed directly. No actor raises a substantive objection, identifies a misrepresentation, or requests revision. The board_delta, affected actors, action coverage, and criterion links are preserved exactly. No new measurement outcomes are asserted, and no past-dated actions require explicit extension. Therefore, the ruling is affirmed without revision.",
+        "responses": [
+          {
+            "actor_id": "buyer",
+            "reason": "The buyer's rebuttal explicitly accepts the ruling, confirming the ruling's accurate reflection of customer segment adjustments and new routines."
+          },
+          {
+            "actor_id": "dunkin",
+            "reason": "Dunkin's rebuttal affirms the ruling as consistent with its operational and financial constraints, and with the competitive and customer context."
+          },
+          {
+            "actor_id": "dutch",
+            "reason": "Dutch Bros accepts the ruling as a correct and complete account of its actions, constraints, and the competitive landscape."
+          },
+          {
+            "actor_id": "home",
+            "reason": "Starbucks (home) confirms the ruling's fidelity to its round 3 commitments, constraints, and public strategy history, with no conflicts or overreach."
+          }
+        ],
+        "revision": null
+      }
+    ]
+  }
+}

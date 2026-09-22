@@ -1,0 +1,6 @@
+{
+  "id": "buyer",
+  "mode": "agent",
+  "name": "Morning customers (composite)",
+  "role": "wildcard"
+}

@@ -1,0 +1,8 @@
+{
+  "actors": [
+    {"id": "home", "name": "Starbucks", "role": "home", "dossier": "home.json"},
+    {"id": "dutch", "name": "Dutch Bros", "role": "competitor", "dossier": "dutch.json"},
+    {"id": "dunkin", "name": "Dunkin", "role": "competitor", "dossier": "dunkin.json"},
+    {"id": "buyer", "name": "Morning customers (composite)", "role": "wildcard", "dossier": "buyer.json"}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "actor_id": "home",
+  "committed_at": "2026-09-12T12:19:35.150731+00:00",
+  "content": {
+    "actions": [
+      "Continue the 20% peak café capacity reservation and mobile order limits in all 50 pilot cafés during weekday 7–10 a.m. through March 2027.",
+      "Expand the dynamic release of unused reserved slots (after 08:00 if café demand is below 15% of capacity) from 10 to all 50 pilot cafés, with real-time monitoring for adverse mobile order abandonment or in-café congestion.",
+      "Set a pre-commitment to rollback the dynamic slot release in any pilot café if measured mobile order abandonment or in-café wait times worsen by more than 5 percentage points versus paired controls."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin may intensify local app offers if they observe Starbucks relaxing mobile slot limits, but may also see reduced switching if Starbucks improves mobile reliability.",
+      "Competitors may adjust their labor or promotional spend in response to any perceived Starbucks vulnerability in mobile or café service.",
+      "Some habitual Starbucks app users may return if their mobile order experience improves, while café-first customers should not see degraded wait times."
+    ],
+    "rationale": "The continued 20% reservation aligns with the strategic objective to protect the in-café experience for core customers, as the coffeehouse visit is central to the Starbucks proposition (h1, h4). Expanding the dynamic release of unused reserved slots system-wide after 08:00 leverages observed lower in-café demand in late peak windows, aiming to recapture mobile transactions that might otherwise divert to competitors. This approach balances the need to defend transaction momentum (h3) and earn back added labor by maximizing capacity utilization without breaching the operational or staffing constraints (h5, h6). The explicit rollback rule addresses the requirement for reversibility and safeguards against negative contribution or excessive churn (h9).",
+    "resource_commitments": [
+      "Maintain incremental staffing up to 2 peak hours per weekday per pilot café, within the existing cap.",
+      "Deploy digital instrumentation and real-time monitoring for mobile order abandonment, café wait times, and slot utilization in all 50 pilot cafés.",
+      "Allocate operations and analytics resources to enforce the rollback rule at the café level if negative impacts are detected."
+    ]
+  },
+  "content_hash": "868488d478037ce684f4c8ea636cdf7a6ccccef0d000ac352929c2be84facbdd",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "868488d478037ce684f4c8ea636cdf7a6ccccef0d000ac352929c2be84facbdd",
+    "ingested_at": "2026-09-12T12:19:35.150731+00:00",
+    "job_id": "job-473eaeec1ac74a38aa050e5aaa0171ff",
+    "manifest_hash": "1562a9f0f936d2b12171183dbf330ce48d3e5ad1be04408f00156849b6ad39f3",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-3-moves-home/results-1.ep"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "attempt": 1,
+  "receipt": {
+    "actor_id": "dutch",
+    "move": 1,
+    "provenance": {
+      "origin": "simulation",
+      "model": "gemini-2.5-flash",
+      "model_parameters": {
+        "model": "gemini-2.5-flash",
+        "parameters": {
+          "maxOutputTokens": 16000,
+          "stopSequences": [],
+          "temperature": 0.5,
+          "thinking_budget": null,
+          "topK": 1,
+          "topP": 1
+        },
+        "inference_service": "google",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "gemini-2.5-flash"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-1-rebuttals-dutch/results-1.ep",
+      "job_id": "job-bb9a337bb34641bbbbe1a78262f656a2",
+      "manifest_hash": "2a0bf0d32901fad52a95e03197c1e8bd3705f14735871061a591038bfd9ebea7",
+      "ingested_at": "2026-09-12T12:06:32.293545+00:00",
+      "answer_hash": "66d62c5eb96d9324c98af301f7f0cbe0179102a137c2bb7f19af1a6d17a362d5"
+    }
+  }
+}

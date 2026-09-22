@@ -1,0 +1,10 @@
+{
+  "context_hash": "6e9f6c9a282cd1a32e165087b2e4cee03173aa545a11dfd7ebbdcb2867182cd1",
+  "job_id": "job-7e88696bfe2547358ca9f10777c0df89",
+  "move": 1,
+  "opened_at": "2026-09-12T11:37:36.213440+00:00",
+  "rulings": {
+    "r1-all-move1": "b6e4a36e3268cdef178b356d4fdf5b71df7bc843bf13c8a86f1949bef17c119d"
+  },
+  "status": "awaiting_rebuttals"
+}

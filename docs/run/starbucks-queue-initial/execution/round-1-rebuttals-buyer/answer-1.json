@@ -1,0 +1,15 @@
+{
+  "rebuttals": {
+    "rebuttals": [
+      {
+        "ruling_id": "r1-all-move1",
+        "stance": "challenge",
+        "argument": "The ruling assumes that a delayed mobile user will always switch to a competitor like Dunkin or Dutch Bros. However, some customers may choose to prepare coffee at home, postpone their purchase, or skip it altogether on a given day, especially if a detour to a competitor is inconvenient.",
+        "link": "mobile_to_competitor",
+        "cite": [
+          "d.buyer.b7"
+        ]
+      }
+    ]
+  }
+}

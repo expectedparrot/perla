@@ -1,0 +1,43 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla adjudicate resolve --move 3 --output round-3/resolutions",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "adjudicate",
+      "resolve"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "facilitate",
+        "description": "Execute the control resolution package and ingest resolutions.",
+        "mutating": false,
+        "networked": false,
+        "requires_approval": false
+      }
+    ],
+    "data": {
+      "job_id": "job-fe40434a5f654adbbb86312f6bfed246",
+      "actor_id": "control",
+      "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-fe40434a5f654adbbb86312f6bfed246.jobs.ep",
+      "reused": false,
+      "export": {
+        "directory": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/resolutions",
+        "version": 1,
+        "project_id": "51bf44d9-5a70-45d0-90cb-4578f7302299",
+        "jobs": [
+          {
+            "job_id": "job-fe40434a5f654adbbb86312f6bfed246",
+            "actor_id": "control",
+            "kind": "resolutions",
+            "move": 3,
+            "package": "control.jobs.ep",
+            "results": "control.results.ep"
+          }
+        ]
+      }
+    }
+  }
+}

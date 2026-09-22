@@ -1,0 +1,50 @@
+{
+  "actor_id": "dunkin",
+  "answer": {
+    "actions": [
+      "Launch a $1.50 discount offer on mobile app advance orders for the breakfast Meal Deal bundle during peak hours (7–10 a.m. weekdays) in the 15 consenting franchise stores starting February 1, 2027.",
+      "Implement local marketing to promote this discounted bundle via the Dunkin app and in-store signage, with clear opt-in and stop rules to monitor store-level economics and customer response.",
+      "Monitor basket contribution, repeat visits, and redemption rates weekly to evaluate profitability and customer retention, with a decision checkpoint at the end of February to continue, adjust, or stop the offer."
+    ],
+    "expected_responses": [
+      "Some increase in mobile advance orders during peak hours at participating stores, with improved order flow predictability.",
+      "Competitors may respond by enhancing their own mobile offers or promotions during peak hours, potentially increasing promotional intensity.",
+      "Franchisees may provide feedback on operational impacts and profitability, influencing continuation or adjustment of the offer.",
+      "Customers may shift some morning visits from in-person to mobile orders, improving customer experience and potentially reducing queue delays."
+    ],
+    "rationale": "The $1.50 discount on the existing $6 breakfast Meal Deal aims to enhance the attractiveness of the bundle specifically during peak morning hours when competition from Starbucks and Dutch Bros is intense. This targeted discount encourages mobile advance ordering, improving order predictability and reducing in-store congestion. The discount level balances customer incentive with maintaining a reasonable contribution margin, considering the assumed $3 contribution per transaction and capped marketing/staffing budget. Local marketing and opt-in controls ensure franchisees' economic willingness is preserved, addressing prior concerns about unprofitable traffic. Monitoring allows timely adjustments to protect store profitability and customer loyalty.",
+    "resource_commitments": [
+      "Allocate up to $20,000 for combined local marketing and incremental staffing costs across the 15 stores for February 2027.",
+      "Staff training and scheduling adjustments to handle potential increased mobile order volume during peak hours.",
+      "Data collection and analysis resources for weekly monitoring of basket contribution, redemption rates, and repeat visits."
+    ]
+  },
+  "id": "ingest-9e07a8864fe24aa38e55a9f16b9904ce",
+  "kind": "moves",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "081c6a200e21610f5cb349d2d1c98d0675f89db5c32aaee906b0d151171246f6",
+    "ingested_at": "2026-09-12T14:04:11.996999+00:00",
+    "job_id": "job-0ca98f2d47cd4d12ba202dfaa7200aec",
+    "manifest_hash": "ea972248f76895a3cc75bafc07621219dca9fc700c377784f5a2ea4933ac7356",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-2/moves/dunkin.results.ep"
+  }
+}

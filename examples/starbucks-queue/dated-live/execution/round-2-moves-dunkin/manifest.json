@@ -1,0 +1,146 @@
+{
+  "actor_id": "dunkin",
+  "actor_name": "Dunkin",
+  "actor_role": "competitor",
+  "context": {
+    "board": {
+      "adjusted_cafe_wait_reduction_pct": null,
+      "assumed_contribution_per_transaction_usd": 3,
+      "assumed_loaded_labor_cost_per_hour_usd": 30,
+      "cafe_capacity_reservation_pct": 20,
+      "calendar_period": "January 2027",
+      "comparison_cafes": 50,
+      "comparison_cohort_complete_customers": 0,
+      "complete_store_pairs": 0,
+      "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+      "incremental_daily_contribution_usd": null,
+      "measured_capacity_per_15min": null,
+      "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+      "mobile_repeat_change_pp": null,
+      "peak_window": "Weekdays 07:00–10:00 local time",
+      "period_ends": {
+        "1": "2027-01-31",
+        "2": "2027-02-28",
+        "3": "2027-03-31"
+      },
+      "pilot_cafes": 50,
+      "pilot_cohort_complete_customers": 0,
+      "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+      "public_roster": [
+        "Starbucks (home)",
+        "Dutch Bros (competitor)",
+        "Dunkin (competitor)",
+        "Composite morning customers (assumed wildcard)"
+      ],
+      "public_strategy_history": [
+        {
+          "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+          "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+          "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+          "period": "January 2027",
+          "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+        }
+      ]
+    },
+    "decision": {
+      "launch_period": "January 2027; a proposed experiment, not an announced Starbucks policy",
+      "months_per_move": 1,
+      "moves": 3,
+      "offer": "Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays",
+      "pricing": "Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure",
+      "scope": "50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores",
+      "segment": "50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés",
+      "statement": "Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full."
+    },
+    "dossier": {
+      "capabilities": [
+        "Design an opt-in morning bundle or app offer with local stop rules and cost accounting (k3, k5, k6).",
+        "Measure basket contribution and repeat visits after discounts expire (k7, k8)."
+      ],
+      "constraints": [
+        "Only the 15 consenting stores are controllable; the group cannot impose a national price (k5).",
+        "The $20,000 monthly envelope includes incentives and staffing; actual unit margins remain unknown (k2, k6).",
+        "No inferred access to competitors’ customer records or automatic corporate reimbursement (k8)."
+      ],
+      "facts": [
+        {
+          "claim": "Reported history and footprint: Founded in 1950, Dunkin describes more than 14,000 restaurants in nearly 40 markets. Its franchise footprint and routine coffee-and-food occasion provide a different operating model from a company-run café pilot.",
+          "id": "k1",
+          "sources": [
+            "https://www.dunkindonuts.com/about-us/"
+          ]
+        },
+        {
+          "claim": "Reported ownership and transaction economics: Inspire completed the acquisition of Dunkin Brands in December 2020 in a transaction valued at $11.3 billion including assumed debt. That figure is an acquisition value for Dunkin Brands, not Dunkin revenue, available cash or franchisee profit. Current local margins are not supplied.",
+          "id": "k2",
+          "sources": [
+            "https://inspirebrands.com/inspire-brands-completes-acquisition-of-dunkin-brands/"
+          ]
+        },
+        {
+          "claim": "Reported commercial capability: The Dunkin app supports advance ordering, rewards and offers. Consumer terms and participation vary; app capability alone does not demonstrate shorter queues.",
+          "id": "k3",
+          "sources": [
+            "https://www.dunkindonuts.com/en/mobile-app"
+          ]
+        },
+        {
+          "claim": "Reported positioning: A September 2026 campaign advertised a $6 breakfast Meal Deal. It supplies evidence of a coffee-and-food value proposition; neither that January 2027 price nor universal franchise participation is assumed.",
+          "id": "k4",
+          "sources": [
+            "https://news.dunkindonuts.com/blog/ttailgate-season-runs-on-dunkin-september2026"
+          ]
+        },
+        {
+          "claim": "Assumed authority: The player represents a consenting local group of 15 franchised restaurants near some pilot cafés. It can coordinate a local opt-in offer and shared marketing but cannot order all US franchisees to participate. No new sites within three months.",
+          "id": "k5",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed finances: Combined incremental local promotion and staffing spend is capped at $20,000 per month. For a proposed $1 discount, test a $2–$4 pre-discount contribution range; these are illustrative sensitivities, not disclosed unit economics. Franchise operators bear local labor and discount costs unless an explicit reimbursement is budgeted.",
+          "id": "k6",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed backstory: The operator group has disagreed over prior offer redemptions that brought traffic without profitable food attachment. Its immediate priority is a repeatable breakfast basket and predictable pickup, with an explicit exit for stores whose economics worsen. This is a constructed governance tension.",
+          "id": "k7",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed information rights: Participating stores can see their own basket mix, discount cost, staffing and repeat rewards visits, and public competitor offers. They cannot see Starbucks’ mobile customer identity or confidential café capacity. National campaign coordination and franchisor reimbursement are not granted.",
+          "id": "k8",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        }
+      ],
+      "incentives": [
+        "Win the whole breakfast occasion through a predictable, attractive coffee-and-food basket (k3, k4).",
+        "Keep participating franchisees economically willing to continue; redemption alone is not profit (k5, k6, k7)."
+      ],
+      "red_lines": [
+        "Do not describe acquisition value as operating revenue or promotion funding (k2).",
+        "Do not claim a local discount works without accounting for full-price purchases that would have occurred anyway (k6, k7)."
+      ]
+    }
+  },
+  "created_at": "2026-09-12T12:16:13.332276+00:00",
+  "id": "job-488bb7f6ab984f44b7c5dff5cd2d47ae",
+  "included": [
+    "project.json#decision",
+    "dossiers/dunkin.json",
+    "board/move-1.json"
+  ],
+  "job_hash": "b2c8057797401c4874647a88acbde438e02995727d1a58fd007224204092b57a",
+  "kind": "moves",
+  "mode": "agent",
+  "move": 2,
+  "package": "jobs/job-488bb7f6ab984f44b7c5dff5cd2d47ae.jobs.ep",
+  "project_id": "aea4062c-852f-45f1-b8bc-cbb7361701e1"
+}

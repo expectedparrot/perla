@@ -1,0 +1,46 @@
+{
+  "actor_id": "buyer",
+  "answer": {
+    "actions": [
+      "As a commuter or habitual app user, if I attempt a mobile order at a pilot Starbucks between 7–10 a.m. and the first available pickup slot is more than 10 minutes later than my desired time, I will immediately attempt to place an order with a competitor.",
+      "My first choice for a redirected purchase will be the most convenient competitor on my route that requires no more than a 4-minute detour. I will try the Dunkin' $6 breakfast bundle or the Dutch Bros Order Ahead with the $1 credit.",
+      "As a habitual app user, if I experience two such service disruptions at Starbucks within any given week, I will switch my primary morning purchase to the most reliable competitor for the remainder of the month."
+    ],
+    "expected_responses": [
+      "I expect Dunkin' and Dutch Bros will see their promotions as successful if they gain new customers like me. They will likely extend their offers or staffing commitments to retain us.",
+      "I expect Starbucks will be monitoring mobile order defections at its pilot stores. If they lose enough of my business, they may adjust the 20% capacity reservation downward or offer incentives, like a recovery coupon, to win back my loyalty."
+    ],
+    "rationale": "My primary goal is to get my morning coffee reliably and on time, minimizing the total cost in terms of money, time, and the risk of being late for work. The new Starbucks policy introduces uncertainty for my mobile ordering routine. A delay of more than 10 minutes exceeds my available slack time as a commuter and tests my patience as a habitual user. Since both Dunkin' and Dutch Bros are actively competing with value and service-speed promotions, the cost of trying an alternative is very low. For a commuter, the one-strike rule is a necessity to get to work on time. For a habitual app user, the two-strike rule reflects a balance between existing loyalty and the need for a dependable daily routine.",
+    "resource_commitments": [
+      "Time: Willingness to spend up to 4 minutes on a detour to try a competitor.",
+      "Attention: The minimal effort required to download and use a competitor's app (Dunkin' or Dutch Bros) after the first service failure.",
+      "Spending: Reallocation of my daily $7-$8 coffee-and-breakfast budget from Starbucks to a competitor on days when I switch."
+    ]
+  },
+  "id": "ingest-2a5272215da5486a89ea9c4a0f624588",
+  "kind": "moves",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "86d562f1c861f2420462e71f4f62b676b59e9065ac979e07c09ac122cfcb4f67",
+    "ingested_at": "2026-09-12T12:07:32.928978+00:00",
+    "job_id": "job-c006e9cbe580474caa400dc6ab4e8fd7",
+    "manifest_hash": "90d6294a9766fcb35ea323aefa71183cdbbe1c55b508e2f315ea764c2d0465f1",
+    "model": "gemini-2.5-pro",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-pro",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-pro",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-moves-buyer/results-1.ep"
+  }
+}

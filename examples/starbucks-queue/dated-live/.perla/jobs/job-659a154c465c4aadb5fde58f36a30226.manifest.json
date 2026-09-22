@@ -1,0 +1,155 @@
+{
+  "actor_id": "home",
+  "actor_name": "Starbucks",
+  "actor_role": "home",
+  "context": {
+    "board": {
+      "adjusted_cafe_wait_reduction_pct": null,
+      "assumed_contribution_per_transaction_usd": 3,
+      "assumed_loaded_labor_cost_per_hour_usd": 30,
+      "cafe_capacity_reservation_pct": 20,
+      "calendar_period": "January 2027",
+      "comparison_cafes": 50,
+      "comparison_cohort_complete_customers": 0,
+      "complete_store_pairs": 0,
+      "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+      "incremental_daily_contribution_usd": null,
+      "measured_capacity_per_15min": null,
+      "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+      "mobile_repeat_change_pp": null,
+      "peak_window": "Weekdays 07:00–10:00 local time",
+      "period_ends": {
+        "1": "2027-01-31",
+        "2": "2027-02-28",
+        "3": "2027-03-31"
+      },
+      "pilot_cafes": 50,
+      "pilot_cohort_complete_customers": 0,
+      "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+      "public_roster": [
+        "Starbucks (home)",
+        "Dutch Bros (competitor)",
+        "Dunkin (competitor)",
+        "Composite morning customers (assumed wildcard)"
+      ],
+      "public_strategy_history": [
+        {
+          "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+          "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+          "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+          "period": "January 2027",
+          "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+        }
+      ]
+    },
+    "decision": {
+      "launch_period": "January 2027; a proposed experiment, not an announced Starbucks policy",
+      "months_per_move": 1,
+      "moves": 3,
+      "offer": "Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays",
+      "pricing": "Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure",
+      "scope": "50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores",
+      "segment": "50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés",
+      "statement": "Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full."
+    },
+    "dossier": {
+      "capabilities": [
+        "Use existing sequencing and staffing practices as the implementation base (h4).",
+        "Offer honest later pickup times, test narrower reservation windows and release unused capacity within the pilot (h5).",
+        "Build paired-store measurement, attempt-to-purchase funnels and baseline cohorts using internal instrumentation (h8, h9)."
+      ],
+      "constraints": [
+        "The two-hour staff allowance, unchanged prices and 50-store limit are binding game constraints (h5).",
+        "Segment margin is not a local cost curve; no store p90 waits or mobile churn elasticity is known (h2, h6, h8).",
+        "A booked later slot is not revenue until a purchase completes; competitor substitution is only partly observable (h8)."
+      ],
+      "facts": [
+        {
+          "claim": "Reported history: Starbucks began in Seattle in 1971. Its evolution from a bean merchant into a coffeehouse makes the in-store experience part of the proposition, not simply a distribution expense. The strategic implication is an author inference.",
+          "id": "h1",
+          "sources": [
+            "https://about.starbucks.com/about-us/"
+          ]
+        },
+        {
+          "claim": "Reported financials: Q3 fiscal 2026 North America revenue was $7,395.1 million, operating income $1,008.9 million and operating margin 13.6%. These are segment figures, not pilot-store unit economics.",
+          "id": "h2",
+          "sources": [
+            "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx"
+          ]
+        },
+        {
+          "claim": "Reported demand: US comparable sales increased 7.9% and comparable transactions 4.2% in Q3 fiscal 2026. This case tests sustaining growth; it does not assume that current transactions are declining.",
+          "id": "h3",
+          "sources": [
+            "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx"
+          ]
+        },
+        {
+          "claim": "Reported strategy: Back to Starbucks combines staffing and scheduling investment, Smart Queue order sequencing, and restoration of the coffeehouse experience. These capabilities are public; the proposed 20% reservation is not an announced policy.",
+          "id": "h4",
+          "sources": [
+            "https://about.starbucks.com/press/2026/back-to-starbucks-two-year-anniversary/"
+          ]
+        },
+        {
+          "claim": "Assumed operating authority: 50 pilot and 50 comparison company-operated cafés; weekdays 07:00–10:00; reserve 20% of measured 15-minute capacity for café orders. Price unchanged. Each pilot café may add at most two peak staff-hours per weekday. Rollback or narrower time windows are allowed; expansion beyond 50 is not.",
+          "id": "h5",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed economics: $3 contribution per incremental or lost transaction before additional staffing. Assume fully loaded incremental labor costs $30/hour for sensitivity calculations. Two added hours cost $60/store/day and require 20 genuinely incremental transactions to break even before other costs. No actual store margins, baselines or demand elasticities are supplied.",
+          "id": "h6",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed management problem: The operations lead is accountable for café service and labor spend; the digital lead for reliable pickup and repeat behavior; the finance lead for all-channel contribution. Optimizing one channel at another’s expense is not success. These are role tensions constructed for the game, not testimony from executives.",
+          "id": "h7",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed information rights: The team can instrument its own order attempts, offered pickup slots, completed orders, refunds, staffing hours and baseline-linked repeat purchases; it cannot see rivals’ transaction logs or know where a rejected mobile user ultimately buys. Available instrumentation is a capability, not already collected evidence.",
+          "id": "h8",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed decision rules: By round two seek at least a 20% adjusted café p90 wait reduction across 40 complete pairs. By round three require nonnegative daily contribution and no worse than a 3pp adjusted repeat decline with 1,000 complete customers per arm. Missing evidence cannot pass these gates.",
+          "id": "h9",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        }
+      ],
+      "incentives": [
+        "Restore a credible coffeehouse visit without sacrificing digital convenience (h1, h4).",
+        "Defend positive transaction momentum while earning back added labor through all-channel contribution (h2, h3, h6).",
+        "Make a reversible operational choice before the March decision deadline (h5, h9)."
+      ],
+      "red_lines": [
+        "Do not invent operating measurements or declare the economics gate passed from a better wait-time story alone (h6, h9).",
+        "Do not promise a national rollout or exceed the staffing cap (h5)."
+      ]
+    }
+  },
+  "created_at": "2026-09-12T12:16:13.593002+00:00",
+  "id": "job-659a154c465c4aadb5fde58f36a30226",
+  "included": [
+    "project.json#decision",
+    "dossiers/home.json",
+    "board/move-1.json"
+  ],
+  "job_hash": "f1367d620e33e3f40d9e89de7d68e44b64fc50590bdec6f125a205342e786c71",
+  "kind": "moves",
+  "mode": "agent",
+  "move": 2,
+  "package": "jobs/job-659a154c465c4aadb5fde58f36a30226.jobs.ep",
+  "project_id": "aea4062c-852f-45f1-b8bc-cbb7361701e1"
+}

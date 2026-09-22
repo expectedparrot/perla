@@ -1,0 +1,32 @@
+{
+  "attempt": 2,
+  "receipt": {
+    "actor_id": "home",
+    "move": 2,
+    "provenance": {
+      "origin": "simulation",
+      "model": "gpt-4.1",
+      "model_parameters": {
+        "model": "gpt-4.1",
+        "parameters": {
+          "frequency_penalty": 0,
+          "logprobs": false,
+          "max_tokens": 16000,
+          "presence_penalty": 0,
+          "reasoning_effort": null,
+          "temperature": 0.5,
+          "top_logprobs": 3,
+          "top_p": 1
+        },
+        "inference_service": "openai",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "LanguageModel"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rebuttals-home/results-2.ep",
+      "job_id": "job-1730a003d6394af3a8c9b1a748981792",
+      "manifest_hash": "9caa775cd0ae456040af92ef2faabb0ab973ced6e8d6a6c58ef55a36ce28e687",
+      "ingested_at": "2026-09-12T12:18:33.573410+00:00",
+      "answer_hash": "40ac7c275f78cb04851b3e91ce272e5e45e6515580db00f7576f3bfbcc28a4cf"
+    }
+  }
+}

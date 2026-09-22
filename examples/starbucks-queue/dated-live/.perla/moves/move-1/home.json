@@ -1,0 +1,47 @@
+{
+  "actor_id": "home",
+  "committed_at": "2026-09-12T12:15:06.222209+00:00",
+  "content": {
+    "actions": [
+      "Implement capacity-aware mobile pickup slot limits in 50 pilot cafés for weekdays 07:00–10:00 a.m. during January 2027, reserving 20% of measured 15-minute production capacity for in-café orders.",
+      "Instrument order attempt funnels, offered pickup slots, completed orders, and staffing hours in both pilot and comparison cafés to capture baseline and intervention effects for January 2027."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin may highlight their drive-thru and mobile order convenience, potentially targeting customers who are denied peak Starbucks mobile slots.",
+      "Some mobile customers may shift to competitors or change their time of visit if peak slots are unavailable, but the experiment will generate the evidence needed to quantify this effect.",
+      "Café customers may experience improved wait times, supporting Starbucks’ positioning as a coffeehouse destination."
+    ],
+    "rationale": "The pilot directly tests whether reserving 20% of peak capacity for in-café orders can meaningfully reduce wait times for café customers without sacrificing overall transaction momentum or contribution. This aligns with Starbucks’ strategic aim to restore the coffeehouse experience (h1, h4) while defending transaction growth and contribution (h2, h3, h6). Instrumentation is essential for credible measurement and for meeting round two evidence requirements (h8, h9). No changes to pricing or staffing policy are made yet, consistent with constraints and red lines (h5, h6).",
+    "resource_commitments": [
+      "Allocate up to two additional peak staff-hours per weekday per pilot café (max 2 hours × 5 days × 50 cafés = 500 staff-hours/week).",
+      "Dedicate digital and operations resources to instrument order attempts, slot offers, completions, refunds, and staffing in pilot and comparison cafés for January 2027."
+    ]
+  },
+  "content_hash": "b67c2807aa6fceccfcbd4178e1f540f5b48460a6e84e43a9b4eff439cde061cd",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "b67c2807aa6fceccfcbd4178e1f540f5b48460a6e84e43a9b4eff439cde061cd",
+    "ingested_at": "2026-09-12T12:15:06.222209+00:00",
+    "job_id": "job-34870514ef6b493f92d085adc8d9401d",
+    "manifest_hash": "58783edc6bfc9e984245813bc61191344449bbffdc1ad753f787c65c89e9bfbf",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-1-moves-home/results-1.ep"
+  }
+}

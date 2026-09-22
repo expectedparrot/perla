@@ -1,0 +1,148 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla ingest rebuttals --from round-3/rebuttals",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "ingest",
+      "rebuttals"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "run",
+        "description": "Advance the current adjudication phase.",
+        "mutating": true,
+        "networked": false,
+        "requires_approval": false,
+        "argv": [
+          "perla",
+          "adjudicate",
+          "resolve",
+          "--move",
+          "3"
+        ]
+      }
+    ],
+    "data": {
+      "imported": [
+        {
+          "actor_id": "buyer",
+          "move": 3,
+          "provenance": {
+            "origin": "simulation",
+            "model": "gemini-2.5-pro",
+            "model_parameters": {
+              "model": "gemini-2.5-pro",
+              "parameters": {
+                "maxOutputTokens": 16000,
+                "max_tokens": 16000,
+                "stopSequences": [],
+                "temperature": 0.5,
+                "thinking_budget": null,
+                "topK": 1,
+                "topP": 1
+              },
+              "inference_service": "google",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "gemini-2.5-pro"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/rebuttals/buyer.results.ep",
+            "job_id": "job-fbf9f8249d5648a098c4c7dfb5634bae",
+            "manifest_hash": "c5a7af8702fbbd9364dd92fb40e9e5a1a505f6b0ce2154197bb59d0fd36e544d",
+            "ingested_at": "2026-09-12T14:08:36.200781+00:00",
+            "answer_hash": "cac16fc9aa5fb8554c42977988667bfe1f65bde2e7b531969af51b88b26020fc"
+          }
+        },
+        {
+          "actor_id": "dunkin",
+          "move": 3,
+          "provenance": {
+            "origin": "simulation",
+            "model": "gpt-4.1-mini",
+            "model_parameters": {
+              "model": "gpt-4.1-mini",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              },
+              "inference_service": "openai",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "LanguageModel"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/rebuttals/dunkin.results.ep",
+            "job_id": "job-a3ad587b4f2a41fdb6887bd335011222",
+            "manifest_hash": "b1d63e67fe4186c020f80d044d29b3da3694538436b6aeb550d5730805acc2ab",
+            "ingested_at": "2026-09-12T14:08:36.894070+00:00",
+            "answer_hash": "a0186c07a08863a95d41f9bf2ace00a754460c776701e6fec518aa907c33ac15"
+          }
+        },
+        {
+          "actor_id": "dutch",
+          "move": 3,
+          "provenance": {
+            "origin": "simulation",
+            "model": "gemini-2.5-flash",
+            "model_parameters": {
+              "model": "gemini-2.5-flash",
+              "parameters": {
+                "maxOutputTokens": 16000,
+                "max_tokens": 16000,
+                "stopSequences": [],
+                "temperature": 0.5,
+                "thinking_budget": null,
+                "topK": 1,
+                "topP": 1
+              },
+              "inference_service": "google",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "gemini-2.5-flash"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/rebuttals/dutch.results.ep",
+            "job_id": "job-a67c5570173e4a6ebf93dae5e29452e8",
+            "manifest_hash": "3ec4c453af43f97e7fccb2be965ff27760df3538c9f79c7b127958b8cbeb208e",
+            "ingested_at": "2026-09-12T14:08:37.566344+00:00",
+            "answer_hash": "0f14df56e87b788b18c8ec2eff5547ffe15499462768b8c934d8c1a40309df3b"
+          }
+        },
+        {
+          "actor_id": "home",
+          "move": 3,
+          "provenance": {
+            "origin": "simulation",
+            "model": "gpt-4.1",
+            "model_parameters": {
+              "model": "gpt-4.1",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              },
+              "inference_service": "openai",
+              "edsl_version": "1.0.8.dev1",
+              "edsl_class_name": "LanguageModel"
+            },
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/rebuttals/home.results.ep",
+            "job_id": "job-981f2d3dc9f14146bd937bac9d10c714",
+            "manifest_hash": "ff63199ce397c1aa6e58a430a613737e4a0c086072d8ab86484715502da80242",
+            "ingested_at": "2026-09-12T14:08:38.224960+00:00",
+            "answer_hash": "581f979da13a25f532523d3fa61fa5d6f2f87451cb3addf96d0d12aaf433f46c"
+          }
+        }
+      ],
+      "already_ingested": []
+    }
+  }
+}

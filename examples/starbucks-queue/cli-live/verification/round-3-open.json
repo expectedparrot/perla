@@ -1,0 +1,44 @@
+{
+  "command": "/Users/johnhorton/tools/ep/perla/.venv/bin/perla adjudicate open --move 3 --output round-3/rulings",
+  "exit_code": 0,
+  "stdout": {
+    "schema_version": "1.0",
+    "ok": true,
+    "command": [
+      "adjudicate",
+      "open"
+    ],
+    "warnings": [],
+    "next_actions": [
+      {
+        "type": "facilitate",
+        "description": "Execute the control package externally and ingest rulings.",
+        "mutating": false,
+        "networked": false,
+        "requires_approval": false
+      }
+    ],
+    "data": {
+      "job_id": "job-36f0830a82694e8a8650f9519dcd2d63",
+      "package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/.perla/jobs/job-36f0830a82694e8a8650f9519dcd2d63.jobs.ep",
+      "move": 3,
+      "mode": "agent",
+      "reused": false,
+      "export": {
+        "directory": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/rulings",
+        "version": 1,
+        "project_id": "51bf44d9-5a70-45d0-90cb-4578f7302299",
+        "jobs": [
+          {
+            "job_id": "job-36f0830a82694e8a8650f9519dcd2d63",
+            "actor_id": "control",
+            "kind": "rulings",
+            "move": 3,
+            "package": "control.jobs.ep",
+            "results": "control.results.ep"
+          }
+        ]
+      }
+    }
+  }
+}

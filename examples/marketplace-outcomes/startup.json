@@ -1,0 +1,9 @@
+{
+  "facts": [
+    {"id": "s1", "claim": "The fictional entrant has eighteen months of runway and must demonstrate rapid managed-delivery growth before its next funding round", "sources": ["Fictional teaching assumption S1"]}
+  ],
+  "incentives": ["Maximize managed-delivery growth before the next venture round (s1)"],
+  "constraints": ["Eighteen months of cash runway without new funding (s1)"],
+  "capabilities": ["Subsidize early managed-delivery contracts from venture capital (s1)"],
+  "red_lines": ["Do not exhaust runway before a credible financing milestone (s1)"]
+}

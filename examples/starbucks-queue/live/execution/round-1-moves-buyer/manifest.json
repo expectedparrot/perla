@@ -1,0 +1,137 @@
+{
+  "actor_id": "buyer",
+  "actor_name": "Morning customers (composite)",
+  "actor_role": "wildcard",
+  "context": {
+    "board": {
+      "adjusted_cafe_wait_reduction_pct": null,
+      "assumed_contribution_per_transaction_usd": 3,
+      "assumed_loaded_labor_cost_per_hour_usd": 30,
+      "cafe_capacity_reservation_pct": 20,
+      "calendar_period": "January 2027",
+      "comparison_cafes": 50,
+      "comparison_cohort_complete_customers": 0,
+      "complete_store_pairs": 0,
+      "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+      "incremental_daily_contribution_usd": null,
+      "measured_capacity_per_15min": null,
+      "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+      "mobile_repeat_change_pp": null,
+      "peak_window": "Weekdays 07:00–10:00 local time",
+      "period_ends": {
+        "1": "2027-01-31",
+        "2": "2027-02-28",
+        "3": "2027-03-31"
+      },
+      "pilot_cafes": 50,
+      "pilot_cohort_complete_customers": 0,
+      "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+      "public_roster": [
+        "Starbucks (home)",
+        "Dutch Bros (competitor)",
+        "Dunkin (competitor)",
+        "Composite morning customers (assumed wildcard)"
+      ],
+      "public_strategy_history": []
+    },
+    "decision": {
+      "launch_period": "January 2027; a proposed experiment, not an announced Starbucks policy",
+      "months_per_move": 1,
+      "moves": 3,
+      "offer": "Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays",
+      "pricing": "Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure",
+      "scope": "50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores",
+      "segment": "50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés",
+      "statement": "Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full."
+    },
+    "dossier": {
+      "capabilities": [
+        "Choose a brand, channel, later time, home preparation or no purchase based on the public offer (b2, b7, b8).",
+        "State contingent choices separately for commuters, habitual app users and café visitors, without inventing population shares (b3, b4, b5, b6)."
+      ],
+      "constraints": [
+        "Each occasion has its own explicit time and spending ceiling; do not average them into a universal customer (b4, b5, b6).",
+        "No measured segment weights, switching probability or real participant testimony exists (b1, b3, b8)."
+      ],
+      "facts": [
+        {
+          "claim": "Reported category context: NCA’s June 2026 report says 47% of American adults consumed specialty coffee in the past day. Among past-day specialty drinkers, 36% had coffee prepared outside the home, versus 23% among traditional coffee drinkers. These national aggregates are not local switching probabilities.",
+          "id": "b1",
+          "sources": [
+            "https://www.ncausa.org/newsroom/Specialty-Coffee-Consumption-Remains-at-Record-High"
+          ]
+        },
+        {
+          "claim": "Reported choices: Dutch Bros Order Ahead is available at participating shops; Dunkin offers app ordering and rewards. A credible alternative depends on the particular route and location, not merely national brand availability.",
+          "id": "b2",
+          "sources": [
+            "https://www.dutchbros.com/order-ahead/"
+          ]
+        },
+        {
+          "claim": "Assumed character: This player is a composite of morning purchase occasions, not a single person controlling the market and not a recruited survey panel. It may describe different segment choices but may not report votes or measured percentages.",
+          "id": "b3",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed commuter occasion: A weekday commuter buys before a fixed work start, has 10 minutes of discretionary travel-and-wait time, and an $8 coffee-and-light-breakfast ceiling. A 4-minute detour consumes real slack. These figures are illustrative constraints, not survey findings.",
+          "id": "b4",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed habitual-app occasion: A repeat Starbucks buyer values a familiar customization and prepaid ordering, allows an 8-minute pickup delay when communicated before paying, and may switch temporarily after two unreliable mornings. Loyalty friction exists, but its monetary value and prevalence are unknown.",
+          "id": "b5",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed café occasion: A customer intends to sit for 25 minutes before a meeting and has a $7 drink budget. Predictable handoff and an available place to sit matter; a cheap drive-through is not a complete substitute for this occasion.",
+          "id": "b6",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed outside option and household economics: Some mornings the customer can prepare coffee at home using an illustrative $1 marginal ingredient cost; time, preparation equipment and taste differ. Skipping the purchase or buying later is permissible. These examples do not establish local market shares.",
+          "id": "b7",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        },
+        {
+          "claim": "Assumed information rights: Customers see quoted pickup times, prices, offers, public store conditions and their own experience. They do not know confidential staffing plans, rivals’ margins, adjudicator confidence, or other customers’ behavior. No segment weights or demand elasticity have been measured.",
+          "id": "b8",
+          "sources": [
+            "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+          ]
+        }
+      ],
+      "incentives": [
+        "Minimize the total cost of the actual occasion: spending, detour, waiting and risk of being late (b4, b5, b6).",
+        "Preserve an enjoyable and reliable routine, with home preparation and postponement as real alternatives (b5, b7)."
+      ],
+      "red_lines": [
+        "Do not claim to have interviewed customers or treat model choices as observed demand (b3).",
+        "Do not read private competitor dossiers or claim that a national consumption statistic predicts local churn (b1, b8)."
+      ]
+    }
+  },
+  "created_at": "2026-09-12T10:49:01.230238+00:00",
+  "id": "job-d3d457e34cd043e0a6a123e461a22e0c",
+  "included": [
+    "project.json#decision",
+    "dossiers/buyer.json",
+    "board/move-0.json"
+  ],
+  "job_hash": "be51c42add6db47928cd176667057b5012a4ab7dd7e1f2d3a70cdfdcf6f37a75",
+  "kind": "moves",
+  "mode": "agent",
+  "move": 1,
+  "package": "jobs/job-d3d457e34cd043e0a6a123e461a22e0c.jobs.ep",
+  "project_id": "47d39ce5-de29-4fef-b12f-ba185967f991"
+}

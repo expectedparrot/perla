@@ -1,0 +1,13 @@
+{
+  "context_hash": "2749ce74d98eecfac1ef894264e00cab3bb2d0488b25810e0aa0cee819406b83",
+  "job_id": "job-402e6c1b67294d12a1ffb03bfede9887",
+  "move": 2,
+  "opened_at": "2026-09-12T12:16:54.498727+00:00",
+  "rulings": {
+    "r2-buyer-behavior": "25ddae00b63991215673db640137da7eb55bed34318e5c2e0d3df50fea885367",
+    "r2-dunkin-actions": "54aa5b528bb0a598ffcc1265c3a7bb2788f759d367641e7b48b3e3835e722c8e",
+    "r2-dutch-actions": "bdf241d8f48163637a5b86a2b7307832fca7b9758c79081081cadebec2426ea9",
+    "r2-home-actions": "6c103a9ae30446f40dbe352b8741a8215485bf0ec5cfd3539caa9e4ddb771311"
+  },
+  "status": "awaiting_rebuttals"
+}

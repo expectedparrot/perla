@@ -1,0 +1,9 @@
+{
+  "facts": [
+    {"id": "h1", "claim": "The fictional home company has twenty qualified delivery teams and a profitable repeat-client marketplace", "sources": ["Fictional teaching assumption H1"]}
+  ],
+  "incentives": ["Protect repeat-client revenue while expanding managed delivery margins (h1)"],
+  "constraints": ["Twenty qualified teams bound the initial pilot capacity (h1)"],
+  "capabilities": ["Established repeat-client relationships (h1)"],
+  "red_lines": ["Do not sacrifice the profitable repeat-client marketplace (h1)"]
+}

@@ -1,0 +1,1499 @@
+{
+  "actor_id": "control",
+  "actor_name": "Neutral control",
+  "actor_role": "control",
+  "context": {
+    "control": {
+      "actions": {
+        "m2.buyer.a1": {
+          "action": "Habitual Starbucks app users who experienced significant mobile order delays (>8 minutes) at pilot stores in January will begin February by trying competitor mobile apps, drawn by promotions like the Dutch Bros $1 Order Ahead offer. Their return to Starbucks is now contingent on the quality of the competitor's service.",
+          "actor_id": "buyer"
+        },
+        "m2.buyer.a2": {
+          "action": "In-store café visitors at the pilot Starbucks locations, having experienced shorter and more predictable wait times in January, will reinforce this behavior in February. We will choose these locations more frequently for occasions that value a reliable in-store experience.",
+          "actor_id": "buyer"
+        },
+        "m2.buyer.a3": {
+          "action": "Time-pressed commuters will continue to check the Starbucks app before committing, but will more readily divert to Dutch Bros or Dunkin' on any morning the quoted pickup time creates a risk of being late.",
+          "actor_id": "buyer"
+        },
+        "m2.dunkin.a1": {
+          "action": "Launch a $1 discount breakfast bundle offer through the Dunkin app at all 15 consenting franchise stores near the Starbucks pilot cafés during the February 2027 morning peak (7-10 a.m. weekdays).",
+          "actor_id": "dunkin"
+        },
+        "m2.dunkin.a2": {
+          "action": "Allocate $12,000 of the $20,000 monthly budget to incremental morning labor to improve order fulfillment speed and reduce wait times, aiming to compete with Starbucks' capacity-aware mobile pickup slots.",
+          "actor_id": "dunkin"
+        },
+        "m2.dunkin.a3": {
+          "action": "Use $8,000 for targeted local app advertising and promotions to drive repeat visits and encourage use of the $1 discount bundle, with monitoring of basket contribution and repeat customer behavior.",
+          "actor_id": "dunkin"
+        },
+        "m2.dunkin.a4": {
+          "action": "Set a stop rule to discontinue the discount offer at any store where the store-level contribution margin worsens after one month.",
+          "actor_id": "dunkin"
+        },
+        "m2.dutch.a1": {
+          "action": "Continue to allocate $15,000/month for incremental morning labor at 12 shops near Starbucks pilot cafés.",
+          "actor_id": "dutch"
+        },
+        "m2.dutch.a2": {
+          "action": "Continue to allocate $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near Starbucks pilot cafés.",
+          "actor_id": "dutch"
+        },
+        "m2.home.a1": {
+          "action": "Continue the 20% peak café capacity reservation and mobile order admission limits in the 50 pilot cafés through February 2027, maintaining the current weekday 07:00–10:00 window.",
+          "actor_id": "home"
+        },
+        "m2.home.a2": {
+          "action": "Within the pilot, begin a controlled test in 10 of the 50 cafés: dynamically release any unused reserved café capacity to mobile orders if, after the first 60 minutes of peak, café demand is tracking below the 20% allocation (e.g., if less than 15% of capacity has actually been used for café orders by 08:00, release half of the remaining reserved slots for mobile pickup for the rest of the peak window).",
+          "actor_id": "home"
+        }
+      },
+      "actors": [
+        {
+          "id": "buyer",
+          "mode": "agent",
+          "name": "Morning customers (composite)",
+          "role": "wildcard"
+        },
+        {
+          "id": "dunkin",
+          "mode": "agent",
+          "name": "Dunkin",
+          "role": "competitor"
+        },
+        {
+          "id": "dutch",
+          "mode": "agent",
+          "name": "Dutch Bros",
+          "role": "competitor"
+        },
+        {
+          "id": "home",
+          "mode": "agent",
+          "name": "Starbucks",
+          "role": "home"
+        }
+      ],
+      "board": {
+        "adjusted_cafe_wait_reduction_pct": null,
+        "assumed_contribution_per_transaction_usd": 3,
+        "assumed_loaded_labor_cost_per_hour_usd": 30,
+        "cafe_capacity_reservation_pct": 20,
+        "calendar_period": "January 2027",
+        "comparison_cafes": 50,
+        "comparison_cohort_complete_customers": 0,
+        "complete_store_pairs": 0,
+        "evidence_status": "Public research through 2026-09-12. Future actions and outcomes are a model simulation. No actual pilot store or customer records are supplied.",
+        "incremental_daily_contribution_usd": null,
+        "measured_capacity_per_15min": null,
+        "measurement_rule": "Null means unmeasured. Keep real measurement fields null and complete observed sample counts at zero without sourced operating records. Put hypothetical estimates in separately named simulated_* fields with assumptions, never in observed fields. Maintain a concise public_strategy_history of observable implemented actions and consequences so later players can adapt. Do not publish private budgets, dossiers or unseen internal intentions. Advance calendar_period to the end of the current month.",
+        "mobile_repeat_change_pp": null,
+        "peak_window": "Weekdays 07:00–10:00 local time",
+        "period_ends": {
+          "1": "2027-01-31",
+          "2": "2027-02-28",
+          "3": "2027-03-31"
+        },
+        "pilot_cafes": 50,
+        "pilot_cohort_complete_customers": 0,
+        "public_market_context": "Starbucks is investing in coffeehouse service, staffing and Smart Queue while US transactions are growing. Dutch Bros offers drive-through beverages and Order Ahead at participating shops. Dunkin offers coffee-and-food value and mobile ordering through a franchise network. Some morning purchases can shift to home preparation or disappear. Local overlaps and customer segments in this exercise are assumptions.",
+        "public_roster": [
+          "Starbucks (home)",
+          "Dutch Bros (competitor)",
+          "Dunkin (competitor)",
+          "Composite morning customers (assumed wildcard)"
+        ],
+        "public_strategy_history": [
+          {
+            "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+            "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+            "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+            "period": "January 2027",
+            "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+          }
+        ]
+      },
+      "criteria": [
+        {
+          "condition": "The baseline-adjusted reduction in peak café order-to-handoff p90 wait is less than 20 percent by move two across at least forty complete pilot/comparison store pairs",
+          "deadline_move": 2,
+          "id": "service",
+          "observable": "adjusted_cafe_wait_reduction_pct; equally weighted store-pair changes in p90 wait, comparing peak weekday windows before and after the pilot; complete_store_pairs >= 40",
+          "threshold": "Below 20% reduction; fewer than 40 complete pairs or missing baseline/wait evidence is unevaluated"
+        },
+        {
+          "condition": "Adjusted daily contribution per pilot café after lost orders, substitution between channels and incremental staffing is negative by move three across at least forty complete store pairs",
+          "deadline_move": 3,
+          "id": "economics",
+          "observable": "incremental_daily_contribution_usd after matched-store baseline adjustment, including all channels and added labor; complete_store_pairs >= 40",
+          "threshold": "Below $0 per café per day; incomplete transaction or cost evidence is unevaluated"
+        },
+        {
+          "condition": "Thirty-day repeat purchase among baseline mobile customers falls by more than three percentage points relative to the comparison-cohort change by move three",
+          "deadline_move": 3,
+          "id": "retention",
+          "observable": "mobile_repeat_change_pp; compare baseline-defined cohorts across all Starbucks purchase channels, with at least 1000 customers per arm and complete 30-day follow-up",
+          "threshold": "Below -3 percentage points; incomplete cohorts or missing follow-up is unevaluated"
+        }
+      ],
+      "decision": {
+        "launch_period": "January 2027; a proposed experiment, not an announced Starbucks policy",
+        "months_per_move": 1,
+        "moves": 3,
+        "offer": "Capacity-aware mobile pickup slots with a protected café-order allocation from 7–10 a.m. on weekdays",
+        "pricing": "Keep beverage prices unchanged; assumed $3 contribution per incremental or lost transaction before added staffing, not a reported company figure",
+        "scope": "50 pilot cafés and 50 comparison cafés; reserve 20% of measured 15-minute capacity for café orders at peak; no automatic transfer of the policy to other stores",
+        "segment": "50 US company-operated cafés with nearby Dutch Bros and Dunkin alternatives, paired with 50 comparison cafés",
+        "statement": "Pilot peak-time mobile-order admission limits in 50 US Starbucks cafés during January–March 2027, reserving 20% of measured production capacity for café orders and offering later pickup slots when the mobile allocation is full."
+      },
+      "dossiers": {
+        "buyer": {
+          "capabilities": [
+            "Choose a brand, channel, later time, home preparation or no purchase based on the public offer (b2, b7, b8).",
+            "State contingent choices separately for commuters, habitual app users and café visitors, without inventing population shares (b3, b4, b5, b6)."
+          ],
+          "constraints": [
+            "Each occasion has its own explicit time and spending ceiling; do not average them into a universal customer (b4, b5, b6).",
+            "No measured segment weights, switching probability or real participant testimony exists (b1, b3, b8)."
+          ],
+          "facts": [
+            {
+              "claim": "Reported category context: NCA’s June 2026 report says 47% of American adults consumed specialty coffee in the past day. Among past-day specialty drinkers, 36% had coffee prepared outside the home, versus 23% among traditional coffee drinkers. These national aggregates are not local switching probabilities.",
+              "id": "b1",
+              "sources": [
+                "https://www.ncausa.org/newsroom/Specialty-Coffee-Consumption-Remains-at-Record-High"
+              ]
+            },
+            {
+              "claim": "Reported choices: Dutch Bros Order Ahead is available at participating shops; Dunkin offers app ordering and rewards. A credible alternative depends on the particular route and location, not merely national brand availability.",
+              "id": "b2",
+              "sources": [
+                "https://www.dutchbros.com/order-ahead/"
+              ]
+            },
+            {
+              "claim": "Assumed character: This player is a composite of morning purchase occasions, not a single person controlling the market and not a recruited survey panel. It may describe different segment choices but may not report votes or measured percentages.",
+              "id": "b3",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed commuter occasion: A weekday commuter buys before a fixed work start, has 10 minutes of discretionary travel-and-wait time, and an $8 coffee-and-light-breakfast ceiling. A 4-minute detour consumes real slack. These figures are illustrative constraints, not survey findings.",
+              "id": "b4",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed habitual-app occasion: A repeat Starbucks buyer values a familiar customization and prepaid ordering, allows an 8-minute pickup delay when communicated before paying, and may switch temporarily after two unreliable mornings. Loyalty friction exists, but its monetary value and prevalence are unknown.",
+              "id": "b5",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed café occasion: A customer intends to sit for 25 minutes before a meeting and has a $7 drink budget. Predictable handoff and an available place to sit matter; a cheap drive-through is not a complete substitute for this occasion.",
+              "id": "b6",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed outside option and household economics: Some mornings the customer can prepare coffee at home using an illustrative $1 marginal ingredient cost; time, preparation equipment and taste differ. Skipping the purchase or buying later is permissible. These examples do not establish local market shares.",
+              "id": "b7",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed information rights: Customers see quoted pickup times, prices, offers, public store conditions and their own experience. They do not know confidential staffing plans, rivals’ margins, adjudicator confidence, or other customers’ behavior. No segment weights or demand elasticity have been measured.",
+              "id": "b8",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            }
+          ],
+          "incentives": [
+            "Minimize the total cost of the actual occasion: spending, detour, waiting and risk of being late (b4, b5, b6).",
+            "Preserve an enjoyable and reliable routine, with home preparation and postponement as real alternatives (b5, b7)."
+          ],
+          "red_lines": [
+            "Do not claim to have interviewed customers or treat model choices as observed demand (b3).",
+            "Do not read private competitor dossiers or claim that a national consumption statistic predicts local churn (b1, b8)."
+          ]
+        },
+        "dunkin": {
+          "capabilities": [
+            "Design an opt-in morning bundle or app offer with local stop rules and cost accounting (k3, k5, k6).",
+            "Measure basket contribution and repeat visits after discounts expire (k7, k8)."
+          ],
+          "constraints": [
+            "Only the 15 consenting stores are controllable; the group cannot impose a national price (k5).",
+            "The $20,000 monthly envelope includes incentives and staffing; actual unit margins remain unknown (k2, k6).",
+            "No inferred access to competitors’ customer records or automatic corporate reimbursement (k8)."
+          ],
+          "facts": [
+            {
+              "claim": "Reported history and footprint: Founded in 1950, Dunkin describes more than 14,000 restaurants in nearly 40 markets. Its franchise footprint and routine coffee-and-food occasion provide a different operating model from a company-run café pilot.",
+              "id": "k1",
+              "sources": [
+                "https://www.dunkindonuts.com/about-us/"
+              ]
+            },
+            {
+              "claim": "Reported ownership and transaction economics: Inspire completed the acquisition of Dunkin Brands in December 2020 in a transaction valued at $11.3 billion including assumed debt. That figure is an acquisition value for Dunkin Brands, not Dunkin revenue, available cash or franchisee profit. Current local margins are not supplied.",
+              "id": "k2",
+              "sources": [
+                "https://inspirebrands.com/inspire-brands-completes-acquisition-of-dunkin-brands/"
+              ]
+            },
+            {
+              "claim": "Reported commercial capability: The Dunkin app supports advance ordering, rewards and offers. Consumer terms and participation vary; app capability alone does not demonstrate shorter queues.",
+              "id": "k3",
+              "sources": [
+                "https://www.dunkindonuts.com/en/mobile-app"
+              ]
+            },
+            {
+              "claim": "Reported positioning: A September 2026 campaign advertised a $6 breakfast Meal Deal. It supplies evidence of a coffee-and-food value proposition; neither that January 2027 price nor universal franchise participation is assumed.",
+              "id": "k4",
+              "sources": [
+                "https://news.dunkindonuts.com/blog/ttailgate-season-runs-on-dunkin-september2026"
+              ]
+            },
+            {
+              "claim": "Assumed authority: The player represents a consenting local group of 15 franchised restaurants near some pilot cafés. It can coordinate a local opt-in offer and shared marketing but cannot order all US franchisees to participate. No new sites within three months.",
+              "id": "k5",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed finances: Combined incremental local promotion and staffing spend is capped at $20,000 per month. For a proposed $1 discount, test a $2–$4 pre-discount contribution range; these are illustrative sensitivities, not disclosed unit economics. Franchise operators bear local labor and discount costs unless an explicit reimbursement is budgeted.",
+              "id": "k6",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed backstory: The operator group has disagreed over prior offer redemptions that brought traffic without profitable food attachment. Its immediate priority is a repeatable breakfast basket and predictable pickup, with an explicit exit for stores whose economics worsen. This is a constructed governance tension.",
+              "id": "k7",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed information rights: Participating stores can see their own basket mix, discount cost, staffing and repeat rewards visits, and public competitor offers. They cannot see Starbucks’ mobile customer identity or confidential café capacity. National campaign coordination and franchisor reimbursement are not granted.",
+              "id": "k8",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            }
+          ],
+          "incentives": [
+            "Win the whole breakfast occasion through a predictable, attractive coffee-and-food basket (k3, k4).",
+            "Keep participating franchisees economically willing to continue; redemption alone is not profit (k5, k6, k7)."
+          ],
+          "red_lines": [
+            "Do not describe acquisition value as operating revenue or promotion funding (k2).",
+            "Do not claim a local discount works without accounting for full-price purchases that would have occurred anyway (k6, k7)."
+          ]
+        },
+        "dutch": {
+          "capabilities": [
+            "Run a geographically limited app offer and shift labor toward a measurable morning bottleneck (d4, d5).",
+            "Measure redeemed offers and subsequent full-price visits in the own-brand cohort (d8)."
+          ],
+          "constraints": [
+            "12 shops, a $30,000 monthly incremental envelope and no new construction within the game (d5, d6).",
+            "Order Ahead availability is location-dependent; there is no measured spare capacity or proven local acquisition cost (d4, d6).",
+            "Public observation does not reveal individual rejected Starbucks customers (d8)."
+          ],
+          "facts": [
+            {
+              "claim": "Reported history: Brothers Dane and Travis Boersma founded Dutch Bros in Grants Pass, Oregon, in 1992. The brand grew from an espresso pushcart around beverages and personal service; drive-through convenience is central to its operating identity.",
+              "id": "d1",
+              "sources": [
+                "https://investors.dutchbros.com/overview/"
+              ]
+            },
+            {
+              "claim": "Reported financials: Q2 2026 total revenue was $550.9 million, up 32.5% from $415.8 million. Company-operated same-shop sales grew 8.3%, including 3.4% transaction growth. Company revenue and company-operated comparable sales are distinct measures.",
+              "id": "d2",
+              "sources": [
+                "https://investors.dutchbros.com/financials/quarterly-results/"
+              ]
+            },
+            {
+              "claim": "Reported expansion: Dutch Bros opened 48 shops in Q2 2026, 44 company-operated. Inference: managers must preserve existing-shop execution while allocating staff and attention to growth. This does not establish spare local capacity.",
+              "id": "d3",
+              "sources": [
+                "https://investors.dutchbros.com/financials/quarterly-results/"
+              ]
+            },
+            {
+              "claim": "Reported capability: Dutch Bros offers app-based Order Ahead at participating shops. Pickup availability varies by location. This does not establish that every location in a hypothetical pilot market supports the feature.",
+              "id": "d4",
+              "sources": [
+                "https://www.dutchbros.com/order-ahead/"
+              ]
+            },
+            {
+              "claim": "Assumed local remit: The player controls 12 participating company-operated shops near some of the Starbucks pilot cafés. It can adjust shifts, app messaging and local acquisition offers, but cannot open a new shop within the three-round horizon.",
+              "id": "d5",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed commercial envelope: Maximum incremental acquisition and labor budget $30,000 across these 12 shops per month. A $1 trial credit is a permitted option, not a precommitted action. Local variable contribution, queue capacity and cohort acquisition cost are unknown and must be estimated or measured before scaling.",
+              "id": "d6",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed backstory: A regional operator has spent the preceding quarter integrating new staff and protecting service consistency. The local team wants repeat demand, not a one-week promotion that overwhelms the lane. This managerial history is scenario design, not reported company information.",
+              "id": "d7",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed information rights: The operator sees its own lane times, app orders, rewards redemptions and repeat visits; it sees public Starbucks slot availability and public offers. It cannot target a verified list of customers rejected inside Starbucks’ app or read either rival’s private budget.",
+              "id": "d8",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            }
+          ],
+          "incentives": [
+            "Turn frustrated morning demand into repeat visits while protecting the service proposition (d1, d4).",
+            "Make existing-shop growth durable as expansion absorbs managerial capacity (d2, d3, d7)."
+          ],
+          "red_lines": [
+            "Do not assume every lost Starbucks order becomes a Dutch Bros order (d8).",
+            "Do not subsidize demand beyond the monthly envelope or promise a pickup time unsupported by local throughput (d6, d7)."
+          ]
+        },
+        "home": {
+          "capabilities": [
+            "Use existing sequencing and staffing practices as the implementation base (h4).",
+            "Offer honest later pickup times, test narrower reservation windows and release unused capacity within the pilot (h5).",
+            "Build paired-store measurement, attempt-to-purchase funnels and baseline cohorts using internal instrumentation (h8, h9)."
+          ],
+          "constraints": [
+            "The two-hour staff allowance, unchanged prices and 50-store limit are binding game constraints (h5).",
+            "Segment margin is not a local cost curve; no store p90 waits or mobile churn elasticity is known (h2, h6, h8).",
+            "A booked later slot is not revenue until a purchase completes; competitor substitution is only partly observable (h8)."
+          ],
+          "facts": [
+            {
+              "claim": "Reported history: Starbucks began in Seattle in 1971. Its evolution from a bean merchant into a coffeehouse makes the in-store experience part of the proposition, not simply a distribution expense. The strategic implication is an author inference.",
+              "id": "h1",
+              "sources": [
+                "https://about.starbucks.com/about-us/"
+              ]
+            },
+            {
+              "claim": "Reported financials: Q3 fiscal 2026 North America revenue was $7,395.1 million, operating income $1,008.9 million and operating margin 13.6%. These are segment figures, not pilot-store unit economics.",
+              "id": "h2",
+              "sources": [
+                "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx"
+              ]
+            },
+            {
+              "claim": "Reported demand: US comparable sales increased 7.9% and comparable transactions 4.2% in Q3 fiscal 2026. This case tests sustaining growth; it does not assume that current transactions are declining.",
+              "id": "h3",
+              "sources": [
+                "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx"
+              ]
+            },
+            {
+              "claim": "Reported strategy: Back to Starbucks combines staffing and scheduling investment, Smart Queue order sequencing, and restoration of the coffeehouse experience. These capabilities are public; the proposed 20% reservation is not an announced policy.",
+              "id": "h4",
+              "sources": [
+                "https://about.starbucks.com/press/2026/back-to-starbucks-two-year-anniversary/"
+              ]
+            },
+            {
+              "claim": "Assumed operating authority: 50 pilot and 50 comparison company-operated cafés; weekdays 07:00–10:00; reserve 20% of measured 15-minute capacity for café orders. Price unchanged. Each pilot café may add at most two peak staff-hours per weekday. Rollback or narrower time windows are allowed; expansion beyond 50 is not.",
+              "id": "h5",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed economics: $3 contribution per incremental or lost transaction before additional staffing. Assume fully loaded incremental labor costs $30/hour for sensitivity calculations. Two added hours cost $60/store/day and require 20 genuinely incremental transactions to break even before other costs. No actual store margins, baselines or demand elasticities are supplied.",
+              "id": "h6",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed management problem: The operations lead is accountable for café service and labor spend; the digital lead for reliable pickup and repeat behavior; the finance lead for all-channel contribution. Optimizing one channel at another’s expense is not success. These are role tensions constructed for the game, not testimony from executives.",
+              "id": "h7",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed information rights: The team can instrument its own order attempts, offered pickup slots, completed orders, refunds, staffing hours and baseline-linked repeat purchases; it cannot see rivals’ transaction logs or know where a rejected mobile user ultimately buys. Available instrumentation is a capability, not already collected evidence.",
+              "id": "h8",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            },
+            {
+              "claim": "Assumed decision rules: By round two seek at least a 20% adjusted café p90 wait reduction across 40 complete pairs. By round three require nonnegative daily contribution and no worse than a 3pp adjusted repeat decline with 1,000 complete customers per arm. Missing evidence cannot pass these gates.",
+              "id": "h9",
+              "sources": [
+                "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+              ]
+            }
+          ],
+          "incentives": [
+            "Restore a credible coffeehouse visit without sacrificing digital convenience (h1, h4).",
+            "Defend positive transaction momentum while earning back added labor through all-channel contribution (h2, h3, h6).",
+            "Make a reversible operational choice before the March decision deadline (h5, h9)."
+          ],
+          "red_lines": [
+            "Do not invent operating measurements or declare the economics gate passed from a better wait-time story alone (h6, h9).",
+            "Do not promise a national rollout or exceed the staffing cap (h5)."
+          ]
+        }
+      },
+      "models": [],
+      "moves": [
+        {
+          "actor_id": "buyer",
+          "committed_at": "2026-09-12T12:16:53.592159+00:00",
+          "content": {
+            "actions": [
+              "Habitual Starbucks app users who experienced significant mobile order delays (>8 minutes) at pilot stores in January will begin February by trying competitor mobile apps, drawn by promotions like the Dutch Bros $1 Order Ahead offer. Their return to Starbucks is now contingent on the quality of the competitor's service.",
+              "In-store café visitors at the pilot Starbucks locations, having experienced shorter and more predictable wait times in January, will reinforce this behavior in February. We will choose these locations more frequently for occasions that value a reliable in-store experience.",
+              "Time-pressed commuters will continue to check the Starbucks app before committing, but will more readily divert to Dutch Bros or Dunkin' on any morning the quoted pickup time creates a risk of being late."
+            ],
+            "expected_responses": [
+              "We expect Starbucks to see a mixed signal from the pilot: happier in-store customers and higher in-store sales, but a potential drop in mobile order volume and the loss of some previously loyal app users to competitors. They might adjust the 20% capacity reservation.",
+              "We expect Dutch Bros and Dunkin' to see a measurable increase in new customer trials and mobile orders at their locations near the pilot stores. They will likely continue their promotions to try and make our new habits stick."
+            ],
+            "rationale": "My choices are a direct reaction to the new reality at the pilot Starbucks stores and the offers from competitors. The Starbucks policy has improved the experience for one type of visit (in-café) at the expense of another (peak-time mobile orders). For those of us who rely on the app for a quick pickup, the new system can be unreliable. When competitors like Dutch Bros and Dunkin' make it easy and cheap to try their service, it's a logical time to explore new routines. Conversely, when I actually want to sit in a café, the pilot stores have become more pleasant and reliable, so I'll go there more often for that purpose.",
+            "resource_commitments": [
+              "Attention and Time: We are willing to spend the time to download a new app and learn a new ordering routine if the incentive is strong enough (like a $1 offer) and our current routine is broken.",
+              "Daily Spend: Our daily budget for coffee and breakfast will be reallocated to the brand that best meets the needs of a specific morning's occasion—be it speed, value, or in-store experience."
+            ]
+          },
+          "content_hash": "9dc32d969421a2563a650a198df0880835440f5b0ae9dc045be856cd6f3abfa7",
+          "move": 2,
+          "provenance": {
+            "answer_hash": "9dc32d969421a2563a650a198df0880835440f5b0ae9dc045be856cd6f3abfa7",
+            "ingested_at": "2026-09-12T12:16:53.592159+00:00",
+            "job_id": "job-eca814078b344531a7bb45d9dfd4e359",
+            "manifest_hash": "3db46255eaee9987e5a90a8cd282be592c682d18efd05b440cc5728a630f6e39",
+            "model": "gemini-2.5-pro",
+            "model_parameters": {
+              "edsl_class_name": "gemini-2.5-pro",
+              "edsl_version": "1.0.8.dev1",
+              "inference_service": "google",
+              "model": "gemini-2.5-pro",
+              "parameters": {
+                "maxOutputTokens": 16000,
+                "stopSequences": [],
+                "temperature": 0.5,
+                "thinking_budget": null,
+                "topK": 1,
+                "topP": 1
+              }
+            },
+            "origin": "simulation",
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-moves-buyer/results-1.ep"
+          }
+        },
+        {
+          "actor_id": "dunkin",
+          "committed_at": "2026-09-12T12:16:53.791830+00:00",
+          "content": {
+            "actions": [
+              "Launch a $1 discount breakfast bundle offer through the Dunkin app at all 15 consenting franchise stores near the Starbucks pilot cafés during the February 2027 morning peak (7-10 a.m. weekdays).",
+              "Allocate $12,000 of the $20,000 monthly budget to incremental morning labor to improve order fulfillment speed and reduce wait times, aiming to compete with Starbucks' capacity-aware mobile pickup slots.",
+              "Use $8,000 for targeted local app advertising and promotions to drive repeat visits and encourage use of the $1 discount bundle, with monitoring of basket contribution and repeat customer behavior.",
+              "Set a stop rule to discontinue the discount offer at any store where the store-level contribution margin worsens after one month."
+            ],
+            "expected_responses": [
+              "Starbucks may maintain or tighten their 20% capacity reservation for in-café orders, possibly improving mobile pickup slot availability or further optimizing staffing.",
+              "Dutch Bros may respond by increasing their geo-targeted $1 Order Ahead offers or adding incremental labor to maintain competitive speed and value.",
+              "Some customers may shift from Starbucks or Dutch Bros to Dunkin due to the value bundle and improved order predictability.",
+              "Franchisees will monitor store-level economics closely and may opt out of the discount if contribution margins deteriorate."
+            ],
+            "rationale": "The $1 discount bundle leverages Dunkin's value positioning and app capabilities to attract time-sensitive breakfast customers who might otherwise try Starbucks' capacity-aware mobile ordering. Allocating most of the budget to labor addresses the need for predictable and fast order fulfillment, which is critical to prevent customer abandonment and competitor switching. Targeted marketing supports repeat usage to build a sustainable basket. The stop rule protects franchisees from unprofitable promotions, consistent with prior concerns about traffic without profitable food attachment.",
+            "resource_commitments": [
+              "$12,000/month for incremental morning labor costs across 15 stores in February 2027",
+              "$8,000/month for targeted local app advertising and promotional incentives",
+              "Offer a $1 discount on a coffee-and-food breakfast bundle via the Dunkin app during 7-10 a.m. weekdays"
+            ]
+          },
+          "content_hash": "41d3773b398aebfec709c8a35ae82bbf8bb0061f9bd46276b9b48c4432c60f9d",
+          "move": 2,
+          "provenance": {
+            "answer_hash": "41d3773b398aebfec709c8a35ae82bbf8bb0061f9bd46276b9b48c4432c60f9d",
+            "ingested_at": "2026-09-12T12:16:53.791830+00:00",
+            "job_id": "job-488bb7f6ab984f44b7c5dff5cd2d47ae",
+            "manifest_hash": "32c3e9223b035fbcd988ae44187f226dd0e1ebf50b5121f41e632c140899484a",
+            "model": "gpt-4.1-mini",
+            "model_parameters": {
+              "edsl_class_name": "LanguageModel",
+              "edsl_version": "1.0.8.dev1",
+              "inference_service": "openai",
+              "model": "gpt-4.1-mini",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              }
+            },
+            "origin": "simulation",
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-moves-dunkin/results-1.ep"
+          }
+        },
+        {
+          "actor_id": "dutch",
+          "committed_at": "2026-09-12T12:16:54.043651+00:00",
+          "content": {
+            "actions": [
+              "Continue to allocate $15,000/month for incremental morning labor at 12 shops near Starbucks pilot cafés.",
+              "Continue to allocate $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near Starbucks pilot cafés."
+            ],
+            "expected_responses": [
+              "Starbucks will likely continue to focus on its internal pilot metrics and observe the effects of its capacity reservation policy. They may notice some shifts in market share but are unlikely to alter their pre-planned pilot strategy in February.",
+              "Dunkin will continue to monitor the performance of its $6 breakfast Meal Deal. If they observe a significant shift in morning traffic towards drive-through competitors, they might consider adjusting their own offers or service, but their primary focus remains on their value and food proposition."
+            ],
+            "rationale": "Starbucks' capacity reservation policy remains in effect for February 2027, creating an ongoing opportunity to capture customers experiencing delays or abandonment. Our initial actions in January were designed to capitalize on this by improving service speed and attracting new users to our convenient drive-through and Order Ahead options. Without new data from January to suggest a change is necessary, continuing this consistent and coherent strategy for February allows us to maintain momentum, reinforce our service proposition, and gather more observations on customer behavior. This approach directly supports our incentives to turn frustrated morning demand into repeat visits and ensure existing-shop growth is durable.",
+            "resource_commitments": [
+              "Allocate $15,000 for incremental morning labor for February 2027.",
+              "Allocate $15,000 for geo-targeted $1 Order Ahead app offers for new/lapsed users for February 2027."
+            ]
+          },
+          "content_hash": "2445d21d7d413b572cb1b18991b4a006f23be45867eda8883d46272556e4ccef",
+          "move": 2,
+          "provenance": {
+            "answer_hash": "2445d21d7d413b572cb1b18991b4a006f23be45867eda8883d46272556e4ccef",
+            "ingested_at": "2026-09-12T12:16:54.043651+00:00",
+            "job_id": "job-e639f12d9bc64df6a0d0359060446613",
+            "manifest_hash": "452f6f6a3dd9060eb54d00fd462c253c25f5682388851338441bd749cc43e01e",
+            "model": "gemini-2.5-flash",
+            "model_parameters": {
+              "edsl_class_name": "gemini-2.5-flash",
+              "edsl_version": "1.0.8.dev1",
+              "inference_service": "google",
+              "model": "gemini-2.5-flash",
+              "parameters": {
+                "maxOutputTokens": 16000,
+                "stopSequences": [],
+                "temperature": 0.5,
+                "thinking_budget": null,
+                "topK": 1,
+                "topP": 1
+              }
+            },
+            "origin": "simulation",
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-moves-dutch/results-1.ep"
+          }
+        },
+        {
+          "actor_id": "home",
+          "committed_at": "2026-09-12T12:16:54.257428+00:00",
+          "content": {
+            "actions": [
+              "Continue the 20% peak café capacity reservation and mobile order admission limits in the 50 pilot cafés through February 2027, maintaining the current weekday 07:00–10:00 window.",
+              "Within the pilot, begin a controlled test in 10 of the 50 cafés: dynamically release any unused reserved café capacity to mobile orders if, after the first 60 minutes of peak, café demand is tracking below the 20% allocation (e.g., if less than 15% of capacity has actually been used for café orders by 08:00, release half of the remaining reserved slots for mobile pickup for the rest of the peak window)."
+            ],
+            "expected_responses": [
+              "Dutch Bros and Dunkin are likely to continue their current promotional tactics, as Starbucks has not signaled a major policy shift or price response. They may monitor for any indication that mobile order reliability improves or worsens.",
+              "If the dynamic release test is successful, competitors may eventually copy or counter-message around digital convenience, but within this round, no immediate escalation is expected.",
+              "Some habitual mobile customers may experience improved slot availability in the 10 test cafés, potentially reducing abandonment or competitive defection; café customers should not experience increased wait times if the release rule is triggered only when café demand is low."
+            ],
+            "rationale": "Maintaining the original reservation policy is necessary to gather enough paired-store and customer repeat data to evaluate the effect on wait times and contribution, as required by the round-two decision rules. However, early evidence may reveal that the 20% café reservation is not fully utilized in some cafés or time intervals, risking unnecessary lost mobile transactions. Dynamically releasing unused reserved capacity in a subset of cafés allows us to test if we can recapture mobile volume without harming the café experience, while still observing the impact on both channels. This approach aligns with the incentive to defend transaction momentum and all-channel contribution, while remaining within staffing and scope constraints.",
+            "resource_commitments": [
+              "Continue incremental staffing (up to 2 additional peak staff-hours per weekday) in all 50 pilot cafés.",
+              "Allocate digital and ops resources to implement and monitor the dynamic release rule in 10 pilot cafés (no new budget, but requires coordination and instrumentation updates)."
+            ]
+          },
+          "content_hash": "9e93b6600c362a85f097f2f44349b29d5ea627deae7a7e4b1820d49acb136219",
+          "move": 2,
+          "provenance": {
+            "answer_hash": "9e93b6600c362a85f097f2f44349b29d5ea627deae7a7e4b1820d49acb136219",
+            "ingested_at": "2026-09-12T12:16:54.257428+00:00",
+            "job_id": "job-659a154c465c4aadb5fde58f36a30226",
+            "manifest_hash": "e691b8fc47dcb78b5801f754fb66194bbbced9d6229825a3c23bb8118d050ed5",
+            "model": "gpt-4.1",
+            "model_parameters": {
+              "edsl_class_name": "LanguageModel",
+              "edsl_version": "1.0.8.dev1",
+              "inference_service": "openai",
+              "model": "gpt-4.1",
+              "parameters": {
+                "frequency_penalty": 0,
+                "logprobs": false,
+                "max_tokens": 16000,
+                "presence_penalty": 0,
+                "reasoning_effort": null,
+                "temperature": 0.5,
+                "top_logprobs": 3,
+                "top_p": 1
+              }
+            },
+            "origin": "simulation",
+            "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-moves-home/results-1.ep"
+          }
+        }
+      ],
+      "testimony": []
+    },
+    "rebuttals": {
+      "buyer": {
+        "answer": {
+          "rebuttals": [
+            {
+              "argument": "This ruling accurately reflects the different motivations and choices of our various customer segments—habitual app users, café visitors, and time-pressed commuters—based on their experiences in January.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-buyer-behavior",
+              "stance": "accept"
+            },
+            {
+              "argument": "We see the new breakfast bundle offer from Dunkin' in the market. We will evaluate it based on our individual needs for convenience, taste, and price on any given morning.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-dunkin-actions",
+              "stance": "accept"
+            },
+            {
+              "argument": "The continuation of the Dutch Bros Order Ahead offer is noted. For those of us who have switched or are considering it, this remains an attractive option, especially when we're in a hurry.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-dutch-actions",
+              "stance": "accept"
+            },
+            {
+              "argument": "We don't know the internal rules Starbucks uses, but we will experience the results. We will continue to check the app for pickup times and observe the wait times in the café, and make our daily decisions based on that.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-home-actions",
+              "stance": "accept"
+            }
+          ]
+        },
+        "provenance": {
+          "answer_hash": "cf5a30b2dbbc23b2f7e7630a09b432383a85144b783f2aca0c776cdd70bbdba6",
+          "ingested_at": "2026-09-12T12:18:09.613603+00:00",
+          "job_id": "job-dfbef0a42cb44fad8bd70ddeb907b549",
+          "manifest_hash": "3745fc8a2464a11ebdc3ada68fc33ad6cba1d83c1f9959d461dfb73271e4afdd",
+          "model": "gemini-2.5-pro",
+          "model_parameters": {
+            "edsl_class_name": "gemini-2.5-pro",
+            "edsl_version": "1.0.8.dev1",
+            "inference_service": "google",
+            "model": "gemini-2.5-pro",
+            "parameters": {
+              "maxOutputTokens": 16000,
+              "stopSequences": [],
+              "temperature": 0.5,
+              "thinking_budget": null,
+              "topK": 1,
+              "topP": 1
+            }
+          },
+          "origin": "simulation",
+          "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rebuttals-buyer/results-1.ep"
+        }
+      },
+      "dunkin": {
+        "answer": {
+          "rebuttals": [
+            {
+              "argument": "The ruling accurately reflects the dossier facts about buyer behavior in response to mobile order delays and competitor offers, consistent with documented assumptions about habitual app users, café visitors, and commuters.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-buyer-behavior",
+              "stance": "accept"
+            },
+            {
+              "argument": "The ruling correctly states Dunkin's committed actions for February 2027, including the $1 discount bundle launch at 15 franchise stores, budget allocations for labor and advertising, and the stop rule for contribution margin monitoring, all supported by Dunkin dossier facts.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-dunkin-actions",
+              "stance": "accept"
+            }
+          ]
+        },
+        "provenance": {
+          "answer_hash": "9a083265cc2fd54c1f3521cc055be040f627539a61618d4d3045cf1af2fa6f36",
+          "ingested_at": "2026-09-12T12:18:32.700583+00:00",
+          "job_id": "job-98b9ab734c4042b49e2c0ed5ada31c02",
+          "manifest_hash": "7de0e4d0b403903bed6e1405dfe9e48a295cb4a47a66c2080c7527e51a781061",
+          "model": "gpt-4.1-mini",
+          "model_parameters": {
+            "edsl_class_name": "LanguageModel",
+            "edsl_version": "1.0.8.dev1",
+            "inference_service": "openai",
+            "model": "gpt-4.1-mini",
+            "parameters": {
+              "frequency_penalty": 0,
+              "logprobs": false,
+              "max_tokens": 16000,
+              "presence_penalty": 0,
+              "reasoning_effort": null,
+              "temperature": 0.5,
+              "top_logprobs": 3,
+              "top_p": 1
+            }
+          },
+          "origin": "simulation",
+          "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rebuttals-dunkin/results-2.ep"
+        }
+      },
+      "dutch": {
+        "answer": {
+          "rebuttals": [
+            {
+              "argument": "This ruling describes customer behavior that aligns with our strategic objective to capture frustrated morning demand. The diversion of habitual Starbucks app users to competitor mobile apps, particularly those with $1 offers, directly supports the efficacy of our ongoing geo-targeted $1 Order Ahead app offer. The increased readiness of commuters to divert also plays into our drive-through convenience model.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-buyer-behavior",
+              "stance": "accept"
+            },
+            {
+              "argument": "We are continuing our commitment to allocate $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offers for new/lapsed users at our 12 shops near Starbucks pilot cafés. This aligns with our strategy to turn frustrated morning demand into repeat visits while protecting our service proposition, as supported by our capabilities and budget (d.dutch.d5, d.dutch.d6, d.dutch.d7).",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-dutch-actions",
+              "stance": "accept"
+            }
+          ]
+        },
+        "provenance": {
+          "answer_hash": "98c7cea3f662ec1ab540efc8559960c5a2654865547192abf2af5d2f91fa8f2c",
+          "ingested_at": "2026-09-12T12:18:11.343054+00:00",
+          "job_id": "job-ed48ee2072eb491a9b74d04d43a942d7",
+          "manifest_hash": "16cc3bb6a82d98b5b0c9b4f91f1de8e2981872167a4e0d74f9d7eb9f7b3250c1",
+          "model": "gemini-2.5-flash",
+          "model_parameters": {
+            "edsl_class_name": "gemini-2.5-flash",
+            "edsl_version": "1.0.8.dev1",
+            "inference_service": "google",
+            "model": "gemini-2.5-flash",
+            "parameters": {
+              "maxOutputTokens": 16000,
+              "stopSequences": [],
+              "temperature": 0.5,
+              "thinking_budget": null,
+              "topK": 1,
+              "topP": 1
+            }
+          },
+          "origin": "simulation",
+          "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rebuttals-dutch/results-1.ep"
+        }
+      },
+      "home": {
+        "answer": {
+          "rebuttals": [
+            {
+              "argument": "The described buyer behaviors—diversion of habitual app users after repeated mobile delays, reinforcement of in-store café visits, and commuter diversion on lateness risk—are consistent with the simulation assumptions and do not conflict with Starbucks' known dossier facts or scenario constraints.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-buyer-behavior",
+              "stance": "accept"
+            },
+            {
+              "argument": "The continued 20% peak café reservation and mobile order admission limits across all 50 pilot cafés, along with the controlled test of dynamic release in 10 cafés, are within the allowed scope, staffing, and measurement constraints specified in the Starbucks dossier.",
+              "cite": [],
+              "link": null,
+              "ruling_id": "r2-home-actions",
+              "stance": "accept"
+            }
+          ]
+        },
+        "provenance": {
+          "answer_hash": "40ac7c275f78cb04851b3e91ce272e5e45e6515580db00f7576f3bfbcc28a4cf",
+          "ingested_at": "2026-09-12T12:18:33.573410+00:00",
+          "job_id": "job-1730a003d6394af3a8c9b1a748981792",
+          "manifest_hash": "9caa775cd0ae456040af92ef2faabb0ab973ced6e8d6a6c58ef55a36ce28e687",
+          "model": "gpt-4.1",
+          "model_parameters": {
+            "edsl_class_name": "LanguageModel",
+            "edsl_version": "1.0.8.dev1",
+            "inference_service": "openai",
+            "model": "gpt-4.1",
+            "parameters": {
+              "frequency_penalty": 0,
+              "logprobs": false,
+              "max_tokens": 16000,
+              "presence_penalty": 0,
+              "reasoning_effort": null,
+              "temperature": 0.5,
+              "top_logprobs": 3,
+              "top_p": 1
+            }
+          },
+          "origin": "simulation",
+          "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-rebuttals-home/results-2.ep"
+        }
+      }
+    },
+    "rulings": {
+      "r2-buyer-behavior": {
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b5",
+              "d.buyer.b8"
+            ],
+            "claim": "Habitual Starbucks app users who experienced >8 minute delays at pilot stores in January will divert to competitor mobile apps (notably Dutch Bros $1 Order Ahead or Dunkin's $1 bundle) at the start of February; their return to Starbucks depends on the competitor's service quality.",
+            "link": "mobile-delay-switch"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b6"
+            ],
+            "claim": "In-store café visitors at pilot Starbucks locations, having experienced improved and more predictable wait times in January, will reinforce this behavior by choosing these locations more frequently for occasions valuing a reliable in-store experience.",
+            "link": "cafe-wait-reinforcement"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.buyer.b4",
+              "d.buyer.b8"
+            ],
+            "claim": "Time-pressed commuters will continue to check the Starbucks app but will more readily divert to Dutch Bros or Dunkin’ if the quoted pickup time risks lateness.",
+            "link": "commuter-diversion"
+          }
+        ],
+        "cite": [],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              {
+                "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+                "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+                "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "January 2027",
+                "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+              },
+              {
+                "customer": "In February, habitual Starbucks app users who experienced repeated mobile delays (>8 minutes) at pilot stores divert to Dutch Bros or Dunkin’ via $1 app offers; their return depends on competitor service. Café visitors reinforce pilot-store behavior, increasing frequency when seeking a reliable in-store experience. Commuters continue to check the Starbucks app, but divert more readily to Dutch Bros, Dunkin, or home prep if quoted pickup times risk lateness.",
+                "dunkin": "Launched $1 discount breakfast bundle via app at 15 local franchise stores near pilot cafés; $12,000 allocated to incremental morning labor for speed, $8,000 to local app advertising/promotions. Stop rule: offer discontinued at any store where contribution margin worsens after one month.",
+                "dutch_bros": "Continued $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "February 2027",
+                "starbucks": "Continued 20% peak café capacity reservation and mobile order limits in 50 pilot cafés; in 10, dynamically release half of unused reserved slots for mobile orders after 08:00 if café demand is below 15% of capacity. No change to price or staffing cap."
+              }
+            ]
+          },
+          "confidence": 0.95,
+          "description": "Buyer segments respond to January’s Starbucks pilot as follows: (1) Habitual app users who experienced repeated delays switch to Dutch Bros or Dunkin’ in early February, attracted by $1 offers; their return is contingent on rival service. (2) Café visitors reinforce their pilot-store habit, increasing frequency for in-store occasions. (3) Commuters remain app-checkers but will increasingly divert to competitors or home prep if Starbucks’ quoted pickup times threaten lateness. No segment weights are assigned, but all behaviors are present in the simulated market."
+        },
+        "rationale": "Each buyer action is directly mapped to the dossier simulation assumptions: habitual app users divert after repeated mobile delays (d.buyer.b5, b8), café visitors reinforce improved in-store experiences (d.buyer.b6), and commuters will check apps but divert if risk of lateness is high (d.buyer.b4, b8). No segment weights are assigned, but all behaviors are simulated as present. The public_strategy_history is updated to reflect these behavioral changes for February 2027.",
+        "resolves": [
+          "m2.buyer.a1",
+          "m2.buyer.a2",
+          "m2.buyer.a3"
+        ],
+        "ruling_id": "r2-buyer-behavior"
+      },
+      "r2-dunkin-actions": {
+        "affected_actors": [
+          "dunkin",
+          "buyer"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k3",
+              "d.dunkin.k5",
+              "d.dunkin.k6"
+            ],
+            "claim": "Dunkin launches a $1 discount breakfast bundle via app at all 15 consenting franchise stores near Starbucks pilot cafés during February 2027 morning peak.",
+            "link": "dunkin-discount-bundle"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k5",
+              "d.dunkin.k6"
+            ],
+            "claim": "Dunkin allocates $12,000 of monthly budget to incremental morning labor for fulfillment speed, and $8,000 to targeted local app advertising and promotions.",
+            "link": "dunkin-incremental-labor"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dunkin.k7"
+            ],
+            "claim": "Dunkin sets a stop rule: discontinue the discount offer at any store where the store-level contribution margin worsens after one month.",
+            "link": "dunkin-stop-rule"
+          }
+        ],
+        "cite": [],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              {
+                "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+                "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+                "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "January 2027",
+                "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+              },
+              {
+                "customer": "In February, habitual Starbucks app users who experienced repeated mobile delays (>8 minutes) at pilot stores divert to Dutch Bros or Dunkin’ via $1 app offers; their return depends on competitor service. Café visitors reinforce pilot-store behavior, increasing frequency when seeking a reliable in-store experience. Commuters continue to check the Starbucks app, but divert more readily to Dutch Bros, Dunkin, or home prep if quoted pickup times risk lateness.",
+                "dunkin": "Launched $1 discount breakfast bundle via app at 15 local franchise stores near pilot cafés; $12,000 allocated to incremental morning labor for speed, $8,000 to local app advertising/promotions. Stop rule: offer discontinued at any store where contribution margin worsens after one month.",
+                "dutch_bros": "Continued $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "February 2027",
+                "starbucks": "Continued 20% peak café capacity reservation and mobile order limits in 50 pilot cafés; in 10, dynamically release half of unused reserved slots for mobile orders after 08:00 if café demand is below 15% of capacity. No change to price or staffing cap."
+              }
+            ]
+          },
+          "confidence": 0.98,
+          "description": "Dunkin implements all four committed actions: launches a $1 breakfast bundle via app at the 15 local franchise stores, allocates $12,000 to incremental labor and $8,000 to targeted app advertising/promotions for February 2027, and establishes a stop rule to discontinue the offer at any store with deteriorating contribution margin after one month. These actions are now observable in the public strategy history."
+        },
+        "rationale": "All Dunkin actions are within the stated capabilities and constraints: local franchise group, capped budget, and explicit stop rule (d.dunkin.k5, k6, k7). The $1 bundle, labor and advertising allocations, and stop rule are public and observable, so the public_strategy_history is updated accordingly.",
+        "resolves": [
+          "m2.dunkin.a1",
+          "m2.dunkin.a2",
+          "m2.dunkin.a3",
+          "m2.dunkin.a4"
+        ],
+        "ruling_id": "r2-dunkin-actions"
+      },
+      "r2-dutch-actions": {
+        "affected_actors": [
+          "dutch",
+          "buyer"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.dutch.d5",
+              "d.dutch.d6"
+            ],
+            "claim": "Dutch Bros continues to allocate $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near Starbucks pilot cafés.",
+            "link": "dutch-labor-and-offer"
+          }
+        ],
+        "cite": [],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              {
+                "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+                "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+                "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "January 2027",
+                "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+              },
+              {
+                "customer": "In February, habitual Starbucks app users who experienced repeated mobile delays (>8 minutes) at pilot stores divert to Dutch Bros or Dunkin’ via $1 app offers; their return depends on competitor service. Café visitors reinforce pilot-store behavior, increasing frequency when seeking a reliable in-store experience. Commuters continue to check the Starbucks app, but divert more readily to Dutch Bros, Dunkin, or home prep if quoted pickup times risk lateness.",
+                "dunkin": "Launched $1 discount breakfast bundle via app at 15 local franchise stores near pilot cafés; $12,000 allocated to incremental morning labor for speed, $8,000 to local app advertising/promotions. Stop rule: offer discontinued at any store where contribution margin worsens after one month.",
+                "dutch_bros": "Continued $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "February 2027",
+                "starbucks": "Continued 20% peak café capacity reservation and mobile order limits in 50 pilot cafés; in 10, dynamically release half of unused reserved slots for mobile orders after 08:00 if café demand is below 15% of capacity. No change to price or staffing cap."
+              }
+            ]
+          },
+          "confidence": 0.99,
+          "description": "Dutch Bros continues both January actions unchanged for February: $15,000/month on incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offers at 12 shops near Starbucks pilot cafés. These actions are now observable in the public strategy history."
+        },
+        "rationale": "Dutch Bros’ actions are within the stated local remit, budget, and scenario constraints (d.dutch.d5, d6). No new actions or changes are proposed, so the public_strategy_history is updated to reflect continued execution.",
+        "resolves": [
+          "m2.dutch.a1",
+          "m2.dutch.a2"
+        ],
+        "ruling_id": "r2-dutch-actions"
+      },
+      "r2-home-actions": {
+        "affected_actors": [
+          "home",
+          "buyer"
+        ],
+        "basis": "judgment",
+        "branches": null,
+        "cases": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h5"
+            ],
+            "claim": "Starbucks continues the 20% peak café capacity reservation and mobile order admission limits in the 50 pilot cafés through February 2027, maintaining the current weekday 07:00–10:00 window.",
+            "link": "starbucks-policy-continued"
+          },
+          {
+            "basis": "dossier_fact",
+            "cases": [],
+            "cite": [
+              "d.home.h5"
+            ],
+            "claim": "Within the pilot, Starbucks begins a controlled test in 10 of the 50 cafés: dynamically release any unused reserved café capacity to mobile orders if, after the first 60 minutes of peak, café demand is tracking below the 20% allocation.",
+            "link": "starbucks-dynamic-release"
+          }
+        ],
+        "cite": [],
+        "kill_criteria": [],
+        "outcome": {
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              {
+                "customer": "Habitual Starbucks app users attempt mobile orders but abandon if quoted slot is >8 minutes late; after two such failures in a week, shift routine to a competitor for the rest of the month. Time-pressed commuters check app and divert if a delay risks lateness. In-store café visitors continue, with increased visit frequency if wait times improve.",
+                "dunkin": "Launched $6 breakfast Meal Deal with coffee and food in 15 local franchise stores near pilot cafés; promoted via app/local channels; monitored basket economics and set rule to discontinue if store-level contribution worsens.",
+                "dutch_bros": "Allocated $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "January 2027",
+                "starbucks": "Implemented 20% capacity reservation for in-café orders in 50 pilot cafés during weekday 7–10 a.m.; mobile pickup slots limited accordingly. Instrumented pilot and comparison cafés for order attempts, slot offers, completions, and staffing."
+              },
+              {
+                "customer": "In February, habitual Starbucks app users who experienced repeated mobile delays (>8 minutes) at pilot stores divert to Dutch Bros or Dunkin’ via $1 app offers; their return depends on competitor service. Café visitors reinforce pilot-store behavior, increasing frequency when seeking a reliable in-store experience. Commuters continue to check the Starbucks app, but divert more readily to Dutch Bros, Dunkin, or home prep if quoted pickup times risk lateness.",
+                "dunkin": "Launched $1 discount breakfast bundle via app at 15 local franchise stores near pilot cafés; $12,000 allocated to incremental morning labor for speed, $8,000 to local app advertising/promotions. Stop rule: offer discontinued at any store where contribution margin worsens after one month.",
+                "dutch_bros": "Continued $15,000/month for incremental morning labor and $15,000/month for geo-targeted $1 Order Ahead app offer for new/lapsed users at 12 shops near pilot cafés.",
+                "period": "February 2027",
+                "starbucks": "Continued 20% peak café capacity reservation and mobile order limits in 50 pilot cafés; in 10, dynamically release half of unused reserved slots for mobile orders after 08:00 if café demand is below 15% of capacity. No change to price or staffing cap."
+              }
+            ]
+          },
+          "confidence": 0.99,
+          "description": "Starbucks continues the 20% capacity reservation and mobile order admission policy in all 50 pilot cafés for February 2027, and in 10 of these, begins a controlled test to dynamically release half of unused reserved slots for mobile orders after 08:00 if café demand is below 15% of capacity. No change to staffing cap, pricing, or measurement rule. These actions are now observable in the public strategy history."
+        },
+        "rationale": "Both Starbucks actions are within the stated scenario constraints (pilot size, reservation policy, staffing cap, dynamic test allowed, d.home.h5). The dynamic release rule is a controlled test in 10 cafés and does not violate the original reservation intent. The public_strategy_history is updated to reflect these actions.",
+        "resolves": [
+          "m2.home.a1",
+          "m2.home.a2"
+        ],
+        "ruling_id": "r2-home-actions"
+      }
+    }
+  },
+  "created_at": "2026-09-12T12:18:34.177146+00:00",
+  "id": "job-e90df26fd7e04c98ae29ae3fc8479930",
+  "included": [
+    "control",
+    "rebuttals",
+    "rulings"
+  ],
+  "job_hash": "d64a65a7d1a768cf34d0500aed957a7f7acc562ff141d79e4321ba5887189d87",
+  "kind": "resolutions",
+  "mode": "agent",
+  "move": 2,
+  "package": "jobs/job-e90df26fd7e04c98ae29ae3fc8479930.jobs.ep",
+  "project_id": "aea4062c-852f-45f1-b8bc-cbb7361701e1",
+  "response_schema": {
+    "$defs": {
+      "Branch": {
+        "additionalProperties": false,
+        "properties": {
+          "board_delta": {
+            "additionalProperties": true,
+            "title": "Board Delta",
+            "type": "object"
+          },
+          "description": {
+            "minLength": 1,
+            "title": "Description",
+            "type": "string"
+          },
+          "id": {
+            "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+            "title": "Id",
+            "type": "string"
+          },
+          "probability": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Probability",
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "description",
+          "probability",
+          "board_delta"
+        ],
+        "title": "Branch",
+        "type": "object"
+      },
+      "Branches": {
+        "additionalProperties": false,
+        "properties": {
+          "options": {
+            "items": {
+              "$ref": "#/$defs/Branch"
+            },
+            "minItems": 2,
+            "title": "Options",
+            "type": "array"
+          },
+          "played": {
+            "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+            "title": "Played",
+            "type": "string"
+          },
+          "uncertainty": {
+            "minLength": 1,
+            "title": "Uncertainty",
+            "type": "string"
+          }
+        },
+        "required": [
+          "uncertainty",
+          "options",
+          "played"
+        ],
+        "title": "Branches",
+        "type": "object"
+      },
+      "ControlResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "actor_id": {
+            "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+            "title": "Actor Id",
+            "type": "string"
+          },
+          "reason": {
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "actor_id",
+          "reason"
+        ],
+        "title": "ControlResponse",
+        "type": "object"
+      },
+      "HistoricalCase": {
+        "additionalProperties": false,
+        "properties": {
+          "disanalogies": {
+            "minLength": 1,
+            "title": "Disanalogies",
+            "type": "string"
+          },
+          "mapping": {
+            "minLength": 1,
+            "title": "Mapping",
+            "type": "string"
+          },
+          "name": {
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          },
+          "sources": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Sources",
+            "type": "array"
+          }
+        },
+        "required": [
+          "name",
+          "sources",
+          "mapping",
+          "disanalogies"
+        ],
+        "title": "HistoricalCase",
+        "type": "object"
+      },
+      "MechanismLink": {
+        "additionalProperties": false,
+        "properties": {
+          "basis": {
+            "enum": [
+              "model",
+              "reference_class",
+              "dossier_fact",
+              "testimony",
+              "panel",
+              "judgment"
+            ],
+            "title": "Basis",
+            "type": "string"
+          },
+          "cases": {
+            "items": {
+              "$ref": "#/$defs/HistoricalCase"
+            },
+            "title": "Cases",
+            "type": "array"
+          },
+          "cite": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Cite",
+            "type": "array"
+          },
+          "claim": {
+            "minLength": 1,
+            "title": "Claim",
+            "type": "string"
+          },
+          "link": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$",
+            "title": "Link",
+            "type": "string"
+          }
+        },
+        "required": [
+          "basis",
+          "link",
+          "claim"
+        ],
+        "title": "MechanismLink",
+        "type": "object"
+      },
+      "Outcome": {
+        "additionalProperties": false,
+        "properties": {
+          "board_delta": {
+            "additionalProperties": true,
+            "title": "Board Delta",
+            "type": "object"
+          },
+          "confidence": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "description": {
+            "minLength": 1,
+            "title": "Description",
+            "type": "string"
+          }
+        },
+        "required": [
+          "description",
+          "board_delta",
+          "confidence"
+        ],
+        "title": "Outcome",
+        "type": "object"
+      },
+      "Resolution": {
+        "additionalProperties": false,
+        "properties": {
+          "decision": {
+            "enum": [
+              "affirm",
+              "revise"
+            ],
+            "title": "Decision",
+            "type": "string"
+          },
+          "reason": {
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "responses": {
+            "items": {
+              "$ref": "#/$defs/ControlResponse"
+            },
+            "minItems": 1,
+            "title": "Responses",
+            "type": "array"
+          },
+          "revision": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/Ruling"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "ruling_id": {
+            "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+            "title": "Ruling Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ruling_id",
+          "decision",
+          "reason",
+          "responses"
+        ],
+        "title": "Resolution",
+        "type": "object"
+      },
+      "Ruling": {
+        "additionalProperties": false,
+        "properties": {
+          "affected_actors": {
+            "items": {
+              "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Affected Actors",
+            "type": "array"
+          },
+          "basis": {
+            "enum": [
+              "model",
+              "reference_class",
+              "dossier_fact",
+              "testimony",
+              "panel",
+              "judgment"
+            ],
+            "title": "Basis",
+            "type": "string"
+          },
+          "branches": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/Branches"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "cases": {
+            "items": {
+              "$ref": "#/$defs/HistoricalCase"
+            },
+            "title": "Cases",
+            "type": "array"
+          },
+          "chain": {
+            "items": {
+              "$ref": "#/$defs/MechanismLink"
+            },
+            "minItems": 1,
+            "title": "Chain",
+            "type": "array"
+          },
+          "cite": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "title": "Cite",
+            "type": "array"
+          },
+          "kill_criteria": {
+            "items": {
+              "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+              "type": "string"
+            },
+            "title": "Kill Criteria",
+            "type": "array"
+          },
+          "outcome": {
+            "$ref": "#/$defs/Outcome"
+          },
+          "rationale": {
+            "minLength": 1,
+            "title": "Rationale",
+            "type": "string"
+          },
+          "resolves": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Resolves",
+            "type": "array"
+          },
+          "ruling_id": {
+            "pattern": "^[a-z][a-z0-9_-]{0,63}$",
+            "title": "Ruling Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "basis",
+          "ruling_id",
+          "rationale",
+          "resolves",
+          "affected_actors",
+          "chain",
+          "outcome"
+        ],
+        "title": "Ruling",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "resolutions": {
+        "items": {
+          "$ref": "#/$defs/Resolution"
+        },
+        "minItems": 1,
+        "title": "Resolutions",
+        "type": "array"
+      }
+    },
+    "required": [
+      "resolutions"
+    ],
+    "title": "ResolutionBatch",
+    "type": "object"
+  }
+}

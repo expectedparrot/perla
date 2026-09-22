@@ -1,0 +1,38 @@
+{
+  "jobs": [
+    {
+      "actor_id": "buyer",
+      "job_id": "job-fbf9f8249d5648a098c4c7dfb5634bae",
+      "kind": "rebuttals",
+      "move": 3,
+      "package": "buyer.jobs.ep",
+      "results": "buyer.results.ep"
+    },
+    {
+      "actor_id": "dunkin",
+      "job_id": "job-a3ad587b4f2a41fdb6887bd335011222",
+      "kind": "rebuttals",
+      "move": 3,
+      "package": "dunkin.jobs.ep",
+      "results": "dunkin.results.ep"
+    },
+    {
+      "actor_id": "dutch",
+      "job_id": "job-a67c5570173e4a6ebf93dae5e29452e8",
+      "kind": "rebuttals",
+      "move": 3,
+      "package": "dutch.jobs.ep",
+      "results": "dutch.results.ep"
+    },
+    {
+      "actor_id": "home",
+      "job_id": "job-981f2d3dc9f14146bd937bac9d10c714",
+      "kind": "rebuttals",
+      "move": 3,
+      "package": "home.jobs.ep",
+      "results": "home.results.ep"
+    }
+  ],
+  "project_id": "51bf44d9-5a70-45d0-90cb-4578f7302299",
+  "version": 1
+}

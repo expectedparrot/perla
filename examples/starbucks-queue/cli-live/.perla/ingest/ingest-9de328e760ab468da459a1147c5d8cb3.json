@@ -1,0 +1,49 @@
+{
+  "actor_id": "dunkin",
+  "answer": {
+    "actions": [
+      "Continue the $1.50 discount on the $6 breakfast Meal Deal via app in the 15 consenting franchise stores through March 2027 with weekly monitoring and opt-in/stop rules.",
+      "Launch a new limited-time $2.00 'Early Bird Bundle' discount for mobile orders placed between 7:00–8:00 a.m. on weekdays at the same 15 stores, capped at 100 redemptions per week to control costs and monitor profitability.",
+      "Implement enhanced local marketing emphasizing the convenience and value of mobile ordering with the discounted bundles, targeting habitual app users and commuters near pilot Starbucks cafés."
+    ],
+    "expected_responses": [
+      "Starbucks may continue to limit mobile order slots and maintain café order reservations, potentially causing habitual app users to increasingly switch to Dunkin's more predictable mobile offers.",
+      "Dutch Bros might respond with enhanced loyalty promotions or increased peak staffing to defend their Order Ahead customer base.",
+      "Some commuters and habitual app users will likely shift to Dunkin's mobile offers due to improved value and reliability, while café visitors may remain loyal to Starbucks for in-person experience."
+    ],
+    "rationale": "Maintaining the existing $1.50 discount sustains momentum and customer interest in the breakfast Meal Deal, which aligns with Dunkin's value positioning. Introducing a higher-value 'Early Bird Bundle' discount during peak mobile order hours incentivizes earlier orders, smoothing peak demand and improving predictability. Capping redemptions controls financial risk within the $20,000 monthly budget. Enhanced marketing supports customer awareness and app adoption, aiming to capture habitual app users switching from Starbucks and Dutch Bros due to their mobile order constraints.",
+    "resource_commitments": [
+      "Allocate up to $12,000 per month for combined discounts and local marketing within the $20,000 monthly envelope.",
+      "Dedicate approximately $8,000 monthly to incremental staffing adjustments during peak hours to ensure order fulfillment and maintain service quality.",
+      "Use weekly monitoring data to adjust or halt offers in stores where economics worsen, ensuring franchisee willingness to continue participation."
+    ]
+  },
+  "id": "ingest-9de328e760ab468da459a1147c5d8cb3",
+  "kind": "moves",
+  "move": 3,
+  "provenance": {
+    "answer_hash": "16a38faf827a6f617c9752bf3b3d0904c7bbe0f8303ea82c235bd65ec92d6b98",
+    "ingested_at": "2026-09-12T14:07:43.003568+00:00",
+    "job_id": "job-ae69dc95bfd8479895ee0ceb919f22fd",
+    "manifest_hash": "f1cc428b98822ae6c315e78ee0fed0e21d07e6a0a2adc6f334f0c0f041277df9",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-3/moves/dunkin.results.ep"
+  }
+}

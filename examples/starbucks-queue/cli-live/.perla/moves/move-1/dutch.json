@@ -1,0 +1,47 @@
+{
+  "actor_id": "dutch",
+  "committed_at": "2026-09-12T13:39:20.500437+00:00",
+  "content": {
+    "actions": [
+      "Launch a geo-fenced digital advertising campaign targeting areas around the 12 Dutch Bros shops during weekday peak hours (7-10 a.m.) in January 2027. The campaign will highlight 'Skip the Wait, Grab Your Dutch Bros!' and promote Order Ahead. Offer a $1 credit for first-time Order Ahead users making a purchase during this peak window.",
+      "Proactively adjust staffing schedules at the 12 shops to ensure optimal coverage and maximize throughput during weekday peak hours (7-10 a.m.) in January 2027. Communicate Order Ahead benefits through existing app channels and in-store signage to reinforce speed and convenience."
+    ],
+    "expected_responses": [
+      "Starbucks: May observe a slight dip in mobile order volume or slower adoption of their new capacity management policy in the pilot stores, potentially attributing it to customer resistance or internal factors rather than direct competitor action.",
+      "Dunkin: Might intensify their own mobile ordering promotions or value offers if they notice increased morning traffic at Dutch Bros locations or anecdotal evidence of Starbucks customer frustration.",
+      "Customers: Some Starbucks customers, especially those inconvenienced by the new mobile order limits or longer wait times, will be attracted by Dutch Bros' convenience messaging and the $1 incentive, leading to trial. Those who experience fast, friendly service will likely become repeat customers."
+    ],
+    "rationale": "Starbucks' new policy of limiting mobile order admissions and reserving capacity during peak morning hours creates an opportunity to capture customers seeking speed and convenience. Our core identity is built on drive-through convenience and personal service. By launching a targeted digital campaign with a trial incentive, we can attract potentially frustrated Starbucks customers to try Dutch Bros' Order Ahead and fast service. Simultaneously, optimizing staffing ensures that we deliver on our promise of speed and a positive experience, converting trial into durable repeat visits and protecting our service proposition, which is crucial for existing-shop growth while we continue to expand.",
+    "resource_commitments": [
+      "Allocate $10,000 for digital advertising spend across the 12 shops for January 2027.",
+      "Cap the $1 Order Ahead credit at $10,000 for January 2027 (up to 10,000 redemptions).",
+      "Allocate up to $10,000 for incremental labor hours across the 12 shops for January 2027 to ensure peak-hour operational excellence."
+    ]
+  },
+  "content_hash": "b7cb7d57a1b3cde59a3d77ebd9280759606996b914ce86be8c02bd395e038c6d",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "b7cb7d57a1b3cde59a3d77ebd9280759606996b914ce86be8c02bd395e038c6d",
+    "ingested_at": "2026-09-12T13:39:20.500437+00:00",
+    "job_id": "job-46ee6226ed0642dbb2e024e2ff377153",
+    "manifest_hash": "9f9d164c22a8df819a8b8a4ccb62daa0c7607b351329fe3c9358f870fa2b1348",
+    "model": "gemini-2.5-flash",
+    "model_parameters": {
+      "edsl_class_name": "gemini-2.5-flash",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "google",
+      "model": "gemini-2.5-flash",
+      "parameters": {
+        "maxOutputTokens": 16000,
+        "max_tokens": 16000,
+        "stopSequences": [],
+        "temperature": 0.5,
+        "thinking_budget": null,
+        "topK": 1,
+        "topP": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-1/moves/dutch.results.ep"
+  }
+}

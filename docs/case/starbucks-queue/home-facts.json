@@ -1,0 +1,67 @@
+{
+  "facts": [
+    {
+      "id": "h1",
+      "claim": "Reported history: Starbucks began in Seattle in 1971. Its evolution from a bean merchant into a coffeehouse makes the in-store experience part of the proposition, not simply a distribution expense. The strategic implication is an author inference.",
+      "sources": [
+        "https://about.starbucks.com/about-us/"
+      ]
+    },
+    {
+      "id": "h2",
+      "claim": "Reported financials: Q3 fiscal 2026 North America revenue was $7,395.1 million, operating income $1,008.9 million and operating margin 13.6%. These are segment figures, not pilot-store unit economics.",
+      "sources": [
+        "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx"
+      ]
+    },
+    {
+      "id": "h3",
+      "claim": "Reported demand: US comparable sales increased 7.9% and comparable transactions 4.2% in Q3 fiscal 2026. This case tests sustaining growth; it does not assume that current transactions are declining.",
+      "sources": [
+        "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx"
+      ]
+    },
+    {
+      "id": "h4",
+      "claim": "Reported strategy: Back to Starbucks combines staffing and scheduling investment, Smart Queue order sequencing, and restoration of the coffeehouse experience. These capabilities are public; the proposed 20% reservation is not an announced policy.",
+      "sources": [
+        "https://about.starbucks.com/press/2026/back-to-starbucks-two-year-anniversary/"
+      ]
+    },
+    {
+      "id": "h5",
+      "claim": "Assumed operating authority: 50 pilot and 50 comparison company-operated cafés; weekdays 07:00–10:00; reserve 20% of measured 15-minute capacity for café orders. Price unchanged. Each pilot café may add at most two peak staff-hours per weekday. Rollback or narrower time windows are allowed; expansion beyond 50 is not.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "h6",
+      "claim": "Assumed economics: $3 contribution per incremental or lost transaction before additional staffing. Assume fully loaded incremental labor costs $30/hour for sensitivity calculations. Two added hours cost $60/store/day and require 20 genuinely incremental transactions to break even before other costs. No actual store margins, baselines or demand elasticities are supplied.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "h7",
+      "claim": "Assumed management problem: The operations lead is accountable for café service and labor spend; the digital lead for reliable pickup and repeat behavior; the finance lead for all-channel contribution. Optimizing one channel at another’s expense is not success. These are role tensions constructed for the game, not testimony from executives.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "h8",
+      "claim": "Assumed information rights: The team can instrument its own order attempts, offered pickup slots, completed orders, refunds, staffing hours and baseline-linked repeat purchases; it cannot see rivals’ transaction logs or know where a rejected mobile user ultimately buys. Available instrumentation is a capability, not already collected evidence.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    },
+    {
+      "id": "h9",
+      "claim": "Assumed decision rules: By round two seek at least a 20% adjusted café p90 wait reduction across 40 complete pairs. By round three require nonnegative daily contribution and no worse than a 3pp adjusted repeat decline with 1,000 complete customers per arm. Missing evidence cannot pass these gates.",
+      "sources": [
+        "Author-designed simulation assumption, 2026-09-12; not a company disclosure or measured customer observation."
+      ]
+    }
+  ]
+}

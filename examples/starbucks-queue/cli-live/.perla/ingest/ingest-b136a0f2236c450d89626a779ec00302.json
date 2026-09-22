@@ -1,0 +1,52 @@
+{
+  "actor_id": "dunkin",
+  "answer": {
+    "actions": [
+      "Launch a local opt-in morning bundle offer in the 15 consenting franchise stores near pilot cafés for January 2027.",
+      "Bundle includes a $6 breakfast Meal Deal targeting coffee-and-food value shoppers, promoted via the Dunkin app with advance ordering and rewards.",
+      "Monitor basket contribution, repeat visits, and staffing costs carefully to ensure economics remain positive.",
+      "Implement stop rules to exit any store where the offer reduces profitability or cannibalizes full-price sales.",
+      "Coordinate shared local marketing emphasizing value and convenience to compete with Starbucks’ mobile pickup slots."
+    ],
+    "expected_responses": [
+      "Starbucks may see some traffic shift toward Dunkin's value bundle, especially if Starbucks' mobile pickup slots limit café order capacity.",
+      "Dutch Bros may respond with adjustments to their drive-through offers or Order Ahead promotions to retain morning customers.",
+      "Franchisees will monitor profitability closely and may opt out if economics worsen, leading to potential scaling back of the offer.",
+      "Customers may appreciate the predictable value and convenience, increasing repeat visits if the offer is well executed."
+    ],
+    "rationale": "Given Dunkin's strong franchise footprint and value positioning, a local opt-in bundle can attract and retain breakfast customers while controlling costs within the $20,000 monthly budget. The $6 Meal Deal aligns with recent advertising and leverages the Dunkin app capabilities to offer convenience without changing prices nationally. Careful measurement and stop rules protect franchisee economics amid competitive pressure from Starbucks’ capacity-aware mobile pickup pilot. This focused approach targets repeatable profitable transactions and predictable pickup during peak morning hours.",
+    "resource_commitments": [
+      "Allocate up to $20,000 in combined local promotion and staffing costs for January 2027 across the 15 participating stores.",
+      "Use existing Dunkin app infrastructure for ordering and rewards without new technology investment.",
+      "Dedicate local marketing resources to promote the Meal Deal bundle and app usage in the pilot area."
+    ]
+  },
+  "id": "ingest-b136a0f2236c450d89626a779ec00302",
+  "kind": "moves",
+  "move": 1,
+  "provenance": {
+    "answer_hash": "1cc453969b866a10d4c9cd9cd5e41cc15b57575c11c95b0efc99b69e0c3fe29f",
+    "ingested_at": "2026-09-12T13:39:20.369732+00:00",
+    "job_id": "job-dbe761d3356b4afb88daa9ee38128eb9",
+    "manifest_hash": "703ceb7f2d125244014941786e4db15c92c33842db3c1687049ac4db8deb3ea2",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/cli-live/round-1/moves/dunkin.results.ep"
+  }
+}

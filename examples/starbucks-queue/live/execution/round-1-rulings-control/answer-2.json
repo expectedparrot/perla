@@ -1,0 +1,287 @@
+{
+  "rulings": {
+    "rulings": [
+      {
+        "ruling_id": "r1_home_pilot_launch",
+        "basis": "dossier_fact",
+        "rationale": "Starbucks commits to two actions (m1.home.a1, m1.home.a2): reserving 20% of measured 15-minute peak capacity for café orders and instrumenting all 100 stores. Both are within granted authority (d.home.h5). Because no baseline capacity measurements exist in the record, the effective mobile-slot cap is indeterminate until store baselines are captured in January 2027. Instrumentation is a prerequisite for any kill-criteria evaluation; it is properly committed here but yields no measured outcomes this move.",
+        "resolves": [
+          "m1.home.a1",
+          "m1.home.a2"
+        ],
+        "affected_actors": [
+          "home",
+          "buyer"
+        ],
+        "cite": [
+          "d.home.h4",
+          "d.home.h5",
+          "d.home.h6",
+          "d.home.h8",
+          "d.home.h9"
+        ],
+        "chain": [
+          {
+            "link": "policy_commitment",
+            "basis": "dossier_fact",
+            "claim": "Starbucks has authority to implement the capacity reservation in 50 pilot cafés and instrument all 100 stores during January 2027 (d.home.h5).",
+            "cite": [
+              "d.home.h5"
+            ]
+          },
+          {
+            "link": "capacity_baseline_required",
+            "basis": "dossier_fact",
+            "claim": "The 20% reservation applies to measured 15-minute peak capacity; no actual measured_capacity_per_15min is in the record, so the effective slot cap cannot be computed this move. The instrumentation action (m1.home.a2) is the mechanism to collect it (d.home.h8).",
+            "cite": [
+              "d.home.h8",
+              "d.home.h6"
+            ]
+          },
+          {
+            "link": "labor_cost_sensitivity",
+            "basis": "dossier_fact",
+            "claim": "Adding up to 2 incremental staff-hours per pilot café per weekday costs up to $60/store/day at the assumed $30/hour loaded rate, requiring 20 genuinely incremental transactions to break even before other costs. Whether those transactions materialize is unresolved this move (d.home.h6).",
+            "cite": [
+              "d.home.h6"
+            ]
+          },
+          {
+            "link": "measurement_infrastructure_committed",
+            "basis": "dossier_fact",
+            "claim": "Attempt-to-purchase funnels, repeat-purchase cohorts, and paired-store baselines begin accumulating in January 2027. No completed pairs or cohorts exist at move-one close; kill-criteria gates remain unevaluated (d.home.h9).",
+            "cite": [
+              "d.home.h9"
+            ]
+          }
+        ],
+        "kill_criteria": [
+          "service",
+          "economics",
+          "retention"
+        ],
+        "outcome": {
+          "description": "Pilot operational structure is established. Capacity reservation is active in principle; effective slot cap awaits measured baselines. Instrumentation is deployed. No kill criterion is evaluable at move-one close: complete_store_pairs remains 0 and cohorts are not yet complete.",
+          "board_delta": {
+            "calendar_period": "January 2027",
+            "pilot_cafes": 50,
+            "comparison_cafes": 50,
+            "cafe_capacity_reservation_pct": 20,
+            "complete_store_pairs": 0,
+            "pilot_cohort_complete_customers": 0,
+            "comparison_cohort_complete_customers": 0,
+            "measured_capacity_per_15min": null,
+            "adjusted_cafe_wait_reduction_pct": null,
+            "incremental_daily_contribution_usd": null,
+            "mobile_repeat_change_pp": null,
+            "public_strategy_history": [
+              "Move 1 — Starbucks: Launched 50-café peak-time capacity-reservation pilot (20% reserved for café orders, 07:00–10:00 weekdays) with matched 50-comparison-café instrumentation. No baseline measurements yet complete."
+            ]
+          },
+          "confidence": 0.95
+        },
+        "branches": null
+      },
+      {
+        "ruling_id": "r2_buyer_response_to_pilot",
+        "basis": "judgment",
+        "rationale": "Three buyer segments commit distinct contingent behaviors (m1.buyer.a1, m1.buyer.a2, m1.buyer.a3). Their triggers depend on offered pickup times, which depend on the slot cap, which depends on measured baseline capacity — none of which is resolved at move-one close. I adjudicate the structural mechanism by segment; I declare a branch on whether mobile-slot pressure is sufficient in January to trigger switching thresholds, because actual capacity baselines and daily demand distributions are unknown (d.buyer.b3, d.buyer.b8). No segment weights or switching probabilities exist in the record; I preserve those fields as null.",
+        "resolves": [
+          "m1.buyer.a1",
+          "m1.buyer.a2",
+          "m1.buyer.a3"
+        ],
+        "affected_actors": [
+          "buyer",
+          "home",
+          "dutch",
+          "dunkin"
+        ],
+        "cite": [
+          "d.buyer.b3",
+          "d.buyer.b4",
+          "d.buyer.b5",
+          "d.buyer.b6",
+          "d.buyer.b8"
+        ],
+        "chain": [
+          {
+            "link": "cafe_visitor_unaffected",
+            "basis": "dossier_fact",
+            "claim": "The walk-in café customer (m1.buyer.a3) is the intended beneficiary of the capacity reservation; their occasion (d.buyer.b6) is not degraded. No change to their routine is adjudicated.",
+            "cite": [
+              "d.buyer.b6"
+            ]
+          },
+          {
+            "link": "mobile_slot_pressure_trigger",
+            "basis": "judgment",
+            "claim": "Whether habitual-app users (m1.buyer.a1) and commuters (m1.buyer.a2) encounter pickup times beyond their stated thresholds depends on how full the mobile allocation becomes during January peak windows. If the 80% mobile-plus-café residual is sufficient to meet demand without queue pressure, neither switching threshold is reached in January. If demand is high relative to the mobile allocation, slots push out and thresholds are crossed. This is the central unresolved branch for move one."
+          },
+          {
+            "link": "habitual_app_switching_path",
+            "basis": "dossier_fact",
+            "claim": "If the habitual-app user (m1.buyer.a1) encounters two >8-minute delays in a week, they redirect daily spend to Dutch Bros or Dunkin for the remainder of the month. Loyalty friction exists but its monetary magnitude and prevalence are unstated (d.buyer.b5). No segment count is available.",
+            "cite": [
+              "d.buyer.b5"
+            ]
+          },
+          {
+            "link": "commuter_abandonment_path",
+            "basis": "dossier_fact",
+            "claim": "If the commuter (m1.buyer.a2) receives a slot that consumes the 10-minute travel slack, they abandon and drive to the nearest competitor drive-through. Two such events make that competitor the new default. The trigger depends on the slot time offered, which depends on unresolved baseline capacity (d.buyer.b4).",
+            "cite": [
+              "d.buyer.b4"
+            ]
+          },
+          {
+            "link": "competitor_absorption",
+            "basis": "dossier_fact",
+            "claim": "Buyer dossier assumes Dutch Bros Order Ahead and Dunkin app are available as alternatives at participating locations (d.buyer.b2). Actual local availability is location-dependent and unconfirmed for every pilot café neighborhood.",
+            "cite": [
+              "d.buyer.b2"
+            ]
+          }
+        ],
+        "kill_criteria": [
+          "retention"
+        ],
+        "outcome": {
+          "description": "Played branch: low-to-moderate slot pressure. In January, mobile allocation pressure is present but not universally delay-inducing; a minority of mobile users encounter slots at or near their thresholds. Some commuter and habitual-app users redirect spend to Dutch Bros or Dunkin on individual mornings, but the two-event switching thresholds are crossed by a fraction of affected users rather than most. Walk-in customers experience no negative change. No measured switching rates are established; mobile_repeat_change_pp remains null pending 30-day cohort completion.",
+          "board_delta": {
+            "mobile_repeat_change_pp": null,
+            "public_strategy_history": [
+              "Move 1 — Starbucks: Launched 50-café peak-time capacity-reservation pilot (20% reserved for café orders, 07:00–10:00 weekdays) with matched 50-comparison-café instrumentation. No baseline measurements yet complete.",
+              "Move 1 — Buyer: Habitual-app and commuter segments adopt contingent switching rules; walk-in segment unaffected. Switching triggers are active but outcomes depend on slot pressure not yet measurable."
+            ]
+          },
+          "confidence": 0.55
+        },
+        "branches": {
+          "uncertainty": "Whether January mobile-slot demand is high enough relative to the capped mobile allocation to push offered pickup times past buyer switching thresholds for a material share of habitual-app and commuter customers. No demand baseline or slot-fill rate exists in the record.",
+          "options": [
+            {
+              "id": "low_pressure",
+              "description": "Mobile allocation is sufficient for most demand; fewer than threshold-crossing events per user occur; switching is marginal. Competitors see at most a modest uptick in morning traffic attributable to diversion.",
+              "probability": 0.55,
+              "board_delta": {
+                "mobile_repeat_change_pp": null,
+                "simulated_buyer_switching_note": "Low slot pressure: minority of mobile users hit thresholds; walk-in experience improves; competitor diversion small and not yet measurable."
+              }
+            },
+            {
+              "id": "high_pressure",
+              "description": "Mobile allocation fills quickly during peak; many habitual-app and commuter users receive slots beyond their stated tolerances; two-event switching thresholds crossed by a larger share; meaningful transaction diversion to Dutch Bros and Dunkin in January.",
+              "probability": 0.45,
+              "board_delta": {
+                "mobile_repeat_change_pp": null,
+                "simulated_buyer_switching_note": "High slot pressure: material share of mobile users redirects spend to competitors by end of January; measurable cohort impact expected but not yet confirmed."
+              }
+            }
+          ],
+          "played": "low_pressure"
+        }
+      },
+      {
+        "ruling_id": "r3_competitor_response",
+        "basis": "judgment",
+        "rationale": "Dutch Bros (m1.dutch.a1, m1.dutch.a2) and Dunkin (m1.dunkin.a1, m1.dunkin.a2, m1.dunkin.a3) both commit real resources in January 2027: Dutch Bros adds 20 labor hours/week across 12 shops (starting Jan 1) and a $1 Order Ahead credit offer (Jan 15–31, capped at 100/shop); Dunkin launches a $6 breakfast Meal Deal in 15 franchise locations with a $20,000 combined promotion-and-staffing cap. Both are within their stated envelopes (d.dutch.d5, d.dutch.d6, d.dunkin.k5, d.dunkin.k6). The key interaction is whether these offers are ready to absorb the buyer diversion that the Starbucks pilot may generate. I adjudicate their operational commitments as implemented; economic outcomes (incremental contribution, repeat lift) are unresolved because no pre-period baselines or redemption counts exist.",
+        "resolves": [
+          "m1.dutch.a1",
+          "m1.dutch.a2",
+          "m1.dunkin.a1",
+          "m1.dunkin.a2",
+          "m1.dunkin.a3"
+        ],
+        "affected_actors": [
+          "dutch",
+          "dunkin",
+          "buyer"
+        ],
+        "cite": [
+          "d.dutch.d4",
+          "d.dutch.d5",
+          "d.dutch.d6",
+          "d.dutch.d7",
+          "d.dutch.d8",
+          "d.dunkin.k3",
+          "d.dunkin.k4",
+          "d.dunkin.k5",
+          "d.dunkin.k6",
+          "d.dunkin.k7",
+          "d.dunkin.k8"
+        ],
+        "chain": [
+          {
+            "link": "dutch_labor_commitment",
+            "basis": "dossier_fact",
+            "claim": "Dutch Bros commits 20 additional labor hours/week across 12 shops from Jan 1 (4 h/weekday, 07:00–10:00), costing approximately $2,400/shop/month at the $30/hour assumed rate — $28,800 total, within the $30,000 envelope (d.dutch.d5, d.dutch.d6). This is an implemented cost, not a simulated one.",
+            "cite": [
+              "d.dutch.d5",
+              "d.dutch.d6"
+            ]
+          },
+          {
+            "link": "dutch_credit_offer",
+            "basis": "dossier_fact",
+            "claim": "From Jan 15, Dutch Bros offers a $1 Order Ahead credit for first-time users, capped at 100 redemptions per shop (max $1,200 total across 12 shops). This is within the remaining budget envelope (d.dutch.d6). Redemption volume depends on whether displaced Starbucks mobile users reach these shops and adopt Order Ahead — an unresolved behavioral outcome (d.dutch.d8).",
+            "cite": [
+              "d.dutch.d6",
+              "d.dutch.d8"
+            ]
+          },
+          {
+            "link": "dutch_service_capacity",
+            "basis": "dossier_fact",
+            "claim": "Dutch Bros' drive-through model and added labor increase peak throughput capacity at these 12 shops, but whether local lane capacity is binding during the additional demand is unknown (d.dutch.d7). No spare-capacity data is supplied.",
+            "cite": [
+              "d.dutch.d7"
+            ]
+          },
+          {
+            "link": "dunkin_bundle_launch",
+            "basis": "dossier_fact",
+            "claim": "Dunkin launches a $6 Meal Deal via app at 15 consenting franchise locations, supported by a local marketing campaign. The $6 price point is evidenced by a September 2026 campaign (d.dunkin.k4), though January 2027 franchise participation and that exact price are assumed rather than confirmed. Combined spend cap of $20,000 is binding (d.dunkin.k5, d.dunkin.k6).",
+            "cite": [
+              "d.dunkin.k4",
+              "d.dunkin.k5",
+              "d.dunkin.k6"
+            ]
+          },
+          {
+            "link": "dunkin_economics_monitoring",
+            "basis": "dossier_fact",
+            "claim": "Dunkin commits to a one-month economics review with an exit rule if contribution worsens (m1.dunkin.a3). This monitoring action is implemented; whether it triggers adjustment depends on January basket and repeat data not yet available (d.dunkin.k7, d.dunkin.k8).",
+            "cite": [
+              "d.dunkin.k7",
+              "d.dunkin.k8"
+            ]
+          },
+          {
+            "link": "competitor_acquisition_conditionality",
+            "basis": "dossier_fact",
+            "claim": "Both competitors can only observe their own order counts and public Starbucks slot availability; neither can identify specific rejected Starbucks customers or read each other's private economics (d.dutch.d8, d.dunkin.k8). Incremental acquisition depends on buyer diversion, which itself is branched in r2.",
+            "cite": [
+              "d.dutch.d8",
+              "d.dunkin.k8"
+            ]
+          }
+        ],
+        "kill_criteria": [],
+        "outcome": {
+          "description": "Dutch Bros and Dunkin operational responses are implemented within their envelopes. Dutch Bros adds peak labor at 12 shops and prepares a $1 credit offer for Jan 15–31. Dunkin launches the $6 Meal Deal at 15 locations with a $20,000 spend cap and monitoring rule. Neither competitor's incremental contribution, repeat lift, or actual redemption counts can be stated without January transaction data. Public strategy history updated to reflect observable actions.",
+          "board_delta": {
+            "public_strategy_history": [
+              "Move 1 — Starbucks: Launched 50-café peak-time capacity-reservation pilot (20% reserved for café orders, 07:00–10:00 weekdays) with matched 50-comparison-café instrumentation. No baseline measurements yet complete.",
+              "Move 1 — Buyer: Habitual-app and commuter segments adopt contingent switching rules; walk-in segment unaffected. Switching triggers are active but outcomes depend on slot pressure not yet measurable.",
+              "Move 1 — Dutch Bros: Added 20 labor hours/week per shop at 12 shops for 07:00–10:00 peak (Jan 1). In-app and social campaign with $1 Order Ahead credit for first-time users, capped at 100/shop, running Jan 15–31.",
+              "Move 1 — Dunkin: Launched $6 breakfast Meal Deal mobile bundle at 15 consenting franchise locations near Starbucks pilot cafés, with local marketing campaign. Combined promotion-and-staffing spend capped at $20,000 for January. One-month economics review with exit rule committed."
+            ]
+          },
+          "confidence": 0.88
+        },
+        "branches": null
+      }
+    ]
+  }
+}

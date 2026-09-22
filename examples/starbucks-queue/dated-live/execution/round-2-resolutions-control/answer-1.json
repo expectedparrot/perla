@@ -1,0 +1,78 @@
+{
+  "resolutions": {
+    "resolutions": [
+      {
+        "ruling_id": "r2-buyer-behavior",
+        "decision": "affirm",
+        "reason": "All affected actors accepted the ruling without objection. The mechanism links directly correspond to the simulation dossier facts for buyer segments: habitual app users divert after repeated mobile delays, café visitors reinforce improved in-store experiences, and commuters check apps but divert if lateness is at risk. No evidence was presented that contradicts the mapped behaviors or the public strategy history update. The outcome and rationale remain unchanged and consistent with the supplied evidence and scenario design.",
+        "responses": [
+          {
+            "actor_id": "buyer",
+            "reason": "Accepted; the ruling accurately characterizes customer segment behaviors in response to January’s pilot and February’s offers, consistent with dossier assumptions."
+          },
+          {
+            "actor_id": "dunkin",
+            "reason": "Accepted; the ruling reflects buyer reactions to mobile order delays and competitive offers, as documented in the Dunkin dossier."
+          },
+          {
+            "actor_id": "dutch",
+            "reason": "Accepted; the ruling aligns with Dutch Bros’ strategy to capture frustrated Starbucks app users and time-pressed commuters."
+          },
+          {
+            "actor_id": "home",
+            "reason": "Accepted; the described buyer behaviors are consistent with simulation assumptions and Starbucks’ dossier constraints."
+          }
+        ],
+        "revision": null
+      },
+      {
+        "ruling_id": "r2-dunkin-actions",
+        "decision": "affirm",
+        "reason": "All affected actors accepted the ruling as an accurate account of Dunkin's committed actions for February 2027. The ruling is fully supported by Dunkin’s dossier facts: local franchise group, capped budget, explicit stop rule, and public offer structure. No objections or new evidence were raised. The outcome and public strategy history update remain unchanged.",
+        "responses": [
+          {
+            "actor_id": "dunkin",
+            "reason": "Accepted; the ruling correctly states Dunkin's actions and constraints, as supported by the Dunkin dossier."
+          },
+          {
+            "actor_id": "buyer",
+            "reason": "Accepted; the ruling accurately reflects the observed Dunkin offer and the buyer’s evaluation criteria."
+          }
+        ],
+        "revision": null
+      },
+      {
+        "ruling_id": "r2-dutch-actions",
+        "decision": "affirm",
+        "reason": "All affected actors accepted the ruling without objection. The ruling accurately describes Dutch Bros’ continued allocation of budget for labor and targeted offers, in line with the dossier’s local remit, budget, and strategic objectives. No new evidence or objections were presented. The outcome and public strategy history update remain unchanged.",
+        "responses": [
+          {
+            "actor_id": "dutch",
+            "reason": "Accepted; the ruling matches Dutch Bros’ stated February commitments and strategic rationale."
+          },
+          {
+            "actor_id": "buyer",
+            "reason": "Accepted; the ruling captures the buyer’s recognition of Dutch Bros’ ongoing $1 Order Ahead offer."
+          }
+        ],
+        "revision": null
+      },
+      {
+        "ruling_id": "r2-home-actions",
+        "decision": "affirm",
+        "reason": "All affected actors accepted the ruling. The continued 20% café capacity reservation and the controlled dynamic release test in 10 cafés are within Starbucks’ dossier constraints and scenario authority. No evidence was offered to challenge the ruling or its mapping to the public strategy history. The outcome and rationale remain unchanged.",
+        "responses": [
+          {
+            "actor_id": "home",
+            "reason": "Accepted; the ruling is consistent with Starbucks’ scenario authority, operational constraints, and pilot test design."
+          },
+          {
+            "actor_id": "buyer",
+            "reason": "Accepted; the ruling accurately describes the observable effects of Starbucks’ actions from the customer perspective."
+          }
+        ],
+        "revision": null
+      }
+    ]
+  }
+}

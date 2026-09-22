@@ -1,0 +1,47 @@
+{
+  "attempt": 1,
+  "receipt": {
+    "move": 3,
+    "ruling_ids": [
+      "move3-integrated-customer-competitor-dynamics"
+    ],
+    "routing": {
+      "move3-integrated-customer-competitor-dynamics": {
+        "reasons": [
+          "judgment"
+        ],
+        "content_hash": "5a46b6fbf271457bb8a863213814ed77b1e7827ab2e1f76d847669a1d2b852ce",
+        "impact_score": 2.0,
+        "blocking": false,
+        "over_budget": true,
+        "assessment": null,
+        "route": "provisional"
+      }
+    },
+    "provenance": {
+      "origin": "simulation",
+      "model": "gpt-4.1",
+      "model_parameters": {
+        "model": "gpt-4.1",
+        "parameters": {
+          "frequency_penalty": 0,
+          "logprobs": false,
+          "max_tokens": 16000,
+          "presence_penalty": 0,
+          "reasoning_effort": null,
+          "temperature": 0.5,
+          "top_logprobs": 3,
+          "top_p": 1
+        },
+        "inference_service": "openai",
+        "edsl_version": "1.0.8.dev1",
+        "edsl_class_name": "LanguageModel"
+      },
+      "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-3-resolutions-control/results-1.ep",
+      "job_id": "job-b99a355db15f4b8794132dcd7a277d02",
+      "manifest_hash": "5ad3d3ec2cdefca8caed61e2995291e1e0e738f9789d93c2e4774e3fe4f4d655",
+      "ingested_at": "2026-09-12T12:10:46.038294+00:00",
+      "answer_hash": "44012f480ec24ff06dc3e1e4d3fccf5aa673f0cea081a1a91405dafd2945db32"
+    }
+  }
+}

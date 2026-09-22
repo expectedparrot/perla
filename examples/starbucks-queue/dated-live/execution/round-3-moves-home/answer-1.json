@@ -1,0 +1,20 @@
+{
+  "moves": {
+    "actions": [
+      "Continue the 20% peak café capacity reservation and mobile order limits in all 50 pilot cafés during weekday 7–10 a.m. through March 2027.",
+      "Expand the dynamic release of unused reserved slots (after 08:00 if café demand is below 15% of capacity) from 10 to all 50 pilot cafés, with real-time monitoring for adverse mobile order abandonment or in-café congestion.",
+      "Set a pre-commitment to rollback the dynamic slot release in any pilot café if measured mobile order abandonment or in-café wait times worsen by more than 5 percentage points versus paired controls."
+    ],
+    "rationale": "The continued 20% reservation aligns with the strategic objective to protect the in-café experience for core customers, as the coffeehouse visit is central to the Starbucks proposition (h1, h4). Expanding the dynamic release of unused reserved slots system-wide after 08:00 leverages observed lower in-café demand in late peak windows, aiming to recapture mobile transactions that might otherwise divert to competitors. This approach balances the need to defend transaction momentum (h3) and earn back added labor by maximizing capacity utilization without breaching the operational or staffing constraints (h5, h6). The explicit rollback rule addresses the requirement for reversibility and safeguards against negative contribution or excessive churn (h9).",
+    "resource_commitments": [
+      "Maintain incremental staffing up to 2 peak hours per weekday per pilot café, within the existing cap.",
+      "Deploy digital instrumentation and real-time monitoring for mobile order abandonment, café wait times, and slot utilization in all 50 pilot cafés.",
+      "Allocate operations and analytics resources to enforce the rollback rule at the café level if negative impacts are detected."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin may intensify local app offers if they observe Starbucks relaxing mobile slot limits, but may also see reduced switching if Starbucks improves mobile reliability.",
+      "Competitors may adjust their labor or promotional spend in response to any perceived Starbucks vulnerability in mobile or café service.",
+      "Some habitual Starbucks app users may return if their mobile order experience improves, while café-first customers should not see degraded wait times."
+    ]
+  }
+}

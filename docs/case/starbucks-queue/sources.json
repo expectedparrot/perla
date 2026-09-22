@@ -1,0 +1,89 @@
+{
+  "as_of": "2026-09-12",
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Starbucks: Q3 fiscal 2026 results",
+      "published": "2026-07-29",
+      "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q3-Fiscal-Year-2026-Results/default.aspx",
+      "supports": "US comparable sales rose 7.9%, with comparable transactions up 4.2%. The question concerns sustaining growth, not assuming an ongoing sales decline."
+    },
+    {
+      "id": "s2",
+      "title": "Starbucks: 2026 Investor Day strategy",
+      "published": "2026-01-29",
+      "url": "https://about.starbucks.com/press/2026/starbucks-is-back-turning-momentum-into-long-term-sustainable-growth/",
+      "supports": "Starbucks described caf\u00e9 investment and Smart Queue sequencing across ordering channels."
+    },
+    {
+      "id": "s3",
+      "title": "Two years of Back to Starbucks",
+      "published": "2026-09-10",
+      "url": "https://about.starbucks.com/press/2026/back-to-starbucks-two-year-anniversary/",
+      "supports": "The company reports launching Smart Queue, investing in staffing, and restoring the coffeehouse experience."
+    },
+    {
+      "id": "s4",
+      "title": "Dutch Bros: Order Ahead",
+      "published": null,
+      "url": "https://www.dutchbros.com/order-ahead/",
+      "supports": "Customers can place orders in the Dutch Bros app for pickup at participating shops; availability depends on the location."
+    },
+    {
+      "id": "s5",
+      "title": "Dunkin: mobile app",
+      "published": null,
+      "url": "https://www.dunkindonuts.com/en/mobile-app",
+      "supports": "Dunkin promotes ordering ahead and rewards through its app."
+    },
+    {
+      "id": "s6",
+      "title": "Dunkin: September 2026 tailgate offers",
+      "published": null,
+      "url": "https://news.dunkindonuts.com/blog/ttailgate-season-runs-on-dunkin-september2026",
+      "supports": "The September page promotes a $6 breakfast Meal Deal. This is evidence of value positioning, not a guaranteed January 2027 price."
+    },
+    {
+      "id": "s7",
+      "title": "Dutch Bros Q2 2026 results",
+      "url": "https://investors.dutchbros.com/financials/quarterly-results/",
+      "published": "2026-08-05",
+      "supports": "Quarterly revenue $550.9 million; company-operated same-shop sales +8.3% and transactions +3.4%."
+    },
+    {
+      "id": "s8",
+      "title": "Starbucks company history",
+      "url": "https://about.starbucks.com/about-us/",
+      "published": null,
+      "supports": "Founded in Seattle in 1971; evolution from bean merchant to coffeehouse."
+    },
+    {
+      "id": "s9",
+      "title": "Dutch Bros company overview",
+      "url": "https://investors.dutchbros.com/overview/",
+      "published": null,
+      "supports": "Founded by Dane and Travis Boersma in Grants Pass in 1992; drive-through beverage model."
+    },
+    {
+      "id": "s10",
+      "title": "Dunkin company overview",
+      "url": "https://www.dunkindonuts.com/about-us/",
+      "published": null,
+      "supports": "Founded in 1950; more than 14,000 restaurants in nearly 40 markets."
+    },
+    {
+      "id": "s11",
+      "title": "Inspire acquisition of Dunkin Brands",
+      "url": "https://inspirebrands.com/inspire-brands-completes-acquisition-of-dunkin-brands/",
+      "published": "2020-12-15",
+      "supports": "The $11.3 billion transaction placed Dunkin within Inspire; this is transaction value, not current brand revenue."
+    },
+    {
+      "id": "s12",
+      "title": "National Coffee Association specialty consumption research",
+      "url": "https://www.ncausa.org/newsroom/Specialty-Coffee-Consumption-Remains-at-Record-High",
+      "published": "2026-06-02",
+      "supports": "47% of adults consumed specialty coffee in the past day; 36% of past-day specialty coffee drinkers had coffee prepared outside home versus 23% of traditional coffee drinkers."
+    }
+  ]
+}

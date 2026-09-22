@@ -1,0 +1,47 @@
+{
+  "actor_id": "home",
+  "answer": {
+    "actions": [
+      "Continue the 20% peak café capacity reservation and mobile order admission limits in the 50 pilot cafés through February 2027, maintaining the current weekday 07:00–10:00 window.",
+      "Within the pilot, begin a controlled test in 10 of the 50 cafés: dynamically release any unused reserved café capacity to mobile orders if, after the first 60 minutes of peak, café demand is tracking below the 20% allocation (e.g., if less than 15% of capacity has actually been used for café orders by 08:00, release half of the remaining reserved slots for mobile pickup for the rest of the peak window)."
+    ],
+    "expected_responses": [
+      "Dutch Bros and Dunkin are likely to continue their current promotional tactics, as Starbucks has not signaled a major policy shift or price response. They may monitor for any indication that mobile order reliability improves or worsens.",
+      "If the dynamic release test is successful, competitors may eventually copy or counter-message around digital convenience, but within this round, no immediate escalation is expected.",
+      "Some habitual mobile customers may experience improved slot availability in the 10 test cafés, potentially reducing abandonment or competitive defection; café customers should not experience increased wait times if the release rule is triggered only when café demand is low."
+    ],
+    "rationale": "Maintaining the original reservation policy is necessary to gather enough paired-store and customer repeat data to evaluate the effect on wait times and contribution, as required by the round-two decision rules. However, early evidence may reveal that the 20% café reservation is not fully utilized in some cafés or time intervals, risking unnecessary lost mobile transactions. Dynamically releasing unused reserved capacity in a subset of cafés allows us to test if we can recapture mobile volume without harming the café experience, while still observing the impact on both channels. This approach aligns with the incentive to defend transaction momentum and all-channel contribution, while remaining within staffing and scope constraints.",
+    "resource_commitments": [
+      "Continue incremental staffing (up to 2 additional peak staff-hours per weekday) in all 50 pilot cafés.",
+      "Allocate digital and ops resources to implement and monitor the dynamic release rule in 10 pilot cafés (no new budget, but requires coordination and instrumentation updates)."
+    ]
+  },
+  "id": "ingest-2a0afa096888412884216a0c4d5e3e0f",
+  "kind": "moves",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "9e93b6600c362a85f097f2f44349b29d5ea627deae7a7e4b1820d49acb136219",
+    "ingested_at": "2026-09-12T12:16:54.257428+00:00",
+    "job_id": "job-659a154c465c4aadb5fde58f36a30226",
+    "manifest_hash": "e691b8fc47dcb78b5801f754fb66194bbbced9d6229825a3c23bb8118d050ed5",
+    "model": "gpt-4.1",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/dated-live/execution/round-2-moves-home/results-1.ep"
+  }
+}

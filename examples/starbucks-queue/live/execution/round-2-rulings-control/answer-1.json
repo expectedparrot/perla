@@ -1,0 +1,87 @@
+{
+  "rulings": {
+    "rulings": [
+      {
+        "ruling_id": "move2-integrated-customer-competition",
+        "basis": "judgment",
+        "rationale": "All committed actions for move 2 are integrated and interact through the morning customer’s contingent redirection behavior, Starbucks’ continued pilot constraints, and the targeted local offers and labor adjustments by Dunkin and Dutch Bros. No direct measurement or reference-class evidence exists for local switching rates, so the outcome rests on the explicit scenario constraints and illustrative customer occasion logic. All measurement fields remain null per the measurement rule, as no real data is supplied. The public_strategy_history is updated to reflect the observable, implemented moves and their intended consequences. No kill criteria are triggered, as no observable threshold or deadline is crossed in this move.",
+        "resolves": [
+          "m2.buyer.a1",
+          "m2.buyer.a2",
+          "m2.buyer.a3",
+          "m2.dunkin.a1",
+          "m2.dunkin.a2",
+          "m2.dunkin.a3",
+          "m2.dunkin.a4",
+          "m2.dutch.a1",
+          "m2.dutch.a2",
+          "m2.home.a1",
+          "m2.home.a2"
+        ],
+        "affected_actors": [
+          "buyer",
+          "dunkin",
+          "dutch",
+          "home"
+        ],
+        "kill_criteria": [],
+        "chain": [
+          {
+            "basis": "dossier_fact",
+            "link": "customer-switch",
+            "claim": "Commuters and habitual app users encountering a Starbucks mobile slot delay beyond their time ceiling will attempt to redirect their order to the most convenient competitor, provided the detour is acceptable; otherwise, they may prepare at home or skip the purchase.",
+            "cite": [
+              "d.buyer.b3",
+              "d.buyer.b4",
+              "d.buyer.b5",
+              "d.buyer.b7"
+            ]
+          },
+          {
+            "basis": "dossier_fact",
+            "link": "offer-competition",
+            "claim": "Dunkin and Dutch Bros have both implemented targeted local offers and additional peak labor to attract and serve redirected mobile demand, but only within their respective local pilot footprints and budget constraints.",
+            "cite": [
+              "d.dunkin.k5",
+              "d.dunkin.k6",
+              "d.dutch.d5",
+              "d.dutch.d6"
+            ]
+          },
+          {
+            "basis": "dossier_fact",
+            "link": "pilot-constraint",
+            "claim": "Starbucks maintains the 20% café capacity reservation, capped peak mobile slots, and up to two incremental staff-hours per pilot store per weekday, with no expansion or price change allowed.",
+            "cite": [
+              "d.home.h5"
+            ]
+          },
+          {
+            "basis": "dossier_fact",
+            "link": "measurement-null",
+            "claim": "All measured outcome fields remain null, as no actual pilot store or customer records are supplied. Simulated outcomes must be stated as hypothetical and not as observed measurement.",
+            "cite": [
+              "d.home.h8"
+            ]
+          }
+        ],
+        "cases": [],
+        "branches": null,
+        "outcome": {
+          "description": "The board advances to February 2027, with all player actions implemented as observable public strategy. Starbucks continues the 20% capacity reservation pilot in 50 cafés with capped mobile slots and added peak staff-hours. Dunkin launches a $5 breakfast bundle with local marketing and a stop rule for unprofitable stores, plus incremental peak labor. Dutch Bros deploys additional peak labor and a capped $1 Order Ahead credit for first-time users at 12 shops. Composite morning customers, when facing a Starbucks mobile slot delay beyond their time or patience ceiling, redirect to the most convenient competitor if feasible, or otherwise may prepare at home or skip the purchase. No measured outcome fields are updated; all remain null. The public_strategy_history is updated to reflect these moves and their intended effects.",
+          "confidence": 0.8,
+          "board_delta": {
+            "calendar_period": "February 2027",
+            "public_strategy_history": [
+              "January 2027: Starbucks pilots 20% peak café capacity reservation for in-café orders in 50 US cafés, capping mobile slots and adding up to two peak staff-hours per weekday per pilot store. Instrumentation deployed for order attempts, slot offers, completions, refunds, staffing, and repeat purchases.",
+              "January 2027: Dunkin launches a $6 breakfast bundle with opt-in mobile ordering and local marketing in 15 franchise locations near Starbucks pilot cafés, with a $20,000 budget cap.",
+              "January 2027: Dutch Bros allocates 20 additional labor hours per week per shop (4 hours/weekday, 7–10 a.m.) at 12 participating shops and promotes a $1 Order Ahead credit for first-time users from January 15–31, capped at 100 redemptions per shop or budget exhaustion.",
+              "January 2027: Composite morning customer segments respond as follows: commuters and habitual app users, when encountering unavailable or delayed Starbucks mobile slots, may redirect purchases to competitors (Dunkin or Dutch Bros) or may instead prepare coffee at home, postpone, or skip the purchase if a detour is inconvenient; walk-in café customers benefit from the new policy and do not switch.",
+              "February 2027: Starbucks continues the 20% peak café capacity reservation pilot in 50 US cafés, maintaining capped mobile slots and up to two additional peak staff-hours per weekday per store. Dunkin launches a $5 breakfast bundle with opt-in mobile ordering, $15,000 in local marketing, and $5,000 for peak labor at 15 franchise locations, with a stop rule for unprofitable stores. Dutch Bros maintains increased peak labor and a $1 Order Ahead credit for first-time users at 12 shops, capped at 250 redemptions per shop or budget exhaustion. Composite morning customers continue to redirect mobile orders to the most convenient competitor when Starbucks slots are unavailable or delayed, or otherwise prepare at home or skip."
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "actor_id": "dunkin",
+  "committed_at": "2026-09-12T12:07:33.141172+00:00",
+  "content": {
+    "actions": [
+      "Launch a targeted $5 breakfast bundle offer with opt-in mobile ordering at the 15 franchise locations near Starbucks pilot cafés for the month of February 2027.",
+      "Allocate a $15,000 portion of the $20,000 monthly budget to local digital and in-store marketing to drive awareness and adoption of the bundle offer.",
+      "Use the remaining $5,000 to fund up to 50 additional labor hours across the 15 locations during the 7–10 a.m. peak window on weekdays to ensure smooth order fulfillment and reduce wait times.",
+      "Implement a local stop rule to pause the offer at any store where the incremental economics worsen after two weeks based on basket contribution and repeat visit data."
+    ],
+    "expected_responses": [
+      "Starbucks pilot cafés may experience some customer redirection to Dunkin due to attractive bundle pricing and reliable mobile order capacity.",
+      "Dutch Bros may respond by increasing promotions or labor hours to defend their drive-through and Order Ahead advantage.",
+      "Some customers may shift from home preparation or skipping breakfast to purchasing at Dunkin if the bundle and service are perceived as convenient and valuable.",
+      "Franchisees will monitor economics closely and may opt out if the offer reduces profitability, ensuring sustainable participation."
+    ],
+    "rationale": "The $5 breakfast bundle offers a compelling value proposition aligned with Dunkin's coffee-and-food focus, aiming to increase repeat visits and basket size. Optimizing labor during peak hours ensures service quality and mitigates lost sales from mobile order capacity constraints. The local stop rule manages franchisee economic risk, addressing previous concerns about unprofitable traffic increases. The marketing spend is calibrated to drive awareness without exceeding budget constraints.",
+    "resource_commitments": [
+      "Budget cap of $20,000 for February 2027 across 15 franchise locations.",
+      "Up to 50 additional labor hours during weekday mornings (7–10 a.m.) distributed as needed.",
+      "$15,000 dedicated to local marketing and promotion of the breakfast bundle.",
+      "Data tracking on basket contribution, discount cost, staffing, and repeat visits for decision-making."
+    ]
+  },
+  "content_hash": "840f680e9e2cb5500be911dd9b21d551bb48b860b105f95d75bf971a12b06021",
+  "move": 2,
+  "provenance": {
+    "answer_hash": "840f680e9e2cb5500be911dd9b21d551bb48b860b105f95d75bf971a12b06021",
+    "ingested_at": "2026-09-12T12:07:33.141172+00:00",
+    "job_id": "job-75f937e0912e481bb6d3f28fe6a6316d",
+    "manifest_hash": "3df10b9d342d8b1140e10d09fa722dd5b8a309f9d98d44509b19d41ad58054b6",
+    "model": "gpt-4.1-mini",
+    "model_parameters": {
+      "edsl_class_name": "LanguageModel",
+      "edsl_version": "1.0.8.dev1",
+      "inference_service": "openai",
+      "model": "gpt-4.1-mini",
+      "parameters": {
+        "frequency_penalty": 0,
+        "logprobs": false,
+        "max_tokens": 16000,
+        "presence_penalty": 0,
+        "reasoning_effort": null,
+        "temperature": 0.5,
+        "top_logprobs": 3,
+        "top_p": 1
+      }
+    },
+    "origin": "simulation",
+    "source_package": "/Users/johnhorton/tools/ep/perla/examples/starbucks-queue/live/execution/round-2-moves-dunkin/results-1.ep"
+  }
+}
